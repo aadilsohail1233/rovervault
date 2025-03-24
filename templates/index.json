@@ -36,8 +36,8 @@
         "button_6DzHTe": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "Learn More",
+            "button_link": "shopify://collections/all",
             "button_style_secondary": false,
             "button_style_third": true
           }
