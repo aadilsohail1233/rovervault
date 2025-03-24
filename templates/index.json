@@ -9,97 +9,55 @@
  */
 {
   "sections": {
-    "image_with_text_bhrJ9P": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_a6DkVd": {
-          "type": "heading",
-          "settings": {
-            "heading": "Rover Vault",
-            "heading_size": "hxxl"
-          }
-        }
-      },
-      "block_order": [
-        "heading_a6DkVd"
-      ],
+    "home_hero_gV8DN8": {
+      "type": "home-hero",
       "settings": {
-        "image": "shopify://shop_images/Vector.svg",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
+        "first-image": "shopify://shop_images/Logo-1.png",
+        "second-image": "shopify://shop_images/RoverVault-text-1.png",
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "image_with_text_ebEabf": {
-      "type": "image-with-text",
+    "image_with_text_1_hehR3M": {
+      "type": "image-with-text-1",
       "blocks": {
-        "heading_KtPcKW": {
+        "heading_VaRR6r": {
           "type": "heading",
           "settings": {
-            "heading": "Overhauled Vintage land rovers",
-            "heading_size": "h1"
+            "heading": "Overhauled Vintage land rovers"
           }
         },
-        "text_CxB9Wm": {
+        "text_nGmxQa": {
           "type": "text",
           "settings": {
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>",
-            "text_style": "body"
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
           }
         },
-        "button_B3ihA3": {
+        "button_6DzHTe": {
           "type": "button",
           "settings": {
-            "button_label": "Learn More",
+            "button_label": "Button label",
             "button_link": "",
-            "button_style_secondary": false
+            "button_style_secondary": false,
+            "button_style_third": true
           }
         }
       },
       "block_order": [
-        "heading_KtPcKW",
-        "text_CxB9Wm",
-        "button_B3ihA3"
+        "heading_VaRR6r",
+        "text_nGmxQa",
+        "button_6DzHTe"
       ],
       "settings": {
-        "image": "shopify://shop_images/Frame_587.png",
+        "image": "shopify://shop_images/car-0.png",
         "height": "adapt",
-        "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
         "section_color_scheme": "",
         "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "image_banner_TBHpx7": {
-      "type": "image-banner",
-      "settings": {
-        "image": "shopify://shop_images/a.svg",
-        "image_overlay_opacity": 0,
-        "image_height": "large",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
       }
     },
     "image_banner": {
@@ -171,9 +129,8 @@
     }
   },
   "order": [
-    "image_with_text_bhrJ9P",
-    "image_with_text_ebEabf",
-    "image_banner_TBHpx7",
+    "home_hero_gV8DN8",
+    "image_with_text_1_hehR3M",
     "image_banner",
     "featured_collection"
   ]
