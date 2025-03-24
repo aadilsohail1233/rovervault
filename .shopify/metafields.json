@@ -1,0 +1,316 @@
+{
+  "article": [],
+  "blog": [],
+  "brand": [],
+  "collection": [],
+  "company": [],
+  "company_location": [],
+  "location": [],
+  "market": [],
+  "order": [],
+  "page": [],
+  "product": [
+    {
+      "key": "rear_badges",
+      "namespace": "vehicles",
+      "name": "Rear badges",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "roof_rack",
+      "namespace": "vehicles",
+      "name": "Roof rack",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "side_steps",
+      "namespace": "vehicles",
+      "name": "Side steps",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "chequer_plate",
+      "namespace": "vehicles",
+      "name": "Chequer plate",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "side_air_intakes",
+      "namespace": "vehicles",
+      "name": "Side air intakes",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "wing_top_air_intakes",
+      "namespace": "vehicles",
+      "name": "Wing-top air intakes",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "slide_lights",
+      "namespace": "vehicles",
+      "name": "Slide lights",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "headlights",
+      "namespace": "vehicles",
+      "name": "Headlights",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "steering_guard",
+      "namespace": "vehicles",
+      "name": "Steering guard",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "a_bar",
+      "namespace": "vehicles",
+      "name": "A-bar",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "bumper",
+      "namespace": "vehicles",
+      "name": "Bumper",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "grille",
+      "namespace": "vehicles",
+      "name": "Grille",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "tires",
+      "namespace": "vehicles",
+      "name": "Tires",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "wheels",
+      "namespace": "vehicles",
+      "name": "Wheels",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "hood_badge",
+      "namespace": "vehicles",
+      "name": "Hood badge",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "hood",
+      "namespace": "vehicles",
+      "name": "Hood",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "paint_finish",
+      "namespace": "vehicles",
+      "name": "Paint finish",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "body_color",
+      "namespace": "vehicles",
+      "name": "Body color",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "engine",
+      "namespace": "vehicles_main",
+      "name": "Engine",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "transmission",
+      "namespace": "vehicles_main",
+      "name": "Transmission",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "milage",
+      "namespace": "vehicles_main",
+      "name": "Milage",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "year",
+      "namespace": "vehicles_main",
+      "name": "Year",
+      "description": "",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "make_model",
+      "namespace": "vehicles_main",
+      "name": "Make/Model",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "owners",
+      "namespace": "vehicles_main",
+      "name": "Owners",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "origin",
+      "namespace": "vehicles_main",
+      "name": "Origin",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "price",
+      "namespace": "vehicles_main",
+      "name": "Price",
+      "description": "",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "frame_size",
+      "namespace": "prints",
+      "name": "Frame Size",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "materials",
+      "namespace": "prints",
+      "name": "Materials",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "original_print",
+      "namespace": "prints",
+      "name": "Original print",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "class",
+      "namespace": "prints",
+      "name": "Class",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
+  "variant": [],
+  "shop": []
+}
