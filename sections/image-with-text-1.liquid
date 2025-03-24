@@ -32,6 +32,9 @@
     flex-direction: column;
     gap: 30px;
     justify-content: center;
+    border: 5px solid rgba(var(--color-secondary-button-text));
+    text-align: center;
+    padding: 0px 36px;
   }
 
   .image-with-text-1-details > * {
@@ -40,8 +43,18 @@
   }
 
   .image-with-text-1_heading {
-    font-size: 6.4rem;
+    font-size: 6.3rem;
     font-family: 'VVDS Fifties';
+    line-height: 90%;
+    letter-spacing: 0px;
+  }
+
+  .image-with-text-1_text {
+    font-size: 2rem;
+    line-height: 150%;
+    letter-spacing: 0px;
+    font-weight: 600;
+    font-family: 'Eczar';
   }
 {%- endstyle -%}
 
@@ -75,7 +88,7 @@
                 {{ block.settings.heading }}
               </div>
             {%- when 'text' -%}
-              <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+              <div class="image-with-text-1_text">
                 {{ block.settings.text }}
               </div>
             {%- when 'button' -%}
