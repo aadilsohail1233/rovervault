@@ -9,6 +9,99 @@
  */
 {
   "sections": {
+    "image_with_text_bhrJ9P": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_a6DkVd": {
+          "type": "heading",
+          "settings": {
+            "heading": "Rover Vault",
+            "heading_size": "hxxl"
+          }
+        }
+      },
+      "block_order": [
+        "heading_a6DkVd"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Vector.svg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_ebEabf": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_KtPcKW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Overhauled Vintage land rovers",
+            "heading_size": "h1"
+          }
+        },
+        "text_CxB9Wm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_B3ihA3": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_KtPcKW",
+        "text_CxB9Wm",
+        "button_B3ihA3"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Frame_587.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_TBHpx7": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/a.svg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -31,15 +124,18 @@
           }
         }
       },
-      "block_order": ["heading", "button"],
+      "block_order": [
+        "heading",
+        "button"
+      ],
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
-        "image_behavior": "none",
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
+        "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
@@ -56,12 +152,11 @@
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -69,10 +164,17 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
       }
     }
   },
-  "order": ["image_banner", "featured_collection"]
+  "order": [
+    "image_with_text_bhrJ9P",
+    "image_with_text_ebEabf",
+    "image_banner_TBHpx7",
+    "image_banner",
+    "featured_collection"
+  ]
 }

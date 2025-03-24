@@ -9,12 +9,13 @@
  */
 {
   "current": {
-    "logo_width": 90,
+    "logo": "shopify://shop_images/Layer_2-2.png",
+    "logo_width": 270,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
     "body_scale": 100,
-    "page_width": 1200,
+    "page_width": 1380,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
@@ -263,7 +264,7 @@
       "heading_scale": 100,
       "type_body_font": "assistant_n4",
       "body_scale": 100,
-      "page_width": 1200,
+      "page_width": 1380,
       "spacing_sections": 0,
       "spacing_grid_horizontal": 8,
       "spacing_grid_vertical": 8,
