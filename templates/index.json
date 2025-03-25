@@ -70,11 +70,19 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
+    },
+    "vehicles_page_links_QcL9HT": {
+      "type": "vehicles-page-links",
+      "settings": {
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
     }
   },
   "order": [
     "home_hero_gV8DN8",
     "image_with_text_1_hehR3M",
-    "image_show_TbTzfG"
+    "image_show_TbTzfG",
+    "vehicles_page_links_QcL9HT"
   ]
 }
