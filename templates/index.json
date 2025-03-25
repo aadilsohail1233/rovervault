@@ -70,11 +70,59 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
+    },
+    "vehicles_page_links_QcL9HT": {
+      "type": "vehicles-page-links",
+      "settings": {
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
+    "image_with_text_1_hjJnG4": {
+      "type": "image-with-text-1",
+      "blocks": {
+        "heading_MecmkC": {
+          "type": "heading",
+          "settings": {
+            "heading": "We realize the impossible journey"
+          }
+        },
+        "text_QCkpjh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor.</p>"
+          }
+        },
+        "button_6zNVyq": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_style_third": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_MecmkC",
+        "text_QCkpjh",
+        "button_6zNVyq"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/car-1.png",
+        "layout": "text_first",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "home_hero_gV8DN8",
     "image_with_text_1_hehR3M",
-    "image_show_TbTzfG"
+    "image_show_TbTzfG",
+    "vehicles_page_links_QcL9HT",
+    "image_with_text_1_hjJnG4"
   ]
 }
