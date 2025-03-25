@@ -10,6 +10,46 @@
       margin-bottom: {{ section.settings.margin_bottom }}px;
     }
   }
+
+  .logo-with-text-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 54px;
+  }
+
+  .logo-with-text-wrapper img {
+    width: 100%;
+  }
+
+  .logo-with-text-images {
+    flex: 1;
+  }
+
+  .logo-with-text-logo {
+    width: 25%;
+  }
+
+  @media screen and (max-width: 850px) {
+    .logo-with-text-logo {
+      display: none;
+    }
+  }
+
+  .logo-with-text-mobile-images {
+    display: none;
+  }
+
+  @media screen and (max-width: 450px) {
+    .logo-with-text-images {
+      display: none;
+    }
+
+    .logo-with-text-mobile-images {
+      display: block;
+    }
+  }
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-margin gradient color-{{ section.settings.section_color_scheme }}">
@@ -23,6 +63,12 @@
         <img
           src="{{ section.settings.second_text_image | img_url: 'master' }}"
           alt="{{ section.settings.second_text_image.alt }}"
+        >
+      </div>
+      <div class="logo-with-text-mobile-images">
+        <img
+          src="{{ section.settings.mobile_text_image | img_url: 'master' }}"
+          alt="{{ section.settings.mobile_text_image.alt }}"
         >
       </div>
       <div class="logo-with-text-logo">
@@ -44,12 +90,17 @@
     {
       "type": "image_picker",
       "id": "first_text_image",
-      "label": "Logo Image"
+      "label": "First Text Image"
     },
     {
       "type": "image_picker",
       "id": "second_text_image",
-      "label": "Logo Image"
+      "label": "Second Text Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_text_image",
+      "label": "Mobile Text Image"
     },
     {
       "type": "range",
