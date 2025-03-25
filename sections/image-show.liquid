@@ -123,6 +123,11 @@
     font-weight: 600;
     font-family: 'Eczar';
   }
+
+  .image-show-main-content a {
+    display: inline-block;
+    margin-top: 25px;
+  }
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-margin gradient color-{{ section.settings.section_color_scheme }}">
@@ -140,6 +145,11 @@
           </div>
           <div class="image-show-main-content">
             <div class="image-show-main-content__text">{{ section.settings['logo-text'] }}</div>
+            {% for block in section.blocks %}
+              <a href="{{ block.settings.button_link }}" class="button--main">
+                {{ block.settings.button_label }}
+              </a>
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -210,6 +220,7 @@
     {
       "type": "button",
       "name": "Learn more button",
+      "limit": 1,
       "settings": [
         {
           "type": "text",

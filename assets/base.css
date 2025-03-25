@@ -1337,6 +1337,7 @@ button.shopify-payment-button__button--unbranded {
   background-color: #c18a14;
   padding: 24px 50px;
   border-radius: 100%;
+  text-decoration: none;
 }
 
 /* Shopify Accelerated Checkout */
