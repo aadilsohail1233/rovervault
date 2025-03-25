@@ -40,7 +40,9 @@
   <div class="page-width">
     <div class="footer-page-wrapper">
       <div class="footer-page-content-wrapper">
-        <div class="footer-page-logo-wrapper"></div>
+        <div class="footer-page-logo-wrapper">
+          {{- 'logo-2.png' | file_url | img_tag: 'Logo', 'footer-logo' -}}
+        </div>
         <div class="footer-page-links-wrapper">
           <a class="footer-page__link">Range Rover</a>
           <a class="footer-page__link">Discovery</a>
@@ -51,12 +53,15 @@
           <a class="footer-page__link">Art</a>
           <a class="footer-page__link">Enquire</a>
           <a class="footer-page__link">
-            {{- 'icon-in.png' | asset_url | img_tag: 'Linkedin', 'footer-social-icon' -}}</a
-          ><a class="footer-page__link">
-            {{- 'icon-youtube.png' | asset_url | img_tag: 'Youtube', 'footer-social-icon' -}}</a
-          ><a class="footer-page__link">
-            {{- 'icon-facebook.png' | asset_url | img_tag: 'Facebook', 'footer-social-icon' -}}</a
-          ><a class="footer-page__link">
+            {{- 'icon-in.png' | asset_url | img_tag: 'Linkedin', 'footer-social-icon' -}}
+          </a>
+          <a class="footer-page__link">
+            {{- 'icon-youtube.png' | asset_url | img_tag: 'Youtube', 'footer-social-icon' -}}
+          </a>
+          <a class="footer-page__link">
+            {{- 'icon-facebook.png' | asset_url | img_tag: 'Facebook', 'footer-social-icon' -}}
+          </a>
+          <a class="footer-page__link">
             {{- 'icon-instagram.png' | asset_url | img_tag: 'Intagram', 'footer-social-icon' -}}
           </a>
         </div>
