@@ -116,6 +116,17 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "logo_with_text_pmUeyA": {
+      "type": "logo-with-text",
+      "settings": {
+        "logo_image": "shopify://shop_images/image-1.png",
+        "first_text_image": "shopify://shop_images/text-1.png",
+        "second_text_image": "shopify://shop_images/text-2.png",
+        "mobile_text_image": "shopify://shop_images/text-3.png",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
     }
   },
   "order": [
@@ -123,6 +134,7 @@
     "image_with_text_1_hehR3M",
     "image_show_TbTzfG",
     "vehicles_page_links_QcL9HT",
-    "image_with_text_1_hjJnG4"
+    "image_with_text_1_hjJnG4",
+    "logo_with_text_pmUeyA"
   ]
 }
