@@ -68,13 +68,13 @@
         "section_color_scheme": "",
         "color_scheme": "",
         "margin_top": 36,
-        "margin_bottom": 36
+        "margin_bottom": 0
       }
     },
     "vehicles_page_links_QcL9HT": {
       "type": "vehicles-page-links",
       "settings": {
-        "margin_top": 36,
+        "margin_top": 0,
         "margin_bottom": 36
       }
     },
