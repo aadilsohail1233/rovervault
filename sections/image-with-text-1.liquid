@@ -14,27 +14,46 @@
   .image-with-text-1-wrapper {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 48px;
   }
 
+  @media screen and (min-width: 750px) {
+    .image-with-text-1-wrapper {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
   .image-with-text-1-image {
+    border: 5px solid rgba(var(--color-secondary-button-text));
+    overflow: hidden;
   }
 
   .image-with-text-1__image {
-    border: 5px solid rgba(var(--color-secondary-button-text));
     width: 100%;
-    aspect-ratio: 1;
+    height: 100%;
+    object-fit: cover;
   }
 
   .image-with-text-1-details {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     justify-content: center;
     border: 5px solid rgba(var(--color-secondary-button-text));
     text-align: center;
-    padding: 0px 36px;
+    padding: 25px;
+    font-size: 2rem;
+    line-height: 150%;
+    letter-spacing: 0px;
+    font-weight: 600;
+    font-family: 'Eczar';
+  }
+
+  @media screen and (min-width: 750px) {
+    .image-with-text-1-details {
+      padding: 25px 36px;
+    }
   }
 
   .image-with-text-1-details > * {
@@ -50,11 +69,7 @@
   }
 
   .image-with-text-1_text {
-    font-size: 2rem;
-    line-height: 150%;
-    letter-spacing: 0px;
-    font-weight: 600;
-    font-family: 'Eczar';
+
   }
 {%- endstyle -%}
 
@@ -71,13 +86,15 @@
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
     <div class="image-with-text-1-wrapper">
-      <div class="image-with-text-1-image">
-        <img
-          src="{{ section.settings.image | img_url: 'master' }}"
-          alt="Vehicle"
-          class="image-with-text-1__image"
-        >
-      </div>
+      {%- if section.settings.layout == 'image_first' -%}
+        <div class="image-with-text-1-image">
+          <img
+            src="{{ section.settings.image | img_url: 'master' }}"
+            alt="Vehicle"
+            class="image-with-text-1__image"
+          >
+        </div>
+      {% endif %}
       <div class="image-with-text-1-details">
         {%- for block in section.blocks -%}
           {% case block.type %}
@@ -99,8 +116,7 @@
                   {% else %}
                     href="{{ block.settings.button_link }}"
                   {% endif %}
-                  class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
-                  {{ block.shopify_attributes }}
+                  class="button--main"
                 >
                   {{ block.settings.button_label | escape }}
                 </a>
@@ -108,6 +124,15 @@
           {%- endcase -%}
         {%- endfor -%}
       </div>
+      {%- if section.settings.layout == 'text_first' -%}
+        <div class="image-with-text-1-image">
+          <img
+            src="{{ section.settings.image | img_url: 'master' }}"
+            alt="Vehicle"
+            class="image-with-text-1__image"
+          >
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>
@@ -127,30 +152,6 @@
     },
     {
       "type": "select",
-      "id": "height",
-      "options": [
-        {
-          "value": "adapt",
-          "label": "t:sections.image-with-text.settings.height.options__1.label"
-        },
-        {
-          "value": "small",
-          "label": "t:sections.image-with-text.settings.height.options__2.label"
-        },
-        {
-          "value": "medium",
-          "label": "t:sections.image-with-text.settings.height.options__3.label"
-        },
-        {
-          "value": "large",
-          "label": "t:sections.image-with-text.settings.height.options__4.label"
-        }
-      ],
-      "default": "adapt",
-      "label": "t:sections.image-with-text.settings.height.label"
-    },
-    {
-      "type": "select",
       "id": "layout",
       "options": [
         {
@@ -165,46 +166,6 @@
       "default": "image_first",
       "label": "t:sections.image-with-text.settings.layout.label",
       "info": "t:sections.image-with-text.settings.layout.info"
-    },
-    {
-      "type": "select",
-      "id": "desktop_content_position",
-      "options": [
-        {
-          "value": "top",
-          "label": "t:sections.image-with-text.settings.desktop_content_position.options__1.label"
-        },
-        {
-          "value": "middle",
-          "label": "t:sections.image-with-text.settings.desktop_content_position.options__2.label"
-        },
-        {
-          "value": "bottom",
-          "label": "t:sections.image-with-text.settings.desktop_content_position.options__3.label"
-        }
-      ],
-      "default": "top",
-      "label": "t:sections.image-with-text.settings.desktop_content_position.label"
-    },
-    {
-      "type": "select",
-      "id": "desktop_content_alignment",
-      "options": [
-        {
-          "value": "left",
-          "label": "t:sections.image-with-text.settings.desktop_content_alignment.options__1.label"
-        },
-        {
-          "value": "center",
-          "label": "t:sections.image-with-text.settings.desktop_content_alignment.options__2.label"
-        },
-        {
-          "value": "right",
-          "label": "t:sections.image-with-text.settings.desktop_content_alignment.options__3.label"
-        }
-      ],
-      "default": "left",
-      "label": "t:sections.image-with-text.settings.desktop_content_alignment.label"
     },
     {
       "type": "color_scheme",
