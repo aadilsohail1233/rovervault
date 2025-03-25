@@ -11,18 +11,30 @@
     }
   }
 
-  .footer-page {
+  .footer-page-wrapper {
     border: 5px solid #6B8D50;
+    font-family: 'Eczar';
+
   }
 
   .footer-page-content-wrapper {
     display: flex;
+    padding: 50px 50px 40px 50px;
+    gap: 50px;
+  }
+
+  .footer-page-logo-wrapper {
+    display: flex;
+    align-items: center;
   }
 
   .footer-page-links-wrapper {
     flex: 1;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 600;
   }
 
   .footer-page-footer {
@@ -79,12 +91,12 @@
     {
       "type": "range",
       "id": "margin_top",
-      "min": 0,
+      "min": -200,
       "max": 100,
       "step": 4,
       "unit": "px",
       "label": "Margin Top",
-      "default": 36
+      "default": -132
     },
     {
       "type": "range",
