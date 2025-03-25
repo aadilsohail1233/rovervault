@@ -50,53 +50,25 @@
       ],
       "settings": {
         "image": "shopify://shop_images/car-0.png",
-        "height": "adapt",
         "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "button"
-      ],
+    "image_show_TbTzfG": {
+      "type": "image-show",
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "background-image": "shopify://shop_images/background-image-1.png",
+        "logo": "shopify://shop_images/logo-land-rover.png",
+        "logo-text": "HERITAGE ROVER COMPANY",
+        "footer-image": "shopify://shop_images/vector-image-1.png",
+        "down-text": "Vehicles Oozing with Styles",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "margin_top": 36,
+        "margin_bottom": 36
       }
     },
     "featured_collection": {
@@ -131,7 +103,7 @@
   "order": [
     "home_hero_gV8DN8",
     "image_with_text_1_hehR3M",
-    "image_banner",
+    "image_show_TbTzfG",
     "featured_collection"
   ]
 }
