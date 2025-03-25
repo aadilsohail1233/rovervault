@@ -13,6 +13,18 @@
   "sections": {
     "image_show_8Nqa4W": {
       "type": "image-show",
+      "blocks": {
+        "button_3wMLf7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Enquire",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_3wMLf7"
+      ],
       "settings": {
         "background-image": "shopify://shop_images/background-image-2.png",
         "logo": "shopify://shop_images/logo-2.png",
