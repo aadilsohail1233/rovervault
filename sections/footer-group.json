@@ -11,6 +11,20 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "image_show_8Nqa4W": {
+      "type": "image-show",
+      "settings": {
+        "background-image": "shopify://shop_images/background-image-2.png",
+        "logo": "shopify://shop_images/logo-2.png",
+        "logo-text": "IDEAS & SKILLS AT THE CORE",
+        "footer-image": "shopify://shop_images/vector-image-2.png",
+        "down-text": "Driving On or Off the Road?",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
     "footer": {
       "type": "footer",
       "settings": {
@@ -30,6 +44,7 @@
     }
   },
   "order": [
+    "image_show_8Nqa4W",
     "footer"
   ]
 }
