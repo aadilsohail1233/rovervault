@@ -127,6 +127,26 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
+    },
+    "features_KPKJ94": {
+      "type": "features",
+      "blocks": {
+        "feature_MUYb7m": {
+          "type": "feature",
+          "settings": {
+            "feature-image": "shopify://shop_images/feature-1.png",
+            "feature-header": "Powerful modern enginees",
+            "feature-content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor."
+          }
+        }
+      },
+      "block_order": [
+        "feature_MUYb7m"
+      ],
+      "settings": {
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
     }
   },
   "order": [
@@ -135,6 +155,7 @@
     "image_show_TbTzfG",
     "vehicles_page_links_QcL9HT",
     "image_with_text_1_hjJnG4",
-    "logo_with_text_pmUeyA"
+    "logo_with_text_pmUeyA",
+    "features_KPKJ94"
   ]
 }
