@@ -79,6 +79,29 @@
     background-position: center;
   }
 
+  .image-show-main-circle {
+    text-align: center;
+    padding: 32px 0px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 573px;
+    background-color: #EBE9D6;
+    border-radius: 50%;
+    border: 5px solid rgba(var(--color-secondary-button-text));
+    font-size: 7.2rem;
+    color: #6B8D50;
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 890px) {
+    .image-show-main-circle {
+      font-size: 4.5rem;
+      width: 331px;
+    }
+  }
+
   .image-show-main-content {
     color: #6B8D50;
     background-color: #EBE9D6;
@@ -106,6 +129,7 @@
       display: none;
     }
   }
+
 
   .image-show-footer {
     margin-top: -40px;
@@ -145,19 +169,26 @@
           class="image-show-background__image"
           alt="Background"
         >
-        <div class="image-show-main">
-          <div class="image-show-main-logo">
-            <img src="{{ section.settings.logo | img_url: 'master' }}" alt="Logo">
+
+        {% if section.settings['logo-type'] %}
+          <div class="image-show-main-circle font-vvds">
+            {{ section.settings['logo-text'] }}
           </div>
-          <div class="image-show-main-content">
-            <div class="image-show-main-content__text">{{ section.settings['logo-text'] }}</div>
-            {% for block in section.blocks %}
-              <a href="{{ block.settings.button_link }}" class="button--main">
-                {{ block.settings.button_label }}
-              </a>
-            {% endfor %}
+        {% else %}
+          <div class="image-show-main">
+            <div class="image-show-main-logo">
+              <img src="{{ section.settings.logo | img_url: 'master' }}" alt="Logo">
+            </div>
+            <div class="image-show-main-content">
+              <div class="image-show-main-content__text">{{ section.settings['logo-text'] }}</div>
+              {% for block in section.blocks %}
+                <a href="{{ block.settings.button_link }}" class="button--main">
+                  {{ block.settings.button_label }}
+                </a>
+              {% endfor %}
+            </div>
           </div>
-        </div>
+        {% endif %}
       </div>
       <div class="image-show-footer">
         <img src="{{ section.settings.footer-image | img_url: 'master' }}" alt="Footer">
@@ -176,6 +207,12 @@
       "type": "image_picker",
       "id": "background-image",
       "label": "Background Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "logo-type",
+      "label": "Logo Type",
+      "default": false
     },
     {
       "type": "image_picker",
