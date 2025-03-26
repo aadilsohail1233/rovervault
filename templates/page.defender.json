@@ -9,8 +9,23 @@
  */
 {
   "sections": {
+    "image_show_8ABaDp": {
+      "type": "image-show",
+      "settings": {
+        "background-image": "shopify://shop_images/background-image-5.png",
+        "logo-type": true,
+        "logo-text": "Defender",
+        "footer-image": "shopify://shop_images/vector-image-3.png",
+        "down-text": "Dripping with Quality & Comfort",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
@@ -18,6 +33,7 @@
     }
   },
   "order": [
+    "image_show_8ABaDp",
     "main"
   ]
 }
