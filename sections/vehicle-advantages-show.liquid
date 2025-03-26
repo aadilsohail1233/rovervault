@@ -11,17 +11,17 @@
     }
   }
 
-  .vehicle-details-show-wrapper {
+  .vehicle-advantages-show-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 55px;
   }
 
-  .vehicle-details-show-image img {
+  .vehicle-advantages-show-image img {
     width: 100%;
   }
 
-  .vehicle-details-show-content {
+  .vehicle-advantages-show-content {
     border: 5px solid #6B8D50;
     text-align: center;
     display: flex;
@@ -29,12 +29,12 @@
   }
 
   @media screen and (max-width: 850px) {
-    .vehicle-details-show-wrapper {
+    .vehicle-advantages-show-wrapper {
       grid-template-columns: 1fr;
       gap: 40px;
     }
 
-    .vehicle-details-show-content {
+    .vehicle-advantages-show-content {
       padding: 30px 10px;
     }
   }
@@ -42,11 +42,11 @@
 
 <div class="section-{{ section.id }}-margin gradient">
   <div class="page-width">
-    <div class="vehicle-details-show-wrapper">
-      <div class="vehicle-details-show-image">
+    <div class="vehicle-advantages-show-wrapper">
+      <div class="vehicle-advantages-show-image">
         <img src="{{ section.settings.image | img_url: 'master' }}" alt="Vehicle Specification">
       </div>
-      <div class="vehicle-details-show-content font-eczar">
+      <div class="vehicle-advantages-show-content font-eczar">
         {{ section.settings.text }}
       </div>
     </div>
@@ -55,7 +55,7 @@
 
 {% schema %}
 {
-  "name": "Vehicle Details Show",
+  "name": "Vehicle Advantages Show",
   "class": "section",
   "settings": [
     {
@@ -92,7 +92,7 @@
   ],
   "presets": [
     {
-      "name": "Vehicle Details Show",
+      "name": "Vehicle Advantages Show",
       "category": "Vehicle"
     }
   ]
