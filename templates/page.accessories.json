@@ -9,8 +9,32 @@
  */
 {
   "sections": {
+    "image_show_wx4YMD": {
+      "type": "image-show",
+      "settings": {
+        "background-image": "shopify://shop_images/background-image-accessories.png",
+        "logo-type": true,
+        "logo-text": "All Accessories",
+        "footer-image": "shopify://shop_images/vector-image-3.png",
+        "down-text": "Dripping with Quality & Comfort",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
+    "vehicle_advantages_show_DxxVLb": {
+      "type": "vehicle-advantages-show",
+      "settings": {
+        "image": "shopify://shop_images/text-accessories.png",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor.",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
@@ -18,6 +42,8 @@
     }
   },
   "order": [
+    "image_show_wx4YMD",
+    "vehicle_advantages_show_DxxVLb",
     "main"
   ]
 }
