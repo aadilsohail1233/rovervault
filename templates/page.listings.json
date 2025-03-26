@@ -23,6 +23,15 @@
         "margin_bottom": 36
       }
     },
+    "vehicle_advantages_show_qC9ECB": {
+      "type": "vehicle-advantages-show",
+      "settings": {
+        "image": "shopify://shop_images/text-7.png",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor.",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -34,6 +43,7 @@
   },
   "order": [
     "image_show_8eft3d",
+    "vehicle_advantages_show_qC9ECB",
     "main"
   ]
 }
