@@ -42,6 +42,18 @@
     },
     "image_show_eRRqwK": {
       "type": "image-show",
+      "blocks": {
+        "button_Hw6A7c": {
+          "type": "button",
+          "settings": {
+            "button_label": "Enquire",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_Hw6A7c"
+      ],
       "settings": {
         "background-image": "shopify://shop_images/background-image-2.png",
         "logo-type": false,
