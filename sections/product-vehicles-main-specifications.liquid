@@ -13,8 +13,28 @@
 
   .vehicles-main-specifications-wrapper {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+  }
+
+  .vehicles-main__specification {
+    text-align: center;
+    border: 5px solid rgba(var(--color-secondary-button-text));
+    padding: 17px 0px;
+  }
+
+  .vehicles-main__specification-title {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .vehicles-main__specification-value {
+    font-size: 20px;
+  }
+
+  .vehicles-main__specification.active {
+    background-color: rgba(var(--color-secondary-button-text));
+    color: #EBE9D6;
   }
 {%- endstyle -%}
 
@@ -22,228 +42,120 @@
   <div class="page-width">
     <div class="vehicles-main-specifications-wrapper">
       <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>ENGINE</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
+        <div class="vehicles-main__specification-title font-vvds font-vvds">ENGINE</div>
+        <div class="vehicles-main__specification-value font-eczar">
           {% if product.metafields.vehicles_main.engine %}
-            <p>{{ product.metafields.vehicles_main.engine.value }}</p>
+            <div>{{ product.metafields.vehicles_main.engine.value }}</div>
           {% else %}
             <div></div>
           {% endif %}
         </div>
       </div>
       <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>TRANSMISSION</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
+        <div class="vehicles-main__specification-title font-vvds">TRANSMISSION</div>
+        <div class="vehicles-main__specification-value font-eczar">
           {% if product.metafields.vehicles_main.transmission %}
-            <p>{{ product.metafields.vehicles_main.transmission.value }}</p>
+            <div>{{ product.metafields.vehicles_main.transmission.value }}</div>
           {% else %}
             <div></div>
           {% endif %}
         </div>
       </div>
       <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>MILAGE</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
+        <div class="vehicles-main__specification-title font-vvds">MILAGE</div>
+        <div class="vehicles-main__specification-value font-eczar">
           {% if product.metafields.vehicles_main.milage %}
-            <p>{{ product.metafields.vehicles_main.milage.value }}</p>
+            <div>{{ product.metafields.vehicles_main.milage.value }}</div>
           {% else %}
             <div></div>
           {% endif %}
         </div>
       </div>
       <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>YEAR</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
+        <div class="vehicles-main__specification-title font-vvds">YEAR</div>
+        <div class="vehicles-main__specification-value font-eczar">
           {% if product.metafields.vehicles_main.year %}
-            <p>{{ product.metafields.vehicles_main.year.value }}</p>
+            <div>{{ product.metafields.vehicles_main.year.value }}</div>
           {% else %}
             <div></div>
           {% endif %}
         </div>
       </div>
       <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>MAKE</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
+        <div class="vehicles-main__specification-title font-vvds">MAKE</div>
+        <div class="vehicles-main__specification-value font-eczar">
           {% if product.metafields.vehicles_main.make %}
-            <p>{{ product.metafields.vehicles_main.make.value }}</p>
+            <div>{{ product.metafields.vehicles_main.make.value }}</div>
           {% else %}
             <div></div>
           {% endif %}
         </div>
       </div>
       <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>MODEL</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
+        <div class="vehicles-main__specification-title font-vvds">MODEL</div>
+        <div class="vehicles-main__specification-value font-eczar">
           {% if product.metafields.vehicles_main.model %}
-            <p>{{ product.metafields.vehicles_main.model.value }}</p>
+            <div>{{ product.metafields.vehicles_main.model.value }}</div>
           {% else %}
             <div></div>
           {% endif %}
         </div>
       </div>
       <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>OWNERS</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
+        <div class="vehicles-main__specification-title font-vvds">OWNERS</div>
+        <div class="vehicles-main__specification-value font-eczar">
           {% if product.metafields.vehicles_main.owners %}
-            <p>{{ product.metafields.vehicles_main.owners.value }}</p>
+            <div>{{ product.metafields.vehicles_main.owners.value }}</div>
           {% else %}
             <div></div>
           {% endif %}
         </div>
       </div>
       <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>OWNERS</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
-          {% if product.metafields.vehicles_main.engine %}
-            <p>{{ product.metafields.vehicles_main.engine.value }}</p>
-          {% else %}
-            <div></div>
-          {% endif %}
-        </div>
-      </div>
-      <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>ORIGIN</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
+        <div class="vehicles-main__specification-title font-vvds">ORIGIN</div>
+        <div class="vehicles-main__specification-value font-eczar">
           {% if product.metafields.vehicles_main.origin %}
-            <p>{{ product.metafields.vehicles_main.origin.value }}</p>
+            <div>{{ product.metafields.vehicles_main.origin.value }}</div>
           {% else %}
             <div></div>
           {% endif %}
         </div>
       </div>
       <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>ENGINE</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
-          {% if product.metafields.vehicles_main.engine %}
-            <p>{{ product.metafields.vehicles_main.engine.value }}</p>
+        <div class="vehicles-main__specification-title font-vvds">INTERIOR</div>
+        <div class="vehicles-main__specification-value font-eczar">
+          {% if product.metafields.vehicles_main.interior %}
+            <div>{{ product.metafields.vehicles_main.interior.value }}</div>
           {% else %}
             <div></div>
           {% endif %}
         </div>
       </div>
       <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>ENGINE</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
-          {% if product.metafields.vehicles_main.engine %}
-            <p>{{ product.metafields.vehicles_main.engine.value }}</p>
+        <div class="vehicles-main__specification-title font-vvds">UPHOLSTERY</div>
+        <div class="vehicles-main__specification-value font-eczar">
+          {% if product.metafields.vehicles_main.upholstery %}
+            <div>{{ product.metafields.vehicles_main.upholstery.value }}</div>
           {% else %}
             <div></div>
           {% endif %}
         </div>
       </div>
       <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>ENGINE</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
-          {% if product.metafields.vehicles_main.engine %}
-            <p>{{ product.metafields.vehicles_main.engine.value }}</p>
+        <div class="vehicles-main__specification-title font-vvds">COLOR</div>
+        <div class="vehicles-main__specification-value font-eczar">
+          {% if product.metafields.vehicles_main.color %}
+            <div>{{ product.metafields.vehicles_main.color.value }}</div>
           {% else %}
             <div></div>
           {% endif %}
         </div>
       </div>
-      <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>ENGINE</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
-          {% if product.metafields.vehicles_main.engine %}
-            <p>{{ product.metafields.vehicles_main.engine.value }}</p>
-          {% else %}
-            <div></div>
-          {% endif %}
-        </div>
-      </div>
-      <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>ENGINE</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
-          {% if product.metafields.vehicles_main.engine %}
-            <p>{{ product.metafields.vehicles_main.engine.value }}</p>
-          {% else %}
-            <div></div>
-          {% endif %}
-        </div>
-      </div>
-      <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>ENGINE</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
-          {% if product.metafields.vehicles_main.engine %}
-            <p>{{ product.metafields.vehicles_main.engine.value }}</p>
-          {% else %}
-            <div></div>
-          {% endif %}
-        </div>
-      </div>
-      <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>ENGINE</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
-          {% if product.metafields.vehicles_main.engine %}
-            <p>{{ product.metafields.vehicles_main.engine.value }}</p>
-          {% else %}
-            <div></div>
-          {% endif %}
-        </div>
-      </div>
-      <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>ENGINE</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
-          {% if product.metafields.vehicles_main.engine %}
-            <p>{{ product.metafields.vehicles_main.engine.value }}</p>
-          {% else %}
-            <div></div>
-          {% endif %}
-        </div>
-      </div>
-      <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>ENGINE</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
-          {% if product.metafields.vehicles_main.engine %}
-            <p>{{ product.metafields.vehicles_main.engine.value }}</p>
-          {% else %}
-            <div></div>
-          {% endif %}
-        </div>
-      </div>
-      <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title">
-          <h2>ENGINE</h2>
-        </div>
-        <div class="vehicles-main__specification-value">
-          {% if product.metafields.vehicles_main.engine %}
-            <p>{{ product.metafields.vehicles_main.engine.value }}</p>
+      <div class="vehicles-main__specification active">
+        <div class="vehicles-main__specification-title font-vvds">PRICE</div>
+        <div class="vehicles-main__specification-value font-eczar">
+          {% if product.price %}
+            <div>{{ product.price | money }}</div>
           {% else %}
             <div></div>
           {% endif %}
