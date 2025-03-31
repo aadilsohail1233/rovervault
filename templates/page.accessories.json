@@ -39,11 +39,27 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_show_eRRqwK": {
+      "type": "image-show",
+      "settings": {
+        "background-image": "shopify://shop_images/background-image-2.png",
+        "logo-type": false,
+        "logo": "shopify://shop_images/logo-2.png",
+        "logo-text": "IDEAS & SKILLS AT THE CORE",
+        "footer-image": "shopify://shop_images/vector-image-2.png",
+        "down-text": "Driving On or Off the Road?",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
     }
   },
   "order": [
     "image_show_wx4YMD",
     "vehicle_advantages_show_DxxVLb",
-    "main"
+    "main",
+    "image_show_eRRqwK"
   ]
 }
