@@ -137,12 +137,20 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
+    },
+    "product_vehicles_main_specifications_LJndnB": {
+      "type": "product-vehicles-main-specifications",
+      "settings": {
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "related-products",
     "vehicle_product_header_DXtgwC",
-    "image_show_z4nGJG"
+    "image_show_z4nGJG",
+    "product_vehicles_main_specifications_LJndnB"
   ]
 }
