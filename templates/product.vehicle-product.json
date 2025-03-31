@@ -66,6 +66,7 @@
         "description",
         "share"
       ],
+      "disabled": true,
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
@@ -84,6 +85,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -98,6 +100,15 @@
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 28
+      }
+    },
+    "vehicle_product_header_DXtgwC": {
+      "type": "vehicle-product-header",
+      "settings": {
+        "margin_top": 36,
+        "margin_bottom": 36,
+        "first-image": "shopify://shop_images/text-panterra.png",
+        "second-image": "shopify://shop_images/lines.png"
       }
     },
     "image_show_z4nGJG": {
@@ -131,6 +142,7 @@
   "order": [
     "main",
     "related-products",
+    "vehicle_product_header_DXtgwC",
     "image_show_z4nGJG"
   ]
 }
