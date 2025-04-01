@@ -146,6 +146,15 @@
         "margin_bottom": 36
       }
     },
+    "logo_with_text_small_P6KTnM": {
+      "type": "logo-with-text-small",
+      "settings": {
+        "logo_image": "shopify://shop_images/image.svg",
+        "text_image": "shopify://shop_images/text-explore.png",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
     "image_show_z4nGJG": {
       "type": "image-show",
       "blocks": {
@@ -188,6 +197,7 @@
     "full_width_image_GVMBb6",
     "product_vehicles_main_specifications_MMHzMf",
     "features_WnVAYB",
+    "logo_with_text_small_P6KTnM",
     "image_show_z4nGJG",
     "product_vehicles_main_specifications_LJndnB"
   ]
