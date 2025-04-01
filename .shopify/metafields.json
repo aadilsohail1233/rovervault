@@ -231,16 +231,6 @@
       }
     },
     {
-      "key": "make_model",
-      "namespace": "vehicles_main",
-      "name": "Make/Model",
-      "description": "",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
       "key": "owners",
       "namespace": "vehicles_main",
       "name": "Owners",
@@ -304,6 +294,36 @@
       "key": "class",
       "namespace": "prints",
       "name": "Class",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "make",
+      "namespace": "vehicles_main",
+      "name": "Make",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "model",
+      "namespace": "vehicles_main",
+      "name": "Model",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "interior",
+      "namespace": "vehicles_main",
+      "name": "Interior",
       "description": "",
       "type": {
         "name": "single_line_text_field",
