@@ -132,12 +132,39 @@
       font-weight: bold;
       border-radius: 5px;
     }
-    .swiper {
-      width: 100%;
-    }
-    .swiper-slide {
-      display: flex;
-      justify-content: center;
-    }
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+  position: relative;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: static; /* override Swiper default absolute */
+  width: 35px;
+  height: 35px;
+  background: #6a7e3f;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 16px;
+}
+
+.swiper-pagination {
+  position: static;
+  display: flex;
+  gap: 6px;
+}
+
     </style>
 
