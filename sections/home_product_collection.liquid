@@ -35,7 +35,7 @@
                          <div class="relative_img">
                          <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}"/>
                          <div class="badge left">
-                          Vehicle
+                          {{ product.collections.first.title | default: "Vehicle" }}
                          </div>
                          </div>
                       </div>
@@ -44,7 +44,7 @@
                         <div class="relative_img">
                          <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}"/>
                          <div class="badge right">
-                          Vehicle
+                          {{ product.collections.first.title | default: "Vehicle" }}
                          </div>
                          </div>
                       </div>
