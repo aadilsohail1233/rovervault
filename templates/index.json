@@ -129,6 +129,28 @@
         "margin_bottom": 36
       }
     },
+    "home_product_collection_gVAdHQ": {
+      "type": "home_product_collection",
+      "blocks": {
+        "product_card_LGaL9e": {
+          "type": "product_card",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_card_A96bML": {
+          "type": "product_card",
+          "settings": {
+            "product": "range-rover-1988"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_LGaL9e",
+        "product_card_A96bML"
+      ],
+      "settings": {}
+    },
     "features_KPKJ94": {
       "type": "features",
       "blocks": {
@@ -202,6 +224,7 @@
     "vehicles_page_links_QcL9HT",
     "image_with_text_1_hjJnG4",
     "logo_with_text_pmUeyA",
+    "home_product_collection_gVAdHQ",
     "features_KPKJ94",
     "image_show_QEcg9i"
   ]
