@@ -30,6 +30,7 @@
             {% if product %}
               <div class="swiper-slide">
                 <div class="card">
+                  <div class""></div>
                   <div class="card-image">
                     <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}">
                   </div>
@@ -88,50 +89,97 @@
     </script>
     
     <style>
-    .collection-slider-section {
-      padding: 40px 20px;
-      background: #ede7d3;
-    }
-    .card {
-      background: #fff;
-      border: 2px solid #95a25a;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-    .card-image img {
-      width: 100%;
-      height: auto;
-    }
-    .card-details {
-      padding: 20px;
-      background: #f3f2e6;
-    }
-    .card-details h3 {
-      font-family: 'Impact', sans-serif;
-      color: #6a7e3f;
-      margin-bottom: 10px;
-    }
-    .product-specs {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 15px;
-    }
-    .product-specs li {
-      margin-bottom: 5px;
-      font-size: 14px;
-      color: #333;
-    }
-    .view-button {
-      display: inline-block;
-      background: #e5a84c;
-      color: white;
-      padding: 10px 16px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-    }
+   .main-card {
+            background-color: #e5e7d4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            gap: 16px;
+        }
+        .card {
+            background-color: #d1d7b7;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 320px;
+            position: relative;
+        }
+        .card.green {
+            background-color: #6b8b4f;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .badge {
+            position: absolute;
+            background-color: #b3a16b;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        .badge.left {
+            top: 8px;
+            left: 8px;
+        }
+        .badge.right {
+            top: 8px;
+            right: 8px;
+        }
+        .card h2 {
+            text-align: center;
+            color: #7a8b4f;
+            font-size: 24px;
+            margin: 16px 0;
+        }
+        .card.green h2 {
+            color: white;
+        }
+        .details {
+            display: flex;
+            justify-content: space-between;
+            color: #7a8b4f;
+            margin: 8px 0;
+        }
+        .card.green .details {
+            color: white;
+        }
+        .button {
+            display: block;
+            background-color: #f39200;
+            color: white;
+            text-align: center;
+            padding: 8px 16px;
+            border-radius: 9999px;
+            margin: 16px auto 0;
+            text-decoration: none;
+        }
+        .navigation {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 32px;
+        }
+        .navigation i {
+            color: #7a8b4f;
+        }
+        .dots {
+            display: flex;
+            gap: 8px;
+        }
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #7a8b4f;
+            border-radius: 50%;
+        }
 .slider-controls {
   display: flex;
   justify-content: center;
