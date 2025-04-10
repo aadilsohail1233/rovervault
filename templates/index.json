@@ -132,10 +132,16 @@
     "home_product_collection_gVAdHQ": {
       "type": "home_product_collection",
       "blocks": {
+        "product_card_RG7JDh": {
+          "type": "product_card",
+          "settings": {
+            "product": "defender"
+          }
+        },
         "product_card_LGaL9e": {
           "type": "product_card",
           "settings": {
-            "product": ""
+            "product": "discovery"
           }
         },
         "product_card_A96bML": {
@@ -146,6 +152,7 @@
         }
       },
       "block_order": [
+        "product_card_RG7JDh",
         "product_card_LGaL9e",
         "product_card_A96bML"
       ],
