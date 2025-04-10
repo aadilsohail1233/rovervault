@@ -1,0 +1,140 @@
+{% schema %}
+    {
+      "name": "Home Product Collection",
+      "settings": [],
+      "blocks": [
+        {
+          "type": "product_card",
+          "name": "Product",
+          "settings": {
+            "product": {
+              "type": "product",
+              "label": "Select product"
+            }
+          }
+        }
+      ],
+      "max_blocks": 10,
+      "presets": [{
+        "name": "Home Product Collection"
+      }]
+    }
+    {% endschema %}
+    
+    <div class="collection-slider-section">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            {% assign product = block.settings.product %}
+            {% if product %}
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}">
+                  </div>
+                  <div class="card-details">
+                    <h3>{{ product.title }}</h3>
+                    <ul class="product-specs">
+                      <li><strong>Price:</strong> {{ product.price | money }}</li>
+                      <li><strong>Type:</strong> {{ product.type }}</li>
+                      <li><strong>Vendor:</strong> {{ product.vendor }}</li>
+                    </ul>
+                    <a href="{{ product.url }}" class="view-button">View full listing</a>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+    
+        <!-- Slider navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    
+    <!-- Swiper JS (Add this only once per theme if not already included) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        new Swiper('.mySwiper', {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 2
+            },
+            1024: {
+              slidesPerView: 3
+            }
+          }
+        });
+      });
+    </script>
+    
+    <style>
+    .collection-slider-section {
+      padding: 40px 20px;
+      background: #ede7d3;
+    }
+    .card {
+      background: #fff;
+      border: 2px solid #95a25a;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .card-image img {
+      width: 100%;
+      height: auto;
+    }
+    .card-details {
+      padding: 20px;
+      background: #f3f2e6;
+    }
+    .card-details h3 {
+      font-family: 'Impact', sans-serif;
+      color: #6a7e3f;
+      margin-bottom: 10px;
+    }
+    .product-specs {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 15px;
+    }
+    .product-specs li {
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #333;
+    }
+    .view-button {
+      display: inline-block;
+      background: #e5a84c;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .swiper {
+      width: 100%;
+    }
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+    }
+    </style>
+    
