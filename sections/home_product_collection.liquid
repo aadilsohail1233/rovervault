@@ -269,10 +269,26 @@
 }
 
 .swiper-pagination-bullet{
-  width: 2rem;
-  height: 2rem;
+  width: 2.25rem;
+  height: 2.25rem;
   border: 5px solid #6B8D50;
   background: transparent !important;
+}
+
+.swiper-pagination-bullet-active{
+ 
+  position: relative;
+}
+
+.swiper-pagination-bullet-active:after{
+  content: '';
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%
+  background: #6B8D50 !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
     </style>
 
