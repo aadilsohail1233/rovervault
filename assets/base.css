@@ -3718,5 +3718,10 @@ details-disclosure > details {
     z-index: 10;
     transform: translate(-50%, -100%);
 }
-
+.swiper-controls-wrap .slider-controls{
+   display: flex;
+    max-width: 300px;
+    min-width: 260px;
+    align-items: center;
+}
 
