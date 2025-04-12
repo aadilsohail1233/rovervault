@@ -3711,4 +3711,12 @@ details-disclosure > details {
   position: relative;
   padding-bottom: 10rem;
 }
+.swiper-controls-wrap {
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    z-index: 10;
+    transform: translate(-50%, -100%);
+}
+
 
