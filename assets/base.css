@@ -3739,3 +3739,7 @@ details-disclosure > details {
     transform: translate3d(0, 0, 0);
     z-index: 10;
 }
+.main-product-section .prd-img-others {
+    width: 100%;
+    height: 450px;
+}
