@@ -72,7 +72,15 @@
                         <div class="product-col-title white-color">Details</div>
                           <div class="product-details-col product-b-top product-b-bottom white-color">
                           <div class="cl-title white-color">Interior Color</div>
-                          <div class="cl-description white-color"> {{ product.metafields.vehicles_main.engine }}</div>  
+                          {% if product.metafields.vehicles_main.interior %}
+                            <div class="cl-description white-color">
+                              {{ product.metafields.vehicles_main.interior }}
+                            </div>
+                            {% else %}
+                            <div class="cl-description white-color">
+                              None
+                            </div>
+                            {% endif %}  
                           </div>
                           <div class="product-details-col product-b-bottom white-color">
                           <div class="cl-title white-color">Upholstery</div>
