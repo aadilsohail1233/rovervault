@@ -88,7 +88,19 @@
                           </div>
                           <div class="product-details-col product-b-bottom white-color">
                           <div class="cl-title white-color">Exterior Color</div>
-                          <div class="cl-description white-color"> {{ product.metafields.vehicles_main.engine }}</div>  
+                          <div class="cl-description white-color">
+                            {% if product.metafields.vehicles.body_color %}
+                            <div class="cl-description white-color">
+                              {{ product.metafields.vehicles.body_color }}
+                            </div>
+                            {% else %}
+                            <div class="cl-description white-color">
+                              None
+                            </div>
+                            {% endif %}  
+
+                            
+                          </div>  
                           </div>
                         
                           <div class="button-product"><a href="/collections/all" class="button--main">View full listing</a></div>
