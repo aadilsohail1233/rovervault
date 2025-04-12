@@ -41,24 +41,54 @@
                           <div class="product-col-title">{{ product.title }}</div>
                           <div class="product-details-col product-b-top product-b-bottom">
                           <div class="cl-title">Engine</div>
-                          <div class="cl-description"> {{ product.metafields.vehicles_main.engine }}</div>  
+                          <div class="cl-description">
+                            {% if product.metafields.vehicles_main.engine %}
+                              {{ product.metafields.vehicles_main.engine }}
+                            {% else %}
+                              None
+                            {% endif %}
+                          </div>  
                           </div>
                           <div class="product-details-col product-b-bottom">
                           <div class="cl-title">Transmission</div>
-                          <div class="cl-description"> {{ product.metafields.vehicles_main.transmission }}</div>  
-                          </div>     
+                          <div class="cl-description">
+                          {% if product.metafields.vehicles_main.transmission %}
+                          {{ product.metafields.vehicles_main.transmission }}
+                          {% else %}
+                          None
+                          {% endif %}
+                          </div>  
+                          </div> 
                           <div class="product-details-col product-b-bottom">
                           <div class="cl-title">Mileage</div>
-                          <div class="cl-description"> {{ product.metafields.vehicles_main.milage }}</div>  
+                          <div class="cl-description">
+                          {% if product.metafields.vehicles_main.milage %}
+                          {{ product.metafields.vehicles_main.milage }}
+                          {% else %}
+                          None
+                          {% endif %}
+                          </div>  
                           </div> 
                           <div class="product-details-col product-b-bottom">
                           <div class="cl-title">Misc.</div>
-                          <div class="cl-description"> {{ product.metafields.vehicles_main.transmission }}</div>  
-                          </div>
+                          <div class="cl-description">
+                          {% if product.metafields.vehicles_main.transmission %}
+                          {{ product.metafields.vehicles_main.transmission }}
+                          {% else %}
+                          None
+                          {% endif %}
+                          </div>  
+                          </div> 
                           <div class="product-details-col product-b-bottom mar-bottom">
                           <div class="cl-title">Heritage</div>
-                          <div class="cl-description"> {{ product.metafields.vehicles_main.transmission }}</div>  
-                          </div>
+                          <div class="cl-description">
+                          {% if product.metafields.vehicles_main.transmission %}
+                          {{ product.metafields.vehicles_main.transmission }}
+                          {% else %}
+                          None
+                          {% endif %}
+                          </div>  
+                          </div> 
                       </div>
                       <div class="product-col-2">
                         <div class="product-avaliable">Avaliable</div>
@@ -84,7 +114,18 @@
                           </div>
                           <div class="product-details-col product-b-bottom white-color">
                           <div class="cl-title white-color">Upholstery</div>
-                          <div class="cl-description white-color"> {{ product.metafields.vehicles_main.engine }}</div>  
+                          <div class="cl-description white-color">
+                            {% if product.metafields.vehicles.body_color %}
+                            <div class="cl-description white-color">
+                              {{ product.metafields.vehicles.body_color }}
+                            </div>
+                            {% else %}
+                            <div class="cl-description white-color">
+                              None
+                            </div>
+                            {% endif %}  
+                            
+                          </div>  
                           </div>
                           <div class="product-details-col product-b-bottom white-color">
                           <div class="cl-title white-color">Exterior Color</div>
