@@ -23,7 +23,7 @@
 {% endschema %}
     <div class="page-width">
     <div class="collection-slider-section">
-      <div class="swiper mySwiper">
+      <div class="swiper mySwiper1">
         <div class="swiper-wrapper">
           {% for block in section.blocks %}
             {% assign product = block.settings.product %}
@@ -150,7 +150,7 @@
     
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        new Swiper('.mySwiper', {
+        new Swiper('.mySwiper1', {
           slidesPerView: 1,
           spaceBetween: 30,
           loop: true,
