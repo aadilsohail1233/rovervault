@@ -158,6 +158,42 @@
       ],
       "settings": {}
     },
+    "home_product_collection_parts_KppqMH": {
+      "type": "home_product_collection_parts",
+      "blocks": {
+        "product_card_jMqjEc": {
+          "type": "product_card",
+          "settings": {
+            "product": "winch"
+          }
+        },
+        "product_card_DGctLt": {
+          "type": "product_card",
+          "settings": {
+            "product": "railing"
+          }
+        },
+        "product_card_qinkEE": {
+          "type": "product_card",
+          "settings": {
+            "product": "winch-1"
+          }
+        },
+        "product_card_3ictLL": {
+          "type": "product_card",
+          "settings": {
+            "product": "railing-1"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_jMqjEc",
+        "product_card_DGctLt",
+        "product_card_qinkEE",
+        "product_card_3ictLL"
+      ],
+      "settings": {}
+    },
     "features_KPKJ94": {
       "type": "features",
       "blocks": {
@@ -232,6 +268,7 @@
     "image_with_text_1_hjJnG4",
     "logo_with_text_pmUeyA",
     "home_product_collection_gVAdHQ",
+    "home_product_collection_parts_KppqMH",
     "features_KPKJ94",
     "image_show_QEcg9i"
   ]
