@@ -1,0 +1,327 @@
+{% schema %}
+{
+  "name": "Home Product Parts",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "product_card",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Select product"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [{
+    "name": "Home Product Parts"
+  }]
+}
+{% endschema %}
+    <div class="page-width">
+    <div class="collection-slider-section">
+      <div class="swiper mySwiper1">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            {% assign product = block.settings.product %}
+            {% if product %}
+              <div class="swiper-slide">
+                 <div class="main-product-section">
+                      <div class="product-col-1">
+                        <div class="product-avaliable">Avaliable</div>
+                         <div class="relative_img">
+                         <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}"/>
+                         <div class="badge left">
+                          {{ product.collections.first.title | default: "Vehicle" }}
+                         </div>
+                         </div>
+                          <div class="product-col-title">{{ product.title }}</div>
+                          <div class="product-details-col product-b-top product-b-bottom">
+                          <div class="cl-title">Fact 1</div>
+                          <div class="cl-description">
+                            {% if product.metafields.custom.fact1 %}
+                              {{ product.metafields.custom.fact1 }}
+                            {% else %}
+                              None
+                            {% endif %}
+                          </div>  
+                          </div>
+                          <div class="product-details-col product-b-bottom">
+                          <div class="cl-title">Fact 2</div>
+                          <div class="cl-description">
+                          {% if product.metafields.custom.fact2 %}
+                          {{ product.metafields.custom.fact2 }}
+                          {% else %}
+                          None
+                          {% endif %}
+                          </div>  
+                          </div> 
+                      </div>
+                 </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+    
+
+      </div>
+                    <!-- Slider navigation -->
+  <div class="swiper-controls-wrap">
+    <div class="slider-controls">
+  <div class="swiper-button-prev1">
+<svg width="67" height="46" viewBox="0 0 67 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 3L4 23M4 23L24 43M4 23H64" stroke="#6B8D50" stroke-width="5" stroke-linecap="round"/>
+</svg>
+
+</div>
+  <div class="swiper-pagination1"></div>
+  <div class="swiper-button-next1">
+<svg width="67" height="46" viewBox="0 0 67 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M43 3L63 23M63 23L43 43M63 23H3" stroke="#6B8D50" stroke-width="5" stroke-linecap="round"/>
+</svg>
+
+</div>
+</div>
+  </div>
+    </div>
+
+    </div>
+    
+    <!-- Swiper JS (Add this only once per theme if not already included) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        new Swiper('.mySwiper1', {
+          slidesPerView: 2,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination1",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next1",
+            prevEl: ".swiper-button-prev1",
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 1
+            },
+            1024: {
+              slidesPerView: 2
+            }
+          }
+        });
+      });
+    </script>
+    
+    <style>
+.main-product-section {
+    display: flex;
+   gap:4rem; 
+}
+      .desktop-section-hide {
+    display: none !important;
+}
+.white-color {
+    color: white !important;
+        border-color:white !important
+}
+.button-product .button--main {
+    font-family: 'Eczar';
+    font-size: 20px;
+}
+  .button-product {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 4rem;
+}
+.mar-bottom {
+    margin-bottom: 4rem !important;
+}
+.relative_img {
+    position: relative;
+}
+      .product-b-top {
+    border-top: 5px solid #6B8D50;
+}
+      .product-b-bottom {
+    border-bottom: 5px solid #6B8D50;
+}
+      .badge.left {
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    background-color: #C18A14;
+    color: white;
+    border-radius: 0px;
+    padding: 10px 15px;
+    font-family: 'Eczar';
+    font-size: 16px;
+}
+      .cl-description {
+    font-family: 'Eczar';
+    font-size: 20px;
+      color:#6B8D50;     
+}
+      .product-details-col {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+    align-items:center;    
+}
+      .cl-title {
+    font-family: 'VVDS Fifties';
+    font-size: 40px;
+    color:#6B8D50;    
+}
+            .badge.right {
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    background-color: #C18A14;
+    color: white;
+    border-radius: 0px;
+    padding: 10px 15px;
+    font-family: 'Eczar';
+    font-size: 16px;
+}
+      .product-col-title {
+    text-align: center;
+    font-family: VVDS Fifties;
+    font-size: 65px;
+    color: #6B8D50;
+}
+      .product-avaliable {
+    background-color: #6B8D50;
+    text-align: center;
+    color: white;
+    font-family: VVDS Fifties;
+    font-size: 24px;
+}
+  .main-product-section .prd-img {
+    width: 100%;
+    height: 300px;
+}
+ .product-col-1{
+   width:100%;
+ border: 5px solid rgba(var(--color-secondary-button-text));
+ }     
+.product-col-2{
+  width:100%;
+   border: 5px solid rgba(var(--color-secondary-button-text));
+  background-color:#6B8D50;
+}
+.collection-slider-section{
+  position: relative;
+  padding-bottom: 5rem;
+}
+.swiper-controls-wrap {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    z-index: 10;
+    transform: translate(-50%, -100%);
+}
+
+.swiper-controls-wrap .slider-controls{
+   display: flex;
+    max-width: 300px;
+    min-width: 260px;
+    align-items: center;
+}
+
+  .swiper-controls-wrap .swiper-button-prev1{
+    display: block  !important;
+}
+
+        .swiper-controls-wrap .swiper-button-prev1 svg{
+    width: 5rem;
+}
+  .swiper-controls-wrap .swiper-button-prev1:after{
+    display: none  !important;
+}
+
+
+.swiper-controls-wrap .swiper-button-next1{
+    display: block  !important;
+}
+
+      .swiper-controls-wrap .swiper-button-next1 svg{
+    width: 5rem;
+}
+
+
+.swiper-controls-wrap .swiper-button-next1:after{
+    display: none  !important;
+}
+
+.swiper-pagination1-bullet{
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 5px solid #6B8D50;
+  background: transparent !important;
+}
+
+.swiper-pagination1-bullet-active{
+ 
+  position: relative;
+}
+
+.swiper-pagination1-bullet-active:after{
+  content: '';
+    width: .75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: #6B8D50 !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.swiper-pagination1-bullets.swiper-pagination1-horizontal{
+  bottom: auto;
+  left: 50%;
+    transform: translate(-45%, 0);
+}
+@media only screen and (max-width: 767px) {
+
+.main-product-section {
+    display: block;
+    width: 96%;
+    margin: 0 auto;
+}
+  .mobile-section-hide {
+    display: none;
+}
+  .desktop-section-hide {
+        display: inline-block !important;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3rem;
+        margin-top: 0px !important;
+    }
+ .cl-title{
+   font-size: 30px;
+ } 
+ .cl-description{
+       font-size: 15px;
+ } 
+  .swiper-controls-wrap .swiper-button-prev1 {
+    display: none !important;
+}
+  .swiper-controls-wrap .swiper-button-next1 {
+    display: none !important;
+}
+}
+    </style>
+
