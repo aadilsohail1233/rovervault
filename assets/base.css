@@ -3724,4 +3724,9 @@ details-disclosure > details {
     min-width: 260px;
     align-items: center;
 }
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+  bottom: auto;
+  left: 50%;
+    transform: translate(-45%, 0);
+}
 
