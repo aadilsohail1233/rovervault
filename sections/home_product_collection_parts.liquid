@@ -95,29 +95,31 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        new Swiper('.mySwiper1', {
-          slidesPerView: 2,
-          spaceBetween: 30,
-          loop: true,
-          pagination: {
-            el: ".swiper-pagination1",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          breakpoints: {
-            768: {
-              slidesPerView: 1
-            },
-            1024: {
-              slidesPerView: 1
-            }
-          }
-        });
-      });
+document.addEventListener('DOMContentLoaded', function () {
+  new Swiper('.mySwiper1', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination1",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      // Screens up to 767px will use 1 slide per view
+      0: {
+        slidesPerView: 1
+      },
+      // From 768px and above
+      768: {
+        slidesPerView: 2
+      }
+    }
+  });
+});
     </script>
     
     <style>
