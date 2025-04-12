@@ -60,6 +60,60 @@
                           </div>  
                           </div> 
                       </div>
+                      <div class="product-col-2 mobile-section-hide">
+                        <div class="product-avaliable">Avaliable</div>
+                        <div class="relative_img">
+                          {% assign second_image = product.images[1] %}
+                         <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
+                         <div class="badge right">
+                          {{ product.collections.first.title | default: "Vehicle" }}
+                         </div>
+                         </div>
+                        <div class="product-col-title white-color">Details</div>
+                          <div class="product-details-col product-b-top product-b-bottom white-color">
+                          <div class="cl-title white-color">Interior Color</div>
+                          {% if product.metafields.vehicles_main.interior %}
+                            <div class="cl-description white-color">
+                              {{ product.metafields.vehicles_main.interior }}
+                            </div>
+                            {% else %}
+                            <div class="cl-description white-color">
+                              None
+                            </div>
+                            {% endif %}  
+                          </div>
+                          <div class="product-details-col product-b-bottom white-color">
+                          <div class="cl-title white-color">Upholstery</div>
+                          <div class="cl-description white-color">
+                            {% if product.metafields.vehicles.body_color %}
+                            <div class="cl-description white-color">
+                              {{ product.metafields.vehicles.body_color }}
+                            </div>
+                            {% else %}
+                            <div class="cl-description white-color">
+                              None
+                            </div>
+                            {% endif %}  
+                            
+                          </div>  
+                          </div>
+                          <div class="product-details-col product-b-bottom white-color">
+                          <div class="cl-title white-color">Exterior Color</div>
+                          <div class="cl-description white-color">
+                            {% if product.metafields.vehicles.body_color %}
+                            <div class="cl-description white-color">
+                              {{ product.metafields.vehicles.body_color }}
+                            </div>
+                            {% else %}
+                            <div class="cl-description white-color">
+                              None
+                            </div>
+                            {% endif %}                              
+                          </div>  
+                          </div>
+                        
+                          <div class="button-product"><a href="/collections/all" class="button--main">View full listing</a></div>
+                      </div>
                  </div>
               </div>
             {% endif %}
@@ -97,7 +151,7 @@
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         new Swiper('.mySwiper', {
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 30,
           loop: true,
           pagination: {
@@ -113,7 +167,7 @@
               slidesPerView: 1
             },
             1024: {
-              slidesPerView: 2
+              slidesPerView: 1
             }
           }
         });
