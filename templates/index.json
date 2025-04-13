@@ -230,6 +230,42 @@
       ],
       "settings": {}
     },
+    "home_product_collections_arts_WjmGLV": {
+      "type": "home_product_collections_arts",
+      "blocks": {
+        "product_card_MEYhBN": {
+          "type": "product_card",
+          "settings": {
+            "product": "cowboys"
+          }
+        },
+        "product_card_637YdY": {
+          "type": "product_card",
+          "settings": {
+            "product": "indians"
+          }
+        },
+        "product_card_6jmHcf": {
+          "type": "product_card",
+          "settings": {
+            "product": "cowboys"
+          }
+        },
+        "product_card_ix99JD": {
+          "type": "product_card",
+          "settings": {
+            "product": "indians"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_MEYhBN",
+        "product_card_637YdY",
+        "product_card_6jmHcf",
+        "product_card_ix99JD"
+      ],
+      "settings": {}
+    },
     "features_KPKJ94": {
       "type": "features",
       "blocks": {
@@ -306,6 +342,7 @@
     "home_product_collection_gVAdHQ",
     "home_product_collection_parts_KppqMH",
     "home_product_collections_prints_3rN3De",
+    "home_product_collections_arts_WjmGLV",
     "features_KPKJ94",
     "image_show_QEcg9i"
   ]
