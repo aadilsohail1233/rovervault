@@ -266,6 +266,42 @@
       ],
       "settings": {}
     },
+    "home_product_collections_drips_BmDw4j": {
+      "type": "home_product_collections_drips",
+      "blocks": {
+        "product_card_QyWixz": {
+          "type": "product_card",
+          "settings": {
+            "product": "hats"
+          }
+        },
+        "product_card_ayAyV6": {
+          "type": "product_card",
+          "settings": {
+            "product": "hats"
+          }
+        },
+        "product_card_DdAyTU": {
+          "type": "product_card",
+          "settings": {
+            "product": "hats"
+          }
+        },
+        "product_card_QbNncy": {
+          "type": "product_card",
+          "settings": {
+            "product": "hats"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_QyWixz",
+        "product_card_ayAyV6",
+        "product_card_DdAyTU",
+        "product_card_QbNncy"
+      ],
+      "settings": {}
+    },
     "features_KPKJ94": {
       "type": "features",
       "blocks": {
@@ -343,6 +379,7 @@
     "home_product_collection_parts_KppqMH",
     "home_product_collections_prints_3rN3De",
     "home_product_collections_arts_WjmGLV",
+    "home_product_collections_drips_BmDw4j",
     "features_KPKJ94",
     "image_show_QEcg9i"
   ]
