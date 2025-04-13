@@ -13,6 +13,9 @@
     font-family: 'Eczar';
     font-size: 20px;
 }
+.header__inline-menu .list-menu__item span {
+    text-decoration: none;
+}
 
 .product-card-wrapper .card,
 .contains-card--product {
