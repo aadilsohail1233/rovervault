@@ -17,6 +17,10 @@
     text-decoration: none;
 }
 
+.list-menu--inline{
+  gap: 5rem;
+}
+
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);
