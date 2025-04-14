@@ -942,6 +942,9 @@ summary::-webkit-details-marker {
     width: 100%;
     max-width: none;
   }
+  a.enquire_heading {
+    display: none;
+}
 }
 
 .grid--1-col .grid__item {
