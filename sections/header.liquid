@@ -244,6 +244,7 @@
               {%- if customer and customer.has_avatar? -%}
                 {{ customer | avatar }}
               {%- else -%}
+                <span class="carts">Cart</span>
                 <!-- icon-account.svg -->
                 <!--<span class="svg-wrapper">{{ '' | inline_asset_content }}</span>-->
               {%- endif -%}
