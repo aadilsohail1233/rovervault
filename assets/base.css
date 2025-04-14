@@ -948,6 +948,16 @@ summary::-webkit-details-marker {
   .header__icon--cart{
   margin-right: 1.8rem;
   }
+  span.carts12 {
+    background-color: #cbd1b5;
+    padding: 0 30px;
+    border: 2px solid #6B8D50;
+    height: 46px;
+    text-decoration: none;
+    font-family: Eczar;
+    font-size: 20px;
+    margin-top: 0px;
+}
 }
 
 .grid--1-col .grid__item {
