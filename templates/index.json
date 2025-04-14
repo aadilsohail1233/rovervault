@@ -366,6 +366,16 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
+    },
+    "text_and_image_ARcWy4": {
+      "type": "Text-and-image",
+      "settings": {
+        "first_text_block": "",
+        "second_text_block": "",
+        "mobile_text_block": "",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
     }
   },
   "order": [
@@ -374,12 +384,13 @@
     "image_show_TbTzfG",
     "vehicles_page_links_QcL9HT",
     "image_with_text_1_hjJnG4",
-    "logo_with_text_pmUeyA",
+    "text_and_image_ARcWy4",
     "home_product_collection_gVAdHQ",
     "home_product_collection_parts_KppqMH",
     "home_product_collections_prints_3rN3De",
     "home_product_collections_arts_WjmGLV",
     "home_product_collections_drips_BmDw4j",
+    "logo_with_text_pmUeyA",
     "features_KPKJ94",
     "image_show_QEcg9i"
   ]
