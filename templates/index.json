@@ -118,13 +118,12 @@
         "padding_bottom": 36
       }
     },
-    "logo_with_text_pmUeyA": {
+    "logo_with_text_rQ7Exy": {
       "type": "logo-with-text",
       "settings": {
-        "logo_image": "shopify://shop_images/image-1.png",
-        "first_text_image": "shopify://shop_images/text-1.png",
-        "second_text_image": "shopify://shop_images/text-2.png",
-        "mobile_text_image": "shopify://shop_images/text-3.png",
+        "logo_image": "shopify://shop_images/Layer_4_3b78df73-d389-4d75-a06c-dace18f48d7d.png",
+        "first_text_image": "shopify://shop_images/Heading_eb082fad-41c8-4a63-8b17-68c091d06146.png",
+        "second_text_image": "shopify://shop_images/Heading_1_da49abfe-e4a2-4b19-b663-68a4340cb0ea.png",
         "margin_top": 36,
         "margin_bottom": 36
       }
@@ -302,6 +301,17 @@
       ],
       "settings": {}
     },
+    "logo_with_text_pmUeyA": {
+      "type": "logo-with-text",
+      "settings": {
+        "logo_image": "shopify://shop_images/image-1.png",
+        "first_text_image": "shopify://shop_images/text-1.png",
+        "second_text_image": "shopify://shop_images/text-2.png",
+        "mobile_text_image": "shopify://shop_images/text-3.png",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
     "features_KPKJ94": {
       "type": "features",
       "blocks": {
@@ -366,16 +376,6 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
-    },
-    "text_and_image_ARcWy4": {
-      "type": "Text-and-image",
-      "settings": {
-        "first_text_block": "",
-        "second_text_block": "",
-        "mobile_text_block": "",
-        "margin_top": 36,
-        "margin_bottom": 36
-      }
     }
   },
   "order": [
@@ -384,7 +384,7 @@
     "image_show_TbTzfG",
     "vehicles_page_links_QcL9HT",
     "image_with_text_1_hjJnG4",
-    "text_and_image_ARcWy4",
+    "logo_with_text_rQ7Exy",
     "home_product_collection_gVAdHQ",
     "home_product_collection_parts_KppqMH",
     "home_product_collections_prints_3rN3De",
