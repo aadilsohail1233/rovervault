@@ -8,13 +8,71 @@
       "label": "Select Collection"
     }
   ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Tab Text"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Tab Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "active",
+          "label": "Set as Active"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "Product Collection"
+      "name": "Product Collection",
+      "blocks": [
+        {
+          "type": "tab",
+          "settings": {
+            "text": "All",
+            "url": "#",
+            "active": true
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "text": "Range Rover",
+            "url": "#",
+            "active": false
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "text": "Discovery",
+            "url": "#",
+            "active": false
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "text": "Defender",
+            "url": "#",
+            "active": false
+          }
+        }
+      ]
     }
   ]
 }
 {% endschema %}
+
 
 {% assign collection = collections[section.settings.selected_collection] %}
 
@@ -22,12 +80,13 @@
 
   <!-- Filters and Sorting Bar -->
   <div class="top-bar">
-    <div class="tabs">
-      <a href="#" class="tab active">All</a>
-      <a href="#" class="tab">Range Rover</a>
-      <a href="#" class="tab">Discovery</a>
-      <a href="#" class="tab">Defender</a>
-    </div>
+  <div class="tabs">
+    {% for tab in section.settings.tabs_list %}
+      <a href="{{ tab.url }}" class="tab {% if tab.active %}active{% endif %}">
+        {{ tab.text }}
+      </a>
+    {% endfor %}
+  </div>
 
     <div class="sort-dropdown">
       <label for="sort_by">Sort by</label>
