@@ -40,6 +40,43 @@
         "padding_bottom": 28
       }
     },
+    "product_template_collection_BXQDdj": {
+      "type": "product_template_collection",
+      "blocks": {
+        "tab_pTtMmn": {
+          "type": "tab",
+          "settings": {
+            "text": "All",
+            "url": "shopify://collections",
+            "active": false
+          }
+        },
+        "tab_aGmzta": {
+          "type": "tab",
+          "settings": {
+            "text": "Range Rover",
+            "url": "shopify://collections/vehicles",
+            "active": true
+          }
+        },
+        "tab_khQGxN": {
+          "type": "tab",
+          "settings": {
+            "text": "Discovery",
+            "url": "shopify://collections/parts",
+            "active": false
+          }
+        }
+      },
+      "block_order": [
+        "tab_pTtMmn",
+        "tab_aGmzta",
+        "tab_khQGxN"
+      ],
+      "settings": {
+        "selected_collection": "vehicles"
+      }
+    },
     "image_show_QG9Uq3": {
       "type": "image-show",
       "blocks": {
@@ -65,12 +102,6 @@
         "color_scheme": "",
         "margin_top": 36,
         "margin_bottom": 36
-      }
-    },
-    "product_template_collection_BXQDdj": {
-      "type": "product_template_collection",
-      "settings": {
-        "selected_collection": "vehicles"
       }
     }
   },
