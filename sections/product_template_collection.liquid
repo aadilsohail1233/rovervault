@@ -1,6 +1,170 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Product Collection",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "selected_collection",
+      "label": "Select Collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Collection"
+    }
+  ]
+}
 {% endschema %}
+
+{% assign collection = collections[section.settings.selected_collection] %}
+
+<div class="range-rover-section">
+
+  <!-- Filters and Sorting Bar -->
+  <div class="top-bar">
+    <div class="tabs">
+      <a href="#" class="tab active">All</a>
+      <a href="#" class="tab">Range Rover</a>
+      <a href="#" class="tab">Discovery</a>
+      <a href="#" class="tab">Defender</a>
+    </div>
+
+    <div class="sort-dropdown">
+      <label for="sort_by">Sort by</label>
+      <select id="sort_by">
+        <option value="best-selling">Best Selling</option>
+        <option value="price-asc">Price, Low to High</option>
+        <option value="price-desc">Price, High to Low</option>
+        <option value="title-asc">Alphabetically, A-Z</option>
+        <option value="title-desc">Alphabetically, Z-A</option>
+        <option value="created-desc">Date, New to Old</option>
+        <option value="created-asc">Date, Old to New</option>
+      </select>
+    </div>
+  </div>
+
+  {% if collection and collection.products.size > 0 %}
+    <div class="product-grid">
+      {% for product in collection.products %}
+        <div class="product-card" data-type="{{ product.type | downcase }}">
+          {% if product.available %}
+            <div class="status available">Available</div>
+          {% else %}
+            <div class="status sold">Sold</div>
+          {% endif %}
+
+          <div class="image">
+            <a href="{{ product.url }}">
+              <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+            </a>
+          </div>
+
+          <h3 class="product-title">{{ product.title }}</h3>
+
+          <div class="product-details">
+            <p><strong>Engine:</strong> {{ product.metafields.custom.engine }}</p>
+            <p><strong>Transmission:</strong> {{ product.metafields.custom.transmission }}</p>
+            <p><strong>Mileage:</strong> {{ product.metafields.custom.mileage }}</p>
+            <p><strong>Misc.:</strong> {{ product.metafields.custom.misc }}</p>
+            <p><strong>Heritage:</strong> {{ product.metafields.custom.heritage }}</p>
+          </div>
+
+          {% if product.available %}
+            <a href="{{ product.url }}" class="view-btn">View Full Listing</a>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    <p class="results-count">Showing {{ collection.products.size }} of {{ collection.products.size }} results</p>
+  {% else %}
+    <p>No products found in this collection.</p>
+  {% endif %}
+</div>
+
+<style>
+.range-rover-section {
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+.tab {
+  background: #e6e6d9;
+  color: #444;
+  padding: 8px 14px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.tab.active {
+  background: #628952;
+  color: #fff;
+}
+.sort-dropdown {
+  margin-top: 10px;
+}
+.sort-dropdown label {
+  margin-right: 6px;
+  font-weight: bold;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.product-card {
+  background: #f7f5ec;
+  border: 1px solid #ccc;
+  padding: 20px;
+  position: relative;
+}
+.status {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.status.available {
+  background-color: #92c35d;
+  color: white;
+}
+.status.sold {
+  background-color: #999;
+  color: white;
+}
+.product-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.product-details p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+.view-btn {
+  margin-top: 10px;
+  display: inline-block;
+  background: #f5a623;
+  padding: 8px 12px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.results-count {
+  margin-top: 30px;
+  font-style: italic;
+  text-align: center;
+}
+</style>
