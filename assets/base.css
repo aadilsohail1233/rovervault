@@ -945,6 +945,9 @@ summary::-webkit-details-marker {
   a.enquire_heading {
     display: none;
 }
+  .header__icon--cart{
+  margin-right: 1.8rem;
+  }
 }
 
 .grid--1-col .grid__item {
