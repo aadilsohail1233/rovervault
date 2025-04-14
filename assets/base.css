@@ -2637,6 +2637,16 @@ a.enquire_heading {
     background-color: #6B8D50;
     margin-right: -1rem;
 }
+span.carts12 {
+    background-color: #cbd1b5;
+    padding: 0px 30px;
+    border: 2px solid #6B8D50;
+    height: 61px;
+    text-decoration: none;
+    font-family: 'Eczar';
+    font-size: 20px;
+    margin-top: 10px;
+}
 .header__icon--menu[aria-expanded="true"]::before {
   content: "";
   top: 100%;
