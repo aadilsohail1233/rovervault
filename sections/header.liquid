@@ -273,8 +273,11 @@
 
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
           {% if cart == empty %}
-          <span class="carts">Cart</span>
+            <span class="carts">Cart</span>
+               {% comment %}
             <span class="svg-wrapper icons">{{'icon-cart-empty.svg' | inline_asset_content }}</span>
+            {% endcomment %}
+
           {% else %}
             <span class="svg-wrapper">{{'icon-cart.svg' | inline_asset_content }}</span>
           {% endif %}
