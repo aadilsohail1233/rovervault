@@ -57,15 +57,8 @@
   <div class="page-width">
     <div class="logo-with-text-wrapper">
       <div class="logo-with-text-images">
-        <img
-          src="{{ section.settings.first_text_image | img_url: 'master' }}"
-          alt="{{ section.settings.first_text_image.alt }}"
-        >
-        <img
-          src="{{ section.settings.second_text_image | img_url: 'master' }}"
-          alt="{{ section.settings.second_text_image.alt }}"
-        >
-      </div>
+        <div>{{ section.settings.first_text_block }}</div>
+        <div>{{ section.settings.second_text_block }}</div>
       <div class="logo-with-text-mobile-images">
         <img
           src="{{ section.settings.mobile_text_image | img_url: 'master' }}"
@@ -73,7 +66,7 @@
         >
       </div>
       <div class="logo-with-text-logo">
-        <img src="{{ section.settings.logo_image | img_url: 'master' }}" alt="{{ section.settings.logo_image.alt }}">
+      <div>{{ section.settings.mobile_text_block }}</div>
       </div>
     </div>
   </div>
