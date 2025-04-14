@@ -66,12 +66,19 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
+    },
+    "product_template_collection_BXQDdj": {
+      "type": "product_template_collection",
+      "settings": {
+        "selected_collection": "vehicles"
+      }
     }
   },
   "order": [
     "image_show_bQmjtw",
     "vehicle_advantages_show_Ja4QKT",
     "main",
+    "product_template_collection_BXQDdj",
     "image_show_QG9Uq3"
   ]
 }
