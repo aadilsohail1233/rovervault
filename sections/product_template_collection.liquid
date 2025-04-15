@@ -105,9 +105,7 @@
     </div>
   </div>
 
-  <div class="border-lines">
-    
-  </div>
+  <div class="border-lines"></div>
 
 
     {% if collection and collection.products.size > 0 %}
@@ -307,8 +305,9 @@
         </div>
       {% endfor %}
     </div>
-
-    <p class="results-count">Showing {{ collection.products.size }} of {{ collection.products.size }} results</p>
+    <div class="border-lines"></div>
+    <div class="results-count">Showing {{ collection.products.size }} of {{ collection.products.size }} results</div>
+    <div class="border-lines"></div>  
   {% else %}
     <p>No products found in this collection.</p>
   {% endif %}
