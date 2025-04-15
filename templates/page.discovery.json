@@ -48,7 +48,7 @@
           "settings": {
             "text": "All",
             "url": "#",
-            "active": true
+            "active": false
           }
         },
         "tab_VABNAA": {
@@ -64,7 +64,7 @@
           "settings": {
             "text": "Discovery",
             "url": "#",
-            "active": false
+            "active": true
           }
         },
         "tab_qRJeXf": {
