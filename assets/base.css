@@ -3961,8 +3961,7 @@ font-family: 'Eczar';
   background-color:#6B8D50;
 }
 .main-product-section_grid {
-    display: grid
-;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
     margin-top: 4rem;
