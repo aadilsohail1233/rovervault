@@ -47,7 +47,7 @@
           "type": "tab",
           "settings": {
             "text": "All",
-            "url": "shopify://collections",
+            "url": "#",
             "active": false
           }
         },
