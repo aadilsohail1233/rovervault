@@ -3986,6 +3986,10 @@ font-family: 'Eczar';
 }
 
 @media (max-width: 992px) {
+
+  .desktop-filters{
+     display:none;
+  }
   
 }
 
