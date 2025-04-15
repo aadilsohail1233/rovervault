@@ -4008,7 +4008,7 @@ font-family: 'Eczar';
      display:none;
   }
 .mobile-tablet-filters{
-  display:inline-block;
+  display:flex;
 }
   
 }
