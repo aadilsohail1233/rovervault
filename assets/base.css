@@ -3861,3 +3861,7 @@ font-family: 'Eczar';
   background: #628952;
   color: #fff;
 }
+.main-product-section {
+    display: flex;
+   gap:4rem;
+}
