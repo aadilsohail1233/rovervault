@@ -207,9 +207,11 @@
                         <div class="relative_img">
                           {% assign second_image = latest_product.images[1] %}
                          <img alt="{{ latest_product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ latest_product.featured_image | img_url: 'large' }}{% endif %}" />
-                         <div class="badge right">
+                         {% comment %}
+                          <div class="badge right">
                           {{ latest_product.collections.first.title | default: "Vehicle" }}
                          </div>
+                         {% endcomment %}
                          </div>
                         <div class="product-col-title white-color">Details</div>
                           <div class="product-details-col product-b-top product-b-bottom white-color">
