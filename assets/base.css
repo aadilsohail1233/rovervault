@@ -3988,6 +3988,16 @@ font-family: 'Eczar';
 .dropdwn {
     width: 80%;
 }
+.dropdwn select {
+    background-color: #CBD2B5;
+    width: 100%;
+    height: 55px;
+    padding: 10px;
+    color: #6B8D50;
+    font-family: 'Eczar';
+    font-size: 20px;
+    border-color: #6B8D50;
+}
 
 @media (max-width: 992px) {
 
