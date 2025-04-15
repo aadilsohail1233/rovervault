@@ -110,17 +110,126 @@
     {% assign latest_product = collection.products.first %}
     
     <!-- Latest Product Banner -->
-    <div class="latest-product-banner">
-      <a href="{{ latest_product.url }}">
-        <img src="{{ latest_product.featured_image | img_url: 'master' }}" alt="{{ latest_product.title }}">
-        <div class="latest-product-info">
-          <h2>{{ latest_product.title }}</h2>
-          <p><strong>Engine:</strong> {{ latest_product.metafields.custom.engine }}</p>
-          <p><strong>Transmission:</strong> {{ latest_product.metafields.custom.transmission }}</p>
-          <p><strong>Mileage:</strong> {{ latest_product.metafields.custom.mileage }}</p>
-        </div>
-      </a>
-    </div>
+                      <div class="main-product-section">
+                      <div class="product-col-1">
+                        <div class="product-avaliable">Avaliable</div>
+                         <div class="relative_img">
+                         <img alt="{{ latest_product.title }}" class="prd-img" src="{{ latest_product.featured_image | img_url: 'large' }}"/>
+                         <div class="badge left">
+                          {{ latest_product.collections.first.title | default: "Vehicle" }}
+                         </div>
+                         </div>
+                          <div class="product-col-title">{{ latest_product.title }}</div>
+                          <div class="product-details-col product-b-top product-b-bottom">
+                          <div class="cl-title">Engine</div>
+                          <div class="cl-description">
+                            {% if latest_product.metafields.vehicles_main.engine %}
+                              {{ latest_product.metafields.vehicles_main.engine }}
+                            {% else %}
+                              None
+                            {% endif %}
+                          </div>  
+                          </div>
+                          <div class="product-details-col product-b-bottom">
+                          <div class="cl-title">Transmission</div>
+                          <div class="cl-description">
+                          {% if latest_product.metafields.vehicles_main.transmission %}
+                          {{ latest_product.metafields.vehicles_main.transmission }}
+                          {% else %}
+                          None
+                          {% endif %}
+                          </div>  
+                          </div> 
+                          <div class="product-details-col product-b-bottom">
+                          <div class="cl-title">Mileage</div>
+                          <div class="cl-description">
+                          {% if latest_product.metafields.vehicles_main.milage %}
+                          {{ latest_product.metafields.vehicles_main.milage }}
+                          {% else %}
+                          None
+                          {% endif %}
+                          </div>  
+                          </div> 
+                          <div class="product-details-col product-b-bottom">
+                          <div class="cl-title">Misc.</div>
+                          <div class="cl-description">
+                          {% if latest_product.metafields.vehicles_main.transmission %}
+                          {{ latest_product.metafields.vehicles_main.transmission }}
+                          {% else %}
+                          None
+                          {% endif %}
+                          </div>  
+                          </div> 
+                          <div class="product-details-col product-b-bottom mar-bottom">
+                          <div class="cl-title">Heritage</div>
+                          <div class="cl-description">
+                          {% if latest_product.metafields.vehicles_main.transmission %}
+                          {{ latest_product.metafields.vehicles_main.transmission }}
+                          {% else %}
+                          None
+                          {% endif %}
+                          </div>  
+                          </div> 
+                          <div class="button-product desktop-section-hide margin-button-bottom"><a href="/collections/all" class="button--main">View full listing</a></div>
+                      </div>
+                      <div class="product-col-2 mobile-section-hide">
+                        <div class="product-avaliable">Avaliable</div>
+                        <div class="relative_img">
+                          {% assign second_image = latest_product.images[1] %}
+                         <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
+                         <div class="badge right">
+                          {{ latest_product.collections.first.title | default: "Vehicle" }}
+                         </div>
+                         </div>
+                        <div class="product-col-title white-color">Details</div>
+                          <div class="product-details-col product-b-top product-b-bottom white-color">
+                          <div class="cl-title white-color">Interior Color</div>
+                          {% if latest_product.metafields.vehicles_main.interior %}
+                            <div class="cl-description white-color">
+                              {{ latest_product.metafields.vehicles_main.interior }}
+                            </div>
+                            {% else %}
+                            <div class="cl-description white-color">
+                              None
+                            </div>
+                            {% endif %}  
+                          </div>
+                          <div class="product-details-col product-b-bottom white-color">
+                          <div class="cl-title white-color">Upholstery</div>
+                          <div class="cl-description white-color">
+                            {% if latest_product.metafields.vehicles.body_color %}
+                            <div class="cl-description white-color">
+                              {{ latest_product.metafields.vehicles.body_color }}
+                            </div>
+                            {% else %}
+                            <div class="cl-description white-color">
+                              None
+                            </div>
+                            {% endif %}  
+                            
+                          </div>  
+                          </div>
+                          <div class="product-details-col product-b-bottom white-color">
+                          <div class="cl-title white-color">Exterior Color</div>
+                          <div class="cl-description white-color">
+                            {% if latest_product.metafields.vehicles.body_color %}
+                            <div class="cl-description white-color">
+                              {{ latest_product.metafields.vehicles.body_color }}
+                            </div>
+                            {% else %}
+                            <div class="cl-description white-color">
+                              None
+                            </div>
+                            {% endif %}  
+
+                            
+                          </div>  
+                          </div>
+                        
+                          <div class="button-product"><a href="/collections/all" class="button--main">View full listing</a></div>
+                      </div>
+                 </div>
+
 
     <!-- Product Grid -->
     <div class="product-grid">
