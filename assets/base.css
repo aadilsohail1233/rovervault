@@ -3989,4 +3989,25 @@ font-family: 'Eczar';
   .product-grid {
     grid-template-columns: 1fr;
   }
+  .main-product-section {
+    display: block;
+    width: 96%;
+    margin: 0 auto;
+}
+  .mobile-section-hide {
+    display: none;
+}
+  .desktop-section-hide {
+        display: inline-block !important;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3rem;
+        margin-top: 0px !important;
+    }
+ .cl-title{
+   font-size: 30px;
+ } 
+ .cl-description{
+       font-size: 15px;
+ } 
 }
