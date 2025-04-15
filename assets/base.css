@@ -4010,7 +4010,12 @@ font-family: 'Eczar';
 .mobile-tablet-filters{
   display:flex;
 }
-  
+.sort-dropdown {
+    width: 18%;
+}
+  #sort_by{
+    width:100%;
+  }
 }
 
 
