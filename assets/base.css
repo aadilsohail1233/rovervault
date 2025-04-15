@@ -3977,6 +3977,14 @@ font-family: 'Eczar';
     width:100%;
 }
 
+.results-count {
+    font-weight: 500;
+    font-family: 'Eczar';
+    text-align: center;
+    font-size: 24px;
+    color: #6B8D50;
+}
+
 @media (max-width: 768px) {
   .product-grid {
     grid-template-columns: 1fr;
