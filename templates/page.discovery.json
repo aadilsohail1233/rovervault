@@ -55,7 +55,7 @@
           "type": "tab",
           "settings": {
             "text": "Range Rover",
-            "url": "https://h1si6k-cd.myshopify.com/pages/range-rover",
+            "url": "shopify://pages/range-rover",
             "active": false
           }
         },
@@ -71,7 +71,7 @@
           "type": "tab",
           "settings": {
             "text": "Defender",
-            "url": "#",
+            "url": "shopify://pages/defender",
             "active": false
           }
         }
