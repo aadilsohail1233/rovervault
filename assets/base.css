@@ -4007,6 +4007,9 @@ font-family: 'Eczar';
   .desktop-filters{
      display:none;
   }
+.mobile-tablet-filters{
+  display:inline-block;
+}
   
 }
 
