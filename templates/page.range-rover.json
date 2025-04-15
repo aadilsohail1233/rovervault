@@ -63,7 +63,7 @@
           "type": "tab",
           "settings": {
             "text": "Discovery",
-            "url": "shopify://collections/parts",
+            "url": "shopify://pages/discovery",
             "active": false
           }
         }
