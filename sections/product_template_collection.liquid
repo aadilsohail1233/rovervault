@@ -241,25 +241,65 @@
             <div class="product-avaliable">Sold</div>
           {% endif %}
 
-          <div class="image">
-            <a href="{{ product.url }}">
-              <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
-            </a>
-          </div>
+         <div class="relative_img">
+         <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}"/>
+         <div class="badge left">
+          {{ product.collections.first.title | default: "Vehicle" }}
+         </div>
+         </div>
 
-          <h3 class="product-title">{{ product.title }}</h3>
-
-          <div class="product-details">
-            <p><strong>Engine:</strong> {{ product.metafields.custom.engine }}</p>
-            <p><strong>Transmission:</strong> {{ product.metafields.custom.transmission }}</p>
-            <p><strong>Mileage:</strong> {{ product.metafields.custom.mileage }}</p>
-            <p><strong>Misc.:</strong> {{ product.metafields.custom.misc }}</p>
-            <p><strong>Heritage:</strong> {{ product.metafields.custom.heritage }}</p>
-          </div>
-
-          {% if product.available %}
-            <a href="{{ product.url }}" class="view-btn">View Full Listing</a>
-          {% endif %}
+                          <div class="product-col-title">{{ product.title }}</div>
+                          <div class="product-details-col product-b-top product-b-bottom">
+                          <div class="cl-title">Engine</div>
+                          <div class="cl-description">
+                            {% if product.metafields.vehicles_main.engine %}
+                              {{ product.metafields.vehicles_main.engine }}
+                            {% else %}
+                              None
+                            {% endif %}
+                          </div>  
+                          </div>
+                          <div class="product-details-col product-b-bottom">
+                          <div class="cl-title">Transmission</div>
+                          <div class="cl-description">
+                          {% if product.metafields.vehicles_main.transmission %}
+                          {{ product.metafields.vehicles_main.transmission }}
+                          {% else %}
+                          None
+                          {% endif %}
+                          </div>  
+                          </div> 
+                          <div class="product-details-col product-b-bottom">
+                          <div class="cl-title">Mileage</div>
+                          <div class="cl-description">
+                          {% if product.metafields.vehicles_main.milage %}
+                          {{ product.metafields.vehicles_main.milage }}
+                          {% else %}
+                          None
+                          {% endif %}
+                          </div>  
+                          </div> 
+                          <div class="product-details-col product-b-bottom">
+                          <div class="cl-title">Misc.</div>
+                          <div class="cl-description">
+                          {% if product.metafields.vehicles_main.transmission %}
+                          {{ product.metafields.vehicles_main.transmission }}
+                          {% else %}
+                          None
+                          {% endif %}
+                          </div>  
+                          </div> 
+                          <div class="product-details-col product-b-bottom mar-bottom">
+                          <div class="cl-title">Heritage</div>
+                          <div class="cl-description">
+                          {% if product.metafields.vehicles_main.transmission %}
+                          {{ product.metafields.vehicles_main.transmission }}
+                          {% else %}
+                          None
+                          {% endif %}
+                          </div>  
+                          </div> 
+                        
         </div>
       {% endfor %}
     </div>
