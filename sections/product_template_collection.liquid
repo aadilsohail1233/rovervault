@@ -105,9 +105,55 @@
     </div>
   </div>
 
+{% assign collection = collections[section.settings.selected_collection] %}
+<div class="page-width">
+<div class="range-rover-section">
+
+  <!-- Top Tabs and Sorting -->
+  <div class="top-bar">
+    <div class="tabs">
+      {% for block in section.blocks %}
+        {% if block.type == 'tab' %}
+          <a href="{{ block.settings.url }}" class="tab {% if block.settings.active %}active{% endif %}">
+            {{ block.settings.text }}
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="sort-dropdown">
+      <select id="sort_by">
+        <option value="">Sort by</option>
+        <option value="best-selling">Best Selling</option>
+        <option value="price-asc">Price, Low to High</option>
+        <option value="price-desc">Price, High to Low</option>
+        <option value="title-asc">Alphabetically, A-Z</option>
+        <option value="title-desc">Alphabetically, Z-A</option>
+        <option value="created-desc">Date, New to Old</option>
+        <option value="created-asc">Date, Old to New</option>
+      </select>
+    </div>
+  </div>
+
   {% if collection and collection.products.size > 0 %}
+    {% assign latest_product = collection.products.first %}
+    
+    <!-- Latest Product Banner -->
+    <div class="latest-product-banner">
+      <a href="{{ latest_product.url }}">
+        <img src="{{ latest_product.featured_image | img_url: 'master' }}" alt="{{ latest_product.title }}">
+        <div class="latest-product-info">
+          <h2>{{ latest_product.title }}</h2>
+          <p><strong>Engine:</strong> {{ latest_product.metafields.custom.engine }}</p>
+          <p><strong>Transmission:</strong> {{ latest_product.metafields.custom.transmission }}</p>
+          <p><strong>Mileage:</strong> {{ latest_product.metafields.custom.mileage }}</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Product Grid -->
     <div class="product-grid">
-      {% for product in collection.products %}
+      {% for product in collection.products offset:1 %}
         <div class="product-card" data-type="{{ product.type | downcase }}">
           {% if product.available %}
             <div class="status available">Available</div>
@@ -137,10 +183,14 @@
         </div>
       {% endfor %}
     </div>
+
     <p class="results-count">Showing {{ collection.products.size }} of {{ collection.products.size }} results</p>
   {% else %}
     <p>No products found in this collection.</p>
   {% endif %}
+</div>
+</div>
+
 </div>
 </div>
 
