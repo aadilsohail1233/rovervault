@@ -3818,3 +3818,10 @@ details-disclosure > details {
     width: 100%;
     height: 450px;
 }
+
+.tabs a {
+    width: 180px;
+    font-family: 'Eczar';
+    font-size: 20px;
+    text-align: center;
+}
