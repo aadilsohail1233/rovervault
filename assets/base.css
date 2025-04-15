@@ -3985,6 +3985,11 @@ font-family: 'Eczar';
     color: #6B8D50;
 }
 
+@media (max-width: 992px) {
+  
+}
+
+
 @media (max-width: 768px) {
   .main-product-section_grid {
     grid-template-columns: 1fr;
