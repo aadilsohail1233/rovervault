@@ -104,6 +104,32 @@
       </select>
     </div>
   </div>
+  <div class="top-bar-filter mobile-tablet-filters">
+ <div class="dropdwn">
+  <select onchange="if (this.value) window.location.href=this.value;">
+  {% for block in section.blocks %}
+    {% if block.type == 'tab' %}
+      <option value="{{ block.settings.url }}" {% if block.settings.active %}selected{% endif %}>
+        {{ block.settings.text }}
+      </option>
+    {% endif %}
+  {% endfor %}
+</select>
+ </div>
+        <div class="sort-dropdown">
+      <select id="sort_by">
+        <option value="">Sort by</option>
+        <option value="best-selling">Best Selling</option>
+        <option value="price-asc">Price, Low to High</option>
+        <option value="price-desc">Price, High to Low</option>
+        <option value="title-asc">Alphabetically, A-Z</option>
+        <option value="title-desc">Alphabetically, Z-A</option>
+        <option value="created-desc">Date, New to Old</option>
+        <option value="created-asc">Date, Old to New</option>
+      </select>
+    </div>
+
+  </div>
 
   <div class="border-lines"></div>
 
