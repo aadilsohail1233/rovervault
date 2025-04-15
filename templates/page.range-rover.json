@@ -66,12 +66,21 @@
             "url": "shopify://pages/discovery",
             "active": false
           }
+        },
+        "tab_jjR8aR": {
+          "type": "tab",
+          "settings": {
+            "text": "Defender",
+            "url": "shopify://pages/defender",
+            "active": false
+          }
         }
       },
       "block_order": [
         "tab_pTtMmn",
         "tab_aGmzta",
-        "tab_khQGxN"
+        "tab_khQGxN",
+        "tab_jjR8aR"
       ],
       "settings": {
         "selected_collection": "vehicles"
