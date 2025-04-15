@@ -3819,6 +3819,20 @@ details-disclosure > details {
     height: 450px;
 }
 
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+.tab {
+  background:#CBD2B5;
+  color: #6B8D50;
+  padding: 8px 14px;
+  text-decoration: none;
+  font-weight: normal;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
 .tabs a {
     width: 180px;
     font-family: 'Eczar';
