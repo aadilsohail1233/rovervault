@@ -232,7 +232,7 @@
 
 
     <!-- Product Grid -->
-    <div class="main-product-section">
+    <div class="main-product-section_grid">
       {% for product in collection.products offset:1 %}
         <div class="product-col-1" data-type="{{ product.type | downcase }}">
           {% if product.available %}
