@@ -3839,3 +3839,12 @@ details-disclosure > details {
     font-size: 20px;
     text-align: center;
 }
+#sort_by {
+width: 200px;
+height: 55px;
+border: 5px solid #628952;
+background: transparent;
+color: #628952;
+font-size: 20px;
+font-family: 'Eczar';
+}
