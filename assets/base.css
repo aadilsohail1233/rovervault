@@ -3986,7 +3986,7 @@ font-family: 'Eczar';
 }
 
 @media (max-width: 768px) {
-  .product-grid {
+  .main-product-section_grid {
     grid-template-columns: 1fr;
   }
   .main-product-section {
