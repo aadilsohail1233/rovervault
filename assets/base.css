@@ -3973,6 +3973,8 @@ font-family: 'Eczar';
 .border-lines {
     border: 2.5px solid #628952;
     margin: 4rem 0rem;
+    display:inline-block !important;
+    width:100%;
 }
 
 @media (max-width: 768px) {
