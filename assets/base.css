@@ -3848,3 +3848,16 @@ color: #628952;
 font-size: 20px;
 font-family: 'Eczar';
 }
+
+.top-bar-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tab.active {
+  background: #628952;
+  color: #fff;
+}
