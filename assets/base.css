@@ -3970,6 +3970,10 @@ font-family: 'Eczar';
     width: 100%;
     height: 300px;
 }
+.border-lines {
+    border: 3px solid #628952;
+    margin: 4rem 0rem;
+}
 
 @media (max-width: 768px) {
   .product-grid {
