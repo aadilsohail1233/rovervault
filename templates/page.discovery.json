@@ -40,6 +40,52 @@
         "padding_bottom": 28
       }
     },
+    "product_template_collection_wHRKKh": {
+      "type": "product_template_collection",
+      "blocks": {
+        "tab_JD8inj": {
+          "type": "tab",
+          "settings": {
+            "text": "All",
+            "url": "#",
+            "active": true
+          }
+        },
+        "tab_VABNAA": {
+          "type": "tab",
+          "settings": {
+            "text": "Range Rover",
+            "url": "#",
+            "active": false
+          }
+        },
+        "tab_EfTVJi": {
+          "type": "tab",
+          "settings": {
+            "text": "Discovery",
+            "url": "#",
+            "active": false
+          }
+        },
+        "tab_qRJeXf": {
+          "type": "tab",
+          "settings": {
+            "text": "Defender",
+            "url": "#",
+            "active": false
+          }
+        }
+      },
+      "block_order": [
+        "tab_JD8inj",
+        "tab_VABNAA",
+        "tab_EfTVJi",
+        "tab_qRJeXf"
+      ],
+      "settings": {
+        "selected_collection": "vehicles"
+      }
+    },
     "image_show_xb9qfm": {
       "type": "image-show",
       "blocks": {
@@ -72,6 +118,7 @@
     "image_show_AKz3cX",
     "vehicle_advantages_show_94UzyG",
     "main",
+    "product_template_collection_wHRKKh",
     "image_show_xb9qfm"
   ]
 }
