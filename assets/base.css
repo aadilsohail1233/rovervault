@@ -3984,10 +3984,13 @@ font-family: 'Eczar';
     font-size: 24px;
     color: #6B8D50;
 }
-
+.mobile-tablet-filters{
+  display:none;
+}
 .dropdwn {
     width: 80%;
 }
+
 .dropdwn select {
     background-color: #CBD2B5;
     width: 100%;
