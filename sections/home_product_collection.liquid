@@ -206,17 +206,16 @@
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           },
-          breakpoints: {
-              0: {
+    breakpoints: {
+      // Screens up to 767px will use 1 slide per view
+      0: {
         slidesPerView: 1
       },
-            768: {
-              slidesPerView: 1
-            },
-            1024: {
-              slidesPerView: 2
-            }
-          }
+      // From 768px and above
+      768: {
+        slidesPerView: 2
+      }
+    }
         });
       });
     </script>
