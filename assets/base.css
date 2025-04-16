@@ -3777,6 +3777,7 @@ details-disclosure > details {
     max-width: 300px;
     min-width: 260px;
     align-items: center;
+  justify-content:center;
 }
 
 .swiper-pagination {
