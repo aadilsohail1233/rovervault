@@ -111,7 +111,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/car-1.png",
-        "layout": "text_first",
+        "layout": "image_first",
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 36,
