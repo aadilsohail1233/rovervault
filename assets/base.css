@@ -4070,7 +4070,9 @@ font-family: 'Eczar';
 .feature-details .font-vvds {
     color: #6B8D50;
 }
-
+.feature .feature-content {
+    color: #6B8D50;
+}
 @media (max-width: 992px) {
 
   .desktop-filters{
