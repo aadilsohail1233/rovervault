@@ -3882,7 +3882,7 @@ font-family: 'Eczar';
     position: relative;
     margin: 0 auto;
     justify-content: center;
-    margin-top: 4rem;
+    margin: 5rem 0rem; 
 }
 .mar-bottom {
     margin-bottom: 4rem !important;
