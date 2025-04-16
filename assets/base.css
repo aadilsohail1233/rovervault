@@ -4010,11 +4010,10 @@ font-family: 'Eczar';
   z-index:-1;
 }
 
-
 .flip-card {
   perspective: 1000px;
   position: relative;
-  height: 100%;
+  width: 100%;
 }
 
 .flip-card-inner {
@@ -4025,21 +4024,22 @@ font-family: 'Eczar';
   transition: transform 0.8s;
 }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
+/* Make sure both sides are 100% height of their parent */
 .flip-card-front,
 .flip-card-back {
   position: absolute;
   width: 100%;
-  backface-visibility: hidden;
   height: 100%;
   top: 0;
   left: 0;
+  backface-visibility: hidden;
 }
 
 .flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
