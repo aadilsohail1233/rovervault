@@ -3770,7 +3770,7 @@ details-disclosure > details {
     left: 50%;
     top: 95%;
     z-index: 10;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -50%);
 }
 .swiper-controls-wrap .slider-controls{
    display: flex;
