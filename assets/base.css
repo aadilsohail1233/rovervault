@@ -3992,6 +3992,11 @@ font-family: 'Eczar';
     width: 80%;
 }
 
+.product-col-1 .prd-img {
+    width: 100%;
+}
+
+
 .dropdwn select {
     background-color: #CBD2B5;
     width: 100%;
@@ -4008,39 +4013,6 @@ font-family: 'Eczar';
   left: 50%;
     transform: translate(-45%, 0);
   z-index:-1;
-}
-
-.flip-card {
-  perspective: 1000px;
-  position: relative;
-  width: 100%;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.8s;
-}
-
-/* Make sure both sides are 100% height of their parent */
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  backface-visibility: hidden;
-}
-
-.flip-card-back {
-  transform: rotateY(180deg);
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
 }
 
 
