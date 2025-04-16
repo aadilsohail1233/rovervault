@@ -4002,6 +4002,13 @@ font-family: 'Eczar';
     border-color: #6B8D50;
 }
 
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+  bottom: auto;
+  left: 50%;
+    transform: translate(-45%, 0);
+  z-index:-1;
+}
+
 @media (max-width: 992px) {
 
   .desktop-filters{
