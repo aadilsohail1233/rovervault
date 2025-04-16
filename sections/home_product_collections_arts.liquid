@@ -51,14 +51,14 @@
                     <!-- Slider navigation -->
   <div class="swiper-controls-wrap">
     <div class="slider-controls">
-  <div class="swiper-button-prev">
+  <div class="swiper-button-prev3">
 <svg width="67" height="46" viewBox="0 0 67 46" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M24 3L4 23M4 23L24 43M4 23H64" stroke="#6B8D50" stroke-width="5" stroke-linecap="round"/>
 </svg>
 
 </div>
   <div class="swiper-pagination3"></div>
-  <div class="swiper-button-next">
+  <div class="swiper-button-next3">
 <svg width="67" height="46" viewBox="0 0 67 46" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M43 3L63 23M63 23L43 43M63 23H3" stroke="#6B8D50" stroke-width="5" stroke-linecap="round"/>
 </svg>
@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', function () {
       clickable: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next3",
+      prevEl: ".swiper-button-prev3",
     },
     breakpoints: {
       // Screens up to 767px will use 1 slide per view
@@ -204,28 +204,28 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 
 
-  .swiper-controls-wrap .swiper-button-prev{
+  .swiper-controls-wrap .swiper-button-prev3{
     display: block  !important;
 }
 
-        .swiper-controls-wrap .swiper-button-prev svg{
+        .swiper-controls-wrap .swiper-button-prev3 svg{
     width: 5rem;
 }
-  .swiper-controls-wrap .swiper-button-prev:after{
+  .swiper-controls-wrap .swiper-button-prev3:after{
     display: none  !important;
 }
 
 
-.swiper-controls-wrap .swiper-button-next{
+.swiper-controls-wrap .swiper-button-next3{
     display: block  !important;
 }
 
-      .swiper-controls-wrap .swiper-button-next svg{
+      .swiper-controls-wrap .swiper-button-next3 svg{
     width: 5rem;
 }
 
 
-.swiper-controls-wrap .swiper-button-next:after{
+.swiper-controls-wrap .swiper-button-next3:after{
     display: none  !important;
 }
 
@@ -252,10 +252,12 @@ document.addEventListener('DOMContentLoaded', function () {
     transform: translate(-50%, -50%);
     position: absolute;
 }
-.swiper-pagination-bullets.swiper-pagination-horizontal{
+.swiper-button-next3.swiper-pagination-bullets.swiper-pagination-horizontal{
   bottom: auto;
-  left: 50%;
-    transform: translate(-45%, 0);
+  left: 48%;
+  transform: translate(-45%, 0);
+  max-width: 50%;
+  z-index: 1;
 }
 @media only screen and (max-width: 767px) {
 
@@ -280,10 +282,10 @@ document.addEventListener('DOMContentLoaded', function () {
  .cl-description{
        font-size: 15px;
  } 
-  .swiper-controls-wrap .swiper-button-prev {
+  .swiper-controls-wrap .swiper-button-prev3 {
     display: none !important;
 }
-  .swiper-controls-wrap .swiper-button-next {
+  .swiper-controls-wrap .swiper-button-next3 {
     display: none !important;
 }
 }
