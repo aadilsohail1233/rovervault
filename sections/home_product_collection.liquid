@@ -29,9 +29,9 @@
             {% assign product = block.settings.product %}
             {% if product %}
               <div class="swiper-slide">
-                 <div class="main-product-section">
+                 <div class="main-product-section flip-card">
 
-                     <div class="card">
+                     <div class="card card flip-card-front">
                       <div class="product-col-1">
                         <div class="product-avaliable">Avaliable</div>
                          <div class="relative_img">
@@ -94,7 +94,7 @@
                           <div class="button-product desktop-section-hide margin-button-bottom"><a href="/collections/all" class="button--main">View full listing</a></div>
                       </div>
                      </div>
-                     <div class="card_details">
+                     <div class="card_details flip-card-back">
                       <div class="product-col-2 mobile-section-hide">
                         <div class="product-avaliable">Avaliable</div>
                         <div class="relative_img">
@@ -213,10 +213,8 @@
     </script>
     
     <style>
-.main-product-section {
-    display: flex;
-   gap:4rem;
-}
+
+
       .desktop-section-hide {
     display: none !important;
 }
