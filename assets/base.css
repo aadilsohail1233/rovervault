@@ -4015,7 +4015,7 @@ font-family: 'Eczar';
 .card {
   width: 100%;
   position: relative;
-  height: 100%;
+  height: 25em;
   perspective: 150em;
 }
 .card__side {
@@ -4023,7 +4023,7 @@ font-family: 'Eczar';
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 25em;
   backface-visibility: hidden;
   transition: all 0.6s ease;
 }
