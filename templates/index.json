@@ -157,36 +157,6 @@
       ],
       "settings": {}
     },
-    "home_product_collection_pUTfKx": {
-      "type": "home_product_collection",
-      "blocks": {
-        "product_card_JgjFnX": {
-          "type": "product_card",
-          "settings": {
-            "product": "range-rover-1988"
-          }
-        },
-        "product_card_kgJe3k": {
-          "type": "product_card",
-          "settings": {
-            "product": "defender"
-          }
-        },
-        "product_card_aNznFG": {
-          "type": "product_card",
-          "settings": {
-            "product": "discovery"
-          }
-        }
-      },
-      "block_order": [
-        "product_card_JgjFnX",
-        "product_card_kgJe3k",
-        "product_card_aNznFG"
-      ],
-      "name": "Home Product Collection",
-      "settings": {}
-    },
     "home_product_collection_parts_KppqMH": {
       "type": "home_product_collection_parts",
       "blocks": {
@@ -416,7 +386,6 @@
     "image_with_text_1_hjJnG4",
     "logo_with_text_rQ7Exy",
     "home_product_collection_gVAdHQ",
-    "home_product_collection_pUTfKx",
     "home_product_collection_parts_KppqMH",
     "home_product_collections_prints_3rN3De",
     "home_product_collections_arts_WjmGLV",
