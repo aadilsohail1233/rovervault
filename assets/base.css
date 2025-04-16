@@ -4063,6 +4063,9 @@ font-family: 'Eczar';
 .image-with-text-1_heading{
   color:#6B8D50;
 }
+.image-with-text-1_text p {
+    color: #6b8d50;
+}
 
 @media (max-width: 992px) {
 
