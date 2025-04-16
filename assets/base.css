@@ -3996,6 +3996,10 @@ font-family: 'Eczar';
     width: 100%;
 }
 
+.product-col-2 .prd-img {
+    width: 100%;
+}
+
 
 .content {
   text-align: center;
