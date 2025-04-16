@@ -21,375 +21,119 @@
   }]
 }
 {% endschema %}
-    <div class="page-width">
-    <div class="collection-slider-section">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          {% for block in section.blocks %}
-            {% assign product = block.settings.product %}
-            {% if product %}
-              <div class="swiper-slide">
-                 <div class="flip-card">
-                    <div class="flip-card-inner">
-                     <div class="card flip-card-front">
-                      <div class="product-col-1">
-                        <div class="product-avaliable">Avaliable</div>
-                         <div class="relative_img">
-                         <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}"/>
-                         <div class="badge left">
-                          {{ product.collections.first.title | default: "Vehicle" }}
-                         </div>
-                         </div>
-                          <div class="product-col-title">{{ product.title }}</div>
-                          <div class="product-details-col product-b-top product-b-bottom">
-                          <div class="cl-title">Engine</div>
-                          <div class="cl-description">
-                            {% if product.metafields.vehicles_main.engine %}
-                              {{ product.metafields.vehicles_main.engine }}
-                            {% else %}
-                              None
-                            {% endif %}
-                          </div>  
-                          </div>
-                          <div class="product-details-col product-b-bottom">
-                          <div class="cl-title">Transmission</div>
-                          <div class="cl-description">
-                          {% if product.metafields.vehicles_main.transmission %}
-                          {{ product.metafields.vehicles_main.transmission }}
-                          {% else %}
-                          None
-                          {% endif %}
-                          </div>  
-                          </div> 
-                          <div class="product-details-col product-b-bottom">
-                          <div class="cl-title">Mileage</div>
-                          <div class="cl-description">
-                          {% if product.metafields.vehicles_main.milage %}
-                          {{ product.metafields.vehicles_main.milage }}
-                          {% else %}
-                          None
-                          {% endif %}
-                          </div>  
-                          </div> 
-                          <div class="product-details-col product-b-bottom">
-                          <div class="cl-title">Misc.</div>
-                          <div class="cl-description">
-                          {% if product.metafields.vehicles_main.transmission %}
-                          {{ product.metafields.vehicles_main.transmission }}
-                          {% else %}
-                          None
-                          {% endif %}
-                          </div>  
-                          </div> 
-                          <div class="product-details-col product-b-bottom mar-bottom">
-                          <div class="cl-title">Heritage</div>
-                          <div class="cl-description">
-                          {% if product.metafields.vehicles_main.transmission %}
-                          {{ product.metafields.vehicles_main.transmission }}
-                          {% else %}
-                          None
-                          {% endif %}
-                          </div>  
-                          </div> 
-                          <div class="button-product desktop-section-hide margin-button-bottom"><a href="/collections/all" class="button--main">View full listing</a></div>
-                      </div>
-                     </div>
-                     <div class="card_details flip-card-back">
-                      <div class="product-col-2 mobile-section-hide">
-                        <div class="product-avaliable">Avaliable</div>
-                        <div class="relative_img">
-                          {% assign second_image = product.images[1] %}
-                         <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
-                         <div class="badge right">
-                          {{ product.collections.first.title | default: "Vehicle" }}
-                         </div>
-                         </div>
-                        <div class="product-col-title white-color">Details</div>
-                          <div class="product-details-col product-b-top product-b-bottom white-color">
-                          <div class="cl-title white-color">Interior Color</div>
-                          {% if product.metafields.vehicles_main.interior %}
-                            <div class="cl-description white-color">
-                              {{ product.metafields.vehicles_main.interior }}
-                            </div>
-                            {% else %}
-                            <div class="cl-description white-color">
-                              None
-                            </div>
-                            {% endif %}  
-                          </div>
-                          <div class="product-details-col product-b-bottom white-color">
-                          <div class="cl-title white-color">Upholstery</div>
-                          <div class="cl-description white-color">
-                            {% if product.metafields.vehicles.body_color %}
-                            <div class="cl-description white-color">
-                              {{ product.metafields.vehicles.body_color }}
-                            </div>
-                            {% else %}
-                            <div class="cl-description white-color">
-                              None
-                            </div>
-                            {% endif %}  
-                            
-                          </div>  
-                          </div>
-                          <div class="product-details-col product-b-bottom white-color">
-                          <div class="cl-title white-color">Exterior Color</div>
-                          <div class="cl-description white-color">
-                            {% if product.metafields.vehicles.body_color %}
-                            <div class="cl-description white-color">
-                              {{ product.metafields.vehicles.body_color }}
-                            </div>
-                            {% else %}
-                            <div class="cl-description white-color">
-                              None
-                            </div>
-                            {% endif %}  
 
-                            
-                          </div>  
-                          </div>
-                        
-                          <div class="button-product"><a href="/collections/all" class="button--main">View full listing</a></div>
-                      </div>
-                     </div>
-                    </div>
-                 </div>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </div>
-    
+{% stylesheet %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 
-      </div>
-                    <!-- Slider navigation -->
-  <div class="swiper-controls-wrap">
-    <div class="slider-controls">
-  <div class="swiper-button-prev">
-<svg width="67" height="46" viewBox="0 0 67 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M24 3L4 23M4 23L24 43M4 23H64" stroke="#6B8D50" stroke-width="5" stroke-linecap="round"/>
-</svg>
-
-</div>
-  <div class="swiper-pagination"></div>
-  <div class="swiper-button-next">
-<svg width="67" height="46" viewBox="0 0 67 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M43 3L63 23M63 23L43 43M63 23H3" stroke="#6B8D50" stroke-width="5" stroke-linecap="round"/>
-</svg>
-
-</div>
-</div>
-  </div>
-    </div>
-
-    </div>
-    
-    <!-- Swiper JS (Add this only once per theme if not already included) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        new Swiper('.mySwiper', {
-          slidesPerView: 2,
-          spaceBetween: 30,
-          loop: true,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          breakpoints: {
-            768: {
-              slidesPerView: 1
-            },
-            1024: {
-              slidesPerView: 2
-            }
-          }
-        });
-      });
-    </script>
-    
-    <style>
-
-      .desktop-section-hide {
-    display: none !important;
+.swiper {
+  padding: 30px 0;
 }
-.white-color {
-    color: white !important;
-        border-color:white !important
-}
-.button-product .button--main {
-    font-family: 'Eczar';
-    font-size: 20px;
-}
-  .button-product {
-    display: flex;
-    position: relative;
-    margin: 0 auto;
-    justify-content: center;
-    margin-top: 4rem;
-}
-.mar-bottom {
-    margin-bottom: 4rem !important;
-}
-.relative_img {
-    position: relative;
-}
-      .product-b-top {
-    border-top: 5px solid #6B8D50;
-}
-      .product-b-bottom {
-    border-bottom: 5px solid #6B8D50;
-}
-      .badge.left {
-    position: absolute;
-    left: 15px;
-    top: 20px;
-    background-color: #C18A14;
-    color: white;
-    border-radius: 0px;
-    padding: 10px 15px;
-    font-family: 'Eczar';
-    font-size: 16px;
-}
-      .cl-description {
-    font-family: 'Eczar';
-    font-size: 20px;
-      color:#6B8D50;     
-}
-      .product-details-col {
-    display: flex;
-    justify-content: space-between;
-    width: 85%;
-    margin: 0 auto;
-    align-items:center;    
-}
-      .cl-title {
-    font-family: 'VVDS Fifties';
-    font-size: 40px;
-    color:#6B8D50;    
-}
-            .badge.right {
-    position: absolute;
-    left: 15px;
-    top: 20px;
-    background-color: #C18A14;
-    color: white;
-    border-radius: 0px;
-    padding: 10px 15px;
-    font-family: 'Eczar';
-    font-size: 16px;
-}
-      .product-col-title {
-    text-align: center;
-    font-family: VVDS Fifties;
-    font-size: 65px;
-    color: #6B8D50;
-}
-      .product-avaliable {
-    background-color: #6B8D50;
-    text-align: center;
-    color: white;
-    font-family: VVDS Fifties;
-    font-size: 24px;
-}
-  .main-product-section .prd-img {
-    width: 100%;
-    height: 300px;
-}
- .product-col-1{
-   width:100%;
- border: 5px solid rgba(var(--color-secondary-button-text));
- }     
-.product-col-2{
-  width:100%;
-   border: 5px solid rgba(var(--color-secondary-button-text));
-  background-color:#6B8D50;
+.swiper-slide {
+  height: auto;
 }
 
-  .swiper-controls-wrap .swiper-button-prev{
-    display: block  !important;
+.product-card {
+  perspective: 1000px;
+  height: 100%;
 }
-
-        .swiper-controls-wrap .swiper-button-prev svg{
-    width: 5rem;
-}
-  .swiper-controls-wrap .swiper-button-prev:after{
-    display: none  !important;
-}
-
-
-.swiper-controls-wrap .swiper-button-next{
-    display: block  !important;
-}
-
-      .swiper-controls-wrap .swiper-button-next svg{
-    width: 5rem;
-}
-
-
-.swiper-controls-wrap .swiper-button-next:after{
-    display: none  !important;
-}
-
-.swiper-pagination-bullet{
-  width: 2.25rem;
-  height: 2.25rem;
-  border: 5px solid #6B8D50;
-  background: transparent !important;
-}
-
-.swiper-pagination-bullet-active{
- 
+.flip-card {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
   position: relative;
 }
+.flip-card:hover {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.flip-card-front {
+  z-index: 2;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+.flip-card-back .btn {
+  margin-top: 10px;
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.product-image img {
+  width: 100%;
+  display: block;
+}
+.product-title {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+{% endstylesheet %}
 
-.swiper-pagination-bullet-active:after{
-  content: '';
-    width: .75rem;
-    height: 0.75rem;
-    border-radius: 50%;
-    background: #6B8D50 !important;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    position: absolute;
-}
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    {% for block in section.blocks %}
+      {% assign product = all_products[block.settings.product] %}
+      {% if product %}
+      <div class="swiper-slide product-card">
+        <div class="flip-card">
+          <div class="flip-card-front">
+            <div class="product-image">
+              <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+            </div>
+            <div class="product-title">
+              {{ product.title }}
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="product-details">
+              <p>{{ product.description | strip_html | truncate: 100 }}</p>
+              <p><strong>{{ product.price | money }}</strong></p>
+              <a href="{{ product.url }}" class="btn">View Product</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
 
-
-@media only screen and (max-width: 767px) {
-
-.main-product-section {
-    display: block;
-    width: 96%;
-    margin: 0 auto;
-}
-  .mobile-section-hide {
-    display: none;
-}
-  .desktop-section-hide {
-        display: inline-block !important;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 3rem;
-        margin-top: 0px !important;
-    }
- .cl-title{
-   font-size: 30px;
- } 
- .cl-description{
-       font-size: 15px;
- } 
-  .swiper-controls-wrap .swiper-button-prev {
-    display: none !important;
-}
-  .swiper-controls-wrap .swiper-button-next {
-    display: none !important;
-}
-}
-    </style>
-
+{% javascript %}
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+        768: {
+          slidesPerView: 1
+        },
+        1024: {
+          slidesPerView: 2
+        }
+      }
+    });
+  });
+</script>
+{% endjavascript %}
