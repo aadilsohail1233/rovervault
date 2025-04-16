@@ -4094,6 +4094,9 @@ font-family: 'Eczar';
   .main-product-section_grid {
     grid-template-columns: 1fr;
   }
+  .content{
+    padding:0em 0;
+  }
   .main-product-section {
     display: block;
     width: 96%;
