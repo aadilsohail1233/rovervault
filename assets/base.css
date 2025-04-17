@@ -4098,6 +4098,9 @@ font-family: 'Eczar';
   .header__heading, .header__heading-link{
     text-align:left;
   }
+  .header__heading-logo{
+        max-width: 90%;
+  }
   .main-product-section_grid {
     grid-template-columns: 1fr;
   }
