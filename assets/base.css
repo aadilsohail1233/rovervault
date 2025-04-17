@@ -19,6 +19,13 @@
     text-transform: uppercase;
     color: #6B8D50;
 }
+a.button--main:hover {
+    transform: perspective(1500px) rotateX(20deg) rotateY(20deg);
+    will-change: transform;
+    transform-origin: 50% 50% 0px;
+    opacity: 1;
+    transition: transform 0.3s ease-in-out;
+}
 .header__inline-menu .list-menu__item span {
     text-decoration: none;
 }
