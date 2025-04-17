@@ -52,7 +52,7 @@
     }
   }
 {%- endstyle -%}
-{% if section.settings.mobile_text_image %}
+
 <div class="section-{{ section.id }}-margin gradient color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
     <div class="logo-with-text-wrapper">
@@ -66,19 +66,21 @@
           alt="{{ section.settings.second_text_image.alt }}"
         >
       </div>
+      {% if section.settings.mobile_text_image %}
       <div class="logo-with-text-mobile-images">
         <img
           src="{{ section.settings.mobile_text_image | img_url: 'master' }}"
           alt="{{ section.settings.mobile_text_image.alt }}"
         >
       </div>
+{% endif %}       
       <div class="logo-with-text-logo">
         <img src="{{ section.settings.logo_image | img_url: 'master' }}" alt="{{ section.settings.logo_image.alt }}">
       </div>
     </div>
   </div>
 </div>
-{% endif %}  
+ 
 {% schema %}
 {
   "name": "Logo with Text",
