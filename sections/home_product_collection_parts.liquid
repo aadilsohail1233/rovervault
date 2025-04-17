@@ -33,7 +33,7 @@
                  <div class="content">
                    <div class="cards">
                  <div class="card">
-                   
+                   <div class="card__side card__side--front card__side--front-1">
                    <div class="product-col-1">
                         <div class="product-avaliable">Avaliable</div>
                          <div class="relative_img">
@@ -64,6 +64,52 @@
                           </div>  
                           </div> 
                       </div>
+                     <div class="button-product desktop-section-hide margin-button-bottom"><a href="/collections/all" class="button--main">View full listing</a></div>
+                   </div>
+                   <div class="card__side card__side--back card__side--back-1">
+
+                     
+                      <div class="product-col-2">
+                        <div class="product-avaliable">Avaliable</div>
+                        <div class="relative_img">
+                          {% assign second_image = product.images[1] %}
+                         <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
+                         <div class="badge right">
+                          {{ product.collections.first.title | default: "Vehicle" }}
+                         </div>
+                         </div>
+                        <div class="product-col-title white-color">Details</div>
+                          <div class="product-details-col product-b-top product-b-bottom white-color">
+                          <div class="cl-title white-color">Fact 3</div>
+                            {% if product.metafields.custom.fact1 %}
+                             <div class="cl-description white-color">
+                              {{ product.metafields.custom.fact1 }}
+                             </div>
+                            {% else %}
+                              <div class="cl-description white-color">
+                              None
+                              </div>  
+                            {% endif %} 
+                          </div>
+                          <div class="product-details-col product-b-bottom white-color">
+                          <div class="cl-title white-color">Fact 4</div>
+                          <div class="cl-description white-color">
+                            {% if product.metafields.custom.fact2 %}
+                            <div class="cl-description white-color">
+                              {{ product.metafields.custom.fact2 }}
+                            </div>
+                            {% else %}
+                            <div class="cl-description white-color">
+                              None
+                            </div>
+                            {% endif %}  
+                            
+                          </div>  
+                          </div>                        
+                          <div class="button-product"><a href="/collections/all" class="button--main">View full listing</a></div>
+                      </div>
+
+                   </div>
 
                  </div>
                    </div>
