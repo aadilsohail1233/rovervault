@@ -109,6 +109,12 @@
       <div class="image-with-text-1-details">
         {%- for block in section.blocks -%}
           {% case block.type %}
+            {%- when 'subheading_text' -%}
+              <div
+                class="image-with-text-1_subheading"
+              >
+                {{ block.settings.subheading_text }}
+              </div>            
             {%- when 'heading' -%}
               <div
                 class="image-with-text-1_heading"
