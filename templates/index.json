@@ -21,6 +21,12 @@
     "image_with_text_1_hehR3M": {
       "type": "image-with-text-1",
       "blocks": {
+        "subheading_HWqCjM": {
+          "type": "subheading",
+          "settings": {
+            "subheading_text": "Vehicles & Arts"
+          }
+        },
         "heading_VaRR6r": {
           "type": "heading",
           "settings": {
@@ -44,6 +50,7 @@
         }
       },
       "block_order": [
+        "subheading_HWqCjM",
         "heading_VaRR6r",
         "text_nGmxQa",
         "button_6DzHTe"
