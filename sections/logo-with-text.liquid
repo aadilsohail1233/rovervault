@@ -56,7 +56,7 @@
 <div class="section-{{ section.id }}-margin gradient color-{{ section.settings.section_color_scheme }} {% unless section.settings.mobile_text_image %} emptyonmobile{% endunless %}">
   <div class="page-width">
     <div class="logo-with-text-wrapper">
-      <div class="logo-with-text-images">
+      <div class="logo-with-text-images{% if section.settings.layout_direction == 'logo-left' %} layoutorders2{% endif %}">
         <img
           src="{{ section.settings.first_text_image | img_url: 'master' }}"
           alt="{{ section.settings.first_text_image.alt }}"
@@ -74,7 +74,7 @@
         >
       </div>
 {% endif %}       
-      <div class="logo-with-text-logo">
+      <div class="logo-with-text-logo{% if section.settings.layout_direction == 'logo-left' %} layoutorders1{% endif %}">
         <img src="{{ section.settings.logo_image | img_url: 'master' }}" alt="{{ section.settings.logo_image.alt }}">
       </div>
     </div>
