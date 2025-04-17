@@ -13,6 +13,12 @@
     font-family: 'Eczar';
     font-size: 20px;
 }
+.image-with-text-1_subheading {
+    font-family: 'VVDS Fifties';
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #6B8D50;
+}
 .header__inline-menu .list-menu__item span {
     text-decoration: none;
 }
