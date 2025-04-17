@@ -125,7 +125,8 @@
         "first_text_image": "shopify://shop_images/Heading_eb082fad-41c8-4a63-8b17-68c091d06146.png",
         "second_text_image": "shopify://shop_images/Heading_1_da49abfe-e4a2-4b19-b663-68a4340cb0ea.png",
         "margin_top": 36,
-        "margin_bottom": 36
+        "margin_bottom": 36,
+        "layout_direction": "text-left"
       }
     },
     "home_product_collection_gVAdHQ": {
@@ -309,7 +310,8 @@
         "second_text_image": "shopify://shop_images/text-2.png",
         "mobile_text_image": "shopify://shop_images/text-3.png",
         "margin_top": 36,
-        "margin_bottom": 36
+        "margin_bottom": 36,
+        "layout_direction": "logo-left"
       }
     },
     "features_KPKJ94": {
