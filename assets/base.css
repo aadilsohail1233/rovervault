@@ -4091,6 +4091,10 @@ font-family: 'Eczar';
 
 
 @media (max-width: 768px) {
+
+  header.header.header--middle-left.header--mobile-center.page-width.header--has-menu.header--has-account {
+    display: flex;
+}
   .main-product-section_grid {
     grid-template-columns: 1fr;
   }
