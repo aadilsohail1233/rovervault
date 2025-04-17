@@ -4095,6 +4095,9 @@ font-family: 'Eczar';
   header.header.header--middle-left.header--mobile-center.page-width.header--has-menu.header--has-account {
     display: flex;
 }
+  .header__heading, .header__heading-link{
+    text-align:left;
+  }
   .main-product-section_grid {
     grid-template-columns: 1fr;
   }
