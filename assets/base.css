@@ -9,6 +9,11 @@
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
+.card__side--front-1 .prd-img-others {
+    width: 100%;
+}
+
+
 .header__inline-menu .list-menu__item {
     font-family: 'Eczar';
     font-size: 20px;
