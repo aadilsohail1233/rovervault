@@ -29,7 +29,11 @@
             {% assign product = block.settings.product %}
             {% if product %}
               <div class="swiper-slide">
-                 <div class="main-product-section">
+                 <div class="content">
+                <div class="cards">
+                     <div class="card"> 
+
+                      <div class="card__side card__side--front card__side--front-1"> 
                       <div class="product-col-1">
                         <div class="product-avaliable">Avaliable</div>
                          <div class="relative_img">
@@ -40,7 +44,24 @@
                          </div>
                           <div class="product-col-title">{{ product.title }}</div>
                       </div>
+                      </div>  
+                    <div class="card__side card__side--back card__side--back-1">
+                     <div class="product-col-2">
+                        <div class="product-avaliable">Avaliable</div>
+                        <div class="relative_img">
+                          {% assign second_image = product.images[1] %}
+                         <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
+                         <div class="badge right">
+                          {{ product.collections.first.title | default: "Vehicle" }}
+                         </div>
+                        </div>
+                        <div class="product-col-title white-color">{{ product.title }}</div>
+                     </div>   
+                    </div> 
+                   
                  </div>
+                </div>
+                </div>
               </div>
             {% endif %}
           {% endfor %}
