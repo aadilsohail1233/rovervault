@@ -12,6 +12,10 @@
 .card__side--front-1 .prd-img-others {
     width: 100%;
 }
+.main_section_all {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .padding-bottom-zero .content {
     padding: 2em 0em 0em 0em;
