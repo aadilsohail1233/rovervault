@@ -1,4 +1,4 @@
-{% schema %}
+     {% schema %}
 {
   "name": "Product Collection",
   "settings": [
@@ -202,6 +202,7 @@
                           </div> 
                           <div class="button-product desktop-section-hide margin-button-bottom"><a href="/collections/all" class="button--main">View full listing</a></div>
                       </div>
+                        
                       <div class="product-col-2 mobile-section-hide">
                         <div class="product-avaliable">Avaliable</div>
                         <div class="relative_img">
@@ -264,8 +265,14 @@
 
 
     <!-- Product Grid -->
-    <div class="main-product-section_grid">
+
       {% for product in collection.products offset:1 %}
+     <div class="content">
+        <div class="cards">
+          <div class="card">
+        
+         <div class="card__side card__side--front card__side--front-1"> 
+        
         <div class="product-col-1" data-type="{{ product.type | downcase }}">
           {% if product.available %}
             <div class="product-avaliable">Available</div>
@@ -335,8 +342,16 @@
                           </div> 
                         <div class="button-product desktop-section-hide margin-button-bottom"><a href="/collections/all" class="button--main">More info</a></div>
         </div>
+          </div>
+        <div class="card__side card__side--back card__side--back-1">
+
+        </div>  
+            
+     </div> 
+        </div>
+</div>
       {% endfor %}
-    </div>
+    
     <div class="border-lines"></div>
     <div class="results-count">Showing {{ collection.products.size }} of {{ collection.products.size }} results</div>
     <div class="border-lines"></div>  
