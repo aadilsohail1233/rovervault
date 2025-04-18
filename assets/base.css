@@ -13,6 +13,10 @@
     width: 100%;
 }
 
+.padding-bottom-zero .content {
+    padding: 4em 0em 0em 0em;
+}
+
 
 .header__inline-menu .list-menu__item {
     font-family: 'Eczar';
