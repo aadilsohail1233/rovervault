@@ -16,7 +16,10 @@
     display: flex;
     flex-wrap: wrap;
 }
-
+.main_section_all .content {
+    flex: 0 0 50%;
+    box-sizing: border-box;
+}
 .padding-bottom-zero .content {
     padding: 2em 0em 0em 0em;
 }
