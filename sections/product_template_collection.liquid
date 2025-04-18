@@ -265,7 +265,7 @@
 
 
     <!-- Product Grid -->
-
+<div class="main_section_all">
       {% for product in collection.products offset:1 %}
      <div class="content">
         <div class="cards">
@@ -409,6 +409,7 @@
         </div>
 </div>
       {% endfor %}
+</div>      
     
     <div class="border-lines"></div>
     <div class="results-count">Showing {{ collection.products.size }} of {{ collection.products.size }} results</div>
