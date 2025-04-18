@@ -16,6 +16,9 @@
 .padding-bottom-zero .content {
     padding: 2em 0em 0em 0em;
 }
+.parts-sections .cards {
+    height: 93vh;
+}
 
 .padding-bottom-zero .cards
 {
