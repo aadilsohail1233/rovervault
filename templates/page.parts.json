@@ -32,70 +32,6 @@
         "margin_bottom": 36
       }
     },
-    "product_parts_template_collection_bGpRCB": {
-      "type": "product_parts_template_collection",
-      "blocks": {
-        "tab_RPm6fR": {
-          "type": "tab",
-          "settings": {
-            "text": "All",
-            "url": "#",
-            "active": false
-          }
-        },
-        "tab_dP8mwH": {
-          "type": "tab",
-          "settings": {
-            "text": "Arts",
-            "url": "#",
-            "active": false
-          }
-        },
-        "tab_bMp6La": {
-          "type": "tab",
-          "settings": {
-            "text": "Parts",
-            "url": "#",
-            "active": true
-          }
-        },
-        "tab_fcGV4e": {
-          "type": "tab",
-          "settings": {
-            "text": "Prints",
-            "url": "#",
-            "active": false
-          }
-        },
-        "tab_XHrWV7": {
-          "type": "tab",
-          "settings": {
-            "text": "Drips",
-            "url": "",
-            "active": false
-          }
-        },
-        "tab_FG63LN": {
-          "type": "tab",
-          "settings": {
-            "text": "Drive Care",
-            "url": "",
-            "active": false
-          }
-        }
-      },
-      "block_order": [
-        "tab_RPm6fR",
-        "tab_dP8mwH",
-        "tab_bMp6La",
-        "tab_fcGV4e",
-        "tab_XHrWV7",
-        "tab_FG63LN"
-      ],
-      "settings": {
-        "selected_collection": "parts"
-      }
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -130,13 +66,77 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
+    },
+    "product_parts_template_collection_VV4djz": {
+      "type": "product_parts_template_collection",
+      "blocks": {
+        "tab_bHryPL": {
+          "type": "tab",
+          "settings": {
+            "text": "All",
+            "url": "#",
+            "active": false
+          }
+        },
+        "tab_7egTkM": {
+          "type": "tab",
+          "settings": {
+            "text": "Arts",
+            "url": "#",
+            "active": false
+          }
+        },
+        "tab_9eeJwK": {
+          "type": "tab",
+          "settings": {
+            "text": "Parts",
+            "url": "#",
+            "active": true
+          }
+        },
+        "tab_G3DXyy": {
+          "type": "tab",
+          "settings": {
+            "text": "Prints",
+            "url": "#",
+            "active": false
+          }
+        },
+        "tab_i46gVy": {
+          "type": "tab",
+          "settings": {
+            "text": "Drips",
+            "url": "#",
+            "active": false
+          }
+        },
+        "tab_VhHYMr": {
+          "type": "tab",
+          "settings": {
+            "text": "Drive Care",
+            "url": "",
+            "active": false
+          }
+        }
+      },
+      "block_order": [
+        "tab_bHryPL",
+        "tab_7egTkM",
+        "tab_9eeJwK",
+        "tab_G3DXyy",
+        "tab_i46gVy",
+        "tab_VhHYMr"
+      ],
+      "settings": {
+        "selected_collection": ""
+      }
     }
   },
   "order": [
     "image_show_Fbp4kP",
     "vehicle_advantages_show_RjK9C9",
-    "product_parts_template_collection_bGpRCB",
     "main",
-    "image_show_NaNKwV"
+    "image_show_NaNKwV",
+    "product_parts_template_collection_VV4djz"
   ]
 }
