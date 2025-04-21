@@ -16,6 +16,9 @@
     display: flex;
     flex-wrap: wrap;
 }
+.parts-tabs a {
+    width: 130px;
+}
 .main_section_all .content {
     flex: 0 0 50%;
     box-sizing: border-box;
