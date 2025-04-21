@@ -32,6 +32,70 @@
         "margin_bottom": 36
       }
     },
+    "product_parts_template_collection_bGpRCB": {
+      "type": "product_parts_template_collection",
+      "blocks": {
+        "tab_RPm6fR": {
+          "type": "tab",
+          "settings": {
+            "text": "All",
+            "url": "#",
+            "active": false
+          }
+        },
+        "tab_dP8mwH": {
+          "type": "tab",
+          "settings": {
+            "text": "Arts",
+            "url": "#",
+            "active": false
+          }
+        },
+        "tab_bMp6La": {
+          "type": "tab",
+          "settings": {
+            "text": "Parts",
+            "url": "#",
+            "active": true
+          }
+        },
+        "tab_fcGV4e": {
+          "type": "tab",
+          "settings": {
+            "text": "Prints",
+            "url": "#",
+            "active": false
+          }
+        },
+        "tab_XHrWV7": {
+          "type": "tab",
+          "settings": {
+            "text": "Drips",
+            "url": "",
+            "active": false
+          }
+        },
+        "tab_FG63LN": {
+          "type": "tab",
+          "settings": {
+            "text": "Drive Care",
+            "url": "",
+            "active": false
+          }
+        }
+      },
+      "block_order": [
+        "tab_RPm6fR",
+        "tab_dP8mwH",
+        "tab_bMp6La",
+        "tab_fcGV4e",
+        "tab_XHrWV7",
+        "tab_FG63LN"
+      ],
+      "settings": {
+        "selected_collection": ""
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -71,6 +135,7 @@
   "order": [
     "image_show_Fbp4kP",
     "vehicle_advantages_show_RjK9C9",
+    "product_parts_template_collection_bGpRCB",
     "main",
     "image_show_NaNKwV"
   ]
