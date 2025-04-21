@@ -4149,6 +4149,9 @@ font-family: 'Eczar';
 }
 @media (max-width: 992px) {
 
+  .cards {
+    height:100dvh;
+  }
   .desktop-filters{
      display:none;
   }
@@ -4168,6 +4171,9 @@ font-family: 'Eczar';
 .emptyonmobile {
     display: none;
 }
+    .cards {
+    height:100dvh;
+  }
 
 .main_section_all .content {
     flex: 0 0 100%;
