@@ -4063,7 +4063,7 @@ font-family: 'Eczar';
 .card {
   width: 100%;
   position: relative;
-  height: 25em;
+  height: 100vh;
   perspective: 150em;
 }
 .card__side {
