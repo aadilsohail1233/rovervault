@@ -12,6 +12,14 @@
 .card__side--front-1 .prd-img-others {
     width: 100%;
 }
+.button-product .button--main:hover {
+    transform: perspective(1500px) rotateX(20deg) rotateY(20deg);
+    will-change: transform;
+    transform-origin: 50% 50% 0px;
+    opacity: 1;
+    transition: transform .3s ease-in-out;
+    font-family: Eczar;
+}
 .button-carts-all {
     display: flex;
     justify-content: center;
