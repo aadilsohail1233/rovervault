@@ -4071,7 +4071,7 @@ font-family: 'Eczar';
   top: 0;
   left: 0;
   width: 98%;
-  height: 25em;
+  height: 100vh;
   backface-visibility: hidden;
   transition: all 0.6s ease;
 }
