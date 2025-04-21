@@ -4160,6 +4160,12 @@ font-family: 'Eczar';
 .emptyonmobile {
     display: none;
 }
+
+.main_section_all .content {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+  padding: 1em 0em;
+}  
   header.header.header--middle-left.header--mobile-center.page-width.header--has-menu.header--has-account {
     display: flex;
 }
