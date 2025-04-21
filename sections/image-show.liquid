@@ -19,6 +19,7 @@
 .image-show-background{
   display:none;
 }  
+    
   }
   
   .image-mobile-background{
@@ -217,6 +218,12 @@
         <img src="{{ section.settings.footer-image | img_url: 'master' }}" alt="Footer">
         <div class="image-show-footer__text">{{ section.settings['down-text'] }}</div>
       </div>
+      <div class="image-show-footer-tablet">
+        <img src="{{ section.settings.footer-image-tablet | img_url: 'master' }}" alt="Footer">
+      </div>
+      <div class="image-show-footer-mobile">
+        <img src="{{ section.settings.footer-image-mobile | img_url: 'master' }}" alt="Footer">
+      </div>      
     </div>
   </div>
 </div>
