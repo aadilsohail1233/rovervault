@@ -17,6 +17,9 @@
     justify-content: center;
     align-items: center;
 }
+.button-carts-all .button-product .button--main {
+    border: 0px;
+}
 .main_section_all {
     display: flex;
     flex-wrap: wrap;
