@@ -12,6 +12,11 @@
 .card__side--front-1 .prd-img-others {
     width: 100%;
 }
+.button-carts-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .main_section_all {
     display: flex;
     flex-wrap: wrap;
