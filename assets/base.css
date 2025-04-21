@@ -2703,13 +2703,7 @@ input[type="checkbox"] {
   width: 4.4rem;
   padding: 0;
 }
-span.carts12 {
-    background-color: #CBD1B5;
-    padding: 10px 30px;
-    border: 2px solid #6B8D50;
-    height: 52px;
-    text-decoration: none;
-}
+
 .header__icon--cart {
   position: relative;
  /* margin-right: -1.2rem;*/
@@ -2729,7 +2723,7 @@ span.carts12 {
     background-color: #cbd1b5;
     padding: 0px 30px;
     border: 2px solid #6B8D50;
-    height: 59px;
+    height: 61px;
     text-decoration: none;
     font-family: 'Eczar';
     font-size: 20px;
