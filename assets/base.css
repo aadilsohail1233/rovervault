@@ -4003,6 +4003,7 @@ font-family: 'Eczar';
  .product-col-1{
    width:100%;
  border: 5px solid rgba(var(--color-secondary-button-text));
+   height: 100vh;
  }     
 .product-col-2{
   width:100%;
