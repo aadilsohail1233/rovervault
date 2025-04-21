@@ -4177,6 +4177,9 @@ font-family: 'Eczar';
   .padding-bottom-zero .cards {
     height: 70vh;
 }
+  .feature-details{
+    padding: 0px 0px;
+  }
 .main_section_all .content {
     flex: 0 0 100%;
     box-sizing: border-box;
