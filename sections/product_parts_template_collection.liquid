@@ -235,7 +235,14 @@
                             
                           </div>  
                           </div>  
+        
                           <div class="button-product"><a href="/collections/all" class="button--main">View full listing</a></div>
+                          <div class="button-product">
+                          <form method="post" action="/cart/add">
+                            <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                            <button type="submit" class="button--main">Add to Cart</button>
+                          </form>
+                        </div>
                       </div>
           
         </div>  
