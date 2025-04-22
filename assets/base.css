@@ -12,6 +12,9 @@
 .card__side--front-1 .prd-img-others {
     width: 100%;
 }
+.parts_collections .product-col-2 .relative_img img {
+    height: 400px;
+}
 .button-product .button--main:hover {
     transform: perspective(1500px) rotateX(20deg) rotateY(20deg);
     will-change: transform;
