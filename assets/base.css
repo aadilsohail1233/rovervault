@@ -4255,3 +4255,9 @@ font-family: 'Eczar';
     font-size:40px;
   }
 }
+
+@media screen and (max-width: 768px) and (min-width: 820px) {
+.card {
+    height: 37em; 
+  }   
+}
