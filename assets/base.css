@@ -4237,6 +4237,9 @@ font-family: 'Eczar';
   .padding-bottom-zero .card {
     height: 37em;
 }
+  .padding-bottom-zero .content{
+    padding: 0px;
+  }
 }
 
 @media screen and (max-width: 440px) and (min-width: 400px) {
