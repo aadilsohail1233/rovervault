@@ -4322,12 +4322,12 @@ font-family: 'Eczar';
 
 @media screen and (max-width: 920px) and (min-width: 821px) {
 .card {
-    height: 37em; 
+    height: 39em; 
   }   
   .parts-sections .card {
-    height: 35em;
+    height: 37em;
 }
   .padding-bottom-zero .card {
-    height: 30em;
+    height: 32em;
 }
 }
