@@ -4237,7 +4237,7 @@ font-family: 'Eczar';
     .card {
     height: 59em; 
   }
-    .parts-sections .card {
+.parts-sections .card {
     height: 49em;
 }
 }
@@ -4245,11 +4245,18 @@ font-family: 'Eczar';
     .card {
     height: 63em; 
   }
+  .parts-sections .card {
+    height: 53em;
+}
 }
  @media screen and (max-width: 749px) and (min-width: 641px) {
     .card {
     height: 67em; 
   } 
+     .parts-sections .card {
+    height: 57em;
+}
+}
 }
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
