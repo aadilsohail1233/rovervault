@@ -4300,6 +4300,12 @@ font-family: 'Eczar';
   .product-col-title{
     font-size:40px !important;
   }
+  .product-col-1{
+    width: 98%;
+  }
+  .product-col-2{
+    width: 98%;
+  }
 }
 
 @media screen and (max-width: 820px) and (min-width: 768px) {
