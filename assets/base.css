@@ -41,6 +41,9 @@
 .parts-sections .card {
     height: 56em;
 }
+.padding-bottom-zero .card {
+    height: 48em;
+}
 .main_section_all .content {
     flex: 0 0 50%;
     box-sizing: border-box;
