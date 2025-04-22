@@ -4187,6 +4187,7 @@ font-family: 'Eczar';
 }
   .header__heading, .header__heading-link{
     text-align:left;
+    width: 80%;
   }
   .header__heading-logo{
         max-width: 90%;
