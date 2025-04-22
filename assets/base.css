@@ -1,4 +1,4 @@
-0:root {
+:root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;
   --alpha-link: 0.85;
@@ -4169,6 +4169,9 @@ font-family: 'Eczar';
 @media (max-width: 768px) {
 .emptyonmobile {
     display: none;
+}
+  .main_section_all .product-col-title {
+    font-size: 40px;
 }
 /*  .parts-sections .cards {
     height: 84vh;
