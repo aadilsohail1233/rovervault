@@ -51,10 +51,10 @@
 .parts-sections .content {
     padding: 2em 0em 0em 0em;
 }
-.parts-sections .cards {
+/*.parts-sections .cards {
     height: 100vh;
 }
-
+*/
 .padding-bottom-zero .cards
 {
   height: 85vh;
@@ -4165,9 +4165,9 @@ font-family: 'Eczar';
 .emptyonmobile {
     display: none;
 }
-  .parts-sections .cards {
+/*  .parts-sections .cards {
     height: 84vh;
-}
+} */
   .padding-bottom-zero .cards {
     height: 70vh;
 }
