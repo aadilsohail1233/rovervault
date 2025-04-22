@@ -4240,6 +4240,9 @@ font-family: 'Eczar';
   .padding-bottom-zero .content{
     padding: 0px;
   }
+  .collection-slider-section.padding-bottom-zero {
+    padding-bottom: 5rem;
+}
 }
 
 @media screen and (max-width: 440px) and (min-width: 400px) {
