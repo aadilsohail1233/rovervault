@@ -4028,11 +4028,13 @@ font-family: 'Eczar';
  .product-col-1{
    width:100%;
  border: 5px solid rgba(var(--color-secondary-button-text));
+   height: 100%;
  }     
 .product-col-2{
   width:100%;
    border: 5px solid rgba(var(--color-secondary-button-text));
   background-color:#6B8D50;
+  height: 100%;
 }
 .main-product-section_grid {
     display: grid;
