@@ -4235,6 +4235,9 @@ font-family: 'Eczar';
   .parts-sections .card {
     height: 44em;
 }
+  .padding-bottom-zero .card {
+    height: 37em;
+}
 }
 @media screen and (max-width: 540px) and (min-width: 441px) {
     .card {
@@ -4242,6 +4245,9 @@ font-family: 'Eczar';
   }
 .parts-sections .card {
     height: 49em;
+}
+  .padding-bottom-zero .card {
+    height: 40em;
 }
 }
 @media screen and (max-width: 640px) and (min-width: 541px) {
@@ -4251,6 +4257,9 @@ font-family: 'Eczar';
   .parts-sections .card {
     height: 53em;
 }
+  .padding-bottom-zero .card {
+    height: 43em;
+}
 }
  @media screen and (max-width: 749px) and (min-width: 641px) {
     .card {
@@ -4259,7 +4268,9 @@ font-family: 'Eczar';
      .parts-sections .card {
     height: 57em;
 }
-}
+    .padding-bottom-zero .card {
+    height: 47em;
+} 
 }
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
