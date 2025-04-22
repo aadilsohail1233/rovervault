@@ -4255,10 +4255,10 @@ font-family: 'Eczar';
     height: 63em; 
   }
   .parts-sections .card {
-    height: 54em;
+    height: 56em;
 }
   .padding-bottom-zero .card {
-    height: 44em;
+    height: 50em;
 }
 }
  @media screen and (max-width: 749px) and (min-width: 641px) {
