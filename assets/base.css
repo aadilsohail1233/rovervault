@@ -4331,3 +4331,16 @@ font-family: 'Eczar';
     height: 32em;
 }
 }
+
+
+@media screen and (max-width: 1024px) and (min-width: 921px) {
+.card {
+    height: 39em; 
+  }   
+  .parts-sections .card {
+    height: 37em;
+}
+  .padding-bottom-zero .card {
+    height: 32em;
+}
+}
