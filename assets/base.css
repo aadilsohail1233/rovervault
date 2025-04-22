@@ -4243,3 +4243,9 @@ font-family: 'Eczar';
     height: 67em; 
   } 
 }
+
+@media screen and (max-width: 768px) and (min-width: 992px) {
+.cl-title {
+    font-size: 22px;
+}
+}
