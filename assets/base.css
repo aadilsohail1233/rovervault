@@ -4244,7 +4244,7 @@ font-family: 'Eczar';
   } 
 }
 
-@media screen and (max-width: 768px) and (min-width: 992px) {
+@media screen and (max-width: 992px) and (min-width: 768px) {
 .cl-title {
     font-size: 22px;
 }
@@ -4256,7 +4256,7 @@ font-family: 'Eczar';
   }
 }
 
-@media screen and (max-width: 768px) and (min-width: 820px) {
+@media screen and (max-width: 820px) and (min-width: 768px) {
 .card {
     height: 37em; 
   }   
