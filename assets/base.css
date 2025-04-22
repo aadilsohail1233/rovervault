@@ -57,10 +57,10 @@
     height: 100vh;
 }
 */
-.padding-bottom-zero .cards
+/*.padding-bottom-zero .cards
 {
   height: 85vh;
-}
+} */
 
 .header__inline-menu .list-menu__item {
     font-family: 'Eczar';
@@ -4170,9 +4170,9 @@ font-family: 'Eczar';
 /*  .parts-sections .cards {
     height: 84vh;
 } */
-  .padding-bottom-zero .cards {
+/*  .padding-bottom-zero .cards {
     height: 70vh;
-}
+}*/
   .feature-details{
     padding: 0px 0px;
   }
