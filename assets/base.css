@@ -4230,8 +4230,13 @@ font-family: 'Eczar';
     height: 55em; 
   }
 }
-@media screen and (max-width: 600px) and (min-width: 441px) {
+@media screen and (max-width: 540px) and (min-width: 441px) {
     .card {
     height: 59em; 
+  }
+}
+@media screen and (max-width: 640px) and (min-width: 541px) {
+    .card {
+    height: 62em; 
   }
 }
