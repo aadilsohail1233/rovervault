@@ -4227,8 +4227,19 @@ font-family: 'Eczar';
        font-size: 15px;
  } 
 }
+@media screen and (max-width: 399px) and (min-width: 320px) {
+     .card {
+    height: 55em; 
+  }
+  .parts-sections .card {
+    height: 44em;
+}
+  .padding-bottom-zero .card {
+    height: 37em;
+}
+}
 
-@media screen and (max-width: 440px) and (min-width: 320px) {
+@media screen and (max-width: 440px) and (min-width: 400px) {
     .card {
     height: 55em; 
   }
