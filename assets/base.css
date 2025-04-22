@@ -15,6 +15,9 @@
 .parts_collections .product-col-2 .relative_img img {
     height: 400px;
 }
+.parts_collections .card {
+    height: 54em;
+}
 .button-product .button--main:hover {
     transform: perspective(1500px) rotateX(20deg) rotateY(20deg);
     will-change: transform;
