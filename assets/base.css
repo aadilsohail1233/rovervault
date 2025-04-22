@@ -4244,10 +4244,10 @@ font-family: 'Eczar';
     height: 59em; 
   }
 .parts-sections .card {
-    height: 49em;
+    height: 50em;
 }
   .padding-bottom-zero .card {
-    height: 40em;
+    height: 41em;
 }
 }
 @media screen and (max-width: 640px) and (min-width: 541px) {
