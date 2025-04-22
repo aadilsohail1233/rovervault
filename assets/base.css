@@ -4246,6 +4246,9 @@ font-family: 'Eczar';
   .collection-slider-section.padding-bottom-zero {
     padding-bottom: 5rem;
 }
+.vehicles .card {
+    height: 49em;
+}
 }
 
 @media screen and (max-width: 440px) and (min-width: 400px) {
@@ -4258,6 +4261,9 @@ font-family: 'Eczar';
   .padding-bottom-zero .card {
     height: 38em;
 }
+  .vehicles .card {
+    height: 51em;
+}
 }
 @media screen and (max-width: 540px) and (min-width: 441px) {
     .card {
@@ -4268,6 +4274,9 @@ font-family: 'Eczar';
 }
   .padding-bottom-zero .card {
     height: 43em;
+}
+.vehicles .card {
+    height: 53em;
 }
 }
 @media screen and (max-width: 640px) and (min-width: 541px) {
