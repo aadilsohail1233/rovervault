@@ -4246,13 +4246,13 @@ font-family: 'Eczar';
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
 .cl-title {
-    font-size: 22px;
+    font-size: 22px !important;
 }
 .cl-description {
-   font-size: 11px;
+   font-size: 11px !important;
 }  
   .product-col-title{
-    font-size:40px;
+    font-size:40px !important;
   }
 }
 
