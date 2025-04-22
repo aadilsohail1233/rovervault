@@ -1,0 +1,95 @@
+{%- style -%}
+  .section-{{ section.id }}-margin {
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-margin {
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+
+  .vehicles-page-links-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+
+  @media screen and (max-width: 850px) {
+    .vehicles-page-links-wrapper {
+      gap: 25px;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .vehicles-page-links-wrapper {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .vehicles-page-link {
+    text-align: center;
+    padding: 35px 0px;
+    border-radius: 100%;
+    border: 5px solid #6b8d50;
+    background-color: #6b8d5040;
+    color: #6B8D50;
+    font-size: 7.2rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 850px) {
+    .vehicles-page-link {
+      font-size: 4.8rem;
+    }
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-margin gradient color-{{ section.settings.section_color_scheme }}">
+  <div class="page-width">
+    <div class="vehicles-page-links-wrapper">
+      <a class="vehicles-page-link font-vvds" href="/pages/range-rover">RANGE ROVER</a>
+      <a class="vehicles-page-link font-vvds" href="/pages/defender">DEFENDER</a>
+      <a class="vehicles-page-link font-vvds" href="/pages/discovery">DISCOVERY</a>
+      <a class="vehicles-page-link font-vvds" href="/pages/accessories">ACCESSORIES</a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Vehicles Page Links",
+  "class": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Vehicles Page Links",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

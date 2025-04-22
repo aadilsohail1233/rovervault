@@ -1,0 +1,155 @@
+{%- style -%}
+  .section-{{ section.id }}-margin {
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-margin {
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+
+  .footer-page-wrapper {
+    border: 5px solid #6B8D50;
+    font-family: 'Eczar';
+
+  }
+
+  .footer-page-content-wrapper {
+    display: flex;
+    padding: 50px 50px 40px 50px;
+    gap: 50px;
+  }
+
+  .footer-page-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-page-links-wrapper {
+    flex: 1;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+
+  .footer-page-socials,
+  .footer-page-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-page-footer {
+    color: #EBE9D6;
+    font-size: 1.6rem;
+    background-color: #6B8D50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+
+  .footer-page__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 950px) {
+    .section-{{ section.id }}-margin {
+      margin-top: 0px;
+    }
+
+    .footer-page-content-wrapper {
+      flex-direction: column;
+      padding: 40px 0px;
+    }
+
+    .footer-page-links-wrapper {
+      padding: 0px 0px;
+    }
+  }
+
+  @media screen and (max-width: 670px) {
+    .footer-page-links {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-margin gradient color-{{ section.settings.section_color_scheme }}">
+  <div class="page-width">
+    <div class="footer-page-wrapper">
+      <div class="footer-page-content-wrapper">
+        <div class="footer-page-logo-wrapper">
+          {{- 'logo-2.png' | file_url | img_tag: 'Logo', 'footer-logo' -}}
+        </div>
+        <div class="footer-page-links-wrapper">
+          <div class="footer-page-links">
+            <a class="footer-page__link">Range Rover</a>
+            <a class="footer-page__link">Discovery</a>
+            <a class="footer-page__link">Defender</a>
+            <a class="footer-page__link">All Listings</a>
+            <a class="footer-page__link">Parts</a>
+            <a class="footer-page__link">Prints</a>
+            <a class="footer-page__link">Art</a>
+            <a class="footer-page__link">Enquire</a>
+          </div>
+          <div class="footer-page-socials">
+            <a class="footer-page__link">
+              {{- 'icon-in.png' | asset_url | img_tag: 'Linkedin', 'footer-social-icon' -}}
+            </a>
+            <a class="footer-page__link">
+              {{- 'icon-youtube.png' | asset_url | img_tag: 'Youtube', 'footer-social-icon' -}}
+            </a>
+            <a class="footer-page__link">
+              {{- 'icon-facebook.png' | asset_url | img_tag: 'Facebook', 'footer-social-icon' -}}
+            </a>
+            <a class="footer-page__link">
+              {{- 'icon-instagram.png' | asset_url | img_tag: 'Intagram', 'footer-social-icon' -}}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-page-footer">© 2025 Rover Vault Ltd. All rights reserved.</div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Footer",
+  "class": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": -200,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": -132
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Footer",
+      "category": "Footer"
+    }
+  ]
+}
+{% endschema %}

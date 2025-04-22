@@ -1,0 +1,204 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "share"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "vehicle_product_header_DXtgwC": {
+      "type": "vehicle-product-header",
+      "settings": {
+        "margin_top": 36,
+        "margin_bottom": 36,
+        "first-image": "shopify://shop_images/text-panterra.png",
+        "second-image": "shopify://shop_images/lines.png"
+      }
+    },
+    "full_width_image_GVMBb6": {
+      "type": "full-width-image",
+      "settings": {
+        "image": "shopify://shop_images/car-2.png",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
+    "product_vehicles_main_specifications_MMHzMf": {
+      "type": "product-vehicles-main-specifications",
+      "settings": {
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
+    "features_WnVAYB": {
+      "type": "features",
+      "blocks": {
+        "feature_xQLCKH": {
+          "type": "feature",
+          "settings": {
+            "feature-image": "shopify://shop_images/feature-2.png",
+            "feature-header": "Provenance",
+            "feature-content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor."
+          }
+        }
+      },
+      "block_order": [
+        "feature_xQLCKH"
+      ],
+      "settings": {
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
+    "logo_with_text_small_P6KTnM": {
+      "type": "logo-with-text-small",
+      "settings": {
+        "logo_image": "shopify://shop_images/image.svg",
+        "text_image": "shopify://shop_images/text-explore.png",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
+    "image_show_z4nGJG": {
+      "type": "image-show",
+      "blocks": {
+        "button_BUE9ig": {
+          "type": "button",
+          "settings": {
+            "button_label": "Enquire",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_BUE9ig"
+      ],
+      "settings": {
+        "background-image": "shopify://shop_images/background-image-2.png",
+        "logo-type": false,
+        "logo": "shopify://shop_images/logo-2.png",
+        "logo-text": "ENQUIRE ABOUT THIS MODEL",
+        "footer-image": "shopify://shop_images/vector-image-2.png",
+        "down-text": "Vehicles Dripping with Style",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
+    "product_vehicles_main_specifications_LJndnB": {
+      "type": "product-vehicles-main-specifications",
+      "settings": {
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "vehicle_product_header_DXtgwC",
+    "full_width_image_GVMBb6",
+    "product_vehicles_main_specifications_MMHzMf",
+    "features_WnVAYB",
+    "logo_with_text_small_P6KTnM",
+    "image_show_z4nGJG",
+    "product_vehicles_main_specifications_LJndnB"
+  ]
+}

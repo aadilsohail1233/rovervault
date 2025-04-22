@@ -1,0 +1,77 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_show_YyGAzh": {
+      "type": "image-show",
+      "settings": {
+        "background-image": "shopify://shop_images/background-image-prints.png",
+        "logo-type": true,
+        "logo-text": "Prints",
+        "footer-image": "shopify://shop_images/vector-image-3.png",
+        "down-text": "Dripping with Quality & Comfort",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
+    "vehicle_advantages_show_Ek388H": {
+      "type": "vehicle-advantages-show",
+      "settings": {
+        "image": "shopify://shop_images/text-prints.png",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor.",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_show_zYjdL7": {
+      "type": "image-show",
+      "blocks": {
+        "button_iPbbdC": {
+          "type": "button",
+          "settings": {
+            "button_label": "Enquire",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_iPbbdC"
+      ],
+      "settings": {
+        "background-image": "shopify://shop_images/background-image-2.png",
+        "logo-type": false,
+        "logo": "shopify://shop_images/logo-2.png",
+        "logo-text": "IDEAS & SKILLS AT THE CORE",
+        "footer-image": "shopify://shop_images/vector-image-2.png",
+        "down-text": "Driving On or Off the Road?",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_show_YyGAzh",
+    "vehicle_advantages_show_Ek388H",
+    "main",
+    "image_show_zYjdL7"
+  ]
+}

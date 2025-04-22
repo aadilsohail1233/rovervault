@@ -1,0 +1,309 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+  }
+
+    @media screen and (max-width: 767px) {
+.image-with-text-1-image {
+  order:1;
+}
+      .image-with-text-1-details{
+        order:2;
+      }
+
+  }
+
+  .image-with-text-1-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .image-with-text-1-wrapper {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .image-with-text-1-image {
+    border: 5px solid rgba(var(--color-secondary-button-text));
+    overflow: hidden;
+  }
+
+  .image-with-text-1__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-with-text-1-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    border: 5px solid rgba(var(--color-secondary-button-text));
+    text-align: center;
+    padding: 25px;
+    font-size: 2rem;
+    line-height: 150%;
+    letter-spacing: 0px;
+    font-weight: 600;
+    font-family: 'Eczar';
+  }
+
+  @media screen and (min-width: 750px) {
+    .image-with-text-1-details {
+      padding: 25px 36px;
+    }
+  }
+
+  .image-with-text-1-details > * {
+    align-self: center;
+
+  }
+
+  .image-with-text-1_heading {
+    font-size: 6.3rem;
+    font-family: 'VVDS Fifties';
+    line-height: 90%;
+    letter-spacing: 0px;
+  }
+
+  .image-with-text-1_text {
+
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+  if section.settings.color_scheme == section.settings.section_color_scheme and section.settings.content_layout == 'no-overlap'
+    assign remove_color_classes = true
+  endif
+-%}
+
+<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
+  <div class="page-width">
+    <div class="image-with-text-1-wrapper">
+      {%- if section.settings.layout == 'image_first' -%}
+        <div class="image-with-text-1-image">
+          <img
+            src="{{ section.settings.image | img_url: 'master' }}"
+            alt="Vehicle"
+            class="image-with-text-1__image"
+          >
+        </div>
+      {% endif %}
+      <div class="image-with-text-1-details">
+        {%- for block in section.blocks -%}
+          {% case block.type %}
+            {%- when 'subheading_text' -%}
+              <div
+                class="image-with-text-1_subheading"
+              >
+                {{ block.settings.subheading_text }}
+              </div>            
+            {%- when 'heading' -%}
+              <div
+                class="image-with-text-1_heading"
+              >
+                {{ block.settings.heading }}
+              </div>
+            {%- when 'text' -%}
+              <div class="image-with-text-1_text">
+                {{ block.settings.text }}
+              </div>
+            {%- when 'button' -%}
+              {%- if block.settings.button_label != blank -%}
+                <a
+                  {% if block.settings.button_link == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.button_link }}"
+                  {% endif %}
+                  class="button--main"
+                >
+                  {{ block.settings.button_label | escape }}
+                </a>
+              {%- endif -%}
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+      {%- if section.settings.layout == 'text_first' -%}
+        <div class="image-with-text-1-image">
+          <img
+            src="{{ section.settings.image | img_url: 'master' }}"
+            alt="Vehicle"
+            class="image-with-text-1__image"
+          >
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image with Text 1",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-with-text.settings.image.label"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "t:sections.image-with-text.settings.layout.options__1.label"
+        },
+        {
+          "value": "text_first",
+          "label": "t:sections.image-with-text.settings.layout.options__2.label"
+        }
+      ],
+      "default": "image_first",
+      "label": "t:sections.image-with-text.settings.layout.label",
+      "info": "t:sections.image-with-text.settings.layout.info"
+    },
+    {
+      "type": "color_scheme",
+      "id": "section_color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.multirow.settings.container_color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [  
+      {
+    "type": "subheading_text",
+    "name": "subheading_text",
+    "limit": 1,
+    "settings": [
+      {
+        "type": "inline_richtext",
+        "id": "subheading_text",
+        "default": "Your subheading goes here",
+        "label": "Subheading Text"
+      }
+    ]
+  },
+    {
+      "type": "heading",
+      "name": "t:sections.image-with-text.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "t:sections.image-with-text.blocks.heading.settings.heading.default",
+          "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.image-with-text.blocks.text.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "t:sections.image-with-text.blocks.text.settings.text.default",
+          "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "t:sections.image-with-text.blocks.button.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "t:sections.image-with-text.blocks.button.settings.button_label.default",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+          "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "default": false,
+          "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_third",
+          "default": true,
+          "label": "Default Rover Vault button style"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with Text 1",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
