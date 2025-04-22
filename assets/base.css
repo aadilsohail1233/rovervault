@@ -4237,6 +4237,9 @@ font-family: 'Eczar';
     .card {
     height: 59em; 
   }
+    .parts-sections .card {
+    height: 49em;
+}
 }
 @media screen and (max-width: 640px) and (min-width: 541px) {
     .card {
