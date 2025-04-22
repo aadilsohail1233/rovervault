@@ -4312,4 +4312,7 @@ font-family: 'Eczar';
 .card {
     height: 37em; 
   }   
+  .parts-sections .card {
+    height: 35em;
+}
 }
