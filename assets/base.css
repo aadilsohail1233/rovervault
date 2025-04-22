@@ -1,4 +1,4 @@
-:root {
+0:root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;
   --alpha-link: 0.85;
@@ -4225,7 +4225,7 @@ font-family: 'Eczar';
  } 
 }
 
-@media screen and (max-width: 500px) and (min-width: 320px) {
+@media screen and (max-width: 440px) and (min-width: 320px) {
     .card {
     height: 55em; 
   }
