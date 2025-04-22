@@ -4077,7 +4077,7 @@ font-family: 'Eczar';
 .cards {
   display: flex;
   justify-content: space-evenly;
-  height:100vh;
+ /* height:100vh; */
 }
 
 .card {
