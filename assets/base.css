@@ -4266,7 +4266,9 @@ font-family: 'Eczar';
     .card {
     height: 55em; 
   }
-
+ .parts_collections .card {
+    height: 43em;
+} 
   .parts-sections .card {
     height: 46em;
 }
