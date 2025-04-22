@@ -4315,4 +4315,7 @@ font-family: 'Eczar';
   .parts-sections .card {
     height: 35em;
 }
+  .padding-bottom-zero .card {
+    height: 30em;
+}
 }
