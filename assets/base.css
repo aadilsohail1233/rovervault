@@ -4083,7 +4083,7 @@ font-family: 'Eczar';
 .card {
   width: 100%;
   position: relative;
-  height: 25em;
+/*  height: 25em; */
   perspective: 150em;
 }
 .card__side {
