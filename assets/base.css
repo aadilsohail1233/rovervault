@@ -4289,6 +4289,9 @@ font-family: 'Eczar';
   .padding-bottom-zero .card {
     height: 50em;
 }
+  .vehicles .card {
+    height: 57em;
+}
 }
  @media screen and (max-width: 749px) and (min-width: 641px) {
     .card {
