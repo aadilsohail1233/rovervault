@@ -4248,4 +4248,7 @@ font-family: 'Eczar';
 .cl-title {
     font-size: 22px;
 }
+.cl-description {
+   font-size: 11px;
+}  
 }
