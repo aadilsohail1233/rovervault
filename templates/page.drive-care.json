@@ -42,7 +42,7 @@
           "settings": {
             "text": "All",
             "url": "#",
-            "active": true
+            "active": false
           }
         },
         "tab_VH4PtL": {
@@ -80,9 +80,9 @@
         "tab_8dzzjC": {
           "type": "tab",
           "settings": {
-            "text": "",
+            "text": "Drive Care",
             "url": "",
-            "active": false
+            "active": true
           }
         }
       },
