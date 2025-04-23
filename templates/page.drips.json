@@ -57,7 +57,7 @@
           "type": "tab",
           "settings": {
             "text": "Parts",
-            "url": "#",
+            "url": "shopify://pages/parts",
             "active": false
           }
         },
@@ -65,7 +65,7 @@
           "type": "tab",
           "settings": {
             "text": "Prints",
-            "url": "#",
+            "url": "shopify://pages/prints",
             "active": false
           }
         },
