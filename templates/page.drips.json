@@ -12,9 +12,9 @@
     "image_show_YyGAzh": {
       "type": "image-show",
       "settings": {
-        "background-image": "shopify://shop_images/background-image-prints.png",
+        "background-image": "shopify://shop_images/AdobeStock_1167486658_Editorial_Use_Only_1.png",
         "logo-type": true,
-        "logo-text": "Prints",
+        "logo-text": "Drips",
         "footer-image": "shopify://shop_images/wave_main_v2.gif",
         "footer-image1": "shopify://shop_images/wave_tablet_v1.gif",
         "footer-image2": "shopify://shop_images/wave_mobile_v1.gif",
@@ -28,7 +28,7 @@
     "vehicle_advantages_show_Ek388H": {
       "type": "vehicle-advantages-show",
       "settings": {
-        "image": "shopify://shop_images/text-prints.png",
+        "image": "shopify://shop_images/Frame_646.png",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor.",
         "margin_top": 36,
         "margin_bottom": 36
@@ -66,7 +66,7 @@
           "settings": {
             "text": "Prints",
             "url": "#",
-            "active": true
+            "active": false
           }
         },
         "tab_xGfYNR": {
@@ -74,7 +74,7 @@
           "settings": {
             "text": "Drips",
             "url": "",
-            "active": false
+            "active": true
           }
         },
         "tab_hVcqBD": {
@@ -95,7 +95,7 @@
         "tab_hVcqBD"
       ],
       "settings": {
-        "selected_collection": "prints"
+        "selected_collection": "drips"
       }
     },
     "main": {
