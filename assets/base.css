@@ -4420,4 +4420,7 @@ font-family: 'Eczar';
   .padding-bottom-zero .card {
     height: 40em;
 }
+    .badge.rights {
+      display:inline-block;
+  }
 }
