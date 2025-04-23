@@ -4201,6 +4201,9 @@ font-family: 'Eczar';
 .emptyonmobile {
     display: none;
 }
+  .badge.rights {
+      display:inline-block;
+  }
   .button-carts-all{
     display: inline-block;
   }
