@@ -81,7 +81,7 @@
           "type": "tab",
           "settings": {
             "text": "Drive Care",
-            "url": "",
+            "url": "shopify://pages/drive-care",
             "active": false
           }
         }
