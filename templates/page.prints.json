@@ -73,7 +73,7 @@
           "type": "tab",
           "settings": {
             "text": "Drips",
-            "url": "",
+            "url": "shopify://pages/drips",
             "active": false
           }
         },
