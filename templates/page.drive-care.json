@@ -68,16 +68,34 @@
             "url": "shopify://pages/prints",
             "active": false
           }
+        },
+        "tab_K6gan8": {
+          "type": "tab",
+          "settings": {
+            "text": "Drips",
+            "url": "shopify://pages/drips",
+            "active": false
+          }
+        },
+        "tab_8dzzjC": {
+          "type": "tab",
+          "settings": {
+            "text": "",
+            "url": "",
+            "active": false
+          }
         }
       },
       "block_order": [
         "tab_jGq94Y",
         "tab_VH4PtL",
         "tab_RzEjtc",
-        "tab_VdVLix"
+        "tab_VdVLix",
+        "tab_K6gan8",
+        "tab_8dzzjC"
       ],
       "settings": {
-        "selected_collection": ""
+        "selected_collection": "coming-soon"
       }
     },
     "main": {
