@@ -149,11 +149,9 @@
          <div class="card__side card__side--front card__side--front-1"> 
         
         <div class="product-col-1" data-type="{{ product.type | downcase }}">
-          {% if product.available %}
+         
             <div class="product-avaliable">Available</div>
-          {% else %}
-            <div class="product-avaliable">Sold</div>
-          {% endif %}
+         
 
          <div class="relative_img">
          <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}"/>
@@ -166,17 +164,14 @@
 
         <div class="product-col-title">{{ product.title }}</div>
 
-        <div class="button-product desktop-section-hide margin-button-bottom"><a href="/collections/all" class="button--main">More info</a></div>
         </div>
           </div>
         <div class="card__side card__side--back card__side--back-1">
                         <div class="product-col-2">
                         <div class="product-avaliable">
-                         {% if product.available %}
+                         
                             <div class="product-avaliable">Available</div>
-                          {% else %}
-                            <div class="product-avaliable">Sold</div>
-                          {% endif %}
+                         
                         </div>
                         <div class="relative_img">
                           {% assign second_image = product.images[1] %}
@@ -190,12 +185,7 @@
                         <div class="product-col-title white-color">Details</div>
                           <div class="button-carts-all">
                           <div class="button-product"><a href="/collections/all" class="button--main">View full listing</a></div>
-                          <div class="button-product">
-                          <form method="post" action="/cart/add">
-                            <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-                            <button type="submit" class="button--main">Add to cart</button>
-                          </form>
-                        </div>
+
                         </div>
                       </div>
           
