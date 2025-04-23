@@ -49,7 +49,7 @@
           "type": "tab",
           "settings": {
             "text": "Arts",
-            "url": "#",
+            "url": "shopify://pages/art",
             "active": false
           }
         },
@@ -65,7 +65,7 @@
           "type": "tab",
           "settings": {
             "text": "Prints",
-            "url": "#",
+            "url": "shopify://pages/prints",
             "active": false
           }
         },
