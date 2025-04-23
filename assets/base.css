@@ -12,6 +12,9 @@
 .card__side--front-1 .prd-img-others {
     width: 100%;
 }
+.arts .product-col-1 .relative_img img {
+    border-bottom: 5px solid #6b8d50;
+}
 .parts_collections .product-col-2 .relative_img img {
     height: 400px;
 }
