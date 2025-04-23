@@ -4173,6 +4173,9 @@ font-family: 'Eczar';
 .parts_collections .product-col-2 .relative_img img {
     height: auto;
 }
+  .badge.rights {
+      display:inline-block;
+  }  
   .arts .desktop-section-hide {
         display: inline-block !important;
         text-align: center;
