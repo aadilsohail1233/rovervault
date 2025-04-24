@@ -22,6 +22,11 @@
     line-height: 40px;
     text-decoration: none;
 }
+.list-menu--disclosure li a:hover {
+    background-color: #6b8d50;
+    color: #fff;
+    text-decoration: none !important;
+}
 .list-menu__item--active {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
