@@ -6,7 +6,7 @@
   position: absolute;
   min-width: 100%;
   top: 106%;
-  width: 23rem;
+  width: 25rem;
 /*  border: 1px solid rgba(var(--color-foreground), 0.2);*/
   border:5px solid #6b8d50 !important;
 }
