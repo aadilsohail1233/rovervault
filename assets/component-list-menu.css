@@ -15,6 +15,13 @@
   outline: none;
 }
 
+.list-menu--disclosure li a {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    line-height: 40px;
+    text-decoration: none;
+}
 .list-menu__item--active {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
