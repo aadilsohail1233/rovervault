@@ -34,10 +34,10 @@
         "margin_bottom": 36
       }
     },
-    "product_arts_template_collection_wmbiTX": {
-      "type": "product_arts_template_collection",
+    "product_parts_template_collection_wWpHAa": {
+      "type": "product_parts_template_collection",
       "blocks": {
-        "tab_ibPCgx": {
+        "tab_A9pXAe": {
           "type": "tab",
           "settings": {
             "text": "All",
@@ -45,7 +45,7 @@
             "active": false
           }
         },
-        "tab_GWwR4L": {
+        "tab_dLKgPf": {
           "type": "tab",
           "settings": {
             "text": "Arts",
@@ -53,15 +53,15 @@
             "active": true
           }
         },
-        "tab_V3dEdM": {
+        "tab_pWm3RD": {
           "type": "tab",
           "settings": {
             "text": "Parts",
-            "url": "#",
+            "url": "shopify://pages/parts",
             "active": false
           }
         },
-        "tab_mGf3Aq": {
+        "tab_i9A9cg": {
           "type": "tab",
           "settings": {
             "text": "Prints",
@@ -69,7 +69,7 @@
             "active": false
           }
         },
-        "tab_6WzGzW": {
+        "tab_eUqjNf": {
           "type": "tab",
           "settings": {
             "text": "Drips",
@@ -77,7 +77,7 @@
             "active": false
           }
         },
-        "tab_RjfcUq": {
+        "tab_P7Pdgg": {
           "type": "tab",
           "settings": {
             "text": "Drive Care",
@@ -87,12 +87,12 @@
         }
       },
       "block_order": [
-        "tab_ibPCgx",
-        "tab_GWwR4L",
-        "tab_V3dEdM",
-        "tab_mGf3Aq",
-        "tab_6WzGzW",
-        "tab_RjfcUq"
+        "tab_A9pXAe",
+        "tab_dLKgPf",
+        "tab_pWm3RD",
+        "tab_i9A9cg",
+        "tab_eUqjNf",
+        "tab_P7Pdgg"
       ],
       "settings": {
         "selected_collection": "art"
@@ -139,7 +139,7 @@
   "order": [
     "image_show_eiHRQp",
     "vehicle_advantages_show_CC4Ayb",
-    "product_arts_template_collection_wmbiTX",
+    "product_parts_template_collection_wWpHAa",
     "main",
     "image_show_aJ4T87"
   ]
