@@ -11,6 +11,10 @@
   border:5px solid #6b8d50 !important;
 }
 
+.cart-count-bubble .carts {
+    display: none;
+}
+
 .list-menu--disclosure:focus {
   outline: none;
 }
