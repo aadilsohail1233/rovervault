@@ -52,7 +52,8 @@
   transform: rotate(180deg);
 }
 </style>
-
+<div class="section-{{ section.id }}">
+  <div class="page-width">
 <div class="custom-accordion">
   <div class="accordion-header">
     <strong>PROVENANCE</strong>
@@ -62,7 +63,8 @@
     {{ product.description | strip_html | truncatewords: 100 }}
   </div>
 </div>
-
+  </div>
+</div>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.custom-accordion').forEach(accordion => {
