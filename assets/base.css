@@ -4225,7 +4225,7 @@ font-family: 'Eczar';
     width: 100% !important;
 }
   .vehicles-main__specification-title{
-    font-size: 30px;
+    font-size: 30px !important;
   }
   .vehicles-main-specifications-wrapper{
     grid-template-columns: repeat(2, 1fr) !important;
