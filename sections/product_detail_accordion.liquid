@@ -13,26 +13,22 @@
 <style>
 .custom-accordion {
   background-color: #f2f0d9;
-  padding: 0px;
+  padding: 20px;
   margin-bottom: 30px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   position: relative;
-  max-width: 100%;
+  max-width: 600px;
 }
-.accordion-header strong {
-    font-size: 30px;
-    padding-left: 20px;
-}
+
 .accordion-header {
-  background-color: #CBD2B5;
+  background-color: #e4e8c6;
   padding: 15px;
   font-weight: bold;
   color: #50793a;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'VVDS Fifties';
 }
 
 .accordion-toggle {
@@ -42,7 +38,7 @@
 .accordion-content {
   display: none;
   padding: 20px;
-  background-color: #dfe3c3;
+  background-color: #CBD2B5;
   color: #2e2e2e;
   font-size: 14px;
   line-height: 1.5;
@@ -56,8 +52,7 @@
   transform: rotate(180deg);
 }
 </style>
-<div class="section-{{ section.id }}">
-  <div class="page-width">
+
 <div class="custom-accordion">
   <div class="accordion-header">
     <strong>PROVENANCE</strong>
@@ -67,8 +62,7 @@
     {{ product.description | strip_html | truncatewords: 100 }}
   </div>
 </div>
-  </div>
-</div>
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.custom-accordion').forEach(accordion => {
