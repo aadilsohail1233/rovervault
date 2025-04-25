@@ -119,14 +119,23 @@
         "margin_bottom": 36
       }
     },
+    "product_vehicles_main_specifications_MMHzMf": {
+      "type": "product-vehicles-main-specifications",
+      "settings": {
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
     "product_detail_accordion_Az3FBH": {
       "type": "product_detail_accordion",
       "name": "Product Accordian Details",
       "settings": {}
     },
-    "product_vehicles_main_specifications_MMHzMf": {
-      "type": "product-vehicles-main-specifications",
+    "logo_with_text_small_P6KTnM": {
+      "type": "logo-with-text-small",
       "settings": {
+        "logo_image": "shopify://shop_images/image.svg",
+        "text_image": "shopify://shop_images/text-explore.png",
         "margin_top": 36,
         "margin_bottom": 36
       }
@@ -147,15 +156,6 @@
         "feature_xQLCKH"
       ],
       "settings": {
-        "margin_top": 36,
-        "margin_bottom": 36
-      }
-    },
-    "logo_with_text_small_P6KTnM": {
-      "type": "logo-with-text-small",
-      "settings": {
-        "logo_image": "shopify://shop_images/image.svg",
-        "text_image": "shopify://shop_images/text-explore.png",
         "margin_top": 36,
         "margin_bottom": 36
       }
@@ -202,8 +202,8 @@
     "full_width_image_GVMBb6",
     "product_vehicles_main_specifications_MMHzMf",
     "product_detail_accordion_Az3FBH",
-    "features_WnVAYB",
     "logo_with_text_small_P6KTnM",
+    "features_WnVAYB",
     "image_show_z4nGJG",
     "product_vehicles_main_specifications_LJndnB"
   ]
