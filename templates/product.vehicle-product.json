@@ -188,6 +188,11 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
+    },
+    "product_detail_accordion_Az3FBH": {
+      "type": "product_detail_accordion",
+      "name": "Product Accordian Details",
+      "settings": {}
     }
   },
   "order": [
@@ -199,6 +204,7 @@
     "features_WnVAYB",
     "logo_with_text_small_P6KTnM",
     "image_show_z4nGJG",
-    "product_vehicles_main_specifications_LJndnB"
+    "product_vehicles_main_specifications_LJndnB",
+    "product_detail_accordion_Az3FBH"
   ]
 }
