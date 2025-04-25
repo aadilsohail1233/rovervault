@@ -1,7 +1,7 @@
 {% schema %}
-  {
-    "name": "Product Details Accordian",
-    "settings": [
+{
+  "name": "Product Accordian Details",
+  "settings": [
     {
       "type": "collection",
       "id": "selected_collection",
@@ -70,5 +70,139 @@
       ]
     }
   ]
-  }
-{% endschema %} 
+}
+{% endschema %}
+
+
+{% assign collection = collections[section.settings.selected_collection] %}
+<div class="page-width">
+<div class="range-rover-section">
+
+  <!-- Filters and Sorting Bar -->
+<div class="top-bar-filter desktop-filters">
+<div class="tabs parts-tabs">
+  {% for block in section.blocks %}
+    {% if block.type == 'tab' %}
+      <a href="{{ block.settings.url }}" class="tab {% if block.settings.active %}active{% endif %}">
+        {{ block.settings.text }}
+      </a>
+    {% endif %}
+  {% endfor %}
+</div>
+
+    <div class="sort-dropdown">
+      
+      <select id="sort_by">
+        <option value="">Sort by</option>
+        <option value="best-selling">Best Selling</option>
+        <option value="price-asc">Price, Low to High</option>
+        <option value="price-desc">Price, High to Low</option>
+        <option value="title-asc">Alphabetically, A-Z</option>
+        <option value="title-desc">Alphabetically, Z-A</option>
+        <option value="created-desc">Date, New to Old</option>
+        <option value="created-asc">Date, Old to New</option>
+      </select>
+    </div>
+  </div>
+  <div class="top-bar-filter mobile-tablet-filters">
+ <div class="dropdwn">
+  <select onchange="if (this.value) window.location.href=this.value;">
+  {% for block in section.blocks %}
+    {% if block.type == 'tab' %}
+      <option value="{{ block.settings.url }}" {% if block.settings.active %}selected{% endif %}>
+        {{ block.settings.text }}
+      </option>
+    {% endif %}
+  {% endfor %}
+</select>
+ </div>
+        <div class="sort-dropdown">
+      <select id="sort_by">
+        <option value="">Sort by</option>
+        <option value="best-selling">Best Selling</option>
+        <option value="price-asc">Price, Low to High</option>
+        <option value="price-desc">Price, High to Low</option>
+        <option value="title-asc">Alphabetically, A-Z</option>
+        <option value="title-desc">Alphabetically, Z-A</option>
+        <option value="created-desc">Date, New to Old</option>
+        <option value="created-asc">Date, Old to New</option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="border-lines"></div>
+
+
+    {% if collection and collection.products.size > 0 %}
+    {% assign latest_product = collection.products.first %}
+    
+    <!-- Latest Product Banner -->
+
+    <!-- Product Grid -->
+<div class="main_section_all">
+      {% for product in collection.products %}
+     <div class="content">
+        <div class="cards">
+          <div class="card">
+        
+         <div class="card__side card__side--front card__side--front-1"> 
+        
+        <div class="product-col-1" data-type="{{ product.type | downcase }}">
+         
+            <div class="product-avaliable">Available</div>
+         
+
+         <div class="relative_img">
+         <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}"/>
+          {% comment %}
+          <div class="badge left">
+          {{ product.collections.first.title | default: "Vehicle" }}
+         </div>
+         {% endcomment %}
+         </div>
+
+        <div class="product-col-title">{{ product.title }}</div>
+
+        </div>
+          </div>
+        <div class="card__side card__side--back card__side--back-1">
+                        <div class="product-col-2">
+                        <div class="product-avaliable">
+                         
+                            <div class="product-avaliable">Available</div>
+                         
+                        </div>
+                        <div class="relative_img">
+                          {% assign second_image = product.images[1] %}
+                         <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
+                         {% comment %}
+                          <div class="badge right">
+                          {{ latest_product.collections.first.title | default: "Vehicle" }}
+                         </div>
+                         {% endcomment %}
+                         </div>
+                        <div class="product-col-title white-color">{{ product.title }}</div>
+                      </div>
+          
+        </div>  
+            
+     </div> 
+        </div>
+</div>
+      {% endfor %}
+</div>      
+    
+    <div class="border-lines"></div>
+    <div class="results-count">Showing {{ collection.products.size }} of {{ collection.products.size }} results</div>
+    <div class="border-lines"></div>  
+  {% else %}
+    <p>No products found in this collection.</p>
+  {% endif %}
+
+
+</div>
+</div>
+
+
+
