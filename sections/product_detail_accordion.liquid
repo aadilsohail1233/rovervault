@@ -1,6 +1,6 @@
 {% schema %}
   {
-    "name": "Product Detail Accordian",
+    "name": "Product Details Accordian",
     "settings": [
     {
       "type": "collection",
@@ -72,67 +72,3 @@
   ]
   }
 {% endschema %} 
-
-<style>
-.custom-accordion {
-  background-color: #f2f0d9;
-  padding: 20px;
-  margin-bottom: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  max-width: 600px;
-}
-
-.accordion-header {
-  background-color: #e4e8c6;
-  padding: 15px;
-  font-weight: bold;
-  color: #50793a;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.accordion-toggle {
-  transition: transform 0.3s ease;
-}
-
-.accordion-content {
-  display: none;
-  padding: 20px;
-  background-color: #dfe3c3;
-  color: #2e2e2e;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.custom-accordion.open .accordion-content {
-  display: block;
-}
-
-.custom-accordion.open .accordion-toggle {
-  transform: rotate(180deg);
-}  
-</style>
-
-<div class="custom-accordion">
-  <div class="accordion-header">
-    <strong>PROVENANCE</strong>
-    <span class="accordion-toggle">&#x25BC;</span>
-  </div>
-  <div class="accordion-content">
-    {{ product.description | strip_html | truncatewords: 100 }}  {# Example content. Replace or customize #}
-  </div>
-</div>
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.custom-accordion').forEach(accordion => {
-      accordion.addEventListener('click', () => {
-        accordion.classList.toggle('open');
-      });
-    });
-  });
-</script>
