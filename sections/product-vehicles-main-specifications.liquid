@@ -135,7 +135,7 @@
         <div class="vehicles-main__specification-title font-vvds">UPHOLSTERY</div>
         <div class="vehicles-main__specification-value font-eczar">
           {% if product.metafields.vehicles_main.upholstery %}
-            <div>{{ product.metafields.custom.upholstery }}</div>
+            <div>{{ product.metafields.vehicles_main.upholstery.value }}</div>
           {% else %}
             <div></div>
           {% endif %}
@@ -145,7 +145,7 @@
         <div class="vehicles-main__specification-title font-vvds">COLOR</div>
         <div class="vehicles-main__specification-value font-eczar">
           {% if product.metafields.vehicles_main.color %}
-            <div>{{ product.metafields.vehicles_main.color.value }}</div>
+            <div>{{ product.metafields.vehicles.body_color }}</div>
           {% else %}
             <div></div>
           {% endif %}
