@@ -1,208 +1,77 @@
 {% schema %}
 {
   "name": "Product Accordian Details",
-  "settings": [
-    {
-      "type": "collection",
-      "id": "selected_collection",
-      "label": "Select Collection"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "tab",
-      "name": "Tab",
-      "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Tab Text"
-        },
-        {
-          "type": "url",
-          "id": "url",
-          "label": "Tab Link"
-        },
-        {
-          "type": "checkbox",
-          "id": "active",
-          "label": "Set as Active"
-        }
-      ]
-    }
-  ],
+  "settings": [],
   "presets": [
     {
       "name": "Product Accordian Details",
-      "blocks": [
-        {
-          "type": "tab",
-          "settings": {
-            "text": "All",
-            "url": "#",
-            "active": true
-          }
-        },
-        {
-          "type": "tab",
-          "settings": {
-            "text": "Range Rover",
-            "url": "#",
-            "active": false
-          }
-        },
-        {
-          "type": "tab",
-          "settings": {
-            "text": "Discovery",
-            "url": "#",
-            "active": false
-          }
-        },
-        {
-          "type": "tab",
-          "settings": {
-            "text": "Defender",
-            "url": "#",
-            "active": false
-          }
-        }
-      ]
     }
   ]
 }
 {% endschema %}
 
+<style>
+.custom-accordion {
+  background-color: #f2f0d9;
+  padding: 20px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  max-width: 600px;
+}
 
-{% assign collection = collections[section.settings.selected_collection] %}
-<div class="page-width">
-<div class="range-rover-section">
+.accordion-header {
+  background-color: #e4e8c6;
+  padding: 15px;
+  font-weight: bold;
+  color: #50793a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  <!-- Filters and Sorting Bar -->
-<div class="top-bar-filter desktop-filters">
-<div class="tabs parts-tabs">
-  {% for block in section.blocks %}
-    {% if block.type == 'tab' %}
-      <a href="{{ block.settings.url }}" class="tab {% if block.settings.active %}active{% endif %}">
-        {{ block.settings.text }}
-      </a>
-    {% endif %}
-  {% endfor %}
-</div>
+.accordion-toggle {
+  transition: transform 0.3s ease;
+}
 
-    <div class="sort-dropdown">
-      
-      <select id="sort_by">
-        <option value="">Sort by</option>
-        <option value="best-selling">Best Selling</option>
-        <option value="price-asc">Price, Low to High</option>
-        <option value="price-desc">Price, High to Low</option>
-        <option value="title-asc">Alphabetically, A-Z</option>
-        <option value="title-desc">Alphabetically, Z-A</option>
-        <option value="created-desc">Date, New to Old</option>
-        <option value="created-asc">Date, Old to New</option>
-      </select>
-    </div>
+.accordion-content {
+  display: none;
+  padding: 20px;
+  background-color: #dfe3c3;
+  color: #2e2e2e;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.custom-accordion.open .accordion-content {
+  display: block;
+}
+
+.custom-accordion.open .accordion-toggle {
+  transform: rotate(180deg);
+}
+</style>
+
+<div class="custom-accordion">
+  <div class="accordion-header">
+    <strong>PROVENANCE</strong>
+    <span class="accordion-toggle">&#x25BC;</span>
   </div>
-  <div class="top-bar-filter mobile-tablet-filters">
- <div class="dropdwn">
-  <select onchange="if (this.value) window.location.href=this.value;">
-  {% for block in section.blocks %}
-    {% if block.type == 'tab' %}
-      <option value="{{ block.settings.url }}" {% if block.settings.active %}selected{% endif %}>
-        {{ block.settings.text }}
-      </option>
-    {% endif %}
-  {% endfor %}
-</select>
- </div>
-        <div class="sort-dropdown">
-      <select id="sort_by">
-        <option value="">Sort by</option>
-        <option value="best-selling">Best Selling</option>
-        <option value="price-asc">Price, Low to High</option>
-        <option value="price-desc">Price, High to Low</option>
-        <option value="title-asc">Alphabetically, A-Z</option>
-        <option value="title-desc">Alphabetically, Z-A</option>
-        <option value="created-desc">Date, New to Old</option>
-        <option value="created-asc">Date, Old to New</option>
-      </select>
-    </div>
-
+  <div class="accordion-content">
+    {{ product.description | strip_html | truncatewords: 100 }}
   </div>
-
-  <div class="border-lines"></div>
-
-
-    {% if collection and collection.products.size > 0 %}
-    {% assign latest_product = collection.products.first %}
-    
-    <!-- Latest Product Banner -->
-
-    <!-- Product Grid -->
-<div class="main_section_all">
-      {% for product in collection.products %}
-     <div class="content">
-        <div class="cards">
-          <div class="card">
-        
-         <div class="card__side card__side--front card__side--front-1"> 
-        
-        <div class="product-col-1" data-type="{{ product.type | downcase }}">
-         
-            <div class="product-avaliable">Available</div>
-         
-
-         <div class="relative_img">
-         <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}"/>
-          {% comment %}
-          <div class="badge left">
-          {{ product.collections.first.title | default: "Vehicle" }}
-         </div>
-         {% endcomment %}
-         </div>
-
-        <div class="product-col-title">{{ product.title }}</div>
-
-        </div>
-          </div>
-        <div class="card__side card__side--back card__side--back-1">
-                        <div class="product-col-2">
-                        <div class="product-avaliable">
-                         
-                            <div class="product-avaliable">Available</div>
-                         
-                        </div>
-                        <div class="relative_img">
-                          {% assign second_image = product.images[1] %}
-                         <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
-                         {% comment %}
-                          <div class="badge right">
-                          {{ latest_product.collections.first.title | default: "Vehicle" }}
-                         </div>
-                         {% endcomment %}
-                         </div>
-                        <div class="product-col-title white-color">{{ product.title }}</div>
-                      </div>
-          
-        </div>  
-            
-     </div> 
-        </div>
 </div>
-      {% endfor %}
-</div>      
-    
-    <div class="border-lines"></div>
-    <div class="results-count">Showing {{ collection.products.size }} of {{ collection.products.size }} results</div>
-    <div class="border-lines"></div>  
-  {% else %}
-    <p>No products found in this collection.</p>
-  {% endif %}
 
-
-</div>
-</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.custom-accordion').forEach(accordion => {
+      accordion.addEventListener('click', () => {
+        accordion.classList.toggle('open');
+      });
+    });
+  });
+</script>
 
 
 
