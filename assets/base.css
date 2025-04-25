@@ -4222,7 +4222,7 @@ font-family: 'Eczar';
     text-align: center;
   }
   .vehicle-product-header__second {
-    width: 100%;
+    width: 100% !important;
 }
   .vehicles-main-specifications-wrapper{
     grid-template-columns: repeat(2, 1fr) !important;
