@@ -27,14 +27,23 @@
 <div class="section-{{ section.id }} gradient color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
     <div class="image-wrapper">
-      <img
-        src="{{ section.settings.image | img_url: 'master' }}"
-        class="section__image"
-        alt="Background"
-      >
+      {% if product.featured_image %}
+        <img
+          src="{{ product.featured_image | img_url: 'master' }}"
+          class="section__image"
+          alt="{{ product.title }}"
+        >
+      {% else %}
+        <img
+          src="{{ section.settings.image | img_url: 'master' }}"
+          class="section__image"
+          alt="Background"
+        >
+      {% endif %}
     </div>
   </div>
 </div>
+
 
 {% schema %}
 {
