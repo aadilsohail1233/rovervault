@@ -4215,7 +4215,7 @@ font-family: 'Eczar';
     display: none;
 }
   .vehicles-main-specifications-wrapper{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
   }
   .badge.rights {
       display:inline-block;
