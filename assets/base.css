@@ -4217,6 +4217,9 @@ font-family: 'Eczar';
   .vehicles-main-specifications-wrapper{
     grid-template-columns: repeat(2, 1fr) !important;
   }
+  .vehicle-product-header-wrapper{
+    display:inline-block !important;
+  }
   .badge.rights {
       display:inline-block;
   }
