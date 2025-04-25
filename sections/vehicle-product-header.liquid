@@ -33,10 +33,13 @@
   <div class="page-width">
     <div class="vehicle-product-header-wrapper">
       <div class="vehicle-product-header__first">
+        <h1 class="vehicle-product-title">{{ product.title }}</h1>
+        {%- comment -%}
         <img
           src="{{ section.settings['first-image'] | img_url: 'master' }}"
           alt="Vehicle Text"
         >
+        {%- endcomment -%}
       </div>
       <div class="vehicle-product-header__second">
         <img
