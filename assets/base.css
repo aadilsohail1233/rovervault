@@ -4217,6 +4217,10 @@ font-family: 'Eczar';
   .vehicle-product-header__second {
     width: 100%;
 }
+  h1.vehicle-product-title{
+    font-size: 4.5rem;
+    text-align: center;
+  }
   .vehicles-main-specifications-wrapper{
     grid-template-columns: repeat(2, 1fr) !important;
   }
