@@ -15,7 +15,7 @@
      </div>     
   </div>
   <div class="tab-content" id="review">
-    <p>Review content goes here...</p>
+     {{ product.description | strip_html }}
   </div>
   <div class="tab-content" id="startup" style="display: none;">
     <p>Startup / Drive content goes here...</p>
