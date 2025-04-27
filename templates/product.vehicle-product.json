@@ -193,6 +193,11 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
+    },
+    "tabs_video_section_VHmFbR": {
+      "type": "tabs-video-section",
+      "name": "Video Tabs",
+      "settings": {}
     }
   },
   "order": [
@@ -203,6 +208,7 @@
     "product_vehicles_main_specifications_MMHzMf",
     "product_detail_accordion_Az3FBH",
     "logo_with_text_small_P6KTnM",
+    "tabs_video_section_VHmFbR",
     "features_WnVAYB",
     "image_show_z4nGJG",
     "product_vehicles_main_specifications_LJndnB"
