@@ -18,6 +18,11 @@ h1.vehicle-product-title {
 .vehicles-main__specification {
     color: #6b8d50;
 }
+.video-tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 8px;
+}
 .badge.rights {
     border: 0;
     position: absolute;
