@@ -15,6 +15,11 @@ h1.vehicle-product-title {
     margin: 0;
     letter-spacing: 0.6rem;
 }
+.video-full-tabs {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
 .vehicles-main__specification {
     color: #6b8d50;
 }
