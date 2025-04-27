@@ -140,6 +140,40 @@
         "margin_bottom": 36
       }
     },
+    "tabs_video_section_VHmFbR": {
+      "type": "tabs-video-section",
+      "name": "Video Tabs",
+      "settings": {}
+    },
+    "image_show_z4nGJG": {
+      "type": "image-show",
+      "blocks": {
+        "button_BUE9ig": {
+          "type": "button",
+          "settings": {
+            "button_label": "Enquire",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_BUE9ig"
+      ],
+      "settings": {
+        "background-image": "shopify://shop_images/background-image-2.png",
+        "logo-type": false,
+        "logo": "shopify://shop_images/Group_611.png",
+        "logo-text": "AUTHENTICALLY REPRODUCED",
+        "footer-image": "shopify://shop_images/wave_main_v2.gif",
+        "footer-image1": "shopify://shop_images/wave_tablet_v1.gif",
+        "footer-image2": "shopify://shop_images/wave_mobile_v1.gif",
+        "down-text": "",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
     "features_WnVAYB": {
       "type": "features",
       "blocks": {
@@ -160,10 +194,10 @@
         "margin_bottom": 36
       }
     },
-    "image_show_z4nGJG": {
+    "image_show_GJbiTa": {
       "type": "image-show",
       "blocks": {
-        "button_BUE9ig": {
+        "button_bAPd9x": {
           "type": "button",
           "settings": {
             "button_label": "Enquire",
@@ -172,7 +206,7 @@
         }
       },
       "block_order": [
-        "button_BUE9ig"
+        "button_bAPd9x"
       ],
       "settings": {
         "background-image": "shopify://shop_images/background-image-2.png",
@@ -193,11 +227,6 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
-    },
-    "tabs_video_section_VHmFbR": {
-      "type": "tabs-video-section",
-      "name": "Video Tabs",
-      "settings": {}
     }
   },
   "order": [
@@ -209,8 +238,9 @@
     "product_detail_accordion_Az3FBH",
     "logo_with_text_small_P6KTnM",
     "tabs_video_section_VHmFbR",
-    "features_WnVAYB",
     "image_show_z4nGJG",
+    "features_WnVAYB",
+    "image_show_GJbiTa",
     "product_vehicles_main_specifications_LJndnB"
   ]
 }
