@@ -1,118 +1,90 @@
 <div class="video-tabs-wrapper">
-  <h2 class="video-heading">Videos</h2>
-
-  <div class="tabs-menu">
-    {% assign first_tab = true %}
-    {% for block in section.blocks %}
-      <button
-        class="tab-button{% if first_tab %} active{% endif %}"
-        data-tab="tab-{{ block.id }}">
-        {{ block.settings.tab_title }}
-      </button>
-      {% assign first_tab = false %}
-    {% endfor %}
+  <h2 class="video-title">Videos</h2>
+  <div class="video-tabs">
+    <button class="tab-link active" data-tab="review">Review</button>
+    <button class="tab-link" data-tab="startup">Startup / Drive</button>
+    <button class="tab-link" data-tab="technical">Technical</button>
+    <button class="tab-link" data-tab="startup2">Startup / Drive</button>
   </div>
 
-  <div class="tabs-content">
-    {% assign first_content = true %}
-    {% for block in section.blocks %}
-      <div class="tab-content{% if first_content %} active{% endif %}" id="tab-{{ block.id }}">
-        <div class="tab-grid">
-          {% for i in (1..6) %}
-            {% assign key = "item_" | append: i %}
-             {% assign label = block.settings[key] %}
-            {% if label != blank %}
-              <div class="tab-grid-item">{{ label }}</div>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-      {% assign first_content = false %}
-    {% endfor %}
+  <div class="tab-content" id="review">
+    <p>Review content goes here...</p>
   </div>
-  
+  <div class="tab-content" id="startup" style="display: none;">
+    <p>Startup / Drive content goes here...</p>
+  </div>
+  <div class="tab-content" id="technical" style="display: none;">
+    <p>Technical content goes here...</p>
+  </div>
+  <div class="tab-content" id="startup2" style="display: none;">
+    <p>Startup / Drive second content goes here...</p>
+  </div>
 </div>
 
 <style>
-  .video-tabs-wrapper {
-    background: #ecead7;
-    padding: 30px;
-    border-top: 5px solid #6b8e4e;
-    border-bottom: 5px solid #6b8e4e;
-  }
+.video-tabs-wrapper {
+  background-color: #e6e4ce;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
 
-  .video-heading {
-    color: #5a7e42;
-    font-size: 40px;
-    font-weight: 800;
-    margin-bottom: 20px;
-  }
+.video-title {
+  color: #567336;
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
 
-  .tabs-menu {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
+.video-tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
 
-  .tab-button {
-    background: #cbd5b3;
-    color: #5a7e42;
-    font-weight: 600;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
+.tab-link {
+  background-color: #d6d7bc;
+  border: none;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #567336;
+  transition: background-color 0.3s;
+}
 
-  .tab-button.active {
-    background: #6b8e4e;
-    color: #fff;
-  }
+.tab-link.active {
+  background-color: #688c45;
+  color: white;
+}
 
-  .tabs-content .tab-content {
-    display: none;
-  }
-
-  .tabs-content .tab-content.active {
-    display: block;
-  }
-
-  .tab-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-  }
-
-  .tab-grid-item {
-    background: #cbd5b3;
-    color: #4b6e3e;
-    text-align: center;
-    padding: 20px;
-    font-weight: 600;
-  }
+.tab-content {
+  background: white;
+  padding: 20px;
+  border: 1px solid #d6d7bc;
+}
 </style>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".tab-button");
-    const contents = document.querySelectorAll(".tab-content");
-
-    buttons.forEach(button => {
-      button.addEventListener("click", function () {
-        const tabId = this.getAttribute("data-tab");
-
-        buttons.forEach(btn => btn.classList.remove("active"));
-        this.classList.add("active");
-
-        contents.forEach(content => {
-          content.classList.remove("active");
-          if (content.id === tabId) content.classList.add("active");
-        });
-      });
+document.querySelectorAll('.tab-link').forEach(function(button) {
+  button.addEventListener('click', function() {
+    // Remove active class from all tabs
+    document.querySelectorAll('.tab-link').forEach(function(btn) {
+      btn.classList.remove('active');
     });
+    // Add active class to the clicked tab
+    this.classList.add('active');
+
+    // Hide all contents
+    document.querySelectorAll('.tab-content').forEach(function(content) {
+      content.style.display = 'none';
+    });
+
+    // Show the clicked content
+    var tabId = this.getAttribute('data-tab');
+    document.getElementById(tabId).style.display = 'block';
   });
+});
 </script>
+
 
 {% schema %}
 {
