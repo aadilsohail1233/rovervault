@@ -55,10 +55,10 @@
                         <div class="relative_img">
                           {% assign second_image = product.images[1] %}
                          <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
-                         <div class="badge rights">
+                         <div class="badge right">
                           {{ product.collections.first.title | default: "Vehicle" }}
                          </div>
-                          <div class="badge left">
+                          <div class="badge lefts">
                           <img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" />
                          </div>  
                           
