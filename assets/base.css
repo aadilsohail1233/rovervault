@@ -4164,7 +4164,7 @@ font-family: 'Eczar';
   transform: rotateY(0deg);
 } 
 .card.flipped .card__side--back {
-  transform: rotate(180deg);
+  transform: rotateY(180deg);
 }
 .dropdwn select {
     background-color: #CBD2B5;
