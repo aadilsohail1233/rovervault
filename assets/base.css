@@ -4154,14 +4154,6 @@ font-family: 'Eczar';
   transform: rotate(0);
 }
 
-/* Active flipped class (for mobile) */
-.card.is-flipped .card__side--front {
-  transform: rotateY(-180deg);
-}
-.card.is-flipped .card__side--back {
-  transform: rotateY(0);
-}
-
 .dropdwn select {
     background-color: #CBD2B5;
     width: 100%;
