@@ -207,21 +207,20 @@
 <div class="section-{{ section.id }}-margin gradient color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
     <div class="image-show-wrapper"> 
-      <div class="image-mobile-background">
-        <img
-          src="{{ section.settings.mobile-background-image | img_url: 'master' }}"
-          class="image-show-background__image"
-          alt="Background"
-        >
-        
-      </div>
       <div class="image-show-background">
-        <img
-          src="{{ section.settings.background-image | img_url: 'master' }}"
-          class="image-show-background__image"
-          alt="Background"
-        >
-
+        
+  <picture>
+    {% if section.settings.mobile-background-image != blank %}
+      <source 
+        srcset="{{ section.settings.mobile-background-image | img_url: 'master' }}" 
+        media="(max-width: 767px)">
+    {% endif %}
+    <img
+      src="{{ section.settings.background-image | img_url: 'master' }}"
+      class="image-show-background__image"
+      alt="Background"
+    >
+  </picture>
         {% if section.settings['logo-type'] %}
           <div class="image-show-main-circle font-vvds">
             {{ section.settings['logo-text'] }}
