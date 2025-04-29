@@ -4160,7 +4160,12 @@ font-family: 'Eczar';
 .card:hover .card__side--back {
   transform: rotate(0);
 }
-
+.card.flipped .card__side--front {
+  transform: rotateY(0deg);
+} 
+.card.flipped .card__side--back {
+  transform: rotate(180deg);
+}
 .dropdwn select {
     background-color: #CBD2B5;
     width: 100%;
