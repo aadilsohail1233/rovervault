@@ -68,6 +68,7 @@
       "type": "image-show",
       "settings": {
         "background-image": "shopify://shop_images/background-image-1.png",
+        "mobile-background-image": "shopify://shop_images/Frame_726_1.png",
         "logo-type": false,
         "logo": "shopify://shop_images/logo-land-rover.png",
         "logo-text": "HERITAGE ROVER COMPANY",
