@@ -12,7 +12,7 @@
           "id": "product",
           "label": "Select product"
         }
-      ] 
+      ]
     }
   ],
   "max_blocks": 10,
@@ -30,10 +30,10 @@
             {% if product %}
               <div class="swiper-slide">
                  <div class="content">
-                   <div class="cards">
-                     <div class="card">  
-                   
-                   <div class="card__side card__side--front card__side--front-1">
+                <div class="cards">
+                     <div class="card"> 
+
+                      <div class="card__side card__side--front card__side--front-1"> 
                       <div class="product-col-1">
                         <div class="product-avaliable">Avaliable</div>
                          <div class="relative_img">
@@ -41,15 +41,15 @@
                          <div class="badge left">
                           {{ product.collections.first.title | default: "Vehicle" }}
                          </div>
-                        <div class="badge rights">
+                         <div class="badge rights">
                           <img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" />
                          </div>   
                          </div>
-                          <div class="product-col-title">{{ product.title }}</div>
+                          <div class="product-col-title">{{ product.title }}</div> 
                         <div class="button-product desktop-section-hide margin-button-bottom"><a href="/collections/all" class="button--main">View full listing</a></div>
                       </div>
-                   </div>
-                     <div class="card__side card__side--back card__side--back-1">
+                      </div>  
+                    <div class="card__side card__side--back card__side--back-1">
                      <div class="product-col-2">
                         <div class="product-avaliable">Avaliable</div>
                         <div class="relative_img">
@@ -60,12 +60,12 @@
                          </div>
                         </div>
                         <div class="product-col-title white-color">{{ product.title }}</div>
-                     </div>
-                       
-                        </div>
-                     </div>
+                     </div>   
+                    </div> 
+                   
                  </div>
-              </div>
+                </div>
+                </div>
               </div>
             {% endif %}
           {% endfor %}
@@ -123,23 +123,6 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesPerView: 2
       }
     }
-  });
-});
-
-        // Flip cards on mobile
-  var cards = document.querySelectorAll('.card');
-
-  cards.forEach(function(card) {
-    card.addEventListener('click', function(e) {
-      // Only on mobile (adjust 768px if needed)
-      if (window.innerWidth <= 768) {
-        // Prevent swiper from sliding when tapping the card
-        e.stopPropagation();
-
-        // Toggle flip
-        card.classList.toggle('is-flipped');
-      }
-    });
   });
 });
     </script>
@@ -202,7 +185,6 @@ document.addEventListener('DOMContentLoaded', function () {
     margin: 0 auto;
     align-items:center;    
 }
-
             .badge.right {
     position: absolute;
     left: 15px;
@@ -290,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function () {
     transform: translate(-50%, -50%);
     position: absolute;
 }
-.swiper-pagination2.swiper-pagination-bullets.swiper-pagination-horizontal{
+.swiper-button-next2.swiper-pagination-bullets.swiper-pagination-horizontal{
   bottom: auto;
   left: 48%;
   transform: translate(-45%, 0);
