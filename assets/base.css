@@ -4142,7 +4142,7 @@ font-family: 'Eczar';
   backface-visibility: hidden;
   transition: all 0.6s ease;
 }
-
+  
 .card__side--back {
   color: #FFF;
   transform: rotateY(180deg);
