@@ -13,6 +13,7 @@
       "type": "image-show",
       "settings": {
         "background-image": "shopify://shop_images/background-image-3.png",
+        "mobile-background-image": "shopify://shop_images/Mask_group_3.png",
         "logo-type": true,
         "logo-text": "Range Rover",
         "footer-image": "shopify://shop_images/wave_main_v2.gif",
