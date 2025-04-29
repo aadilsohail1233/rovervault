@@ -125,6 +125,23 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+        // Flip cards on mobile
+  var cards = document.querySelectorAll('.card');
+
+  cards.forEach(function(card) {
+    card.addEventListener('click', function(e) {
+      // Only on mobile (adjust 768px if needed)
+      if (window.innerWidth <= 768) {
+        // Prevent swiper from sliding when tapping the card
+        e.stopPropagation();
+
+        // Toggle flip
+        card.classList.toggle('is-flipped');
+      }
+    });
+  });
+});
     </script>
     
     <style>
