@@ -213,6 +213,25 @@
           class="image-show-background__image"
           alt="Background"
         >
+        {% if section.settings['logo-type'] %}
+          <div class="image-show-main-circle font-vvds">
+            {{ section.settings['logo-text'] }}
+          </div>
+        {% else %}
+          <div class="image-show-main">
+            <div class="image-show-main-logo">
+              <img src="{{ section.settings.logo | img_url: 'master' }}" alt="Logo">
+            </div>
+            <div class="image-show-main-content">
+              <div class="image-show-main-content__text">{{ section.settings['logo-text'] }}</div>
+              {% for block in section.blocks %}
+                <a href="{{ block.settings.button_link }}" class="button--main">
+                  {{ block.settings.button_label }}
+                </a>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
       </div>
       <div class="image-show-background">
         <img
