@@ -15,10 +15,6 @@ h1.vehicle-product-title {
     margin: 0;
     letter-spacing: 0.6rem;
 }
-.collection-slider-section .prd-img {
-    height: 260px;
-    object-fit: cover;
-}
 .badge.lefts {
     border: 0;
     position: absolute;
@@ -53,7 +49,9 @@ h1.vehicle-product-title {
 .arts .product-col-1 .relative_img img {
     border-bottom: 5px solid #6b8d50;
 }
-
+.arts .product-col-1 .product-col-title {
+    line-height: 3em;
+}
 .parts_collections .product-col-2 .relative_img img {
     height: 400px;
 }
@@ -4042,7 +4040,7 @@ font-family: 'Eczar';
 }
       .cl-title {
     font-family: 'VVDS Fifties';
-    font-size: 36px;
+    font-size: 30px;
     color:#6B8D50;    
 }
             .badge.right {
@@ -4118,7 +4116,7 @@ font-family: 'Eczar';
 .product-col-1 .prd-img {
     width: 100%;
 }
-
+ 
 .product-col-2 .prd-img {
     width: 100%;
 }
@@ -4136,7 +4134,7 @@ font-family: 'Eczar';
   cursor: url(https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926), auto;
 }
 .collection-slider-section .card {
-  height: 57em;  
+  height: 53em;  
 }
 .card {
   width: 100%;
