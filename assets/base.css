@@ -1488,6 +1488,7 @@ button.shopify-payment-button__button--unbranded {
   padding: 20px 30px;
   border-radius: 100%;
   text-decoration: none;
+  display:inline-block;
 }
 
 /* Shopify Accelerated Checkout */
@@ -3220,6 +3221,9 @@ details-disclosure > details {
   .content-container--full-width-mobile:after {
     display: none;
   }
+  .button--main{
+   padding: 15px 25px;
+  }
 }
 
 .global-media-settings {
@@ -4342,7 +4346,7 @@ font-family: 'Eczar';
     height: 48em;
 }
   .padding-bottom-zero .card {
-    height: 43em;
+    height: 42em;
 }
   .padding-bottom-zero .content{
     padding: 0px;
@@ -4357,16 +4361,19 @@ font-family: 'Eczar';
 
 @media screen and (max-width: 440px) and (min-width: 400px) {
     .card {
-    height: 55em; 
+    height: 56em; 
   }
+  .collection-slider-section .card {
+    height: 56em;
+}
  .parts_collections .card {
-    height: 51em;
+    height: 52em;
 } 
   .parts-sections .card {
-    height: 51em;
+    height: 52em;
 }
   .padding-bottom-zero .card {
-    height: 46em;
+    height: 45em;
 }
   .vehicles .card {
     height: 51em;
@@ -4376,6 +4383,9 @@ font-family: 'Eczar';
     .card {
     height: 59em; 
   }
+.collection-slider-section .card {
+    height: 59em;
+}
 .parts-sections .card {
     height: 58em;
 }
@@ -4384,7 +4394,7 @@ font-family: 'Eczar';
 }  
   
   .padding-bottom-zero .card {
-    height: 53em;
+    height: 51em;
 }
 .vehicles .card {
     height: 53em;
@@ -4394,6 +4404,9 @@ font-family: 'Eczar';
     .card {
     height: 63em; 
   }
+.collection-slider-section .card {
+    height: 63em;
+}
   .parts-sections .card {
     height: 61em;
 }
@@ -4408,6 +4421,10 @@ font-family: 'Eczar';
     .card {
     height: 67em; 
   } 
+
+.collection-slider-section .card {
+    height: 67em;
+}   
      .parts-sections .card {
     height: 67em;
 }
@@ -4438,6 +4455,9 @@ font-family: 'Eczar';
 .card {
     height: 37em; 
   }   
+  .collection-slider-section .card {
+    height: 37em;
+}
   .parts-sections .card {
     height: 37em;
 }
@@ -4449,7 +4469,10 @@ font-family: 'Eczar';
 @media screen and (max-width: 920px) and (min-width: 821px) {
 .card {
     height: 39em; 
-  }   
+  }  
+    .collection-slider-section .card {
+    height: 39em;
+}
   .parts-sections .card {
     height: 37em;
 }
@@ -4462,7 +4485,10 @@ font-family: 'Eczar';
 @media screen and (max-width: 980px) and (min-width: 921px) {
 .card {
     height: 39em; 
-  }   
+  }  
+      .collection-slider-section .card {
+    height: 39em;
+}
   .parts-sections .card {
     height: 39em;
 }
@@ -4475,6 +4501,9 @@ font-family: 'Eczar';
 .card {
     height: 53em; 
   }     
+      .collection-slider-section .card {
+    height: 53em;
+}
   .parts-sections .card {
     height: 49em;
 }
