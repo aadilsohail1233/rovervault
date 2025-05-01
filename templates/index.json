@@ -134,8 +134,8 @@
         "logo_image": "shopify://shop_images/Layer_4_3b78df73-d389-4d75-a06c-dace18f48d7d.png",
         "first_text_image": "shopify://shop_images/Heading_eb082fad-41c8-4a63-8b17-68c091d06146.png",
         "second_text_image": "shopify://shop_images/Heading_1_da49abfe-e4a2-4b19-b663-68a4340cb0ea.png",
-        "margin_top": 36,
-        "margin_bottom": 36,
+        "margin_top": 0,
+        "margin_bottom": 16,
         "layout_direction": "text-left"
       }
     },
