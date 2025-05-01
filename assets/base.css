@@ -15,6 +15,9 @@ h1.vehicle-product-title {
     margin: 0;
     letter-spacing: 0.6rem;
 }
+a.footer-page__link {
+    color: #6b8d50;
+}
 .badge.lefts {
     border: 0;
     position: absolute;
@@ -46,13 +49,11 @@ h1.vehicle-product-title {
 .card__side--front-1 .prd-img-others {
     width: 100%;
 }
-.arts .product-col-1 .relative_img img {
+.arts .product-col-1 .relative_img .prd-img {
     border-bottom: 5px solid #6b8d50;
 }
-.arts .product-col-1 .product-col-title {
-    line-height: 3em;
-}
-.parts_collections .product-col-2 .relative_img img {
+
+.parts_collections .product-col-2 .relative_img .prd-img {
     height: 400px;
 }
 .parts_collections .card {
