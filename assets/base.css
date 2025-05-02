@@ -3033,8 +3033,8 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item:hover span {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  text-decoration: none;
+/*  text-underline-offset: 0.3rem; */
 }
 
 details[open] > .header__menu-item {
