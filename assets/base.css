@@ -1061,7 +1061,7 @@ summary::-webkit-details-marker {
 }
 @media screen and (max-width: 768px) {
  .header__icon--cart{
-   margin-right: 0rem;
+   margin-right: 0rem !important;
  } 
 }
 
