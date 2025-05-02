@@ -1489,10 +1489,12 @@ button.shopify-payment-button__button--unbranded {
     padding: 20px 30px;
     border-radius: 100%;
     text-decoration: none;
-    display: inline-block;
     font-family: Eczar !important;
     font-size: 20px !important;
     min-width: 209px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Shopify Accelerated Checkout */
