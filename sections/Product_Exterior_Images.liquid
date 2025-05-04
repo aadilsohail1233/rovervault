@@ -7,23 +7,31 @@
      </div>
   <div class="videos-tabs"> 
   <div class="video-tabs">
-    <button class="tab-link active" data-tab="review">Body</button>
-    <button class="tab-link" data-tab="startup">Wheels</button>
-    <button class="tab-link" data-tab="technical">Door</button>
-    <button class="tab-link" data-tab="startup2">Engine</button>
+    <button class="tab-link active" data-tab="body">Body</button>
+    <button class="tab-link" data-tab="wheels">Wheels</button>
+    <button class="tab-link" data-tab="door">Door</button>
+    <button class="tab-link" data-tab="engine">Engine</button>
   </div>
      </div>     
   </div>
-  <div class="tab-content" id="review">
-      {{ product.metafields.custom.exterior_body_image_2 }}
+  <div class="tab-content" id="body">
+      {% if product.metafields.custom.exterior_body_image_2 != blank %}
+  <div style="display: flex; flex-wrap: nowrap; gap: 10px; overflow-x: auto;">
+    {% for image in product.metafields.custom.exterior_body_image_2.value %}
+      <div style="flex: 0 0 auto;">
+        <img src="{{ image | image_url: width: 300 }}" alt="Exterior Body Image" style="max-width: 100%; height: auto;" />
+      </div>
+    {% endfor %}
   </div>
-  <div class="tab-content" id="startup" style="display: none;">
+{% endif %}
+  </div>
+  <div class="tab-content" id="wheels" style="display: none;">
     {{ product.metafields.custom.startup_video_embed }}
   </div>
-  <div class="tab-content" id="technical" style="display: none;">
+  <div class="tab-content" id="door" style="display: none;">
     {{ product.metafields.custom.techinal_video_embed }}
   </div>
-  <div class="tab-content" id="startup2" style="display: none;">
+  <div class="tab-content" id="engine" style="display: none;">
     {{ product.metafields.custom.drive_video_embed }}
   </div>
 </div>
