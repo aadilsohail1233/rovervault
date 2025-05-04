@@ -4319,11 +4319,12 @@ font-family: 'Eczar';
   .video-tabs{
     display:inline-block !important;
   }
-  .tab-link{
-    width:49% !important;
-  }
   .tab-link {
-    width: 49%;
+    width: 49% !important;
+    margin-bottom: 1rem;
+}
+    .tab-link1 {
+    width: 49% !important;
     margin-bottom: 1rem;
 }
   
