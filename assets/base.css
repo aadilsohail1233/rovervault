@@ -4312,6 +4312,9 @@ font-family: 'Eczar';
     width: 100% !important;
     text-align: center;
 }
+  .videos-tabs {
+    width: 100%;
+}
 /* Active flipped class (for mobile) */
 .card.is-flipped .card__side--front {
   transform: rotateY(-180deg);
