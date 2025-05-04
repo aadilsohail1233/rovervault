@@ -17,9 +17,9 @@
   <div class="tab-content2" id="storage">
 
     
-{% if product.metafields.custom.exterior_body_image_2 != blank %}
+{% if product.metafields.custom.interior_storage_image != blank %}
   <div class="images_all_out">
-    {% assign images = product.metafields.custom.exterior_body_image_2.value | parse_json %}
+    {% assign images = product.metafields.custom.interior_storage_image.value | parse_json %}
       {% for image in images %}
       {% assign Counter = forloop.index %}  
       {% endfor %}
@@ -56,9 +56,9 @@
   </div>
   <div class="tab-content2" id="seatings" style="display: none;">
     
-   {% if product.metafields.custom.exterior_wheels != blank %}
+   {% if product.metafields.custom.interior_seating_image != blank %}
   <div class="images_all_out">
-    {% assign images = product.metafields.custom.exterior_wheels.value | parse_json %}
+    {% assign images = product.metafields.custom.interior_seating_image.value | parse_json %}
       {% for image in images %}
       {% assign Counter = forloop.index %}  
       {% endfor %}
@@ -93,9 +93,9 @@
 
   </div>
   <div class="tab-content2" id="infotainment" style="display: none;">
-  {% if product.metafields.custom.exterior_door_images != blank %}
+  {% if product.metafields.custom.interior_info_image != blank %}
   <div class="images_all_out">
-    {% assign images = product.metafields.custom.exterior_door_images.value | parse_json %}
+    {% assign images = product.metafields.custom.interior_info_image.value | parse_json %}
       {% for image in images %}
       {% assign Counter = forloop.index %}  
       {% endfor %}
@@ -129,9 +129,9 @@
 {% endif %}
   </div>
   <div class="tab-content2" id="safety" style="display: none;">
-    {% if product.metafields.custom.exterior_engine_images != blank %}
+    {% if product.metafields.custom.interior_safety_image != blank %}
   <div class="images_all_out">
-    {% assign images = product.metafields.custom.exterior_door_images.value | parse_json %}
+    {% assign images = product.metafields.custom.interior_safety_image.value | parse_json %}
       {% for image in images %}
       {% assign Counter = forloop.index %}  
       {% endfor %}
