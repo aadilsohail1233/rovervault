@@ -17,7 +17,7 @@
   <div class="tab-content" id="body">
 {% assign images = product.metafields.custom.exterior_body_image_2.value %}
 {% if product.metafields.custom.exterior_body_image_2 != blank %}
-  <div class="images">
+  <div class="images_all_out">
     {% assign images = product.metafields.custom.exterior_body_image_2.value %}
     {% for image in images limit: 4 %}
       {% assign mod_check = forloop.index0 | modulo: 2 %}
