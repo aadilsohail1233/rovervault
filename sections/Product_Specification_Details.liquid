@@ -28,7 +28,14 @@
     </div>
     <div class="par_col_1">
     <div class="sp_title">Paint Finished</div>
-     <div class="sp_description">State Grey</div>  
+     <div class="sp_description">
+  {% if product.metafields.vehicles.paint_finish %}
+   {{ product.metafields.vehicles.paint_finish }}
+    {% else %}
+    None
+   {% endif %}    
+       
+     </div>  
     </div>
    </div>
     <div class="parent_col">
