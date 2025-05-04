@@ -30,6 +30,9 @@ h1.vehicle-product-title {
     font-size: 48px;
     text-decoration: none;
 }
+.image-box-4.exterior-image {
+    position: relative;
+}
 .parent-row .image-box-2 {
     width: 40%;
     object-fit: cover;
