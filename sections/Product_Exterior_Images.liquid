@@ -31,6 +31,13 @@
 
       <div class="image-box-{{ forloop.index }} exterior-image">
         <img src="{{ image | image_url: width: 600 }}" alt="Exterior Image {{ forloop.index }}" />
+      {% if Counter > 4 %}
+      <div class="view-all-box" style="display: flex; justify-content: flex-end;">
+        <a href="#view-all" style="background: #c89c29; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold;">
+          VIEW ALL {{ Counter }} PICTURES
+        </a>
+      </div>
+    {% endif %}
       </div>
 
       {% assign mod_check_end = forloop.index0 | modulo: 2 %}
@@ -40,13 +47,7 @@
       {% endif %}
     {% endfor %}
 
-    {% if images.size > 4 %}
-      <div class="view-all-box" style="display: flex; justify-content: flex-end;">
-        <a href="#view-all" style="background: #c89c29; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold;">
-          VIEW ALL {{ images.size }} PICTURES
-        </a>
-      </div>
-    {% endif %}
+
   </div>
 {% endif %}
 
