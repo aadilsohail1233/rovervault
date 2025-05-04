@@ -21,14 +21,16 @@ h1.vehicle-product-title {
     display: flex;
 }
 .view-all-box a{
-  background: #c89c29;
-    color: white;
+    background: #c89c29;
+    color: #fff;
     position: absolute;
     bottom: 0;
     right: 0;
-    font-family: 'VVDS Fifties';
+    font-family: VVDS Fifties;
     font-size: 48px;
     text-decoration: none;
+    text-align: center;
+    line-height: 50px;
 }
 .image-box-4.exterior-image {
     position: relative;
