@@ -191,9 +191,21 @@
 </div>-->
 
 <script>
-  function openModal() {
-    document.getElementById("viewAllModal").style.display = "block";
+function openModal(imagesJson) {
+    const container = document.getElementById('allImagesContainer');
+    const images = JSON.parse(imagesJson);
+    container.innerHTML = ''; // Clear previous images
+
+    images.forEach((src, index) => {
+      const img = document.createElement('img');
+      img.src = `${src}?width=800`;
+      img.alt = `Exterior Image ${index + 1}`;
+      container.appendChild(img);
+    });
+
+    document.getElementById('viewAllModal').style.display = 'block';
   }
+
 
   function closeModal() {
     document.getElementById("viewAllModal").style.display = "none";
