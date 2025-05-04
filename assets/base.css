@@ -4547,7 +4547,7 @@ font-family: 'Eczar';
     height: 32em;
 }
     .video-title{
-    font-size: 40px;
+    font-size: 40px !important;
   }
   
 }
@@ -4567,7 +4567,7 @@ font-family: 'Eczar';
     height: 34em;
 }
     .video-title{
-    font-size: 40px;
+    font-size: 40px !important;
   }
 }
 
@@ -4576,7 +4576,7 @@ font-family: 'Eczar';
     height: 53em; 
   }     
   .video-title{
-    font-size: 40px;
+    font-size: 40px !important;
   }
       .collection-slider-section .card {
     height: 53em;
