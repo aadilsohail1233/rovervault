@@ -15,14 +15,11 @@
      </div>     
   </div>
   <div class="tab-content" id="body">
-    
-{% assign images = product.metafields.custom.exterior_body_image_2.value | parse_json %}
-{% assign image_ids = images | split: ',' %}
-<div class="total-images"> Total Images {{ image_ids.size }}</div>
+
     
 {% if product.metafields.custom.exterior_body_image_2 != blank %}
   <div class="images_all_out">
-    {% assign images = product.metafields.custom.exterior_body_image_2.value %}
+    {% assign images = product.metafields.custom.exterior_body_image_2.value | parse_json %}
     {% for image in images limit: 4 %}
       {% assign mod_check = forloop.index0 | modulo: 2 %}
       {% if mod_check == 0 %}
@@ -38,8 +35,6 @@
         </div>
       {% endif %}
     {% endfor %}
-  
-  <pre>{{ image_ids.size }}</pre>
 
     {% if images.size > 4 %}
       <div class="view-all-box" style="display: flex; justify-content: flex-end;">
