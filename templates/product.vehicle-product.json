@@ -194,6 +194,16 @@
       "name": "Interior Images",
       "settings": {}
     },
+    "home_hero_HnmEAg": {
+      "type": "home-hero",
+      "name": "Home hero",
+      "settings": {
+        "first-image": "shopify://shop_images/Group_592.png",
+        "second-image": "shopify://shop_images/Heading_5bf98edf-69fe-4259-9c76-2e4d71f527d2.png",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "features_WnVAYB": {
       "type": "features",
       "blocks": {
@@ -262,6 +272,7 @@
     "product_exterior_images_X6TLd6",
     "vehicle_advantages_show_9yEMAX",
     "product_interior_images_RDVyWh",
+    "home_hero_HnmEAg",
     "features_WnVAYB",
     "image_show_GJbiTa",
     "product_vehicles_main_specifications_LJndnB"
