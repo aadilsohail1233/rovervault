@@ -15,36 +15,49 @@
      </div>     
   </div>
   <div class="tab-content" id="body">
-{% assign images = product.metafields.custom.exterior_body_image_2.value %}
-<pre>{{ product.metafields.custom.exterior_body_image_2 }}</pre>
-{% if product.metafields.custom.exterior_body_image_2 != blank %}
+    
+{% assign image_ids = product.metafields.custom.exterior_body_image_2.value %}
+
+{% if image_ids and image_ids.size > 0 %}
   <div class="images_all_out">
-    {% assign images = product.metafields.custom.exterior_body_image_2.value %}
-    {% for image in images limit: 4 %}
-      {% assign mod_check = forloop.index0 | modulo: 2 %}
-      {% if mod_check == 0 %}
-        <div class="parent-row">
-      {% endif %}
+    {% for id in image_ids %}
+      {% assign image_obj = nil %}
 
-      <div class="image-box-{{ forloop.index }} exterior-image">
-        <img src="{{ image | image_url: width: 600 }}" alt="Exterior Image {{ forloop.index }}" />
-      </div>
+      {% for media in product.media %}
+        {% if media.id == id %}
+          {% assign image_obj = media %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
 
-      {% assign mod_check_end = forloop.index0 | modulo: 2 %}
-      {% if mod_check_end == 1 or forloop.last %}
+      {% if image_obj %}
+        {% assign mod_check = forloop.index0 | modulo: 2 %}
+        {% if mod_check == 0 %}
+          <div class="parent-row">
+        {% endif %}
+
+        <div class="image-box-{{ forloop.index }} exterior-image">
+          <img src="{{ image_obj | image_url: width: 600 }}" alt="Exterior Image {{ forloop.index }}" />
         </div>
+
+        {% if mod_check == 1 or forloop.last %}
+          </div>
+        {% endif %}
       {% endif %}
     {% endfor %}
-<div class="total-images"> Total Images {{ images.size }}</div>
-    {% if images.size > 4 %}
+
+    <div class="total-images">Total Images: {{ image_ids.size }}</div>
+
+    {% if image_ids.size > 4 %}
       <div class="view-all-box" style="display: flex; justify-content: flex-end;">
         <a href="#view-all" style="background: #c89c29; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold;">
-          VIEW ALL {{ images.size }} PICTURES
+          VIEW ALL {{ image_ids.size }} PICTURES
         </a>
       </div>
     {% endif %}
   </div>
 {% endif %}
+
 
 
 
