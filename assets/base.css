@@ -4315,6 +4315,10 @@ font-family: 'Eczar';
   .videos-tabs {
     width: 100% !important;
 }
+  .tab-link {
+    width: 49%;
+    margin-bottom: 1rem;
+}
 /* Active flipped class (for mobile) */
 .card.is-flipped .card__side--front {
   transform: rotateY(-180deg);
