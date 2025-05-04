@@ -16,24 +16,25 @@
   </div>
   <div class="tab-content" id="body">
 {% assign images = product.metafields.custom.exterior_body_image_2.value %}
-{% if images != blank %}
-  <div style="background-color: #f2f0db; padding: 20px;">
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
-      {% for image in images limit: 5 %}
-        <div style="border: 3px solid #94a973; padding: 4px; background: white;">
-          <img src="{{ image | image_url: width: 600 }}" alt="Image {{ forloop.index }}" style="width: 100%; height: auto;" />
-        </div>
-      {% endfor %}
+{% if product.metafields.custom.exterior_body_image_2 != blank %}
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #f2f0db; padding: 20px;">
+    {% assign images = product.metafields.custom.exterior_body_image_2.value %}
+    {% for image in images limit: 4 %}
+      <div class="image-box-{{ forloop.index }}" style="border: 4px solid #94a973; padding: 5px; background: #fff;">
+        <img src="{{ image | image_url: width: 600 }}" alt="Exterior Image {{ forloop.index }}" style="width: 100%; height: auto;" />
+      </div>
+    {% endfor %}
 
-      <!-- CTA Box (last column of second row) -->
-      <div style="background-color: #c89c29; color: white; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 16px;">
-        <a href="#view-all" style="color: white; text-decoration: none; padding: 20px; display: block; width: 100%; height: 100%; text-align: center;">
+    {% if images.size > 4 %}
+      <div class="view-all-box" style="grid-column: span 2; display: flex; justify-content: flex-end;">
+        <a href="#view-all" style="background: #c89c29; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold;">
           VIEW ALL {{ images.size }} PICTURES
         </a>
       </div>
-    </div>
+    {% endif %}
   </div>
 {% endif %}
+
 
 
   </div>
