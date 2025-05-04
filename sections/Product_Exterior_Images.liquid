@@ -53,12 +53,42 @@
 {% endif %}
 
 
-
-
-
   </div>
   <div class="tab-content1" id="wheels" style="display: none;">
-    {{ product.metafields.custom.startup_video_embed }}
+   {% if product.metafields.custom.custom.exterior_wheels != blank %}
+  <div class="images_all_out">
+    {% assign images = product.metafields.custom.custom.exterior_wheels.value | parse_json %}
+      {% for image in images %}
+      {% assign Counter = forloop.index %}  
+      {% endfor %}
+    {% for image in images %}
+      {% assign Counter1 = forloop.index %}  
+      {% if Counter1 <= 4 %}
+      {% assign mod_check = forloop.index0 | modulo: 2 %}
+      
+      {% if mod_check == 0 %}
+        <div class="parent-row">
+      {% endif %}
+
+      <div class="image-box-{{ forloop.index }} exterior-image">
+        <img src="{{ image | image_url: width: 600 }}" alt="Exterior Image {{ forloop.index }}" />
+      {% if Counter > 4 and Counter1 == 4 %}
+      <div class="view-all-box" style="display: flex; justify-content: flex-end;">
+        <a href="javascript:void(0);" onclick="openModal()" style="background: #c89c29; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold;">
+          VIEW ALL <br> {{ Counter }} PICTURES
+        </a>
+      </div>
+    {% endif %}
+      </div>
+
+      {% assign mod_check_end = forloop.index0 | modulo: 2 %}
+      {% if mod_check_end == 1 or forloop.last %}
+        </div>
+      {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}
   </div>
   <div class="tab-content1" id="door" style="display: none;">
     {{ product.metafields.custom.techinal_video_embed }}
