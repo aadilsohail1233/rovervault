@@ -28,6 +28,11 @@ h1.vehicle-product-title {
     border: 4px solid #6B8D50;
     padding: 10px;
 }
+.parent_col .par_col_1 .sp_title {
+    font-family: 'VVDS Fifties';
+    font-size: 40px;
+    color: #688c45;
+}
 .parent-row .image-box-1 {
     width: 60%;
     object-fit: cover;
