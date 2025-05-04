@@ -26,7 +26,7 @@
       {% endif %}
 
       <div class="image-box-{{ forloop.index }}" style="border: 4px solid #94a973;">
-        <img src="{{ image | image_url: width: 600 }}" alt="Exterior Image {{ forloop.index }}" style="width: 100%; height: auto;" />
+        <img src="{{ image | image_url: width: 600 }}" alt="Exterior Image {{ forloop.index }}" />
       </div>
 
       {% assign mod_check_end = forloop.index0 | modulo: 2 %}
