@@ -14,7 +14,7 @@
   </div>
      </div>     
   </div>
-  <div class="tab-content" id="body">
+  <div class="tab-content1" id="body">
 
     
 {% if product.metafields.custom.exterior_body_image_2 != blank %}
@@ -57,13 +57,13 @@
 
 
   </div>
-  <div class="tab-content" id="wheels" style="display: none;">
+  <div class="tab-content1" id="wheels" style="display: none;">
     {{ product.metafields.custom.startup_video_embed }}
   </div>
-  <div class="tab-content" id="door" style="display: none;">
+  <div class="tab-content1" id="door" style="display: none;">
     {{ product.metafields.custom.techinal_video_embed }}
   </div>
-  <div class="tab-content" id="engine" style="display: none;">
+  <div class="tab-content1" id="engine" style="display: none;">
     {{ product.metafields.custom.drive_video_embed }}
   </div>
 </div>
@@ -191,7 +191,7 @@
   font-size: 20px;
 }
 
-.tab-content {
+.tab-content1 {
 /*  background: white;
   padding: 20px;
   border: 1px solid #d6d7bc; */
@@ -209,7 +209,7 @@ document.querySelectorAll('.tab-link').forEach(function(button) {
     this.classList.add('active');
 
     // Hide all contents
-    document.querySelectorAll('.tab-content').forEach(function(content) {
+    document.querySelectorAll('.tab-content1').forEach(function(content) {
       content.style.display = 'none';
     });
 
