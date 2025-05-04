@@ -4546,6 +4546,10 @@ font-family: 'Eczar';
   .padding-bottom-zero .card {
     height: 32em;
 }
+    .video-title{
+    font-size: 40px;
+  }
+  
 }
 
 
@@ -4562,12 +4566,18 @@ font-family: 'Eczar';
   .padding-bottom-zero .card {
     height: 34em;
 }
+    .video-title{
+    font-size: 40px;
+  }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 981px) {
 .card {
     height: 53em; 
   }     
+  .video-title{
+    font-size: 40px;
+  }
       .collection-slider-section .card {
     height: 53em;
 }
