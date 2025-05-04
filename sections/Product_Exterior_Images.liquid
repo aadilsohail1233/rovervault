@@ -69,6 +69,36 @@
 </div>
 </div>
 </div>  
+
+<div id="viewAllModal" class="view-all-modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <div class="all-images-grid">
+      {% for image in images %}
+        <img src="{{ image | image_url: width: 800 }}" alt="All Exterior Image {{ forloop.index }}" />
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal() {
+    document.getElementById("viewAllModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("viewAllModal").style.display = "none";
+  }
+
+  // Optional: Close when clicking outside modal content
+  window.onclick = function(event) {
+    var modal = document.getElementById("viewAllModal");
+    if (event.target == modal) {
+      closeModal();
+    }
+  }
+</script>
+
 <style>
 .video-tabs-wrapper {
 /*  background-color: #e6e4ce; */
