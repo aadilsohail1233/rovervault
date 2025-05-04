@@ -4317,7 +4317,7 @@ font-family: 'Eczar';
     
 }
   .video-tabs{
-    display:inline-block;
+    display:inline-block !important;
   }
   .tab-link {
     width: 49%;
