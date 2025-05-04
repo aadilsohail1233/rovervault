@@ -1,6 +1,139 @@
+<div class="section-{{ section.id }}">
+<div class="page-width">
+<div class="video-tabs-wrapper">
+  <div class="video-full-tabs">
+     <div class="video-text"> 
+  <h2 class="video-title">Videos</h2> 
+     </div>
+  <div class="videos-tabs"> 
+  <div class="video-tabs">
+    <button class="tab-link active" data-tab="review">Body</button>
+    <button class="tab-link" data-tab="startup">Wheels</button>
+    <button class="tab-link" data-tab="technical">Door</button>
+    <button class="tab-link" data-tab="startup2">Engine</button>
+  </div>
+     </div>     
+  </div>
+  <div class="tab-content" id="review">
+      {{ product.metafields.custom.review_video_embed }}
+  </div>
+  <div class="tab-content" id="startup" style="display: none;">
+    {{ product.metafields.custom.startup_video_embed }}
+  </div>
+  <div class="tab-content" id="technical" style="display: none;">
+    {{ product.metafields.custom.techinal_video_embed }}
+  </div>
+  <div class="tab-content" id="startup2" style="display: none;">
+    {{ product.metafields.custom.drive_video_embed }}
+  </div>
+</div>
+</div>
+</div>  
+<style>
+.video-tabs-wrapper {
+/*  background-color: #e6e4ce; */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  border-top: 5px solid #6B8D50;
+}
+
+.video-title {
+  color: #567336;
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-family:'VVDS Fifties';
+  margin-top:0px;
+}
+.video-text {
+    width: 12%;
+}
+.video-tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+  .videos-tabs {
+    width: 85%;
+}
+
+.tab-link {
+  background-color: #d6d7bc;
+  border: none;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #567336;
+  transition: background-color 0.3s;
+  font-family: Eczar;
+    font-size: 20px;
+  width:25%;
+}
+
+.tab-link.active {
+  background-color: #688c45;
+  color: white;
+  font-family: Eczar;
+  font-size: 20px;
+}
+
+.tab-content {
+/*  background: white;
+  padding: 20px;
+  border: 1px solid #d6d7bc; */
+}
+</style>
+
+<script>
+document.querySelectorAll('.tab-link').forEach(function(button) {
+  button.addEventListener('click', function() {
+    // Remove active class from all tabs
+    document.querySelectorAll('.tab-link').forEach(function(btn) {
+      btn.classList.remove('active');
+    });
+    // Add active class to the clicked tab
+    this.classList.add('active');
+
+    // Hide all contents
+    document.querySelectorAll('.tab-content').forEach(function(content) {
+      content.style.display = 'none';
+    });
+
+    // Show the clicked content
+    var tabId = this.getAttribute('data-tab');
+    document.getElementById(tabId).style.display = 'block';
+  });
+});
+</script>
+
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Exterior Image Section",
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab Title"
+        },
+        {
+          "type": "text",
+          "id": "item_1",
+          "label": "Grid Item 1"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Exterior Images",
+      "category": "Custom"
+    }
+  ]
+}
 {% endschema %}
