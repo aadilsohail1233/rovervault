@@ -4327,6 +4327,9 @@ font-family: 'Eczar';
     width: 49% !important;
     margin-bottom: 1rem;
 }
+  .parent-row{
+    display: inline-block;
+  }
   
 /* Active flipped class (for mobile) */
 .card.is-flipped .card__side--front {
