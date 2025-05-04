@@ -21,6 +21,7 @@ h1.vehicle-product-title {
     gap: 2rem;
     align-items: center;
     justify-content: center;
+  margin-bottom:2rem;
 }
 .parent_col .par_col_1 {
     width: 100%;
