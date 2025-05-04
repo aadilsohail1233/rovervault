@@ -20,6 +20,16 @@ h1.vehicle-product-title {
     object-fit: cover;
     display: flex;
 }
+.view-all-box a{
+  background: #c89c29;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: 'VVDS Fifties';
+    font-size: 48px;
+    text-decoration: none;
+}
 .parent-row .image-box-2 {
     width: 40%;
     object-fit: cover;
