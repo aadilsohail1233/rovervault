@@ -55,9 +55,9 @@
 
   </div>
   <div class="tab-content1" id="wheels" style="display: none;">
-   {% if product.metafields.custom.custom.exterior_wheels != blank %}
+   {% if product.metafields.custom.exterior_wheels != blank %}
   <div class="images_all_out">
-    {% assign images = product.metafields.custom.custom.exterior_wheels.value | parse_json %}
+    {% assign images = product.metafields.custom.exterior_wheels.value | parse_json %}
       {% for image in images %}
       {% assign Counter = forloop.index %}  
       {% endfor %}
