@@ -34,14 +34,20 @@
     {% else %}
     None
    {% endif %}    
-       
      </div>  
     </div>
    </div>
     <div class="parent_col">
     <div class="par_col_1">
     <div class="sp_title">Hood</div>
-     <div class="sp_description">State Grey</div>  
+     <div class="sp_description">
+  {% if product.metafields.vehicles.hood %}
+   {{ product.metafields.vehicles.hood }}
+    {% else %}
+    None
+   {% endif %}    
+       
+     </div>  
     </div>
     <div class="par_col_1">
     <div class="sp_title">Hood Badge</div>
