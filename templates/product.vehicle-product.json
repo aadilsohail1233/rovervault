@@ -189,6 +189,11 @@
         "margin_bottom": 36
       }
     },
+    "product_interior_images_RDVyWh": {
+      "type": "Product_Interior_Images",
+      "name": "Interior Images",
+      "settings": {}
+    },
     "features_WnVAYB": {
       "type": "features",
       "blocks": {
@@ -256,6 +261,7 @@
     "image_show_z4nGJG",
     "product_exterior_images_X6TLd6",
     "vehicle_advantages_show_9yEMAX",
+    "product_interior_images_RDVyWh",
     "features_WnVAYB",
     "image_show_GJbiTa",
     "product_vehicles_main_specifications_LJndnB"
