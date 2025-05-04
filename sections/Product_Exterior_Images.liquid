@@ -21,7 +21,9 @@
   <div class="images_all_out">
     {% assign images = product.metafields.custom.exterior_body_image_2.value | parse_json %}
     {% for image in images limit: 4 %}
+      <div> Image Number {{ forloop.index }}</div>
       {% assign mod_check = forloop.index0 | modulo: 2 %}
+      
       {% if mod_check == 0 %}
         <div class="parent-row">
       {% endif %}
