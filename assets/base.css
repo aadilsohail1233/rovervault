@@ -4313,7 +4313,7 @@ font-family: 'Eczar';
     text-align: center;
 }
   .videos-tabs {
-    width: 100%;
+    width: 100% !important;
 }
 /* Active flipped class (for mobile) */
 .card.is-flipped .card__side--front {
