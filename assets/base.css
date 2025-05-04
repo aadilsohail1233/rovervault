@@ -26,14 +26,19 @@ h1.vehicle-product-title {
     display: flex;
 }
 .parent-row .image-box-3 {
-    width: 60%;
+    width: 40%;
     object-fit: cover;
     display: flex;
 }
 .parent-row .image-box-4 {
-    width: 40%;
+    width: 60%;
     object-fit: cover;
     display: flex;
+}
+.parent-row img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
 }
 .parent-row {
     display: flex;
