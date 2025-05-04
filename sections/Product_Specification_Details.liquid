@@ -99,21 +99,38 @@
     <div class="par_col_1">
     <div class="sp_title">Bumper</div>
      <div class="sp_description"> 
-       {% if product.metafields.vehicles.bumper %}
+    {% if product.metafields.vehicles.bumper %}
     {{ product.metafields.vehicles.bumper }}
     {% else %}
     None
-   {% endif %}</div>  
+   {% endif %}
+   
+     </div>  
     </div>
    </div>   
       <div class="parent_col">
     <div class="par_col_1">
     <div class="sp_title">A-bar</div>
-     <div class="sp_description">State Grey</div>  
+     <div class="sp_description">
+ {% if product.metafields.vehicles.a_bar %}
+    {{ product.metafields.vehicles.a_bar }}
+    {% else %}
+    None
+   {% endif %}
+   
+       
+     </div>  
     </div>
     <div class="par_col_1">
     <div class="sp_title">Streeing Guard</div>
-     <div class="sp_description">State Grey</div>  
+     <div class="sp_description">
+ {% if product.metafields.vehicles.steering_guard %}
+    {{ product.metafields.vehicles.steering_guard }}
+    {% else %}
+    None
+   {% endif %}
+       
+     </div>  
     </div>
    </div>   
   </div>
