@@ -4308,6 +4308,10 @@ font-family: 'Eczar';
   .video-full-tabs{
         display:inline-block;
   }
+  .video-text {
+    width: 100%;
+    text-align: center;
+}
 /* Active flipped class (for mobile) */
 .card.is-flipped .card__side--front {
   transform: rotateY(-180deg);
