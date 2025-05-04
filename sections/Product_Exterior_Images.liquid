@@ -17,16 +17,26 @@
   <div class="tab-content" id="body">
 {% assign images = product.metafields.custom.exterior_body_image_2.value %}
 {% if product.metafields.custom.exterior_body_image_2 != blank %}
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #f2f0db; padding: 20px;">
+  <div style="background: #f2f0db; padding: 20px;">
     {% assign images = product.metafields.custom.exterior_body_image_2.value %}
     {% for image in images limit: 4 %}
+      {% assign mod_check = forloop.index0 | modulo: 2 %}
+      {% if mod_check == 0 %}
+        <div class="parent-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+      {% endif %}
+
       <div class="image-box-{{ forloop.index }}" style="border: 4px solid #94a973; padding: 5px; background: #fff;">
         <img src="{{ image | image_url: width: 600 }}" alt="Exterior Image {{ forloop.index }}" style="width: 100%; height: auto;" />
       </div>
+
+      {% assign mod_check_end = forloop.index0 | modulo: 2 %}
+      {% if mod_check_end == 1 or forloop.last %}
+        </div>
+      {% endif %}
     {% endfor %}
 
     {% if images.size > 4 %}
-      <div class="view-all-box" style="grid-column: span 2; display: flex; justify-content: flex-end;">
+      <div class="view-all-box" style="display: flex; justify-content: flex-end;">
         <a href="#view-all" style="background: #c89c29; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold;">
           VIEW ALL {{ images.size }} PICTURES
         </a>
@@ -34,6 +44,8 @@
     {% endif %}
   </div>
 {% endif %}
+
+
 
 
 
