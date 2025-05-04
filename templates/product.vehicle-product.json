@@ -204,25 +204,10 @@
         "margin_bottom": 36
       }
     },
-    "features_WnVAYB": {
-      "type": "features",
-      "blocks": {
-        "feature_xQLCKH": {
-          "type": "feature",
-          "settings": {
-            "feature-image": "shopify://shop_images/feature-2.png",
-            "feature-header": "Provenance",
-            "feature-content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor."
-          }
-        }
-      },
-      "block_order": [
-        "feature_xQLCKH"
-      ],
-      "settings": {
-        "margin_top": 36,
-        "margin_bottom": 36
-      }
+    "product_specification_details_Umx3XT": {
+      "type": "Product_Specification_Details",
+      "name": "Specification Section",
+      "settings": {}
     },
     "image_show_GJbiTa": {
       "type": "image-show",
@@ -273,7 +258,7 @@
     "vehicle_advantages_show_9yEMAX",
     "product_interior_images_RDVyWh",
     "logo_with_text_small_Ah6LXR",
-    "features_WnVAYB",
+    "product_specification_details_Umx3XT",
     "image_show_GJbiTa",
     "product_vehicles_main_specifications_LJndnB"
   ]
