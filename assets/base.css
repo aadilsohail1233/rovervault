@@ -4305,7 +4305,9 @@ font-family: 'Eczar';
 
 @media (max-width: 768px) { 
 
-  
+  .video-full-tabs{
+        display:inline-block;
+  }
 /* Active flipped class (for mobile) */
 .card.is-flipped .card__side--front {
   transform: rotateY(-180deg);
