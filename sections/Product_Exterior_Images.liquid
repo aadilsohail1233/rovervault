@@ -173,7 +173,7 @@
   <div class="modal-content">
     <span class="close-modal" onclick="closeModal()">&times;</span>
     <div class="all-images-grid" id="allImagesContainer">
-      <!-- Images will be injected by JavaScript -->
+      <!-- JavaScript injects images here -->
     </div>
   </div>
 </div>
@@ -194,8 +194,11 @@
     document.getElementById('viewAllModal').style.display = 'block';
   }
 
-
+  function closeModal() {
+    document.getElementById('viewAllModal').style.display = 'none';
+  }
 </script>
+
 
 
 <style>
