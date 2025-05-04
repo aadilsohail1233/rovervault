@@ -16,6 +16,7 @@
   </div>
   <div class="tab-content" id="body">
 {% assign images = product.metafields.custom.exterior_body_image_2.value %}
+<pre>{{ product.metafields.custom.exterior_body_image_2 | json }}</pre>
 {% if product.metafields.custom.exterior_body_image_2 != blank %}
   <div class="images_all_out">
     {% assign images = product.metafields.custom.exterior_body_image_2.value %}
