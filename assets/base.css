@@ -4333,6 +4333,16 @@ font-family: 'Eczar';
   .parent-row .image-box-1{
     width:100%;
   }
+.parent-row .image-box-2{
+    width:100%;
+  }
+.parent-row .image-box-3{
+    width:100%;
+  }
+  .parent-row .image-box-4{
+    width:100%;
+  }
+  
 /* Active flipped class (for mobile) */
 .card.is-flipped .card__side--front {
   transform: rotateY(-180deg);
