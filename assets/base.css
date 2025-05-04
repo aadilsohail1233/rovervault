@@ -15,6 +15,12 @@ h1.vehicle-product-title {
     margin: 0;
     letter-spacing: 0.6rem;
 }
+.parent-row {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
 a.footer-page__link {
     color: #6b8d50;
 }
