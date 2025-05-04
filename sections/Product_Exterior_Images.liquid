@@ -7,10 +7,10 @@
      </div>
   <div class="videos-tabs"> 
   <div class="video-tabs">
-    <button class="tab-link active" data-tab="body">Body</button>
-    <button class="tab-link" data-tab="wheels">Wheels</button>
-    <button class="tab-link" data-tab="door">Door</button>
-    <button class="tab-link" data-tab="engine">Engine</button>
+    <button class="tab-link1 active" data-tab="body">Body</button>
+    <button class="tab-link1" data-tab="wheels">Wheels</button>
+    <button class="tab-link1" data-tab="door">Door</button>
+    <button class="tab-link1" data-tab="engine">Engine</button>
   </div>
      </div>     
   </div>
@@ -292,7 +292,7 @@ function openModal(imagesJson) {
     width: 85%;
 }
 
-.tab-link {
+.tab-link1 {
   background-color: #d6d7bc;
   border: none;
   padding: 10px 30px;
@@ -305,7 +305,7 @@ function openModal(imagesJson) {
   width:25%;
 }
 
-.tab-link.active {
+.tab-link1.active {
   background-color: #688c45;
   color: white;
   font-family: Eczar;
@@ -320,10 +320,10 @@ function openModal(imagesJson) {
 </style>
 
 <script>
-document.querySelectorAll('.tab-link').forEach(function(button) {
+document.querySelectorAll('.tab-link1').forEach(function(button) {
   button.addEventListener('click', function() {
     // Remove active class from all tabs
-    document.querySelectorAll('.tab-link').forEach(function(btn) {
+    document.querySelectorAll('.tab-link1').forEach(function(btn) {
       btn.classList.remove('active');
     });
     // Add active class to the clicked tab
