@@ -51,7 +51,14 @@
     </div>
     <div class="par_col_1">
     <div class="sp_title">Hood Badge</div>
-     <div class="sp_description">State Grey</div>  
+     <div class="sp_description">
+  {% if product.metafields.vehicles.hood_badge %}
+   {{ product.metafields.vehicles.hood_badge }}
+    {% else %}
+    None
+   {% endif %} 
+       
+     </div>  
     </div>
    </div>   
     <div class="parent_col">
