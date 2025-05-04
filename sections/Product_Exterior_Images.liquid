@@ -20,9 +20,12 @@
 {% if product.metafields.custom.exterior_body_image_2 != blank %}
   <div class="images_all_out">
     {% assign images = product.metafields.custom.exterior_body_image_2.value | parse_json %}
-    {% for image in images %}
+      {% for image in images %}
       {% assign Counter = forloop.index %}  
-      {% if Counter <= 4 %}
+      {% endfor %}
+    {% for image in images %}
+      {% assign Counter1 = forloop.index %}  
+      {% if Counter1 <= 4 %}
       {% assign mod_check = forloop.index0 | modulo: 2 %}
       
       {% if mod_check == 0 %}
