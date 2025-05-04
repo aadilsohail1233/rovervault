@@ -64,11 +64,24 @@
     <div class="parent_col">
     <div class="par_col_1">
     <div class="sp_title">Wheels</div>
-     <div class="sp_description">State Grey</div>  
+     <div class="sp_description">
+    {% if product.metafields.vehicles.wheels %}
+    {{ product.metafields.vehicles.wheels }}
+    {% else %}
+    None
+   {% endif %}
+   </div>  
     </div>
     <div class="par_col_1">
     <div class="sp_title">Tires</div>
-     <div class="sp_description">State Grey</div>  
+     <div class="sp_description">
+    {% if product.metafields.vehicles.tires %}
+    {{ product.metafields.vehicles.tires }}
+    {% else %}
+    None
+   {% endif %}
+       
+     </div>  
     </div>
    </div>   
   <div class="parent_col">
