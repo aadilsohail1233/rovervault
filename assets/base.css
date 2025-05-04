@@ -35,6 +35,10 @@ h1.vehicle-product-title {
     object-fit: cover;
     display: flex;
 }
+.parent-row .exterior-image {
+    border: 4px solid #6b8d50;
+    margin-bottom: 3rem;
+}
 .parent-row img {
     width: 100%;
     height: 400px;
