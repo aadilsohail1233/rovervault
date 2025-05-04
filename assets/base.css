@@ -79,6 +79,9 @@ a.footer-page__link {
     display: flex;
     gap: 3rem;
     align-items: center;
+    border-bottom: 5px solid #6B8D50;
+    padding-bottom: 5px;
+    margin-bottom: 4rem;
 }
 .vehicles-main__specification {
     color: #6b8d50;
