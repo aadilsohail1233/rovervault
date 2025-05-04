@@ -4309,7 +4309,7 @@ font-family: 'Eczar';
         display:inline-block;
   }
   .video-text {
-    width: 100%;
+    width: 100% ;
     text-align: center;
 }
 /* Active flipped class (for mobile) */
