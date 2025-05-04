@@ -17,8 +17,8 @@
   <div class="tab-content" id="body">
     
 {% assign images = product.metafields.custom.exterior_body_image_2.value %}
+{% assign image_ids = images | split: ',' %}
 
-<pre>{{ product.metafields.custom.exterior_body_image_2 }}</pre>
 {% if product.metafields.custom.exterior_body_image_2 != blank %}
   <div class="images_all_out">
     {% assign images = product.metafields.custom.exterior_body_image_2.value %}
@@ -37,7 +37,7 @@
         </div>
       {% endif %}
     {% endfor %}
-  {% assign image_ids = images | split: ',' %}
+  
   <pre>{{ image_ids }}</pre>
 <div class="total-images"> Total Images {{ image_ids.size }}</div>
     {% if images.size > 4 %}
