@@ -4319,6 +4319,9 @@ font-family: 'Eczar';
   .video-tabs{
     display:inline-block !important;
   }
+  .tab-link{
+    width:49%;
+  }
   .tab-link {
     width: 49%;
     margin-bottom: 1rem;
