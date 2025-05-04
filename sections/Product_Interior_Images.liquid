@@ -170,7 +170,7 @@
 </div>  
 
 
-<div id="viewAllModal" class="view-all-modal" style="display: none;">
+<div id="viewAllModal1" class="view-all-modal" style="display: none;">
   <div class="modal-content">
     <span class="close-modal" onclick="closeModal()">&times;</span>
     <div class="all-images-grid" id="allImagesContainer1">
@@ -179,7 +179,7 @@
   </div>
 </div>
 
-<!--<div id="viewAllModal" class="view-all-modal" style="display: none;">
+<!--<div id="viewAllModal1" class="view-all-modal" style="display: none;">
   <div class="modal-content">
     <span class="close-modal" onclick="closeModal()">&times;</span>
     <div class="all-images-grid">
@@ -203,17 +203,17 @@ function openModal(imagesJson) {
       container.appendChild(img);
     });
 
-    document.getElementById('viewAllModal').style.display = 'block';
+    document.getElementById('viewAllModal1').style.display = 'block';
   }
 
 
   function closeModal() {
-    document.getElementById("viewAllModal").style.display = "none";
+    document.getElementById("viewAllModal1").style.display = "none";
   }
 
   // Optional: Close when clicking outside modal content
   window.onclick = function(event) {
-    var modal = document.getElementById("viewAllModal");
+    var modal = document.getElementById("viewAllModal1");
     if (event.target == modal) {
       closeModal();
     }
