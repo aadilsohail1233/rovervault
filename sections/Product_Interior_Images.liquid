@@ -1,6 +1,374 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<div class="section-{{ section.id }}">
+<div class="page-width">
+<div class="video-tabs-wrapper">
+  <div class="video-full-tabs">
+     <div class="video-text"> 
+  <h2 class="video-title">Interior</h2> 
+     </div>
+  <div class="videos-tabs"> 
+  <div class="video-tabs">
+    <button class="tab-link1 active" data-tab="body">Body</button>
+    <button class="tab-link1" data-tab="wheels">Wheels</button>
+    <button class="tab-link1" data-tab="door">Door</button>
+    <button class="tab-link1" data-tab="engine">Engine</button>
+  </div>
+     </div>     
+  </div>
+  <div class="tab-content1" id="body">
+
+    
+{% if product.metafields.custom.exterior_body_image_2 != blank %}
+  <div class="images_all_out">
+    {% assign images = product.metafields.custom.exterior_body_image_2.value | parse_json %}
+      {% for image in images %}
+      {% assign Counter = forloop.index %}  
+      {% endfor %}
+    {% for image in images %}
+      {% assign Counter1 = forloop.index %}  
+      {% if Counter1 <= 4 %}
+      {% assign mod_check = forloop.index0 | modulo: 2 %}
+      
+      {% if mod_check == 0 %}
+        <div class="parent-row">
+      {% endif %}
+
+      <div class="image-box-{{ forloop.index }} exterior-image">
+        <img src="{{ image | image_url: width: 600 }}" alt="Exterior Image {{ forloop.index }}" />
+      {% if Counter > 4 and Counter1 == 4 %}
+      <div class="view-all-box" style="display: flex; justify-content: flex-end;">
+        <a href="javascript:void(0);" onclick="openModal('{{ images | json | escape }}')" style="background: #c89c29; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold;">
+          VIEW ALL <br> {{ Counter }} PICTURES
+        </a>
+      </div>
+    {% endif %}
+      </div>
+
+      {% assign mod_check_end = forloop.index0 | modulo: 2 %}
+      {% if mod_check_end == 1 or forloop.last %}
+        </div>
+      {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}
+
+
+  </div>
+  <div class="tab-content1" id="wheels" style="display: none;">
+    
+   {% if product.metafields.custom.exterior_wheels != blank %}
+  <div class="images_all_out">
+    {% assign images = product.metafields.custom.exterior_wheels.value | parse_json %}
+      {% for image in images %}
+      {% assign Counter = forloop.index %}  
+      {% endfor %}
+    {% for image in images %}
+      {% assign Counter1 = forloop.index %}  
+      {% if Counter1 <= 4 %}
+      {% assign mod_check = forloop.index0 | modulo: 2 %}
+      
+      {% if mod_check == 0 %}
+        <div class="parent-row">
+      {% endif %}
+
+      <div class="image-box-{{ forloop.index }} exterior-image">
+        <img src="{{ image | image_url: width: 600 }}" alt="Exterior Image {{ forloop.index }}" />
+      {% if Counter > 4 and Counter1 == 4 %}
+      <div class="view-all-box" style="display: flex; justify-content: flex-end;">
+        <a href="javascript:void(0);" onclick="openModal('{{ images | json | escape }}')" style="background: #c89c29; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold;">
+          VIEW ALL <br> {{ Counter }} PICTURES
+        </a>
+      </div>
+    {% endif %}
+      </div>
+
+      {% assign mod_check_end = forloop.index0 | modulo: 2 %}
+      {% if mod_check_end == 1 or forloop.last %}
+        </div>
+      {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}
+
+  </div>
+  <div class="tab-content1" id="door" style="display: none;">
+  {% if product.metafields.custom.exterior_door_images != blank %}
+  <div class="images_all_out">
+    {% assign images = product.metafields.custom.exterior_door_images.value | parse_json %}
+      {% for image in images %}
+      {% assign Counter = forloop.index %}  
+      {% endfor %}
+    {% for image in images %}
+      {% assign Counter1 = forloop.index %}  
+      {% if Counter1 <= 4 %}
+      {% assign mod_check = forloop.index0 | modulo: 2 %}
+      
+      {% if mod_check == 0 %}
+        <div class="parent-row">
+      {% endif %}
+
+      <div class="image-box-{{ forloop.index }} exterior-image">
+        <img src="{{ image | image_url: width: 600 }}" alt="Exterior Image {{ forloop.index }}" />
+      {% if Counter > 4 and Counter1 == 4 %}
+      <div class="view-all-box" style="display: flex; justify-content: flex-end;">
+        <a href="javascript:void(0);" onclick="openModal('{{ images | json | escape }}')" style="background: #c89c29; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold;">
+          VIEW ALL <br> {{ Counter }} PICTURES
+        </a>
+      </div>
+    {% endif %}
+      </div>
+
+      {% assign mod_check_end = forloop.index0 | modulo: 2 %}
+      {% if mod_check_end == 1 or forloop.last %}
+        </div>
+      {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}
+  </div>
+  <div class="tab-content1" id="engine" style="display: none;">
+    {% if product.metafields.custom.exterior_engine_images != blank %}
+  <div class="images_all_out">
+    {% assign images = product.metafields.custom.exterior_door_images.value | parse_json %}
+      {% for image in images %}
+      {% assign Counter = forloop.index %}  
+      {% endfor %}
+    {% for image in images %}
+      {% assign Counter1 = forloop.index %}  
+      {% if Counter1 <= 4 %}
+      {% assign mod_check = forloop.index0 | modulo: 2 %}
+      
+      {% if mod_check == 0 %}
+        <div class="parent-row">
+      {% endif %}
+
+      <div class="image-box-{{ forloop.index }} exterior-image">
+        <img src="{{ image | image_url: width: 600 }}" alt="Exterior Image {{ forloop.index }}" />
+      {% if Counter > 4 and Counter1 == 4 %}
+      <div class="view-all-box" style="display: flex; justify-content: flex-end;">
+        <a href="javascript:void(0);" onclick="openModal('{{ images | json | escape }}')" style="background: #c89c29; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold;">
+          VIEW ALL <br> {{ Counter }} PICTURES
+        </a>
+      </div>
+    {% endif %}
+      </div>
+
+      {% assign mod_check_end = forloop.index0 | modulo: 2 %}
+      {% if mod_check_end == 1 or forloop.last %}
+        </div>
+      {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}
+    
+  </div>
+</div>
+</div>
+</div>  
+
+
+<div id="viewAllModal" class="view-all-modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <div class="all-images-grid" id="allImagesContainer">
+      <!-- JS will insert tab-specific images here -->
+    </div>
+  </div>
+</div>
+
+<!--<div id="viewAllModal" class="view-all-modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <div class="all-images-grid">
+      {% for image in images %}
+        <img src="{{ image | image_url: width: 800 }}" alt="All Exterior Image {{ forloop.index }}" />
+      {% endfor %}
+    </div>
+  </div>
+</div>-->
+
+<script>
+function openModal(imagesJson) {
+    const container = document.getElementById('allImagesContainer');
+    const images = JSON.parse(imagesJson);
+    container.innerHTML = ''; // Clear previous images
+
+    images.forEach((src, index) => {
+      const img = document.createElement('img');
+      img.src = `${src}?width=800`;
+      img.alt = `Exterior Image ${index + 1}`;
+      container.appendChild(img);
+    });
+
+    document.getElementById('viewAllModal').style.display = 'block';
   }
+
+
+  function closeModal() {
+    document.getElementById("viewAllModal").style.display = "none";
+  }
+
+  // Optional: Close when clicking outside modal content
+  window.onclick = function(event) {
+    var modal = document.getElementById("viewAllModal");
+    if (event.target == modal) {
+      closeModal();
+    }
+  }
+</script>
+
+<style>
+.view-all-modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  max-width: 90%;
+  border-radius: 8px;
+}
+
+.close-modal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  color: black;
+}
+
+.all-images-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.all-images-grid img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 5px;
+}
+
+  
+.video-tabs-wrapper {
+/*  background-color: #e6e4ce; */
+  padding: 20px 0px;
+  font-family: Arial, sans-serif;
+  border-top: 5px solid #6B8D50;
+}
+
+.video-title {
+  color: #567336;
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-family:'VVDS Fifties';
+  margin-top:0px;
+}
+.video-text {
+    width: 15%;
+}
+.video-tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+  .videos-tabs {
+    width: 85%;
+}
+
+.tab-link1 {
+  background-color: #d6d7bc;
+  border: none;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #567336;
+  transition: background-color 0.3s;
+  font-family: Eczar;
+    font-size: 20px;
+  width:25%;
+}
+
+.tab-link1.active {
+  background-color: #688c45;
+  color: white;
+  font-family: Eczar;
+  font-size: 20px;
+}
+
+.tab-content1 {
+/*  background: white;
+  padding: 20px;
+  border: 1px solid #d6d7bc; */
+}
+</style>
+
+<script>
+document.querySelectorAll('.tab-link1').forEach(function(button) {
+  button.addEventListener('click', function() {
+    // Remove active class from all tabs
+    document.querySelectorAll('.tab-link1').forEach(function(btn) {
+      btn.classList.remove('active');
+    });
+    // Add active class to the clicked tab
+    this.classList.add('active');
+
+    // Hide all contents
+    document.querySelectorAll('.tab-content1').forEach(function(content) {
+      content.style.display = 'none';
+    });
+
+    // Show the clicked content
+    var tabId = this.getAttribute('data-tab');
+    document.getElementById(tabId).style.display = 'block';
+  });
+});
+</script>
+
+
+{% schema %}
+{
+  "name": "Interior Image Section",
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab Title"
+        },
+        {
+          "type": "text",
+          "id": "item_1",
+          "label": "Grid Item 1"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Interior Images",
+      "category": "Custom"
+    }
+  ]
+}
 {% endschema %}
