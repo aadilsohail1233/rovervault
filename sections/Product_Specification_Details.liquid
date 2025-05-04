@@ -7,14 +7,14 @@
      </div>
   <div class="videos-tabs"> 
   <div class="video-tabs">
-    <button class="tab-link2 active" data-tab="Technical">Technical</button>
-    <button class="tab-link2" data-tab="Interior">Interior</button>
-    <button class="tab-link2" data-tab="Exterior">Exterior</button>
-    <button class="tab-link2" data-tab="standard-featured">Standard Featured</button>
+    <button class="tab-link3 active" data-tab="Technical">Technical</button>
+    <button class="tab-link3" data-tab="Interior">Interior</button>
+    <button class="tab-link3" data-tab="Exterior">Exterior</button>
+    <button class="tab-link3" data-tab="standard-featured">Standard Featured</button>
   </div>
      </div>     
   </div>
-  <div class="tab-content2" id="Technical">
+  <div class="tab-content3" id="Technical">
 
     
 {% if product.metafields.custom.interior_storage_image != blank %}
@@ -54,7 +54,7 @@
 
 
   </div>
-  <div class="tab-content2" id="Interior" style="display: none;">
+  <div class="tab-content3" id="Interior" style="display: none;">
     
    {% if product.metafields.custom.interior_seating_image != blank %}
   <div class="images_all_out">
@@ -92,7 +92,7 @@
 {% endif %}
 
   </div>
-  <div class="tab-content2" id="Exterior" style="display: none;">
+  <div class="tab-content3" id="Exterior" style="display: none;">
   {% if product.metafields.custom.interior_info_image != blank %}
   <div class="images_all_out">
     {% assign images = product.metafields.custom.interior_info_image.value | parse_json %}
@@ -128,7 +128,7 @@
   </div>
 {% endif %}
   </div>
-  <div class="tab-content2" id="standard-featured" style="display: none;">
+  <div class="tab-content3" id="standard-featured" style="display: none;">
     {% if product.metafields.custom.interior_safety_image != blank %}
   <div class="images_all_out">
     {% assign images = product.metafields.custom.interior_safety_image.value | parse_json %}
@@ -170,14 +170,6 @@
 </div>  
 
 
-<div id="viewAllModal1" class="view-all-modal" style="display: none;">
-  <div class="modal-content">
-    <span class="close-modal" onclick="closeModal()">&times;</span>
-    <div class="all-images-grid" id="allImagesContainer1">
-      <!-- JS will insert tab-specific images here -->
-    </div>
-  </div>
-</div>
 
 <!--<div id="viewAllModal1" class="view-all-modal" style="display: none;">
   <div class="modal-content">
@@ -190,35 +182,6 @@
   </div>
 </div>-->
 
-<script>
-function openModal(imagesJson) {
-    const container = document.getElementById('allImagesContainer1');
-    const images = JSON.parse(imagesJson);
-    container.innerHTML = ''; // Clear previous images
-
-    images.forEach((src, index) => {
-      const img = document.createElement('img');
-      img.src = `${src}?width=800`;
-      img.alt = `Exterior Image ${index + 1}`;
-      container.appendChild(img);
-    });
-
-    document.getElementById('viewAllModal1').style.display = 'block';
-  }
-
-
-  function closeModal() {
-    document.getElementById("viewAllModal1").style.display = "none";
-  }
-
-  // Optional: Close when clicking outside modal content
-  window.onclick = function(event) {
-    var modal = document.getElementById("viewAllModal1");
-    if (event.target == modal) {
-      closeModal();
-    }
-  }
-</script>
 
 <style>
 .view-all-modal {
@@ -292,7 +255,7 @@ function openModal(imagesJson) {
     width: 85%;
 }
 
-.tab-link2 {
+.tab-link3 {
   background-color: #d6d7bc;
   border: none;
   padding: 10px 30px;
@@ -305,14 +268,14 @@ function openModal(imagesJson) {
   width:25%;
 }
 
-.tab-link2.active {
+.tab-link3.active {
   background-color: #688c45;
   color: white;
   font-family: Eczar;
   font-size: 20px;
 }
 
-.tab-content2 {
+.tab-content3 {
 /*  background: white;
   padding: 20px;
   border: 1px solid #d6d7bc; */
@@ -320,17 +283,17 @@ function openModal(imagesJson) {
 </style>
 
 <script>
-document.querySelectorAll('.tab-link2').forEach(function(button) {
+document.querySelectorAll('.tab-link3').forEach(function(button) {
   button.addEventListener('click', function() {
     // Remove active class from all tabs
-    document.querySelectorAll('.tab-link2').forEach(function(btn) {
+    document.querySelectorAll('.tab-link3').forEach(function(btn) {
       btn.classList.remove('active');
     });
     // Add active class to the clicked tab
     this.classList.add('active');
 
     // Hide all contents
-    document.querySelectorAll('.tab-content2').forEach(function(content) {
+    document.querySelectorAll('.tab-content3').forEach(function(content) {
       content.style.display = 'none';
     });
 
