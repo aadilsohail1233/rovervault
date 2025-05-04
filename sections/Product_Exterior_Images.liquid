@@ -169,7 +169,17 @@
 </div>
 </div>  
 
+
 <div id="viewAllModal" class="view-all-modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <div class="all-images-grid" id="allImagesContainer">
+      <!-- JS will insert tab-specific images here -->
+    </div>
+  </div>
+</div>
+
+<!--<div id="viewAllModal" class="view-all-modal" style="display: none;">
   <div class="modal-content">
     <span class="close-modal" onclick="closeModal()">&times;</span>
     <div class="all-images-grid">
@@ -178,7 +188,7 @@
       {% endfor %}
     </div>
   </div>
-</div>
+</div>-->
 
 <script>
   function openModal() {
