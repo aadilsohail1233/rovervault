@@ -4314,8 +4314,11 @@ font-family: 'Eczar';
 }
   .videos-tabs {
     width: 100% !important;
-      display:inline-block;
+    
 }
+  .video-tabs{
+    display:inline-block;
+  }
   .tab-link {
     width: 49%;
     margin-bottom: 1rem;
