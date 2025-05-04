@@ -16,9 +16,8 @@
   </div>
   <div class="tab-content" id="body">
 {% assign images = product.metafields.custom.exterior_body_image_2.value %}
-{% if product.metafields.custom.exterior_body_image_2 != blank %}
+{% if images != blank and images.size > 0 %}
   <div class="images_all_out">
-    {% assign images = product.metafields.custom.exterior_body_image_2.value %}
     {% for image in images limit: 4 %}
       {% assign mod_check = forloop.index0 | modulo: 2 %}
       {% if mod_check == 0 %}
@@ -34,7 +33,9 @@
         </div>
       {% endif %}
     {% endfor %}
-<div class="total-images"> Total Images {{ images.size }}</div>
+
+    <div class="total-images">Total Images: {{ images.size }}</div>
+
     {% if images.size > 4 %}
       <div class="view-all-box" style="display: flex; justify-content: flex-end;">
         <a href="#view-all" style="background: #c89c29; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold;">
@@ -44,6 +45,7 @@
     {% endif %}
   </div>
 {% endif %}
+
 
 
 
