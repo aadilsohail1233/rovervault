@@ -16,7 +16,7 @@
   </div>
   <div class="tab-content" id="body">
     
-{% assign images = product.metafields.custom.exterior_body_image_2.value %}
+{% assign images = product.metafields.custom.exterior_body_image_2.value | parse_json %}
 {% assign image_ids = images | split: ',' %}
 
 {% if product.metafields.custom.exterior_body_image_2 != blank %}
