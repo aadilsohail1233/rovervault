@@ -15,6 +15,26 @@ h1.vehicle-product-title {
     margin: 0;
     letter-spacing: 0.6rem;
 }
+.parent-row .image-box-1 {
+    width: 60%;
+    object-fit: cover;
+    display: flex;
+}
+.parent-row .image-box-2 {
+    width: 40%;
+    object-fit: cover;
+    display: flex;
+}
+.parent-row .image-box-3 {
+    width: 60%;
+    object-fit: cover;
+    display: flex;
+}
+.parent-row .image-box-4 {
+    width: 40%;
+    object-fit: cover;
+    display: flex;
+}
 .parent-row {
     display: flex;
     gap: 2rem;
