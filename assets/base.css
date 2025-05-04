@@ -4320,7 +4320,7 @@ font-family: 'Eczar';
     display:inline-block !important;
   }
   .tab-link{
-    width:49%;
+    width:49% !important;
   }
   .tab-link {
     width: 49%;
