@@ -22,7 +22,7 @@
     {% for image in images limit: 4 %}
       {% assign mod_check = forloop.index0 | modulo: 2 %}
       {% if mod_check == 0 %}
-        <div class="parent-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+        <div class="parent-row">
       {% endif %}
 
       <div class="image-box-{{ forloop.index }}" style="border: 4px solid #94a973; padding: 5px; background: #fff;">
