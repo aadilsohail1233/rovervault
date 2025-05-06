@@ -1,17 +1,16 @@
 <div class="section-{{ section.id }}">
-<div class="page-width">
-<div class="product-parts-single-image">
-  {% if product.metafields.custom.parts_single_image %}
-    <img 
-      src="{{ product.metafields.custom.parts_single_image | image_url: width: 800 }}" 
-      alt="{{ product.metafields.custom.parts_single_image.alt | escape }}" 
-      loading="lazy"
-    >
-  {% else %}
-    <p>No image available.</p>
-  {% endif %}
-</div>
-</div>
+  <div class="product-parts-single-image" style="width: 100%;">
+    {% if product.metafields.custom.parts_single_image %}
+      <img 
+        src="{{ product.metafields.custom.parts_single_image | image_url: width: 2000 }}" 
+        alt="{{ product.metafields.custom.parts_single_image.alt | escape }}" 
+        loading="lazy"
+        style="width: 100%; height: auto; display: block;"
+      >
+    {% else %}
+      <p>No image available.</p>
+    {% endif %}
+  </div>
 </div>  
 
 {% schema %}
