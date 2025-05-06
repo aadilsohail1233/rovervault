@@ -3,7 +3,7 @@
 <div class="product-parts-single-image">
   {% if product.metafields.custom.parts_single_image %}
     <img 
-      src="{{ product.metafields.custom.parts_single_image | image_url }}" 
+      src="{{ product.metafields.custom.parts_single_image | image_url: width: 2000 }}" 
       alt="{{ product.metafields.custom.parts_single_image.alt | escape }}" 
       loading="lazy"
     >
