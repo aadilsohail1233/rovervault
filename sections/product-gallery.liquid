@@ -9,6 +9,9 @@
 }
 {% endschema %}
 
+<div class="section-{{ section.id }}">
+<div class="page-width">
+  
 <div class="product-gallery-grid">
   {% if product and product.media.size > 0 %}
     <div class="media-grid">
@@ -25,6 +28,8 @@
   {% endif %}
 </div>
 
+</div>
+</div>
 <style>
   .product-gallery-grid .media-grid {
     display: grid;
