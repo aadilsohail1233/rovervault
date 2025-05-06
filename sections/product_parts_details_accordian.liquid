@@ -69,7 +69,7 @@
         <span class="accordion-toggle">&#x25BC;</span>
       </div>
       <div class="accordion-content">
-        {{ product.description | strip_html | truncatewords: 100 }}
+        {{ product.description | default: "No product details."  }}
       </div>
     </div>
 
@@ -80,7 +80,7 @@
         <span class="accordion-toggle">&#x25BC;</span>
       </div>
       <div class="accordion-content">
-        {{ product.metafields.custom.details | default: "More product details go here." }}
+        {{ product.metafields.custom.details | default: "No product details." }}
       </div>
     </div>
 
