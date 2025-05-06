@@ -1,16 +1,13 @@
 <div class="section-{{ section.id }}">
 <div class="page-width">
 <div class="video-tabs-wrapper">
-  <div class="video-full-tabs">
+  <div class="video-full-tabs" style="display:none;">
      <div class="video-text"> 
   <h2 class="video-title">Exterior</h2> 
      </div>
   <div class="videos-tabs"> 
   <div class="video-tabs">
     <button class="tab-link1 active" data-tab="body">Body</button>
-    <button class="tab-link1" data-tab="wheels">Wheels</button>
-    <button class="tab-link1" data-tab="door">Door</button>
-    <button class="tab-link1" data-tab="engine">Engine</button>
   </div>
      </div>     
   </div>
@@ -53,117 +50,6 @@
 {% endif %}
 
 
-  </div>
-  <div class="tab-content1" id="wheels" style="display: none;">
-    
-   {% if product.metafields.custom.exterior_wheels != blank %}
-  <div class="images_all_out">
-    {% assign images = product.metafields.custom.exterior_wheels.value | parse_json %}
-      {% for image in images %}
-      {% assign Counter = forloop.index %}  
-      {% endfor %}
-    {% for image in images %}
-      {% assign Counter1 = forloop.index %}  
-      {% if Counter1 <= 4 %}
-      {% assign mod_check = forloop.index0 | modulo: 2 %}
-      
-      {% if mod_check == 0 %}
-        <div class="parent-row">
-      {% endif %}
-
-      <div class="image-box-{{ forloop.index }} exterior-image">
-        <img src="{{ image | image_url: width: 600 }}" alt="Exterior Image {{ forloop.index }}" />
-      {% if Counter > 4 and Counter1 == 4 %}
-      <div class="view-all-box" style="display: flex; justify-content: flex-end;">
-        <a href="javascript:void(0);" onclick="openModal('{{ images | json | escape }}')" style="background: #c89c29; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold;">
-          VIEW ALL <br> {{ Counter }} PICTURES
-        </a>
-      </div>
-    {% endif %}
-      </div>
-
-      {% assign mod_check_end = forloop.index0 | modulo: 2 %}
-      {% if mod_check_end == 1 or forloop.last %}
-        </div>
-      {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-{% endif %}
-
-  </div>
-  <div class="tab-content1" id="door" style="display: none;">
-  {% if product.metafields.custom.exterior_door_images != blank %}
-  <div class="images_all_out">
-    {% assign images = product.metafields.custom.exterior_door_images.value | parse_json %}
-      {% for image in images %}
-      {% assign Counter = forloop.index %}  
-      {% endfor %}
-    {% for image in images %}
-      {% assign Counter1 = forloop.index %}  
-      {% if Counter1 <= 4 %}
-      {% assign mod_check = forloop.index0 | modulo: 2 %}
-      
-      {% if mod_check == 0 %}
-        <div class="parent-row">
-      {% endif %}
-
-      <div class="image-box-{{ forloop.index }} exterior-image">
-        <img src="{{ image | image_url: width: 600 }}" alt="Exterior Image {{ forloop.index }}" />
-      {% if Counter > 4 and Counter1 == 4 %}
-      <div class="view-all-box" style="display: flex; justify-content: flex-end;">
-        <a href="javascript:void(0);" onclick="openModal('{{ images | json | escape }}')" style="background: #c89c29; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold;">
-          VIEW ALL <br> {{ Counter }} PICTURES
-        </a>
-      </div>
-    {% endif %}
-      </div>
-
-      {% assign mod_check_end = forloop.index0 | modulo: 2 %}
-      {% if mod_check_end == 1 or forloop.last %}
-        </div>
-      {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-{% endif %}
-  </div>
-  <div class="tab-content1" id="engine" style="display: none;">
-    {% if product.metafields.custom.exterior_engine_images != blank %}
-  <div class="images_all_out">
-    {% assign images = product.metafields.custom.exterior_door_images.value | parse_json %}
-      {% for image in images %}
-      {% assign Counter = forloop.index %}  
-      {% endfor %}
-    {% for image in images %}
-      {% assign Counter1 = forloop.index %}  
-      {% if Counter1 <= 4 %}
-      {% assign mod_check = forloop.index0 | modulo: 2 %}
-      
-      {% if mod_check == 0 %}
-        <div class="parent-row">
-      {% endif %}
-
-      <div class="image-box-{{ forloop.index }} exterior-image">
-        <img src="{{ image | image_url: width: 600 }}" alt="Exterior Image {{ forloop.index }}" />
-      {% if Counter > 4 and Counter1 == 4 %}
-      <div class="view-all-box" style="display: flex; justify-content: flex-end;">
-        <a href="javascript:void(0);" onclick="openModal('{{ images | json | escape }}')" style="background: #c89c29; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold;">
-          VIEW ALL <br> {{ Counter }} PICTURES
-        </a>
-      </div>
-    {% endif %}
-      </div>
-
-      {% assign mod_check_end = forloop.index0 | modulo: 2 %}
-      {% if mod_check_end == 1 or forloop.last %}
-        </div>
-      {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-{% endif %}
-    
   </div>
 </div>
 </div>
