@@ -119,13 +119,6 @@
         "margin_bottom": 36
       }
     },
-    "product_vehicles_main_specifications_MMHzMf": {
-      "type": "product-vehicles-main-specifications",
-      "settings": {
-        "margin_top": 36,
-        "margin_bottom": 36
-      }
-    },
     "product_detail_accordion_Az3FBH": {
       "type": "product_detail_accordion",
       "name": "Product Accordian Details",
@@ -220,6 +213,14 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
+    },
+    "product_parts_specifications_Lt8kfw": {
+      "type": "product-parts-specifications",
+      "name": "Parts Main Specifications",
+      "settings": {
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
     }
   },
   "order": [
@@ -227,7 +228,7 @@
     "related-products",
     "vehicle_product_header_DXtgwC",
     "full_width_image_GVMBb6",
-    "product_vehicles_main_specifications_MMHzMf",
+    "product_parts_specifications_Lt8kfw",
     "product_detail_accordion_Az3FBH",
     "logo_with_text_small_P6KTnM",
     "image_show_z4nGJG",
