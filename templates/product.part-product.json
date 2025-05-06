@@ -119,9 +119,17 @@
         "margin_bottom": 36
       }
     },
-    "product_detail_accordion_Az3FBH": {
-      "type": "product_detail_accordion",
-      "name": "Product Accordian Details",
+    "product_parts_specifications_Lt8kfw": {
+      "type": "product-parts-specifications",
+      "name": "Parts Main Specifications",
+      "settings": {
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
+    "product_parts_details_accordian_RwgNE4": {
+      "type": "product_parts_details_accordian",
+      "name": "Product Parts Accordian",
       "settings": {}
     },
     "logo_with_text_small_P6KTnM": {
@@ -213,14 +221,6 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
-    },
-    "product_parts_specifications_Lt8kfw": {
-      "type": "product-parts-specifications",
-      "name": "Parts Main Specifications",
-      "settings": {
-        "margin_top": 36,
-        "margin_bottom": 36
-      }
     }
   },
   "order": [
@@ -229,7 +229,7 @@
     "vehicle_product_header_DXtgwC",
     "full_width_image_GVMBb6",
     "product_parts_specifications_Lt8kfw",
-    "product_detail_accordion_Az3FBH",
+    "product_parts_details_accordian_RwgNE4",
     "logo_with_text_small_P6KTnM",
     "image_show_z4nGJG",
     "vehicle_advantages_show_9yEMAX",
