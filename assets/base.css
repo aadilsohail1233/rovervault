@@ -15,6 +15,10 @@ h1.vehicle-product-title {
     margin: 0;
     letter-spacing: 0.6rem;
 }
+.main-product-image-height img {
+    height: 550px;
+    object-fit: cover;
+}
 .parent_col {
     display: flex;
     width: 100%;
