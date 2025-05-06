@@ -1,6 +1,121 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{%- style -%}
+  .section-{{ section.id }} {
+    margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.5 | round: 0 }}px;
   }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }} {
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+
+  .vehicles-main-specifications-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .vehicles-main__specification {
+    text-align: center;
+    border: 5px solid rgba(var(--color-secondary-button-text));
+    padding: 17px 0px;
+  }
+
+  .vehicles-main__specification-title {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .vehicles-main__specification-value {
+    font-size: 20px;
+  }
+
+  .vehicles-main__specification.active {
+    background-color: rgba(var(--color-secondary-button-text));
+    color: #EBE9D6;
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }} gradient color-{{ section.settings.section_color_scheme }}">
+  <div class="page-width">
+    <div class="vehicles-main-specifications-wrapper">
+      <div class="vehicles-main__specification">
+        <div class="vehicles-main__specification-title font-vvds font-vvds">FACT 1</div>
+        <div class="vehicles-main__specification-value font-eczar">
+          {% if product.metafields.vehicles_main.engine %}
+            <div>{{ product.metafields.vehicles_main.engine.value }}</div>
+          {% else %}
+            <div></div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="vehicles-main__specification">
+        <div class="vehicles-main__specification-title font-vvds">FACT 2</div>
+        <div class="vehicles-main__specification-value font-eczar">
+          {% if product.metafields.vehicles_main.transmission %}
+            <div>{{ product.metafields.vehicles_main.transmission.value }}</div>
+          {% else %}
+            <div></div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="vehicles-main__specification">
+        <div class="vehicles-main__specification-title font-vvds">FACT 3</div>
+        <div class="vehicles-main__specification-value font-eczar">
+          {% if product.metafields.vehicles_main.milage %}
+            <div>{{ product.metafields.vehicles_main.milage.value }}</div>
+          {% else %}
+            <div></div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="vehicles-main__specification active">
+        <div class="vehicles-main__specification-title font-vvds">PRICE</div>
+        <div class="vehicles-main__specification-value font-eczar">
+          {% if product.price %}
+            <div>{{ product.price | money }}</div>
+          {% else %}
+            <div></div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Parts Main Speci",
+  "class": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Parts Main Specifications",
+      "category": "Image"
+    }
+  ]
+}
 {% endschema %}
