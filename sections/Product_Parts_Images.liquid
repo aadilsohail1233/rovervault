@@ -12,9 +12,9 @@
      </div>     
   </div>
   <div class="tab-content1" id="body"> 
-{% if product.metafields.custom.exterior_body_image_2 != blank %}
+{% if product.metafields.custom.parts_images != blank %}
   <div class="images_all_out">
-    {% assign images = product.metafields.custom.exterior_body_image_2.value | parse_json %}
+    {% assign images = product.metafields.custom.parts_images.value | parse_json %}
       {% for image in images %}
       {% assign Counter = forloop.index %}  
       {% endfor %}
