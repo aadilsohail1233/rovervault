@@ -1,12 +1,24 @@
+<div class="product-parts-single-image">
+  {% if product.metafields.custom.parts_single_image %}
+    <img 
+      src="{{ product.metafields.custom.parts_single_image | image_url: width: 800 }}" 
+      alt="{{ product.metafields.custom.parts_single_image.alt | escape }}" 
+      loading="lazy"
+    >
+  {% else %}
+    <p>No image available.</p>
+  {% endif %}
+</div>
+
 {% schema %}
-  {
-    "name": "Product Parts Single", 
-    "settings": [],
-      "presets": [
+{
+  "name": "Product Parts Single", 
+  "settings": [],
+  "presets": [
     {
       "name": "Product Parts Single",
       "category": "Custom"
     }
   ]
-  }
+}
 {% endschema %}
