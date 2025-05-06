@@ -221,6 +221,11 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
+    },
+    "product_parts_images_t48kn8": {
+      "type": "Product_Parts_Images",
+      "name": "Parts Images",
+      "settings": {}
     }
   },
   "order": [
@@ -231,6 +236,7 @@
     "product_parts_specifications_Lt8kfw",
     "product_parts_details_accordian_RwgNE4",
     "logo_with_text_small_P6KTnM",
+    "product_parts_images_t48kn8",
     "image_show_z4nGJG",
     "vehicle_advantages_show_9yEMAX",
     "logo_with_text_small_Ah6LXR",
