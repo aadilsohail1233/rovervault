@@ -140,11 +140,6 @@
         "margin_bottom": 36
       }
     },
-    "tabs_video_section_VHmFbR": {
-      "type": "tabs-video-section",
-      "name": "Video Tabs",
-      "settings": {}
-    },
     "image_show_z4nGJG": {
       "type": "image-show",
       "blocks": {
@@ -174,11 +169,6 @@
         "margin_bottom": 36
       }
     },
-    "product_exterior_images_X6TLd6": {
-      "type": "Product_Exterior_Images",
-      "name": "Exterior Images",
-      "settings": {}
-    },
     "vehicle_advantages_show_9yEMAX": {
       "type": "vehicle-advantages-show",
       "name": "Vehicle Advantages Show",
@@ -188,11 +178,6 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
-    },
-    "product_interior_images_RDVyWh": {
-      "type": "Product_Interior_Images",
-      "name": "Interior Images",
-      "settings": {}
     },
     "logo_with_text_small_Ah6LXR": {
       "type": "logo-with-text-small",
@@ -245,11 +230,8 @@
     "product_vehicles_main_specifications_MMHzMf",
     "product_detail_accordion_Az3FBH",
     "logo_with_text_small_P6KTnM",
-    "tabs_video_section_VHmFbR",
     "image_show_z4nGJG",
-    "product_exterior_images_X6TLd6",
     "vehicle_advantages_show_9yEMAX",
-    "product_interior_images_RDVyWh",
     "logo_with_text_small_Ah6LXR",
     "product_specification_details_Umx3XT",
     "image_show_GJbiTa"
