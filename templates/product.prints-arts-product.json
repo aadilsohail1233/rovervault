@@ -111,6 +111,11 @@
         "second-image": "shopify://shop_images/lines.png"
       }
     },
+    "product_gallery_AkUf6h": {
+      "type": "product-gallery",
+      "name": "Product Gallery Grid",
+      "settings": {}
+    },
     "product_parts_specifications_Lt8kfw": {
       "type": "product-parts-specifications",
       "name": "Parts Main Specifications",
@@ -177,21 +182,6 @@
         "margin_bottom": 36
       }
     },
-    "logo_with_text_small_Ah6LXR": {
-      "type": "logo-with-text-small",
-      "name": "Logo With Text Small",
-      "settings": {
-        "logo_image": "shopify://shop_images/Group_592.png",
-        "text_image": "shopify://shop_images/Heading_5bf98edf-69fe-4259-9c76-2e4d71f527d2.png",
-        "margin_top": 36,
-        "margin_bottom": 36
-      }
-    },
-    "product_specification_details_Umx3XT": {
-      "type": "Product_Specification_Details",
-      "name": "Specification Section",
-      "settings": {}
-    },
     "image_show_GJbiTa": {
       "type": "image-show",
       "blocks": {
@@ -218,11 +208,6 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
-    },
-    "product_gallery_AkUf6h": {
-      "type": "product-gallery",
-      "name": "Product Gallery Grid",
-      "settings": {}
     }
   },
   "order": [
@@ -236,8 +221,6 @@
     "product_parts_images_t48kn8",
     "image_show_z4nGJG",
     "vehicle_advantages_show_9yEMAX",
-    "logo_with_text_small_Ah6LXR",
-    "product_specification_details_Umx3XT",
     "image_show_GJbiTa"
   ]
 }
