@@ -44,8 +44,8 @@
       <div class="vehicles-main__specification">
         <div class="vehicles-main__specification-title font-vvds font-vvds">FACT 1</div>
         <div class="vehicles-main__specification-value font-eczar">
-          {% if product.metafields.vehicles_main.engine %}
-            <div>{{ product.metafields.vehicles_main.engine.value }}</div>
+          {% if product.metafields.custom.fact1 %}
+            <div>{{ product.metafields.custom.fact1.value }}</div>
           {% else %}
             <div></div>
           {% endif %}
@@ -54,8 +54,8 @@
       <div class="vehicles-main__specification">
         <div class="vehicles-main__specification-title font-vvds">FACT 2</div>
         <div class="vehicles-main__specification-value font-eczar">
-          {% if product.metafields.vehicles_main.transmission %}
-            <div>{{ product.metafields.vehicles_main.transmission.value }}</div>
+          {% if product.metafields.custom.fact2 %}
+            <div>{{ product.metafields.custom.fact2.value }}</div>
           {% else %}
             <div></div>
           {% endif %}
@@ -64,8 +64,8 @@
       <div class="vehicles-main__specification">
         <div class="vehicles-main__specification-title font-vvds">FACT 3</div>
         <div class="vehicles-main__specification-value font-eczar">
-          {% if product.metafields.vehicles_main.milage %}
-            <div>{{ product.metafields.vehicles_main.milage.value }}</div>
+          {% if product.metafields.custom.fact_3 %}
+            <div>{{ product.metafields.custom.fact_3.value }}</div>
           {% else %}
             <div></div>
           {% endif %}
