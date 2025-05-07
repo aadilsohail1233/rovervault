@@ -84,6 +84,14 @@
             "url": "shopify://pages/drips",
             "active": false
           }
+        },
+        "tab_qyjFRA": {
+          "type": "tab",
+          "settings": {
+            "text": "Drive Care",
+            "url": "shopify://pages/drive-care",
+            "active": false
+          }
         }
       },
       "block_order": [
@@ -91,7 +99,8 @@
         "tab_tFyzVg",
         "tab_Q8ciPk",
         "tab_GaRLHF",
-        "tab_GjVqde"
+        "tab_GjVqde",
+        "tab_qyjFRA"
       ],
       "name": "Product all Collection",
       "settings": {
