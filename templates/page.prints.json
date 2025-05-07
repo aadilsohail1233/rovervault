@@ -57,7 +57,7 @@
           "type": "tab",
           "settings": {
             "text": "Parts",
-            "url": "#",
+            "url": "shopify://pages/parts",
             "active": false
           }
         },
