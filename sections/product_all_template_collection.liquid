@@ -2,11 +2,11 @@
 {
   "name": "Product All Collection",
   "settings": [
-  {
-    "type": "collection_list",
-    "id": "selected_collections",
-    "label": "Select Collections"
-  }
+    {
+      "type": "collection_list",
+      "id": "selected_collections",
+      "label": "Select Collections"
+    }
   ],
   "blocks": [
     {
@@ -73,7 +73,6 @@
 }
 {% endschema %}
 
-
 {% assign selected_collections = section.settings.selected_collections %}
 <div class="page-width">
   <div class="range-rover-section">
@@ -133,101 +132,112 @@
 
     <div class="border-lines"></div>
 
-    {% for collection_handle in selected_collections %}
-      {% assign collection = collections[collection_handle] %}
-      {% if collection and collection.products.size > 0 %}
-        <h2 class="collection-title">{{ collection.title }}</h2>
-        <div class="main_section_all parts_collections">
-          {% for product in collection.products %}
-            <div class="content">
-              <div class="cards">
-                <div class="card">
-                  <div class="card__side card__side--front card__side--front-1">
-                    <div class="product-col-1" data-type="{{ product.type | downcase }}">
-                      {% if product.available %}
-                        <div class="product-avaliable">Available</div>
-                      {% else %}
-                        <div class="product-avaliable">Sold</div>
-                      {% endif %}
+    {% if selected_collections.size > 0 %}
+      {% for collection_handle in selected_collections %}
+        {% assign collection = collections[collection_handle] %}
 
-                      <div class="relative_img">
-                        <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}"/>
-                        <div class="badge left">{{ product.collections.first.title | default: "Vehicle" }}</div>
-                        <div class="badge rights">
-                          <a href="#"><img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" /></a>
+        {% if collection %}
+          {% if collection.products.size > 0 %}
+            <h2 class="collection-title">{{ collection.title }}</h2>
+            <div class="main_section_all parts_collections">
+              {% for product in collection.products %}
+                <div class="content">
+                  <div class="cards">
+                    <div class="card">
+                      <div class="card__side card__side--front card__side--front-1">
+                        <div class="product-col-1" data-type="{{ product.type | downcase }}">
+                          {% if product.available %}
+                            <div class="product-avaliable">Available</div>
+                          {% else %}
+                            <div class="product-avaliable">Sold</div>
+                          {% endif %}
+
+                          <div class="relative_img">
+                            <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}"/>
+                            <div class="badge left">{{ product.collections.first.title | default: "Vehicle" }}</div>
+                            <div class="badge rights">
+                              <a href="#"><img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" /></a>
+                            </div>
+                          </div>
+
+                          <div class="product-col-title">{{ product.title }}</div>
+                          <div class="product-details-col product-b-top product-b-bottom">
+                            <div class="cl-title">Fact 1</div>
+                            <div class="cl-description">
+                              {{ product.metafields.custom.fact1 | default: 'None' }}
+                            </div>
+                          </div>
+                          <div class="product-details-col product-b-bottom mar-bottom">
+                            <div class="cl-title">Fact 2</div>
+                            <div class="cl-description">
+                              {{ product.metafields.custom.fact2 | default: 'None' }}
+                            </div>
+                          </div>
+                          <div class="button-product desktop-section-hide margin-button-bottom">
+                            <a href="/collections/all" class="button--main">More info</a>
+                          </div>
                         </div>
                       </div>
 
-                      <div class="product-col-title">{{ product.title }}</div>
-                      <div class="product-details-col product-b-top product-b-bottom">
-                        <div class="cl-title">Fact 1</div>
-                        <div class="cl-description">
-                          {{ product.metafields.custom.fact1 | default: 'None' }}
-                        </div>
-                      </div>
-                      <div class="product-details-col product-b-bottom mar-bottom">
-                        <div class="cl-title">Fact 2</div>
-                        <div class="cl-description">
-                          {{ product.metafields.custom.fact2 | default: 'None' }}
-                        </div>
-                      </div>
-                      <div class="button-product desktop-section-hide margin-button-bottom">
-                        <a href="/collections/all" class="button--main">More info</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card__side card__side--back card__side--back-1">
-                    <div class="product-col-2">
-                      <div class="product-avaliable">
-                        {% if product.available %}
-                          Available
-                        {% else %}
-                          Sold
-                        {% endif %}
-                      </div>
-                      <div class="relative_img">
-                        {% assign second_image = product.images[1] %}
-                        <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
-                        <div class="badge right">{{ product.collections.first.title | default: "Vehicle" }}</div>
-                        <div class="badge lefts">
-                          <a href="#"><img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" /></a>
-                        </div>
-                      </div>
-                      <div class="product-col-title white-color">Details</div>
-                      <div class="product-details-col product-b-top product-b-bottom white-color">
-                        <div class="cl-title white-color">Fact 3</div>
-                        <div class="cl-description white-color">
-                          {{ product.metafields.custom.fact1 | default: 'None' }}
-                        </div>
-                      </div>
-                      <div class="product-details-col product-b-bottom white-color">
-                        <div class="cl-title white-color">Fact 4</div>
-                        <div class="cl-description white-color">
-                          {{ product.metafields.custom.fact2 | default: 'None' }}
-                        </div>
-                      </div>
-                      <div class="button-carts-all">
-                        <div class="button-product">
-                          <a href="/collections/all" class="button--main">View full listing</a>
-                        </div>
-                        <div class="button-product">
-                          <form method="post" action="/cart/add">
-                            <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-                            <button type="submit" class="button--main">Add to cart</button>
-                          </form>
+                      <div class="card__side card__side--back card__side--back-1">
+                        <div class="product-col-2">
+                          <div class="product-avaliable">
+                            {% if product.available %}
+                              Available
+                            {% else %}
+                              Sold
+                            {% endif %}
+                          </div>
+                          <div class="relative_img">
+                            {% assign second_image = product.images[1] %}
+                            <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
+                            <div class="badge right">{{ product.collections.first.title | default: "Vehicle" }}</div>
+                            <div class="badge lefts">
+                              <a href="#"><img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" /></a>
+                            </div>
+                          </div>
+                          <div class="product-col-title white-color">Details</div>
+                          <div class="product-details-col product-b-top product-b-bottom white-color">
+                            <div class="cl-title white-color">Fact 3</div>
+                            <div class="cl-description white-color">
+                              {{ product.metafields.custom.fact1 | default: 'None' }}
+                            </div>
+                          </div>
+                          <div class="product-details-col product-b-bottom white-color">
+                            <div class="cl-title white-color">Fact 4</div>
+                            <div class="cl-description white-color">
+                              {{ product.metafields.custom.fact2 | default: 'None' }}
+                            </div>
+                          </div>
+                          <div class="button-carts-all">
+                            <div class="button-product">
+                              <a href="/collections/all" class="button--main">View full listing</a>
+                            </div>
+                            <div class="button-product">
+                              <form method="post" action="/cart/add">
+                                <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                                <button type="submit" class="button--main">Add to cart</button>
+                              </form>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              {% endfor %}
             </div>
-          {% endfor %}
-        </div>
-        <div class="border-lines"></div>
-      {% endif %}
-    {% endfor %}
+            <div class="border-lines"></div>
+          {% else %}
+            <p>No products in collection: {{ collection.title }}</p>
+          {% endif %}
+        {% else %}
+          <p class="warning">Collection not found: {{ collection_handle }}</p>
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      <p>No collections selected in section settings.</p>
+    {% endif %}
 
   </div>
 </div>
