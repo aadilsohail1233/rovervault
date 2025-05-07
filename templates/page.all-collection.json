@@ -72,8 +72,8 @@
         "tab_GaRLHF": {
           "type": "tab",
           "settings": {
-            "text": "",
-            "url": "",
+            "text": "Prints",
+            "url": "shopify://pages/prints",
             "active": false
           }
         },
