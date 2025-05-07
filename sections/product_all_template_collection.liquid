@@ -1,14 +1,19 @@
 {% schema %}
 {
   "name": "Product All Collection",
-  "settings": [
-    {
-      "type": "collection_list",
-      "id": "selected_collections",
-      "label": "Select Collections"
-    }
-  ],
+  "settings": [],
   "blocks": [
+    {
+      "type": "collection_tab",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select Collection"
+        }
+      ]
+    },
     {
       "type": "tab",
       "name": "Tab",
@@ -34,44 +39,12 @@
   "presets": [
     {
       "name": "Product all Collection",
-      "blocks": [
-        {
-          "type": "tab",
-          "settings": {
-            "text": "All",
-            "url": "#",
-            "active": true
-          }
-        },
-        {
-          "type": "tab",
-          "settings": {
-            "text": "Range Rover",
-            "url": "#",
-            "active": false
-          }
-        },
-        {
-          "type": "tab",
-          "settings": {
-            "text": "Discovery",
-            "url": "#",
-            "active": false
-          }
-        },
-        {
-          "type": "tab",
-          "settings": {
-            "text": "Defender",
-            "url": "#",
-            "active": false
-          }
-        }
-      ]
+      "blocks": []
     }
   ]
 }
 {% endschema %}
+
 
 {% assign selected_collections = section.settings.selected_collections %}
 <div class="page-width">
