@@ -51,15 +51,15 @@
           "settings": {
             "text": "All",
             "url": "#",
-            "active": false
+            "active": true
           }
         },
         "tab_aGmzta": {
           "type": "tab",
           "settings": {
             "text": "Range Rover",
-            "url": "shopify://collections/vehicles",
-            "active": true
+            "url": "shopify://pages/range-rover",
+            "active": false
           }
         },
         "tab_khQGxN": {
