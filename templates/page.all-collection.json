@@ -114,7 +114,14 @@
         "tab_RbqBYJ"
       ],
       "name": "Product all Collection",
-      "settings": {}
+      "settings": {
+        "selected_collections": [
+          "art",
+          "drips",
+          "parts",
+          "prints"
+        ]
+      }
     }
   },
   "order": [
