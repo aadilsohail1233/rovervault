@@ -50,7 +50,7 @@
           "type": "tab",
           "settings": {
             "text": "All",
-            "url": "#",
+            "url": "shopify://pages/all-collections",
             "active": false
           }
         },
