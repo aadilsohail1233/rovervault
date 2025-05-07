@@ -34,70 +34,6 @@
         "margin_bottom": 36
       }
     },
-    "product_parts_template_collection_VV4djz": {
-      "type": "product_parts_template_collection",
-      "blocks": {
-        "tab_bHryPL": {
-          "type": "tab",
-          "settings": {
-            "text": "All",
-            "url": "#",
-            "active": false
-          }
-        },
-        "tab_7egTkM": {
-          "type": "tab",
-          "settings": {
-            "text": "Arts",
-            "url": "shopify://pages/art",
-            "active": false
-          }
-        },
-        "tab_9eeJwK": {
-          "type": "tab",
-          "settings": {
-            "text": "Parts",
-            "url": "#",
-            "active": true
-          }
-        },
-        "tab_G3DXyy": {
-          "type": "tab",
-          "settings": {
-            "text": "Prints",
-            "url": "shopify://pages/prints",
-            "active": false
-          }
-        },
-        "tab_i46gVy": {
-          "type": "tab",
-          "settings": {
-            "text": "Drips",
-            "url": "shopify://pages/drips",
-            "active": false
-          }
-        },
-        "tab_VhHYMr": {
-          "type": "tab",
-          "settings": {
-            "text": "Drive Care",
-            "url": "shopify://pages/drive-care",
-            "active": false
-          }
-        }
-      },
-      "block_order": [
-        "tab_bHryPL",
-        "tab_7egTkM",
-        "tab_9eeJwK",
-        "tab_G3DXyy",
-        "tab_i46gVy",
-        "tab_VhHYMr"
-      ],
-      "settings": {
-        "selected_collection": "parts"
-      }
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -134,13 +70,58 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
+    },
+    "product_all_template_collection_zDJzNH": {
+      "type": "product_all_template_collection",
+      "blocks": {
+        "tab_YCCHgT": {
+          "type": "tab",
+          "settings": {
+            "text": "All",
+            "url": "#",
+            "active": true
+          }
+        },
+        "tab_YBmULN": {
+          "type": "tab",
+          "settings": {
+            "text": "Range Rover",
+            "url": "#",
+            "active": false
+          }
+        },
+        "tab_7HyqPK": {
+          "type": "tab",
+          "settings": {
+            "text": "Discovery",
+            "url": "#",
+            "active": false
+          }
+        },
+        "tab_RbqBYJ": {
+          "type": "tab",
+          "settings": {
+            "text": "Defender",
+            "url": "#",
+            "active": false
+          }
+        }
+      },
+      "block_order": [
+        "tab_YCCHgT",
+        "tab_YBmULN",
+        "tab_7HyqPK",
+        "tab_RbqBYJ"
+      ],
+      "name": "Product all Collection",
+      "settings": {}
     }
   },
   "order": [
     "image_show_Fbp4kP",
     "vehicle_advantages_show_RjK9C9",
-    "product_parts_template_collection_VV4djz",
     "main",
-    "image_show_NaNKwV"
+    "image_show_NaNKwV",
+    "product_all_template_collection_zDJzNH"
   ]
 }
