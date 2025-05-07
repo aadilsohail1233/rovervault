@@ -81,45 +81,15 @@
             "url": "#",
             "active": true
           }
-        },
-        "tab_YBmULN": {
-          "type": "tab",
-          "settings": {
-            "text": "Range Rover",
-            "url": "#",
-            "active": false
-          }
-        },
-        "tab_7HyqPK": {
-          "type": "tab",
-          "settings": {
-            "text": "Discovery",
-            "url": "#",
-            "active": false
-          }
-        },
-        "tab_RbqBYJ": {
-          "type": "tab",
-          "settings": {
-            "text": "Defender",
-            "url": "#",
-            "active": false
-          }
         }
       },
       "block_order": [
-        "tab_YCCHgT",
-        "tab_YBmULN",
-        "tab_7HyqPK",
-        "tab_RbqBYJ"
+        "tab_YCCHgT"
       ],
       "name": "Product all Collection",
       "settings": {
         "selected_collections": [
-          "art",
-          "drips",
-          "parts",
-          "prints"
+          "art"
         ]
       }
     }
