@@ -1,14 +1,19 @@
 {% schema %}
 {
   "name": "Product All Collection",
-  "settings": [
-  {
-    "type": "collection_list",
-    "id": "selected_collections",
-    "label": "Select Collections"
-  }
-  ],
+  "settings": [],
   "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select Collection"
+        }
+      ]
+    },
     {
       "type": "tab",
       "name": "Tab",
@@ -72,6 +77,7 @@
   ]
 }
 {% endschema %}
+
 
 
 {% assign collection = collections[section.settings.selected_collection] %}
