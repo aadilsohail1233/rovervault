@@ -41,7 +41,7 @@
           "type": "tab",
           "settings": {
             "text": "All",
-            "url": "#",
+            "url": "shopify://pages/all-accessories",
             "active": false
           }
         },
