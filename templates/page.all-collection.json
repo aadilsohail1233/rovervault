@@ -80,8 +80,8 @@
         "tab_GjVqde": {
           "type": "tab",
           "settings": {
-            "text": "",
-            "url": "",
+            "text": "Drips",
+            "url": "shopify://pages/drips",
             "active": false
           }
         }
