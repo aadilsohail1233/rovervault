@@ -42,6 +42,26 @@
         "padding_bottom": 28
       }
     },
+    "product_all_template_collection_zDJzNH": {
+      "type": "product_all_template_collection",
+      "blocks": {
+        "tab_YCCHgT": {
+          "type": "tab",
+          "settings": {
+            "text": "All",
+            "url": "#",
+            "active": true
+          }
+        }
+      },
+      "block_order": [
+        "tab_YCCHgT"
+      ],
+      "name": "Product all Collection",
+      "settings": {
+        "selected_collection": "all-accessories"
+      }
+    },
     "image_show_NaNKwV": {
       "type": "image-show",
       "blocks": {
@@ -70,33 +90,13 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
-    },
-    "product_all_template_collection_zDJzNH": {
-      "type": "product_all_template_collection",
-      "blocks": {
-        "tab_YCCHgT": {
-          "type": "tab",
-          "settings": {
-            "text": "All",
-            "url": "#",
-            "active": true
-          }
-        }
-      },
-      "block_order": [
-        "tab_YCCHgT"
-      ],
-      "name": "Product all Collection",
-      "settings": {
-        "selected_collection": "all-accessories"
-      }
     }
   },
   "order": [
     "image_show_Fbp4kP",
     "vehicle_advantages_show_RjK9C9",
     "main",
-    "image_show_NaNKwV",
-    "product_all_template_collection_zDJzNH"
+    "product_all_template_collection_zDJzNH",
+    "image_show_NaNKwV"
   ]
 }
