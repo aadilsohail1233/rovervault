@@ -52,10 +52,46 @@
             "url": "#",
             "active": true
           }
+        },
+        "tab_tFyzVg": {
+          "type": "tab",
+          "settings": {
+            "text": "Arts",
+            "url": "shopify://pages/art",
+            "active": false
+          }
+        },
+        "tab_Q8ciPk": {
+          "type": "tab",
+          "settings": {
+            "text": "Parts",
+            "url": "shopify://pages/parts",
+            "active": false
+          }
+        },
+        "tab_GaRLHF": {
+          "type": "tab",
+          "settings": {
+            "text": "",
+            "url": "",
+            "active": false
+          }
+        },
+        "tab_GjVqde": {
+          "type": "tab",
+          "settings": {
+            "text": "",
+            "url": "",
+            "active": false
+          }
         }
       },
       "block_order": [
-        "tab_YCCHgT"
+        "tab_YCCHgT",
+        "tab_tFyzVg",
+        "tab_Q8ciPk",
+        "tab_GaRLHF",
+        "tab_GjVqde"
       ],
       "name": "Product all Collection",
       "settings": {
