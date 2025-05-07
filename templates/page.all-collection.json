@@ -89,7 +89,9 @@
       "name": "Product all Collection",
       "settings": {
         "selected_collections": [
-          "art"
+          "art",
+          "drips",
+          "parts"
         ]
       }
     }
