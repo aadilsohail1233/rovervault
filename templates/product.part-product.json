@@ -185,6 +185,11 @@
         "margin_bottom": 36
       }
     },
+    "product_parts_single_image_3mmr4f": {
+      "type": "Product_Parts_Single_Image",
+      "name": "Product Parts Single",
+      "settings": {}
+    },
     "logo_with_text_small_Ah6LXR": {
       "type": "logo-with-text-small",
       "name": "Logo With Text Small",
@@ -194,11 +199,6 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
-    },
-    "product_specification_details_Umx3XT": {
-      "type": "Product_Specification_Details",
-      "name": "Specification Section",
-      "settings": {}
     },
     "image_show_GJbiTa": {
       "type": "image-show",
@@ -226,11 +226,6 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
-    },
-    "product_parts_single_image_3mmr4f": {
-      "type": "Product_Parts_Single_Image",
-      "name": "Product Parts Single",
-      "settings": {}
     }
   },
   "order": [
@@ -246,7 +241,6 @@
     "vehicle_advantages_show_9yEMAX",
     "product_parts_single_image_3mmr4f",
     "logo_with_text_small_Ah6LXR",
-    "product_specification_details_Umx3XT",
     "image_show_GJbiTa"
   ]
 }
