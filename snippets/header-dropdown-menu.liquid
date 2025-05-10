@@ -44,6 +44,15 @@
   .has-subsubmenu:hover .header__submenu {
     display: block;
   }
+
+    .icon-caret-wrapper svg {
+    transition: transform 0.3s ease;
+  }
+
+  .has-submenu:hover > a .icon-caret-wrapper svg,
+  .has-subsubmenu:hover > a .icon-caret-wrapper svg {
+    transform: rotate(180deg);
+  }
 }
 
   
