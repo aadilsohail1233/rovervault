@@ -1589,6 +1589,7 @@ button.shopify-payment-button__button--unbranded {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 500;
 }
 
 /* Shopify Accelerated Checkout */
