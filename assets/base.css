@@ -4664,5 +4664,7 @@ font-family: 'Eczar';
 }
 
 @media (min-width: 1366px) and (max-width: 1920px) {
-  
+      .page-width {
+        padding: 0 0px;
+    }
 }  
