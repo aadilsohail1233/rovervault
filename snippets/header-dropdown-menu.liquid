@@ -61,7 +61,9 @@
             <span {% if link.child_active %}class="header__active-menu-item"{% endif %}>
               {{ link.title | escape }}
             </span>
+            <span class="icon-caret-wrapper">
             {{ 'icon-caret.svg' | inline_asset_content }}
+            </span>
           </a>
           <ul class="header__submenu list-menu list-menu--disclosure color-{{ section.settings.menu_color_scheme }} gradient caption-large">
             {%- for childlink in link.links -%}
