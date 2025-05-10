@@ -15,6 +15,10 @@ h1.vehicle-product-title {
     margin: 0;
     letter-spacing: 0.6rem;
 }
+.image-with-text-1_text p{
+  font-weight: 500;
+  font-family: Eczar !important;
+}
 .product-parts-single-image img {
     border: 5px solid rgba(var(--color-secondary-button-text));
     width: 100%;
