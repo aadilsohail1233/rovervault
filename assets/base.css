@@ -4667,4 +4667,7 @@ font-family: 'Eczar';
       .page-width {
         padding: 0 0px;
     }
+  .collection-slider-section .card {
+    height: 55em;
+}
 }  
