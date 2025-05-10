@@ -4662,3 +4662,7 @@ font-family: 'Eczar';
       display:inline-block;
   }
 }
+
+@media (min-width: 1366px) and (max-width: 1920px) {
+  
+}  
