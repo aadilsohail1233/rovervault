@@ -4504,6 +4504,9 @@ font-family: 'Eczar';
   .header-drawer{
     background-color: #6b8d50;
   }
+  .header__icon--menu .icon{
+    filter: brightness(0) invert(1);
+  }
   header{
        padding: 0px 0px !important; 
   }
