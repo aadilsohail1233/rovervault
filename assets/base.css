@@ -4502,7 +4502,7 @@ font-family: 'Eczar';
     height: 53em; 
   }
   .header-drawer{
-    background-color: #6b8d50;
+    background-color: #6b8d50 !important;
   }
   .header__icon--menu .icon{
     filter: brightness(0) invert(1);
