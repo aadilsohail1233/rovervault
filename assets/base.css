@@ -15,6 +15,10 @@ h1.vehicle-product-title {
     margin: 0;
     letter-spacing: 0.6rem;
 }
+a.enquire_heading:hover {
+    background-color: #CBD2B5;
+    color: #6b8d50;
+}
 .image-with-text-1_text p{
   font-weight: 500;
   font-family: Eczar !important;
