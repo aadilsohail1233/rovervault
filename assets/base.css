@@ -4595,6 +4595,7 @@ font-family: 'Eczar';
   .header__icon--menu .icon{
     filter: brightness(0) invert(1);
   }
+  
 .parts-sections .card {
     height: 58em;
 }
@@ -4616,6 +4617,20 @@ font-family: 'Eczar';
 .collection-slider-section .card {
     height: 63em;
 }
+      #Details-menu-drawer-container{
+     background-color: #6b8d50 !important;
+     margin-right: -10px;
+     border: #6b8d50;
+  }
+  .header__icons{
+     background-color: #6b8d50;
+  }
+  .header-drawer {
+    background-color: #6b8d50 !important;
+  }
+  .header__icon--menu .icon{
+    filter: brightness(0) invert(1);
+  }
   .parts-sections .card {
     height: 61em;
 }
