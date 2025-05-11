@@ -4485,7 +4485,7 @@ font-family: 'Eczar';
     display: none;
 }
   .desktop-section-hide {
-        display: inline-block !important;
+        display: flex !important;
         text-align: center;
         margin-bottom: 3rem;
         margin-top: 0px !important;
