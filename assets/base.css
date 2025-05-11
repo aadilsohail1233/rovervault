@@ -4502,7 +4502,9 @@ font-family: 'Eczar';
     height: 53em; 
   }
   #Details-menu-drawer-container{
-    background-color: #6b8d50 !important; 
+     background-color: #6b8d50 !important;
+     margin-right: -10px;
+     border: #6b8d50;
   }
   .header-drawer {
     background-color: #6b8d50 !important;
