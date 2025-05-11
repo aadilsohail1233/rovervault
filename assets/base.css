@@ -23,6 +23,9 @@ span.carts12:hover {
     background-color: #6B8D50;
     color: #EBE9D6;
 }
+.list-menu--disclosure li a:hover{
+      color: #EBE9D6 !important;
+}
 .image-with-text-1_text p{
   font-weight: 500;
   font-family: Eczar !important;
