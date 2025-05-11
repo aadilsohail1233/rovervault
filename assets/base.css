@@ -4498,10 +4498,10 @@ font-family: 'Eczar';
  } 
 }
 @media screen and (max-width: 399px) and (min-width: 320px) {
-     .card {
+  .card {
     height: 53em; 
   }
-  .header-drawer{
+  .header-drawer {
     background-color: #6b8d50 !important;
   }
   .header__icon--menu .icon{
