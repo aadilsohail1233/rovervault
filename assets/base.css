@@ -4506,6 +4506,9 @@ font-family: 'Eczar';
      margin-right: -10px;
      border: #6b8d50;
   }
+  .header__icons{
+     background-color: #6b8d50;
+  }
   .header-drawer {
     background-color: #6b8d50 !important;
   }
