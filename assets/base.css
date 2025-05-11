@@ -4501,6 +4501,9 @@ font-family: 'Eczar';
      .card {
     height: 53em; 
   }
+  header{
+       padding: 0px 0px !important; 
+  }
  .parts_collections .card {
     height: 43em;
 } 
