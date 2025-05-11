@@ -145,7 +145,7 @@
                             
                           </div>  
                           </div>
-                          <div class="product-details-col product-b-bottom white-color">
+                          <div class="product-details-col product-b-bottom white-color mar-bottom">
                           <div class="cl-title white-color">Exterior Color</div>
                           <div class="cl-description white-color">
                             {% if product.metafields.vehicles.body_color %}
@@ -162,7 +162,7 @@
                           </div>  
                           </div>
                         
-                          <div class="button-product"><a href="/collections/all" class="button--main">View full listing</a></div>
+                          <div class="button-product button_now"><a href="/collections/all" class="button--main">View full listing</a></div>
                       </div>
                     
                   </div>
@@ -272,6 +272,7 @@ document.addEventListener('DOMContentLoaded', function () {
     font-family: 'Eczar';
     font-size: 20px;
 }
+
  .collection-slider-section .button-product {
     display: flex;
     position: relative;
@@ -280,6 +281,9 @@ document.addEventListener('DOMContentLoaded', function () {
     margin-top: 0rem !important;
      margin-bottom: 3rem !important;
 }
+.button_now {
+    margin-top: 3rem !important;
+}     
 .mar-bottom {
     margin-bottom: 4rem !important;
 }
@@ -420,7 +424,7 @@ document.addEventListener('DOMContentLoaded', function () {
     display: none;
 }
   .desktop-section-hide {
-        display: inline-block !important;
+        display: flex !important;
         width: 100%;
         text-align: center;
         margin-bottom: 3rem;
