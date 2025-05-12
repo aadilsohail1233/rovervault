@@ -4698,6 +4698,9 @@ font-family: 'Eczar';
     text-align:left;
     width: 80%;
   }
+header.header.header--middle-left.header--mobile-center.page-width.header--has-menu.header--has-account {
+        display: flex;
+    }
 }
 
 @media screen and (max-width: 820px) and (min-width: 768px) {
