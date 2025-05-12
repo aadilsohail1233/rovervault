@@ -12,6 +12,9 @@
     height: 400px;
     object-fit: cover;
 }
+a.footer-page__link:hover {
+    color: #C18A14;
+}
 .padding-bottom-zero .prd-img {
     height: 400px;
     object-fit: cover;
