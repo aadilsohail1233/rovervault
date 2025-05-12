@@ -4707,6 +4707,10 @@ a.enquire_heading {
   .product-col-2{
     width: 98%;
   }
+  .padding-bottom-zero .prd-img-others {
+    height: 230px;
+    object-fit: cover;
+}
 }
 @media screen and (max-width: 990px) and (min-width: 768px) {
  a.enquire_heading {
