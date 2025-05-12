@@ -4501,6 +4501,9 @@ font-family: 'Eczar';
   .card {
     height: 53em; 
   }
+  .padding-bottom-zero .content, .parts-sections .content{
+    padding: 0em 0 0;
+  }
   #Details-menu-drawer-container{
      background-color: #6b8d50 !important;
      margin-right: -10px;
