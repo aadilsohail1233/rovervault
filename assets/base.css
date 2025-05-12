@@ -4708,7 +4708,7 @@ a.enquire_heading {
     width: 98%;
   }
 }
-@media screen and (max-width: 1024px) and (min-width: 768px) {
+@media screen and (max-width: 990px) and (min-width: 768px) {
  a.enquire_heading {
     display: none;
 } 
