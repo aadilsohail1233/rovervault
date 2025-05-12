@@ -4716,6 +4716,9 @@ a.enquire_heading {
  a.enquire_heading {
     display: none;
 } 
+  .image-with-text-1-wrapper{
+            direction: rtl;
+  }
 .header__heading, .header__heading-link{
     text-align:left;
     width: 80%;
