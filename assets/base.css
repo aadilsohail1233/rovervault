@@ -4725,7 +4725,10 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
         padding-left: 0px;
         padding-right: 0px;
        justify-content: space-between;
-       width:87%;
+       width:93%;
+    }
+  .page-width {
+        padding: 0 30px;
     }
 
   .header__icon--menu .icon {
