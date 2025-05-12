@@ -4369,6 +4369,10 @@ font-family: 'Eczar';
   .video-full-tabs{
         display:inline-block;
   }
+  }
+a.enquire_heading {
+    display: none;
+}
   .video-text {
     width: 100% !important;
     text-align: center;
