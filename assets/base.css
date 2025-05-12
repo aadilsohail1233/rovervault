@@ -4709,6 +4709,9 @@ font-family: 'Eczar';
   .padding-bottom-zero .card {
     height: 30em;
 }
+  span.carts12{
+    height: 45px;
+  }
 }
 
 @media screen and (max-width: 920px) and (min-width: 821px) {
