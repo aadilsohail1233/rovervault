@@ -4718,6 +4718,8 @@ a.enquire_heading {
   }
 header.header.header--middle-left.header--mobile-center.page-width.header--has-menu.header--has-account {
         display: flex;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
   .header__icon--menu .icon {
