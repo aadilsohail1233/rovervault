@@ -4363,7 +4363,11 @@ font-family: 'Eczar';
   }
 }
 
-
+@media (max-width: 767px) {
+  .emptyonmobile {
+    display: none;
+}
+}
 @media (max-width: 768px) { 
 
   .video-full-tabs{
@@ -4434,10 +4438,6 @@ a.enquire_heading {
 }
 .card.is-flipped .card__side--back {
   transform: rotateY(0);
-}
-
-.emptyonmobile {
-    display: none;
 }
   .vehicle-product-header__second {
     width: 100%;
