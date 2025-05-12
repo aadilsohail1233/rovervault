@@ -4694,6 +4694,10 @@ font-family: 'Eczar';
  a.enquire_heading {
     display: none;
 } 
+.header__heading, .header__heading-link{
+    text-align:left;
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 820px) and (min-width: 768px) {
