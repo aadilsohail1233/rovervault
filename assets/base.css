@@ -4374,7 +4374,9 @@ font-family: 'Eczar';
     }
   span.carts12 {
     height: 44px !important;
+    margin-top: 0px;
   }
+  
   header-drawer{
     padding-right: 10px;
     padding-left: 10px;
