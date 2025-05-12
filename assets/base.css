@@ -4477,6 +4477,7 @@ a.enquire_heading {
   header.header.header--middle-left.header--mobile-center.page-width.header--has-menu.header--has-account {
     display: flex;
     padding: 0px;
+    justify-content: space-between;
 }
   .header__heading, .header__heading-link{
     text-align:left;
