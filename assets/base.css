@@ -1189,9 +1189,7 @@ summary::-webkit-details-marker {
   a.enquire_heading {
     display: none;
 }
-  .header__icon--cart{
-  margin-right: 1rem !important;
-  }
+
   span.carts12 {
     background-color: #cbd1b5;
     padding: 0 30px;
