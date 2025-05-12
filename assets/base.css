@@ -8,6 +8,14 @@
   --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
+.padding-bottom-zero .prd-img-others {
+    height: 400px;
+    object-fit: cover;
+}
+.padding-bottom-zero .prd-img {
+    height: 400px;
+    object-fit: cover;
+}
 h1.vehicle-product-title {
     font-family: 'VVDS Fifties';
     text-transform: uppercase;
