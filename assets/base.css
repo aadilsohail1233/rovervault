@@ -4372,6 +4372,9 @@ font-family: 'Eczar';
       .header__icon--menu .icon {
         filter: brightness(0) invert(1);
     }
+  span.carts12 {
+    height: 44px !important;
+  }
   header-drawer{
     padding-right: 10px;
     padding-left: 10px;
