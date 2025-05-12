@@ -159,12 +159,19 @@
           "settings": {
             "product": "range-rover-1988"
           }
+        },
+        "product_card_aaxzew": {
+          "type": "product_card",
+          "settings": {
+            "product": "defender"
+          }
         }
       },
       "block_order": [
         "product_card_RG7JDh",
         "product_card_LGaL9e",
-        "product_card_A96bML"
+        "product_card_A96bML",
+        "product_card_aaxzew"
       ],
       "settings": {}
     },
