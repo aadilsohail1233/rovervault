@@ -4769,4 +4769,7 @@ font-family: 'Eczar';
   .collection-slider-section .card {
     height: 57em;
 }
+  .padding-bottom-zero .card {
+    height: 45em;
+}
 }  
