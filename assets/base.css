@@ -22,8 +22,8 @@
     height: 300px;
     object-fit: cover;
 }
-.main_section_all.vehicles.product-col-title{
-  font-size:50px;
+.main_section_all.vehicles .product-col-title {
+    font-size: 50px;
 }
 a.footer-page__link:hover {
     color: #C18A14;
