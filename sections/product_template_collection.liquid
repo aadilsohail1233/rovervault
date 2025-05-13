@@ -1,213 +1,97 @@
-{% schema %}
-{
-  "name": "Product Collection",
-  "settings": [
-    {
-      "type": "collection",
-      "id": "selected_collection",
-      "label": "Select Collection"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "tab",
-      "name": "Tab",
-      "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Tab Text"
-        },
-        {
-          "type": "collection",
-          "id": "collection",
-          "label": "Select Collection"
-        },
-        {
-          "type": "checkbox",
-          "id": "active",
-          "label": "Set as Active"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Product Collection",
-      "blocks": [
-        {
-          "type": "tab",
-          "settings": {
-            "text": "All",
-            "collection": "",
-            "active": true
-          }
-        },
-        {
-          "type": "tab",
-          "settings": {
-            "text": "Range Rover",
-            "collection": "",
-            "active": false
-          }
-        },
-        {
-          "type": "tab",
-          "settings": {
-            "text": "Discovery",
-            "collection": "",
-            "active": false
-          }
-        },
-        {
-          "type": "tab",
-          "settings": {
-            "text": "Defender",
-            "collection": "",
-            "active": false
-          }
-        }
-      ]
-    }
-  ]
-}
-{% endschema %}
+<div class="product-tabs-wrapper page-width">
+  <!-- Tab Buttons -->
+  <div class="tab-buttons">
+    {% assign tab_index = 0 %}
+    {% for block in section.blocks %}
+      <button class="tab-button {% if block.settings.active %}active{% endif %}" data-tab="tab-{{ tab_index }}">
+        {{ block.settings.text }}
+      </button>
+      {% assign tab_index = tab_index | plus: 1 %}
+    {% endfor %}
+  </div>
 
-<div class="page-width">
-  <div class="range-rover-section">
+  <!-- Tab Contents -->
+  <div class="tab-contents">
+    {% assign tab_index = 0 %}
+    {% for block in section.blocks %}
+      {% assign collection_handle = block.settings.collection %}
+      {% assign tab_active = block.settings.active %}
+      {% assign collection = collections[collection_handle] %}
 
-    <!-- Tabs -->
-    <div class="top-bar-filter desktop-filters">
-      <div class="tabs">
-        {% assign tab_index = 0 %}
-        {% for block in section.blocks %}
-          {% if block.type == 'tab' %}
-            <a href="javascript:void(0);" 
-               class="tab {% if block.settings.active %}active{% endif %}" 
-               data-tab="tab-{{ tab_index }}">
-              {{ block.settings.text }}
-            </a>
-            {% assign tab_index = tab_index | plus: 1 %}
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-
-    <div class="border-lines"></div>
-
-    <!-- Tab Content -->
-    <div class="main_section_all vehicles">
-      {% assign tab_index = 0 %}
-      {% for block in section.blocks %}
-        {% if block.type == 'tab' %}
-          {% assign collection = collections[block.settings.collection] %}
-          <div class="tab-content {% if block.settings.active %}active{% endif %}" id="tab-{{ tab_index }}">
-            {% if collection %}
-              {% for product in collection.products %}
-                <div class="cards">
-                  <div class="card">
-                    <div class="card__side card__side--front card__side--front-1">
-                      <div class="product-col-1" data-type="{{ product.type | downcase }}">
-                        {% if product.available %}
-                          <div class="product-avaliable">Available</div>
-                        {% else %}
-                          <div class="product-avaliable">Sold</div>
-                        {% endif %}
-                        <div class="relative_img">
-                          <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}" />
-                          <div class="badge left">{{ product.collections.first.title }}</div>
-                          <div class="badge rights">
-                            <a href="#"><img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" /></a>
-                          </div>
-                        </div>
-                        <div class="product-col-title">{{ product.title }}</div>
-                        <div class="product-details-col product-b-top product-b-bottom">
-                          <div class="cl-title">Engine</div>
-                          <div class="cl-description">
-                            {{ product.metafields.vehicles_main.engine | default: 'None' }}
-                          </div>
-                        </div>
-                        <div class="button-product desktop-section-hide margin-button-bottom">
-                          <a href="{{ product.url }}" class="button--main">More info</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              {% endfor %}
-            {% else %}
-              <p>No products found in this collection.</p>
-            {% endif %}
+      <div class="tab-content {% if tab_active %}active{% endif %}" id="tab-{{ tab_index }}">
+        {% if collection %}
+          <h2>{{ collection.title }}</h2>
+          <div class="products-grid">
+            {% for product in collection.products %}
+              <div class="product-card">
+                <a href="{{ product.url }}">
+                  <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+                  <p>{{ product.title }}</p>
+                </a>
+              </div>
+            {% endfor %}
           </div>
-          {% assign tab_index = tab_index | plus: 1 %}
+        {% else %}
+          <p>No collection selected.</p>
         {% endif %}
-      {% endfor %}
-    </div>
+      </div>
+
+      {% assign tab_index = tab_index | plus: 1 %}
+    {% endfor %}
   </div>
 </div>
 
-<!-- Styles -->
 <style>
-  .tab-content { display: none; }
-  .tab-content.active { display: block; }
-  .tabs .tab.active {
-    font-weight: bold;
-    border-bottom: 2px solid black;
+  .tab-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .tab-button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+  }
+  .tab-button.active {
+    background: #000;
+    color: white;
+  }
+  .tab-content {
+    display: none;
+  }
+  .tab-content.active {
+    display: block;
+  }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  .product-card {
+    text-align: center;
+  }
+  .product-card img {
+    width: 100%;
+    max-width: 200px;
   }
 </style>
 
-<!-- JavaScript -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    const tabs = document.querySelectorAll(".tabs .tab");
-    const contents = document.querySelectorAll(".tab-content");
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const tabContents = document.querySelectorAll(".tab-content");
 
-    tabs.forEach(function(tab) {
-      tab.addEventListener("click", function() {
-        const tabId = this.getAttribute("data-tab");
+    tabButtons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        // Remove all active classes
+        tabButtons.forEach(btn => btn.classList.remove("active"));
+        tabContents.forEach(content => content.classList.remove("active"));
 
-        tabs.forEach(t => t.classList.remove("active"));
-        contents.forEach(c => c.classList.remove("active"));
-
-        this.classList.add("active");
-        const activeTab = document.getElementById(tabId);
-        if (activeTab) {
-          activeTab.classList.add("active");
-        }
+        // Add active to clicked
+        button.classList.add("active");
+        document.getElementById(`tab-${index}`).classList.add("active");
       });
     });
   });
 </script>
-
-
-      <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const flipToBackButtons = document.querySelectorAll('.badge.lefts a');
-  const flipToFrontButtons = document.querySelectorAll('.badge.rights a');
-
-  // Flip to back
-  flipToBackButtons.forEach(button => {
-    button.addEventListener('click', function (e) {
-      e.preventDefault();
-      if (window.innerWidth <= 767) {
-        const card = this.closest('.card');
-        card.classList.remove('frontflipped');
-        card.classList.add('flipped');
-      }
-    });
-  });
-
-  // Flip to front
-  flipToFrontButtons.forEach(button => {
-    button.addEventListener('click', function (e) {
-      e.preventDefault();
-      if (window.innerWidth <= 767) {
-        const card = this.closest('.card');
-        card.classList.remove('flipped');
-        card.classList.add('frontflipped');
-      }
-    });
-  });
-});
-</script>
-
