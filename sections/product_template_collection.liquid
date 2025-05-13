@@ -73,103 +73,111 @@
 }
 {% endschema %}
 
-<div class="product-tabs-wrapper page-width">
-  <!-- Tab Buttons -->
-  <div class="tab-buttons">
-    {% assign tab_index = 0 %}
-    {% for block in section.blocks %}
-      <button class="tab-button {% if block.settings.active %}active{% endif %}" data-tab="tab-{{ tab_index }}">
-        {{ block.settings.text }}
-      </button>
-      {% assign tab_index = tab_index | plus: 1 %}
-    {% endfor %}
-  </div>
+{% assign active_found = false %}
+<div class="page-width">
+  <div class="range-rover-section">
 
-  <!-- Tab Contents -->
-  <div class="tab-contents">
-    {% assign tab_index = 0 %}
-    {% for block in section.blocks %}
-      {% assign collection_handle = block.settings.collection %}
-      {% assign tab_active = block.settings.active %}
-      {% assign collection = collections[collection_handle] %}
-
-      <div class="tab-content {% if tab_active %}active{% endif %}" id="tab-{{ tab_index }}">
-        {% if collection %}
-          <h2>{{ collection.title }}</h2>
-          <div class="products-grid">
-            {% for product in collection.products %}
-              <div class="product-card">
-                <a href="{{ product.url }}">
-                  <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
-                  <p>{{ product.title }}</p>
-                </a>
-              </div>
-            {% endfor %}
-          </div>
-        {% else %}
-          <p>No collection selected.</p>
-        {% endif %}
+    <!-- Tabs -->
+    <div class="top-bar-filter desktop-filters">
+      <div class="tabs">
+        {% for block in section.blocks %}
+          {% if block.type == 'tab' %}
+            <a href="javascript:void(0);" 
+               class="tab {% if block.settings.active and active_found == false %}active{% assign active_found = true %}{% endif %}" 
+               data-tab-id="tab-{{ forloop.index }}">
+              {{ block.settings.text }}
+            </a>
+          {% endif %}
+        {% endfor %}
       </div>
+    </div>
 
-      {% assign tab_index = tab_index | plus: 1 %}
-    {% endfor %}
+    <div class="border-lines"></div>
+
+    <!-- Tab Content Panels -->
+    <div class="main_section_all vehicles">
+      {% assign active_found = false %}
+      {% for block in section.blocks %}
+        {% if block.type == 'tab' %}
+          {% assign collection = collections[block.settings.collection] %}
+          {% if collection %}
+            <div class="tab-content {% if block.settings.active and active_found == false %}active{% assign active_found = true %}{% endif %}" id="tab-{{ forloop.index }}">
+              {% for product in collection.products %}
+                <div class="content">
+                  <div class="cards">
+                    <div class="card">
+                      <!-- Product Card Content (trimmed for clarity) -->
+                      <div class="card__side card__side--front card__side--front-1">
+                        <div class="product-col-1" data-type="{{ product.type | downcase }}">
+                          {% if product.available %}
+                            <div class="product-avaliable">Available</div>
+                          {% else %}
+                            <div class="product-avaliable">Sold</div>
+                          {% endif %}
+                          <div class="relative_img">
+                            <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}" />
+                            <div class="badge left">
+                              {{ product.collections.first.title | default: "Vehicle" }}
+                            </div>
+                            <div class="badge rights">
+                              <a href="#"><img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" /></a>
+                            </div>
+                          </div>
+
+                          <div class="product-col-title">{{ product.title }}</div>
+                          <div class="product-details-col product-b-top product-b-bottom">
+                            <div class="cl-title">Engine</div>
+                            <div class="cl-description">
+                              {{ product.metafields.vehicles_main.engine | default: 'None' }}
+                            </div>
+                          </div>
+                          <!-- Add more fields as needed -->
+                          <div class="button-product desktop-section-hide margin-button-bottom">
+                            <a href="{{ product.url }}" class="button--main">More info</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+              {% if collection.products.size == 0 %}
+                <p>No products in this collection.</p>
+              {% endif %}
+              <div class="results-count">Showing {{ collection.products.size }} of {{ collection.products.size }} results</div>
+            </div>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </div>
 
 <style>
-  .tab-buttons {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  .tab-button {
-    padding: 10px 20px;
-    border: 1px solid #ccc;
-    background: white;
-    cursor: pointer;
-  }
-  .tab-button.active {
-    background: #000;
-    color: white;
-  }
-  .tab-content {
-    display: none;
-  }
-  .tab-content.active {
-    display: block;
-  }
-  .products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-  }
-  .product-card {
-    text-align: center;
-  }
-  .product-card img {
-    width: 100%;
-    max-width: 200px;
-  }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+  .tab.active { font-weight: bold; }
 </style>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    const tabButtons = document.querySelectorAll(".tab-button");
-    const tabContents = document.querySelectorAll(".tab-content");
+    const tabs = document.querySelectorAll(".tab");
+    const contents = document.querySelectorAll(".tab-content");
 
-    tabButtons.forEach((button, index) => {
-      button.addEventListener("click", () => {
-        // Remove all active classes
-        tabButtons.forEach(btn => btn.classList.remove("active"));
-        tabContents.forEach(content => content.classList.remove("active"));
+    tabs.forEach(tab => {
+      tab.addEventListener("click", function() {
+        tabs.forEach(t => t.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
 
-        // Add active to clicked
-        button.classList.add("active");
-        document.getElementById(`tab-${index}`).classList.add("active");
+        this.classList.add("active");
+        const tabId = this.getAttribute("data-tab-id");
+        const content = document.getElementById(tabId);
+        if (content) content.classList.add("active");
       });
     });
   });
 </script>
+
 
 
       <script>
