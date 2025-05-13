@@ -174,9 +174,10 @@
             {% endif %}
           {% endfor %}
         </div>
+    
+
       </div>
-      
-  <!-- Slider navigation -->
+                    <!-- Slider navigation -->
   <div class="swiper-controls-wrap">
     <div class="slider-controls">
   <div class="swiper-button-prev">
@@ -296,8 +297,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .product-b-bottom {
     border-bottom: 5px solid #6B8D50;
 }
-      
-.badge.left {
+      .badge.left {
     position: absolute;
     left: 15px;
     top: 20px;
@@ -343,8 +343,7 @@ document.addEventListener('DOMContentLoaded', function () {
     font-size: 65px;
     color: #6B8D50;
 }
-      
-.product-avaliable {
+      .product-avaliable {
     background-color: #6B8D50;
     text-align: center;
     color: white;
@@ -363,6 +362,14 @@ document.addEventListener('DOMContentLoaded', function () {
   width:100%;
    border: 5px solid rgba(var(--color-secondary-button-text));
   background-color:#6B8D50;
+}
+
+.collection-slider-section .swiper-wrapper {
+  margin-bottom: 0rem !important;
+}
+
+.swiper-controls-wrap {
+  margin-top: 0.5rem; /* Adjust as needed */
 }
 
 .swiper-controls-wrap .swiper-button-prev{
@@ -398,6 +405,7 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 
 .swiper-pagination-bullet-active{
+ 
   position: relative;
 }
 
@@ -437,13 +445,7 @@ document.addEventListener('DOMContentLoaded', function () {
  .cl-description{
        font-size: 15px;
  } 
-
-.collection-slider-section,
-.swiper-controls-wrap {
-  background: rgba(255, 0, 0, 0.1); /* Helps visualize spacing */
-}
-
-.swiper-controls-wrap .swiper-button-prev {
+  .swiper-controls-wrap .swiper-button-prev {
     display: none !important;
 }
   .swiper-controls-wrap .swiper-button-next {
