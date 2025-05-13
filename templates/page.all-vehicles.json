@@ -50,7 +50,7 @@
           "type": "tab",
           "settings": {
             "text": "All",
-            "url": "#",
+            "collection": "vehicles",
             "active": true
           }
         },
@@ -58,7 +58,7 @@
           "type": "tab",
           "settings": {
             "text": "Range Rover",
-            "url": "shopify://pages/range-rover",
+            "collection": "vehicles",
             "active": false
           }
         },
@@ -66,7 +66,7 @@
           "type": "tab",
           "settings": {
             "text": "Discovery",
-            "url": "shopify://pages/discovery",
+            "collection": "vehicles",
             "active": false
           }
         },
@@ -74,7 +74,7 @@
           "type": "tab",
           "settings": {
             "text": "Defender",
-            "url": "shopify://pages/defender",
+            "collection": "vehicles",
             "active": false
           }
         }
