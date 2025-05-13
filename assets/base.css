@@ -12,6 +12,16 @@
     height: 400px;
     object-fit: cover;
 }
+.main_section_all.vehicles .prd-img
+ {
+    height: 300px;
+    object-fit: cover;
+}
+.main_section_all.vehicles.prd-img
+ {
+    height: 300px;
+    object-fit: cover;
+}
 a.footer-page__link:hover {
     color: #C18A14;
 }
