@@ -95,14 +95,15 @@
     <div class="border-lines"></div>
 
     <!-- Tab Content Panels -->
-    <div class="main_section_all vehicles">
+    
       {% assign active_found = false %}
       {% for block in section.blocks %}
         {% if block.type == 'tab' %}
           {% assign collection = collections[block.settings.collection] %}
           {% if collection %}
             <div class="tab-content {% if block.settings.active and active_found == false %}active{% assign active_found = true %}{% endif %}" id="tab-{{ forloop.index }}">
-              {% for product in collection.products %}
+            <div class="main_section_all vehicles">  
+            {% for product in collection.products %}
                 <div class="content">
                   <div class="cards">
                     <div class="card">
@@ -141,6 +142,7 @@
                   </div>
                 </div>
               {% endfor %}
+                </div>
               {% if collection.products.size == 0 %}
                 <p>No products in this collection.</p>
               {% endif %}
@@ -149,7 +151,7 @@
           {% endif %}
         {% endif %}
       {% endfor %}
-    </div>
+
   </div>
 </div>
 
