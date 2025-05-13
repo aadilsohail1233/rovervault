@@ -19,9 +19,9 @@
           "label": "Tab Text"
         },
         {
-          "type": "url",
-          "id": "url",
-          "label": "Tab Link"
+          "type": "collection",
+          "id": "collection",
+          "label": "Select Collection"
         },
         {
           "type": "checkbox",
@@ -39,7 +39,7 @@
           "type": "tab",
           "settings": {
             "text": "All",
-            "url": "#",
+            "collection": "",
             "active": true
           }
         },
@@ -47,7 +47,7 @@
           "type": "tab",
           "settings": {
             "text": "Range Rover",
-            "url": "#",
+            "collection": "",
             "active": false
           }
         },
@@ -55,7 +55,7 @@
           "type": "tab",
           "settings": {
             "text": "Discovery",
-            "url": "#",
+            "collection": "",
             "active": false
           }
         },
@@ -63,7 +63,7 @@
           "type": "tab",
           "settings": {
             "text": "Defender",
-            "url": "#",
+            "collection": "",
             "active": false
           }
         }
@@ -72,7 +72,6 @@
   ]
 }
 {% endschema %}
-
 
 {% assign collection = collections[section.settings.selected_collection] %}
 <div class="page-width">
@@ -157,6 +156,14 @@
 
          <div class="relative_img">
          <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}"/>
+          <div class="badge left">
+          {{ product.collections.first.title | default: "Vehicle" }}
+          </div>
+          <div class="badge rights">
+          <a href="#">
+          <img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" />
+          </a>
+          </div>  
           {% comment %}
           <div class="badge left">
           {{ product.collections.first.title | default: "Vehicle" }}
@@ -230,7 +237,15 @@
                         <div class="relative_img">
                           {% assign second_image = product.images[1] %}
                          <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
-                         {% comment %}
+                          <div class="badge right">
+                          {{ product.collections.first.title | default: "Vehicle" }}
+                         </div>
+                         <div class="badge lefts">
+                          <a href="#">  
+                          <img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" />
+                          </a>  
+                         </div> 
+                          {% comment %}
                           <div class="badge right">
                           {{ latest_product.collections.first.title | default: "Vehicle" }}
                          </div>
@@ -302,4 +317,35 @@
 
 </div>
 </div>
+
+      <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const flipToBackButtons = document.querySelectorAll('.badge.lefts a');
+  const flipToFrontButtons = document.querySelectorAll('.badge.rights a');
+
+  // Flip to back
+  flipToBackButtons.forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (window.innerWidth <= 767) {
+        const card = this.closest('.card');
+        card.classList.remove('frontflipped');
+        card.classList.add('flipped');
+      }
+    });
+  });
+
+  // Flip to front
+  flipToFrontButtons.forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (window.innerWidth <= 767) {
+        const card = this.closest('.card');
+        card.classList.remove('flipped');
+        card.classList.add('frontflipped');
+      }
+    });
+  });
+});
+</script>
 
