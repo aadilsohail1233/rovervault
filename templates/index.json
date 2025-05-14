@@ -145,23 +145,24 @@
         "product_card_RG7JDh": {
           "type": "product_card",
           "settings": {
-            "product": "defender"
+            "product": "1998-land-rover-defender"
           }
         },
         "product_card_LGaL9e": {
           "type": "product_card",
           "settings": {
-            "product": "discovery"
+            "product": "1997-land-rover-discovery"
           }
         },
         "product_card_A96bML": {
           "type": "product_card",
           "settings": {
-            "product": "range-rover-1988"
+            "product": "1987-land-rover-range-rover"
           }
         },
         "product_card_aaxzew": {
           "type": "product_card",
+          "disabled": true,
           "settings": {
             "product": "defender"
           }
