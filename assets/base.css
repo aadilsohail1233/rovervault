@@ -211,9 +211,7 @@ a.footer-page__link {
 .button-carts-all .button-product {
     margin: 2rem;
 }
-.parts-sections .card {
-    height: 56em;
-}
+
 .padding-bottom-zero .card {
     height: 48em;
 }
@@ -4280,6 +4278,9 @@ font-family: 'Eczar';
 }
 .collection-slider-section .card {
   height: 42em;  
+}
+.parts-sections .card {
+    height: 37em;
 }
 .card {
   width: 100%;
