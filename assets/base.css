@@ -4544,6 +4544,9 @@ a.enquire_heading {
 /*  .card {
     height: 53em; 
   } */
+  .collection-slider-section .card {
+    height: 53em;
+}
   .padding-bottom-zero .content, .parts-sections .content{
     padding: 0em 0 0;
   }
