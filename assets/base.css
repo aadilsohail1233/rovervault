@@ -4173,7 +4173,7 @@ font-family: 'Eczar';
 }
       .cl-description {
     font-family: 'Eczar';
-    font-size: 14px;
+    font-size: 20px;
       color:#6B8D50;     
 }
       .product-details-col {
@@ -4185,7 +4185,7 @@ font-family: 'Eczar';
 }
       .cl-title {
     font-family: 'VVDS Fifties';
-    font-size: 22px;
+    font-size: 30px;
     color:#6B8D50;    
 }
             .badge.right {
@@ -4279,7 +4279,7 @@ font-family: 'Eczar';
   cursor: url(https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926), auto;
 }
 .collection-slider-section .card {
-  height: 53em;  
+  height: 40em;  
 }
 .card {
   width: 100%;
