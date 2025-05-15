@@ -4541,9 +4541,9 @@ a.enquire_heading {
  } 
 }
 @media screen and (max-width: 399px) and (min-width: 320px) {
-  .card {
+/*  .card {
     height: 53em; 
-  }
+  } */
   .padding-bottom-zero .content, .parts-sections .content{
     padding: 0em 0 0;
   }
