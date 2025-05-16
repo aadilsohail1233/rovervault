@@ -183,7 +183,7 @@ a.footer-page__link {
     object-fit: cover;
 }
 .parts_collections .card {
-    height: 54em;
+    height: 44em;
 }
 .button-product .button--main:hover {
     transform: perspective(1500px) rotateX(20deg) rotateY(20deg);
