@@ -4696,7 +4696,9 @@ a.enquire_heading {
     .card {
     height: 67em; 
   } 
-
+  .vehicles .card {
+    height: 61em;
+}
 .collection-slider-section .card {
     height: 67em;
 }   
