@@ -4356,6 +4356,7 @@ font-family: 'Eczar';
   }  
   .arts .desktop-section-hide {
         display: inline-block !important;
+        opacity:1 !important;
         text-align: center;
         margin-bottom: 3rem;
         margin-top: 0px !important;
