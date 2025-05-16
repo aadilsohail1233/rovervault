@@ -4128,8 +4128,8 @@ font-family: 'Eczar';
     display: flex;
    gap:4rem;
 }
-      .desktop-section-hide {
-    display: none !important;
+.desktop-section-hide {
+    opacity: 0 !important;
 }
 .white-color {
     color: white !important;
