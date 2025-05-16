@@ -4850,6 +4850,9 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
   .collection-slider-section .card {
     height: 44em;
 }
+    .parts-sections .card {
+    height: 42em;
+}
   .padding-bottom-zero .card {
     height: 43em;
 }
