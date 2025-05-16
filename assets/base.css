@@ -209,7 +209,7 @@ a.footer-page__link {
     flex-wrap: wrap;
 }
 .button-carts-all .button-product {
-    margin: 2rem;
+    margin: 2rem 1rem;
 }
 
 .padding-bottom-zero .card {
