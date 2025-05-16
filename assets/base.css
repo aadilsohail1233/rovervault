@@ -1617,12 +1617,12 @@ button.shopify-payment-button__button--unbranded {
 .button--main {
     color: #fff;
     background-color: #c18a14;
-    padding: 20px 30px;
+    padding: 20px 15px;
     border-radius: 100%;
     text-decoration: none;
     font-family: Eczar !important;
-    font-size: 20px !important;
-    min-width: 209px;
+    font-size: 15px !important;
+    min-width: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
