@@ -1,4 +1,5 @@
 {%- style -%}
+{%- style -%}
   .section-{{ section.id }} {
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
@@ -9,6 +10,30 @@
       margin-top: {{ section.settings.margin_top }}px;
       margin-bottom: {{ section.settings.margin_bottom }}px;
     }
+
+    .desktop-only {
+      display: flex;
+    }
+
+    .mobile-only {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .desktop-only {
+      display: none !important;
+    }
+
+    .mobile-only {
+      display: block;
+      text-align: center;
+    }
+
+    .mobile-only img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .logo-with-text-small-wrapper {
@@ -17,6 +42,7 @@
     justify-content: center;
     align-items: center;
     gap: 42px;
+    flex-wrap: wrap;
   }
 
   .logo-image-wrapper {
@@ -30,6 +56,8 @@
   .logo-with-text-small-wrapper img {
     width: 100%;
   }
+{%- endstyle -%}
+
 {%- endstyle -%}
 
 <div class="section-{{ section.id }} gradient color-{{ section.settings.section_color_scheme }}">
