@@ -15,6 +15,7 @@
      </div>     
   </div>
   <div class="tab-content3" id="Technical">
+    
    <div class="parent_col">
     <div class="par_col_1">
     <div class="sp_title">Body Color</div>
@@ -133,6 +134,7 @@
      </div>  
     </div>
    </div>   
+    
   </div>
   <div class="tab-content3" id="Interior" style="display: none;">
     
@@ -149,7 +151,127 @@
   <div class="accordion-tab">
     <button class="accordion-header">Technical <span class="plus-icon">+</span></button>
     <div class="accordion-content" id="Technical">
-      <!-- Your existing Technical content here -->
+
+   <div class="parent_col">
+    <div class="par_col_1">
+    <div class="sp_title">Body Color</div>
+     <div class="sp_description">
+  {% if product.metafields.vehicles.body_color %}
+   {{ product.metafields.vehicles.body_color }}
+    {% else %}
+    None
+   {% endif %}    
+     </div>  
+    </div>
+    <div class="par_col_1">
+    <div class="sp_title">Paint Finished</div>
+     <div class="sp_description">
+  {% if product.metafields.vehicles.paint_finish %}
+   {{ product.metafields.vehicles.paint_finish }}
+    {% else %}
+    None
+   {% endif %}    
+     </div>  
+    </div>
+   </div>
+    <div class="parent_col">
+    <div class="par_col_1">
+    <div class="sp_title">Hood</div>
+     <div class="sp_description">
+  {% if product.metafields.vehicles.hood %}
+   {{ product.metafields.vehicles.hood }}
+    {% else %}
+    None
+   {% endif %}    
+       
+     </div>  
+    </div>
+    <div class="par_col_1">
+    <div class="sp_title">Hood Badge</div>
+     <div class="sp_description">
+  {% if product.metafields.vehicles.hood_badge %}
+   {{ product.metafields.vehicles.hood_badge }}
+    {% else %}
+    None
+   {% endif %} 
+       
+     </div>  
+    </div>
+   </div>   
+    <div class="parent_col">
+    <div class="par_col_1">
+    <div class="sp_title">Wheels</div>
+     <div class="sp_description">
+    {% if product.metafields.vehicles.wheels %}
+    {{ product.metafields.vehicles.wheels }}
+    {% else %}
+    None
+   {% endif %}
+   </div>  
+    </div>
+    <div class="par_col_1">
+    <div class="sp_title">Tires</div>
+     <div class="sp_description">
+    {% if product.metafields.vehicles.tires %}
+    {{ product.metafields.vehicles.tires }}
+    {% else %}
+    None
+   {% endif %}
+       
+     </div>  
+    </div>
+   </div>   
+  <div class="parent_col">
+    <div class="par_col_1">
+    <div class="sp_title">Grille</div>
+     <div class="sp_description">
+ {% if product.metafields.vehicles.grille %}
+    {{ product.metafields.vehicles.grille }}
+    {% else %}
+    None
+   {% endif %}
+       
+     </div>  
+    </div>
+    <div class="par_col_1">
+    <div class="sp_title">Bumper</div>
+     <div class="sp_description"> 
+    {% if product.metafields.vehicles.bumper %}
+    {{ product.metafields.vehicles.bumper }}
+    {% else %}
+    None
+   {% endif %}
+   
+     </div>  
+    </div>
+   </div>   
+      <div class="parent_col">
+    <div class="par_col_1">
+    <div class="sp_title">A-bar</div>
+     <div class="sp_description">
+ {% if product.metafields.vehicles.a_bar %}
+    {{ product.metafields.vehicles.a_bar }}
+    {% else %}
+    None
+   {% endif %}
+   
+       
+     </div>  
+    </div>
+    <div class="par_col_1">
+    <div class="sp_title">Streeing Guard</div>
+     <div class="sp_description">
+ {% if product.metafields.vehicles.steering_guard %}
+    {{ product.metafields.vehicles.steering_guard }}
+    {% else %}
+    None
+   {% endif %}
+       
+     </div>  
+    </div>
+   </div>   
+
+      
     </div>
   </div>
   <div class="accordion-tab">
