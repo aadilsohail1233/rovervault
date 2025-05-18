@@ -4437,6 +4437,7 @@ a.enquire_heading {
 }
   .parent-row{
     display: inline-block;
+    width:100%;
   }
   .parent-row .image-box-1{
     width:100%;
