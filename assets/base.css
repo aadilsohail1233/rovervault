@@ -4557,6 +4557,10 @@ a.enquire_heading {
   .padding-bottom-zero .content, .parts-sections .content{
     padding: 0em 0 0;
   }
+  sticky-header.header-wrapper.color-scheme-1.gradient.header-wrapper--border-bottom {
+    width: 90%;
+    margin: 0 auto;
+}
   #Details-menu-drawer-container{
      background-color: #6b8d50 !important;
      margin-right: -10px;
@@ -4601,6 +4605,10 @@ a.enquire_heading {
   .collection-slider-section .card {
     height: 56em;
 }
+  sticky-header.header-wrapper.color-scheme-1.gradient.header-wrapper--border-bottom {
+    width: 90%;
+    margin: 0 auto;
+}
     .padding-bottom-zero .content, .parts-sections .content{
     padding: 0em 0 0;
   }
@@ -4636,6 +4644,10 @@ a.enquire_heading {
     .card {
     height: 59em; 
   }
+  sticky-header.header-wrapper.color-scheme-1.gradient.header-wrapper--border-bottom {
+    width: 90%;
+    margin: 0 auto;
+}
 .collection-slider-section .card {
     height: 59em;
 }
