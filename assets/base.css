@@ -4476,6 +4476,7 @@ a.enquire_heading {
   }
   .vehicle-product-header-wrapper{
     display:inline-block !important;
+    width:100%;
   }
   .badge.rights {
       display:inline-block;
