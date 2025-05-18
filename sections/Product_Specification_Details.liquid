@@ -144,6 +144,36 @@
     
   </div>
 </div>
+
+<div class="accordion-tabs-wrapper">
+  <div class="accordion-tab">
+    <button class="accordion-header">Technical <span class="plus-icon">+</span></button>
+    <div class="accordion-content" id="Technical">
+      <!-- Your existing Technical content here -->
+    </div>
+  </div>
+  <div class="accordion-tab">
+    <button class="accordion-header">Interior <span class="plus-icon">+</span></button>
+    <div class="accordion-content" id="Interior">
+      <!-- Your existing Interior content here -->
+    </div>
+  </div>
+  <div class="accordion-tab">
+    <button class="accordion-header">Exterior <span class="plus-icon">+</span></button>
+    <div class="accordion-content" id="Exterior">
+      <!-- Your existing Exterior content here -->
+    </div>
+  </div>
+  <div class="accordion-tab">
+    <button class="accordion-header">Standard features <span class="plus-icon">+</span></button>
+    <div class="accordion-content" id="standard-featured">
+      <!-- Your existing Standard Featured content here -->
+    </div>
+  </div>
+</div>
+
+  
+  
 </div>
 </div>  
 
@@ -258,6 +288,50 @@
   padding: 20px;
   border: 1px solid #d6d7bc; */
 }
+
+@media (max-width: 768px) {
+  .video-tabs-wrapper,
+  .video-full-tabs,
+  .video-tabs,
+  .tab-link3 {
+    display: none !important;
+  }
+
+  .accordion-tabs-wrapper {
+    display: block;
+  }
+
+  .accordion-header {
+    width: 100%;
+    background-color: #c9d6b3;
+    color: #3c6337;
+    padding: 15px;
+    font-weight: bold;
+    border: none;
+    text-align: left;
+    position: relative;
+    font-family: serif;
+    font-size: 16px;
+  }
+
+  .plus-icon {
+    position: absolute;
+    right: 20px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .accordion-content {
+    display: none;
+    padding: 15px;
+    background-color: #f5f5dc;
+  }
+
+  .accordion-header.active .plus-icon {
+    transform: rotate(45deg); /* turn plus to x */
+  }
+}
+  
 </style>
 
 <script>
@@ -282,6 +356,25 @@ document.querySelectorAll('.tab-link3').forEach(function(button) {
 });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const headers = document.querySelectorAll(".accordion-header");
+
+  headers.forEach(header => {
+    header.addEventListener("click", function() {
+      // Collapse all
+      headers.forEach(h => {
+        h.classList.remove("active");
+        h.nextElementSibling.style.display = "none";
+      });
+
+      // Expand this one
+      this.classList.add("active");
+      this.nextElementSibling.style.display = "block";
+    });
+  });
+});
+</script>
 
 {% schema %}
 {
