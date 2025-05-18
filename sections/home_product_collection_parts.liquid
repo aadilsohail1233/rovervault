@@ -35,7 +35,13 @@
                  <div class="card">
                    <div class="card__side card__side--front card__side--front-1">
                    <div class="product-col-1">
-                        <div class="product-avaliable">Avaliable</div>
+                        <div class="product-avaliable">
+                   {% if product.available %}
+                          <div class="product-avaliable">Available</div>
+                        {% else %}
+                          <div class="product-avaliable">Sold</div>
+                        {% endif %}
+                        </div>
                          <div class="relative_img">
                          <img alt="{{ product.title }}" class="prd-img-others" src="{{ product.featured_image | img_url: 'large' }}"/>
                          <div class="badge left">
@@ -79,7 +85,13 @@
 
                      
                       <div class="product-col-2">
-                        <div class="product-avaliable">Avaliable</div>
+                        <div class="product-avaliable">
+                      {% if product.available %}
+                          <div class="product-avaliable">Available</div>
+                        {% else %}
+                          <div class="product-avaliable">Sold</div>
+                        {% endif %}
+              </div>
                         <div class="relative_img">
                           {% assign second_image = product.images[1] %}
                          <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
