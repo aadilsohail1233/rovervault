@@ -4389,6 +4389,9 @@ font-family: 'Eczar';
      display:inline-block;
      width:100%;
   }
+  .video-tabs{
+      width:100%;
+  }
       .header__icon--menu .icon {
         filter: brightness(0) invert(1);
     }
