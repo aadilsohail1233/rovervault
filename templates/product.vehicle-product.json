@@ -136,6 +136,7 @@
       "settings": {
         "logo_image": "shopify://shop_images/image.svg",
         "text_image": "shopify://shop_images/text-explore.png",
+        "mobile_image": "shopify://shop_images/Heading_2.png",
         "margin_top": 36,
         "margin_bottom": 36
       }
@@ -200,6 +201,7 @@
       "settings": {
         "logo_image": "shopify://shop_images/Group_592.png",
         "text_image": "shopify://shop_images/Heading_5bf98edf-69fe-4259-9c76-2e4d71f527d2.png",
+        "mobile_image": "shopify://shop_images/Heading_1_8be7ecbb-a8f5-427e-8b50-147fc73483f8.png",
         "margin_top": 36,
         "margin_bottom": 36
       }
