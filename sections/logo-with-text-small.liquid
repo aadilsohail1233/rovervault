@@ -35,7 +35,7 @@
 <div class="section-{{ section.id }} gradient color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
     <div class="logo-with-text-small-wrapper">
-      <div class="logo-image-wrapper">
+      <div class="logo-image-wrapper desktop-only">
         <img
           src="{{ section.settings.logo_image | img_url: 'master' }}"
           class="logo-image-wrapper__image"
@@ -43,13 +43,24 @@
         >
       </div>
 
-      <div class="text-image-wrapper">
+      <div class="text-image-wrapper desktop-only">
         <img
           src="{{ section.settings.text_image | img_url: 'master' }}"
           class="text-image-wrapper__image"
           alt="Text Image"
         >
       </div>
+      
+  {% if section.settings.mobile_image %}
+    <div class="mobile-only">
+      <img
+        src="{{ section.settings.mobile_image | img_url: 'master' }}"
+        class="mobile-image-wrapper__image"
+        alt="Mobile Image"
+      >
+    </div>
+  {% endif %}  
+      
     </div>
   </div>
 </div>
