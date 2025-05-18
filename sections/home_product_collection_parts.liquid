@@ -84,7 +84,10 @@
                           {% assign second_image = product.images[1] %}
                          <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
                          <div class="badge right">
+               Part
+                         {% comment %}
                           {{ product.collections.first.title | default: "Vehicle" }}
+                         {% endcomment %}
                          </div>
                          <div class="badge lefts">
                           <a href="#">  
