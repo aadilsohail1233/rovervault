@@ -4687,6 +4687,10 @@ a.enquire_heading {
 .collection-slider-section .card {
     height: 63em;
 }
+    sticky-header.header-wrapper.color-scheme-1.gradient.header-wrapper--border-bottom {
+    width: 95%;
+    margin: 0 auto;
+}
       #Details-menu-drawer-container{
      background-color: #6b8d50 !important;
      margin-right: -10px;
@@ -4715,6 +4719,10 @@ a.enquire_heading {
     .card {
     height: 67em; 
   } 
+       sticky-header.header-wrapper.color-scheme-1.gradient.header-wrapper--border-bottom {
+    width: 95%;
+    margin: 0 auto;
+}
   .vehicles .card {
     height: 61em;
 }
