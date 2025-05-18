@@ -484,24 +484,30 @@ document.querySelectorAll('.tab-link3').forEach(function(button) {
 </script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const headers = document.querySelectorAll(".accordion-header");
 
   headers.forEach(header => {
-    header.addEventListener("click", function() {
-      // Collapse all
+    header.addEventListener("click", function () {
+      const content = this.nextElementSibling;
+      const isActive = this.classList.contains("active");
+
+      // Close all
       headers.forEach(h => {
         h.classList.remove("active");
         h.nextElementSibling.style.display = "none";
       });
 
-      // Expand this one
-      this.classList.add("active");
-      this.nextElementSibling.style.display = "block";
+      // Toggle this one
+      if (!isActive) {
+        this.classList.add("active");
+        content.style.display = "block";
+      }
     });
   });
 });
 </script>
+
 
 {% schema %}
 {
