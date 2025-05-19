@@ -398,6 +398,11 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
+    },
+    "enquire_popup_GjhXwE": {
+      "type": "enquire-popup",
+      "name": "Enquire Popup",
+      "settings": {}
     }
   },
   "order": [
@@ -414,6 +419,7 @@
     "home_product_collections_drips_BmDw4j",
     "logo_with_text_pmUeyA",
     "features_KPKJ94",
-    "image_show_QEcg9i"
+    "image_show_QEcg9i",
+    "enquire_popup_GjhXwE"
   ]
 }
