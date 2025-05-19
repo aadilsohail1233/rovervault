@@ -403,7 +403,7 @@
       "type": "enquire-popup",
       "name": "Enquire Popup",
       "settings": {
-        "background_image": "shopify://shop_images/Frame_1073.png",
+        "background_image": "shopify://shop_images/Frame_1073_1.png",
         "recipient_email": "mohsinpervaiz39@gmail.com"
       }
     }
