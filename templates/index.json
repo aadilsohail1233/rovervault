@@ -174,7 +174,9 @@
         "product_card_A96bML",
         "product_card_aaxzew"
       ],
-      "settings": {}
+      "settings": {
+        "collection_name": "Vehicles"
+      }
     },
     "home_product_collection_parts_KppqMH": {
       "type": "home_product_collection_parts",
