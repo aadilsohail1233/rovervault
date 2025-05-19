@@ -4828,6 +4828,9 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
   span.carts12{
     height: 45px;
   }
+    .button-carts-all{
+   display: inline-block;
+  }
 }
 
 @media screen and (max-width: 920px) and (min-width: 821px) {
@@ -4850,6 +4853,9 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
     .video-title{
     font-size: 35px !important;
   }
+    .button-carts-all{
+   display: inline-block;
+  }
   
 }
 
@@ -4870,6 +4876,9 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
     .video-title{
     font-size: 35px !important;
   }
+    .button-carts-all{
+   display: inline-block;
+  }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 981px) {
@@ -4878,6 +4887,9 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
   }     
     .parts_collections .product-col-2 .relative_img .prd-img{
       height:auto;
+  }
+  .button-carts-all{
+   display: inline-block;
   }
   .video-title{
     font-size: 40px !important;
