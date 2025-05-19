@@ -4197,6 +4197,9 @@ font-family: 'Eczar';
     font-family: 'Eczar';
     font-size: 16px;
 }
+.cart-button {
+    background-color: rgba(193, 138, 20, 0.5);
+}
       .product-col-title {
     text-align: center;
     font-family: VVDS Fifties;
