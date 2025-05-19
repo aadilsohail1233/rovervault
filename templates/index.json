@@ -15,7 +15,7 @@
         "first-image": "shopify://shop_images/Logo-1.png",
         "second-image": "shopify://shop_images/RoverVault-text-1.png",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "image_with_text_1_hehR3M": {
