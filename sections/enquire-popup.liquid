@@ -140,7 +140,7 @@ font-size: 132px;
       <textarea placeholder="Message" name="message" required class="enquire-textarea"></textarea>
       <div class="button-popup">  
       <button id="my-form-button" class="button--main">Enquire</button>
-      <button id="closePopupBtn" class="button--main">Cancel</button>
+      <button id="closePopupBtn12" class="button--main">Cancel</button>
       </div>  
       <p id="my-form-status"></p>
       </form>
@@ -163,6 +163,7 @@ function hidePopup() {
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("openEnquirePopup").addEventListener("click", showPopup);
   document.getElementById("closePopupBtn").addEventListener("click", hidePopup);
+  document.getElementById("closePopupBtn12").addEventListener("click", hidePopup);  
   document.getElementById("cancelPopupBtn").addEventListener("click", hidePopup);
 });
 
