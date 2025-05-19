@@ -4806,6 +4806,9 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
     .vehicles .card {
     height: 50em;
 }
+  .video-title {
+   font-size: 32px;
+  }
   .parts-sections .card {
     height: 36em;
 }
@@ -4825,6 +4828,9 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
      .vehicles .card {
     height: 51em;
 } 
+    .video-title {
+   font-size: 32px;
+  }
     .collection-slider-section .card {
     height: 42em;
 }
