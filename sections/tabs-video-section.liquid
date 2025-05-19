@@ -19,7 +19,7 @@
   {% assign review_video = product.metafields.custom.review_video_embed | strip | downcase %}
   {% assign review_video_raw = product.metafields.custom.review_video_embed %}
   {% if review_video contains '.mp4' or review_video contains '.mov' %}
-    <video controls width="100%" height="500px">
+    <video controls width="100%" height="500px" style="object-fit: cover;">
       <source src="{{ review_video_raw | strip }}" type="video/mp4">
       Your browser does not support the video tag.
     </video>
