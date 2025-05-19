@@ -334,7 +334,9 @@
         "product_card_DdAyTU",
         "product_card_QbNncy"
       ],
-      "settings": {}
+      "settings": {
+        "collection_name": "Drip"
+      }
     },
     "logo_with_text_pmUeyA": {
       "type": "logo-with-text",
