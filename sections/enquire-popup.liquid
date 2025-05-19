@@ -104,14 +104,16 @@
   </button>
 
   <!-- Popup -->
-  <div id="enquirePopup" class="enquire-popup-overlay"  style="
+<div id="enquirePopup" class="enquire-popup-overlay"
+  style="
     {% if section.settings.background_image != blank %}
-      background-image: url({{ section.settings.background_image | image_url: 'master' }});
+      background-image: url('{{ section.settings.background_image | image_url }}');
       background-size: cover;
       background-position: center;
     {% else %}
       background-color: rgba(34, 58, 18, 0.9);
-    {% endif %}">
+    {% endif %}
+">
     
     <img
     src="{{ section.settings.background_image | img_url: 'master' }}" >
