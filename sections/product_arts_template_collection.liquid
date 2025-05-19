@@ -174,7 +174,7 @@
 
         <div class="product-col-title">{{ product.title }}</div>
 
-        <div class="button-product desktop-section-hide margin-button-bottom"><a href="/collections/all" class="button--main">More info</a></div>
+        <div class="button-product desktop-section-hide margin-button-bottom"><a href="{{ product.url }}" class="button--main">More info</a></div>
         </div>
           </div>
         <div class="card__side card__side--back card__side--back-1">
@@ -232,7 +232,7 @@
                           </div>  
                           </div>  
                           <div class="button-carts-all">
-                          <div class="button-product"><a href="/collections/all" class="button--main">View full listing</a></div>
+                          <div class="button-product"><a href="{{ product.url }}" class="button--main">View full listing</a></div>
                           <div class="button-product">
                           <form method="post" action="/cart/add">
                             <input type="hidden" name="id" value="{{ product.variants.first.id }}">
