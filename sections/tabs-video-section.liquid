@@ -16,53 +16,57 @@
   </div>
   
 <div class="tab-content" id="review">
-  {% assign review_video = product.metafields.custom.review_video_embed %}
+  {% assign review_video = product.metafields.custom.review_video_embed | strip | downcase %}
+  {% assign review_video_raw = product.metafields.custom.review_video_embed %}
   {% if review_video contains '.mp4' or review_video contains '.mov' %}
-    
     <video controls width="100%">
-      <source src="{{ review_video | strip }}" type="video/mp4">
+      <source src="{{ review_video_raw | strip }}" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   {% else %}
-    {{ review_video }}
+    {{ review_video_raw }}
   {% endif %}
 </div>
 
 <div class="tab-content" id="startup" style="display: none;">
-  {% assign startup_video = product.metafields.custom.startup_video_embed %}
+  {% assign startup_video = product.metafields.custom.startup_video_embed | strip | downcase %}
+  {% assign startup_video_raw = product.metafields.custom.startup_video_embed %}
   {% if startup_video contains '.mp4' or startup_video contains '.mov' %}
     <video controls width="100%">
-      <source src="{{ startup_video | strip }}" type="video/mp4">
+      <source src="{{ startup_video_raw | strip }}" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   {% else %}
-    {{ startup_video }}
+    {{ startup_video_raw }}
   {% endif %}
 </div>
 
 <div class="tab-content" id="technical" style="display: none;">
-  {% assign technical_video = product.metafields.custom.techinal_video_embed %}
+  {% assign technical_video = product.metafields.custom.techinal_video_embed | strip | downcase %}
+  {% assign technical_video_raw = product.metafields.custom.techinal_video_embed %}
   {% if technical_video contains '.mp4' or technical_video contains '.mov' %}
     <video controls width="100%">
-      <source src="{{ technical_video | strip }}" type="video/mp4">
+      <source src="{{ technical_video_raw | strip }}" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   {% else %}
-    {{ technical_video }}
+    {{ technical_video_raw }}
   {% endif %}
 </div>
 
 <div class="tab-content" id="startup2" style="display: none;">
-  {% assign drive_video = product.metafields.custom.drive_video_embed %}
+  {% assign drive_video = product.metafields.custom.drive_video_embed | strip | downcase %}
+  {% assign drive_video_raw = product.metafields.custom.drive_video_embed %}
   {% if drive_video contains '.mp4' or drive_video contains '.mov' %}
     <video controls width="100%">
-      <source src="{{ drive_video | strip }}" type="video/mp4">
+      <source src="{{ drive_video_raw | strip }}" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   {% else %}
-    {{ drive_video }}
+    {{ drive_video_raw }}
   {% endif %}
 </div>
+
 
   
 </div>
