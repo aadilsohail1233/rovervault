@@ -117,13 +117,11 @@
     <div class="enquire-popup">
       <button class="enquire-close-btn" id="closePopupBtn">×</button>
       <h2 class="enquire-title">ENQUIRE</h2>
-      <form id="enquireForm">
-        <input type="email" placeholder="Email" required class="enquire-input" />
-        <textarea placeholder="Message" required class="enquire-textarea"></textarea>
-        <div class="enquire-buttons">
-          <button type="submit" class="enquire-submit">Enquire</button>
-          <button type="button" class="enquire-cancel" id="cancelPopupBtn">Cancel</button>
-        </div>
+      <form id="my-form" action="https://formspree.io/f/xovdbjak" method="POST">
+      <input type="email" placeholder="Email" name="email" required class="enquire-input" />
+      <textarea placeholder="Message" name="message" required class="enquire-textarea"></textarea>
+      <button id="my-form-button">Submit</button>
+      <p id="my-form-status"></p>
       </form>
     </div>
   </div>
@@ -146,5 +144,39 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("closePopupBtn").addEventListener("click", hidePopup);
   document.getElementById("cancelPopupBtn").addEventListener("click", hidePopup);
 });
+
+
+
+  var form = document.getElementById("my-form");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          } else {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          }
+        })
+      }
+    }).catch(error => {
+      status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+  }
+  form.addEventListener("submit", handleSubmit)
+  
 {% endjavascript %}
 
