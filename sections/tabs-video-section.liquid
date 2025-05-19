@@ -17,10 +17,6 @@
   
 <div class="tab-content" id="review">
   {% assign review_video = product.metafields.custom.review_video_embed %}
-      <video controls width="100%">
-      <source src="{{ review_video | strip }}" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
   {% if review_video contains '.mp4' or review_video contains '.mov' %}
     
     <video controls width="100%">
