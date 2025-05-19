@@ -12,6 +12,10 @@
     height: 400px;
     object-fit: cover;
 }
+
+.range-rover-section .card {
+    height: 46em;
+}
 .main_section_all.vehicles .prd-img
  {
     height: 300px; 
