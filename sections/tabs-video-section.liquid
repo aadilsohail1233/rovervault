@@ -14,18 +14,53 @@
   </div>
      </div>     
   </div>
-  <div class="tab-content" id="review">
-      {{ product.metafields.custom.review_video_embed }}
-  </div>
-  <div class="tab-content" id="startup" style="display: none;">
-    {{ product.metafields.custom.startup_video_embed }}
-  </div>
-  <div class="tab-content" id="technical" style="display: none;">
-    {{ product.metafields.custom.techinal_video_embed }}
-  </div>
-  <div class="tab-content" id="startup2" style="display: none;">
-    {{ product.metafields.custom.drive_video_embed }}
-  </div>
+<div class="tab-content" id="review">
+  {% assign review_video = product.metafields.custom.review_video_embed %}
+  {% if review_video contains '.mp4' %}
+    <video controls width="100%">
+      <source src="{{ review_video | strip }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  {% else %}
+    {{ review_video }}
+  {% endif %}
+</div>
+
+<div class="tab-content" id="startup" style="display: none;">
+  {% assign startup_video = product.metafields.custom.startup_video_embed %}
+  {% if startup_video contains '.mp4' %}
+    <video controls width="100%">
+      <source src="{{ startup_video | strip }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  {% else %}
+    {{ startup_video }}
+  {% endif %}
+</div>
+
+<div class="tab-content" id="technical" style="display: none;">
+  {% assign technical_video = product.metafields.custom.techinal_video_embed %}
+  {% if technical_video contains '.mp4' %}
+    <video controls width="100%">
+      <source src="{{ technical_video | strip }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  {% else %}
+    {{ technical_video }}
+  {% endif %}
+</div>
+
+<div class="tab-content" id="startup2" style="display: none;">
+  {% assign drive_video = product.metafields.custom.drive_video_embed %}
+  {% if drive_video contains '.mp4' %}
+    <video controls width="100%">
+      <source src="{{ drive_video | strip }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  {% else %}
+    {{ drive_video }}
+  {% endif %}
+</div>  
 </div>
 </div>
 </div>  
