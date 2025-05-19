@@ -212,7 +212,9 @@
         "product_card_qinkEE",
         "product_card_3ictLL"
       ],
-      "settings": {}
+      "settings": {
+        "collection_name": "Part"
+      }
     },
     "home_product_collections_prints_3rN3De": {
       "type": "home_product_collections_prints",
