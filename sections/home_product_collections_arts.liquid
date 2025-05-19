@@ -1,7 +1,15 @@
 {% schema %}
 {
   "name": "Home Product Arts",
-  "settings": [],
+  "settings": [
+ {
+      "type": "text",
+      "id": "collection_name",
+      "label": "Collection Name",
+      "default": "Featured Collection"
+    }
+    
+  ],
   "blocks": [
     {
       "type": "product_card",
@@ -45,7 +53,7 @@
                          <div class="relative_img">
                          <img alt="{{ product.title }}" class="prd-img-others" src="{{ product.featured_image | img_url: 'large' }}"/>
                          <div class="badge left">
-                           Art
+                            {{ section.settings.collection_name }}
                             {% comment %}
                           {{ product.collections.first.title | default: "Vehicle" }}
                           {% endcomment %}
@@ -73,7 +81,7 @@
                           {% assign second_image = product.images[1] %}
                          <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
                          <div class="badge right">
-                Art
+                 {{ section.settings.collection_name }}
                             {% comment %}
                           {{ product.collections.first.title | default: "Vehicle" }}
                {% endcomment %}
