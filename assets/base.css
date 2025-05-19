@@ -4571,6 +4571,9 @@ a.enquire_heading {
      margin-right: -10px;
      border: #6b8d50;
   }
+     .desktop-section-hide {
+    opacity: 1 !important;
+}
   .header__icons{
      background-color: #6b8d50;
   }
@@ -4609,6 +4612,9 @@ a.enquire_heading {
   }
   .collection-slider-section .card {
     height: 56em;
+}
+     .desktop-section-hide {
+    opacity: 1 !important;
 }
   sticky-header.header-wrapper.color-scheme-1.gradient.header-wrapper--border-bottom {
     width: 90%;
@@ -4653,6 +4659,9 @@ a.enquire_heading {
     width: 90%;
     margin: 0 auto;
 }
+     .desktop-section-hide {
+    opacity: 1 !important;
+}
 .collection-slider-section .card {
     height: 59em;
 }
@@ -4689,6 +4698,9 @@ a.enquire_heading {
     .card {
     height: 63em; 
   }
+     .desktop-section-hide {
+    opacity: 1 !important;
+}
 .collection-slider-section .card {
     height: 63em;
 }
@@ -4724,6 +4736,9 @@ a.enquire_heading {
     .card {
     height: 67em; 
   } 
+   .desktop-section-hide {
+    opacity: 1 !important;
+}
        sticky-header.header-wrapper.color-scheme-1.gradient.header-wrapper--border-bottom {
     width: 95%;
     margin: 0 auto;
