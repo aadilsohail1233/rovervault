@@ -120,7 +120,7 @@
          <div class="relative_img">
          <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}"/>
           <div class="badge left">
-          {{ product.collections.first.title | default: "Vehicle" }}
+          {{ collection.title }}
           </div>
           <div class="badge rights">
           <a href="#">
@@ -202,7 +202,7 @@
                           {% assign second_image = product.images[1] %}
                          <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
                           <div class="badge right">
-                          {{ product.collections.first.title | default: "Vehicle" }}
+                          {{ collection.title }}
                          </div>
                          <div class="badge lefts">
                           <a href="#">  
