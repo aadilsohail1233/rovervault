@@ -402,7 +402,10 @@
     "enquire_popup_GjhXwE": {
       "type": "enquire-popup",
       "name": "Enquire Popup",
-      "settings": {}
+      "settings": {
+        "background_image": "shopify://shop_images/Frame_1073.png",
+        "recipient_email": ""
+      }
     }
   },
   "order": [
