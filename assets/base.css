@@ -4816,6 +4816,9 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
     .vehicles .card {
     height: 50em;
 }
+  .desktop-section-hide {
+    opacity: 1 !important;
+}
   .video-title {
    font-size: 32px !important;
   }
@@ -4841,6 +4844,9 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
      .vehicles .card {
     height: 51em;
 } 
+  .desktop-section-hide {
+    opacity: 1 !important;
+}
     .collection-slider-section .card {
     height: 42em;
 }
