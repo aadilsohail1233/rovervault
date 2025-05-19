@@ -9,3 +9,114 @@
      ]
   }
 {% endschema %}
+
+
+
+{% stylesheet %}
+.enquire-popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 58, 18, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.enquire-popup {
+  background-color: #fef9e7;
+  padding: 40px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  text-align: center;
+}
+.enquire-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+.enquire-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #4b6226;
+  margin-bottom: 30px;
+}
+.enquire-input,
+.enquire-textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #4b6226;
+  background: #fffaf0;
+  font-family: serif;
+}
+.enquire-textarea {
+  height: 100px;
+  resize: none;
+}
+.enquire-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.enquire-submit,
+.enquire-cancel {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: serif;
+}
+.enquire-submit {
+  background-color: #a75a00;
+  color: white;
+}
+.enquire-cancel {
+  background-color: #e5c07b;
+  color: white;
+}
+{% endstylesheet %}
+
+<div>
+  <!-- Trigger Button -->
+  <button id="openEnquirePopup" style="padding: 10px 20px; background-color: green; color: white;">
+    Enquire
+  </button>
+
+  <!-- Popup -->
+  <div id="enquirePopup" class="enquire-popup-overlay">
+    <div class="enquire-popup">
+      <button class="enquire-close-btn" onclick="togglePopup()">×</button>
+      <h2 class="enquire-title">ENQUIRE</h2>
+      <form id="enquireForm">
+        <input type="email" placeholder="Email" required class="enquire-input" />
+        <textarea placeholder="Message" required class="enquire-textarea"></textarea>
+        <div class="enquire-buttons">
+          <button type="submit" class="enquire-submit">Enquire</button>
+          <button type="button" class="enquire-cancel" onclick="togglePopup()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% javascript %}
+function togglePopup() {
+  const popup = document.getElementById('enquirePopup');
+  popup.style.display = popup.style.display === 'flex' ? 'none' : 'flex';
+}
+document.addEventListener("DOMContentLoaded", function () {
+  const openBtn = document.getElementById("openEnquirePopup");
+  if (openBtn) {
+    openBtn.addEventListener("click", togglePopup);
+  }
+});
+{% endjavascript %}
