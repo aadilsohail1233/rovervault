@@ -258,7 +258,9 @@
         "product_card_cTPLTq",
         "product_card_66GNCC"
       ],
-      "settings": {}
+      "settings": {
+        "collection_name": "Print"
+      }
     },
     "home_product_collections_arts_WjmGLV": {
       "type": "home_product_collections_arts",
