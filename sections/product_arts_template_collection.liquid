@@ -157,6 +157,14 @@
 
          <div class="relative_img">
          <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}"/>
+          <div class="badge left">
+          {{ collection.title }}
+          </div>
+          <div class="badge rights">
+          <a href="#">
+          <img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" />
+          </a>
+          </div> 
           {% comment %}
           <div class="badge left">
           {{ product.collections.first.title | default: "Vehicle" }}
@@ -181,7 +189,15 @@
                         <div class="relative_img">
                           {% assign second_image = product.images[1] %}
                          <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
-                         {% comment %}
+                                                              <div class="badge right">
+                         {{ collection.title }}
+                         </div>
+                         <div class="badge lefts">
+                          <a href="#">  
+                          <img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" />
+                          </a>  
+                         </div>           
+        {% comment %}
                           <div class="badge right">
                           {{ latest_product.collections.first.title | default: "Vehicle" }}
                          </div>
