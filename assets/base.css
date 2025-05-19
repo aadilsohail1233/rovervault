@@ -218,7 +218,7 @@ a.footer-page__link {
 .main_section_all .content {
     flex: 0 0 33.3%;
     box-sizing: border-box;
-  padding: 2em 0em;
+  padding: 1em 0em;
 }
 .padding-bottom-zero .content {
     padding: 2em 0em 0em 0em;
