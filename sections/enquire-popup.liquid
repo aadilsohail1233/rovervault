@@ -1,13 +1,24 @@
 {% schema %}
-  {
-    "name": "Enquire Popup",
-    "settings": [],
-     "presets": [
+{
+  "name": "Enquire Popup",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "recipient_email",
+      "label": "Send enquiries to (email)"
+    }
+  ],
+  "presets": [
     {
       "name": "Enquire Popup"
     }
-     ]
-  }
+  ]
+}
 {% endschema %}
 
 
