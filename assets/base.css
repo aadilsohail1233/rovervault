@@ -4867,6 +4867,9 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
       .collection-slider-section .card {
     height: 44em;
 }
+  .desktop-section-hide {
+    opacity: 1 !important;
+}
   .parts-sections .card {
     height: 43em;
 }
@@ -4888,6 +4891,9 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
     .parts_collections .product-col-2 .relative_img .prd-img{
       height:auto;
   }
+  .desktop-section-hide {
+    opacity: 1 !important;
+}
   .button-carts-all{
    display: inline-block;
   }
