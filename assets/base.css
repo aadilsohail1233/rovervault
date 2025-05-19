@@ -4203,12 +4203,13 @@ font-family: 'Eczar';
     font-size: 40px;
     color: #6B8D50;
 }
-      .product-avaliable {
+.product-avaliable {
     background-color: #6B8D50;
     text-align: center;
     color: white;
     font-family: VVDS Fifties;
     font-size: 24px;
+    text-transform: uppercase;
 }
   .main-product-section .prd-img {
     width: 100%;
