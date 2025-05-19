@@ -238,13 +238,20 @@
           "settings": {
             "product": "the-original-fly-drive"
           }
+        },
+        "product_card_66GNCC": {
+          "type": "product_card",
+          "settings": {
+            "product": "the-latest-range-rover"
+          }
         }
       },
       "block_order": [
         "product_card_qMxLhF",
         "product_card_zjVmjy",
         "product_card_yPLDee",
-        "product_card_cTPLTq"
+        "product_card_cTPLTq",
+        "product_card_66GNCC"
       ],
       "settings": {}
     },
@@ -274,13 +281,20 @@
           "settings": {
             "product": "indians"
           }
+        },
+        "product_card_EHVQDh": {
+          "type": "product_card",
+          "settings": {
+            "product": "the-original-fly-drive"
+          }
         }
       },
       "block_order": [
         "product_card_MEYhBN",
         "product_card_637YdY",
         "product_card_6jmHcf",
-        "product_card_ix99JD"
+        "product_card_ix99JD",
+        "product_card_EHVQDh"
       ],
       "settings": {}
     },
