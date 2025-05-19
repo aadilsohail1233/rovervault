@@ -104,9 +104,9 @@
   </button>
 
   <!-- Popup -->
-  <div id="enquirePopup" class="enquire-popup-overlay"   style="
+  <div id="enquirePopup" class="enquire-popup-overlay"  style="
     {% if section.settings.background_image != blank %}
-      background-image: url({{ section.settings.background_image | image_url: 'master' }});
+      background-image: url({{ section.settings.background_image }});
       background-size: cover;
       background-position: center;
     {% else %}
