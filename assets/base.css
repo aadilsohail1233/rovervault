@@ -4819,6 +4819,9 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
   .desktop-section-hide {
     opacity: 1 !important;
 }
+  .parts_collections .card {
+    height: 37em;
+}
   .video-title {
    font-size: 32px !important;
   }
