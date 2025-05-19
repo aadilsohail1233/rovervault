@@ -16,6 +16,7 @@
   </div>
 <div class="tab-content" id="review">
   {% assign review_video = product.metafields.custom.review_video_embed %}
+  {{ review_video }}
   {% if review_video contains '.mp4' %}
     <video controls width="100%">
       <source src="{{ review_video | strip }}" type="video/mp4">
