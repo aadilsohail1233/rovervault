@@ -296,7 +296,9 @@
         "product_card_6jmHcf",
         "product_card_ix99JD"
       ],
-      "settings": {}
+      "settings": {
+        "collection_name": "Art"
+      }
     },
     "home_product_collections_drips_BmDw4j": {
       "type": "home_product_collections_drips",
