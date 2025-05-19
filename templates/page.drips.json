@@ -14,7 +14,7 @@
       "settings": {
         "background-image": "shopify://shop_images/AdobeStock_1167486658_Editorial_Use_Only_1.png",
         "logo-type": true,
-        "logo-text": "Drips",
+        "logo-text": "Drip",
         "footer-image": "shopify://shop_images/wave_main_v2.gif",
         "footer-image1": "shopify://shop_images/wave_tablet_v1.gif",
         "footer-image2": "shopify://shop_images/wave_mobile_v1.gif",
@@ -72,7 +72,7 @@
         "tab_xGfYNR": {
           "type": "tab",
           "settings": {
-            "text": "Drips",
+            "text": "Drip",
             "url": "",
             "active": true
           }
