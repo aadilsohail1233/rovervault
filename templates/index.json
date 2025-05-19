@@ -43,7 +43,7 @@
           "type": "button",
           "settings": {
             "button_label": "Learn More",
-            "button_link": "shopify://collections/vehicles",
+            "button_link": "shopify://pages/all-collections",
             "button_style_secondary": false,
             "button_style_third": true
           }
