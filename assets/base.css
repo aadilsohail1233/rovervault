@@ -4770,6 +4770,9 @@ a.enquire_heading {
  a.enquire_heading {
     display: none;
 } 
+    .parts_collections .product-col-2 .relative_img .prd-img{
+      height:auto;
+  }
   .image-with-text-1-wrapper{
             direction: rtl;
   }
@@ -4873,6 +4876,9 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
 .card {
     height: 53em; 
   }     
+    .parts_collections .product-col-2 .relative_img .prd-img{
+      height:auto;
+  }
   .video-title{
     font-size: 40px !important;
   }
