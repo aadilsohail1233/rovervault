@@ -241,6 +241,7 @@
         },
         "product_card_66GNCC": {
           "type": "product_card",
+          "disabled": true,
           "settings": {
             "product": "the-latest-range-rover"
           }
