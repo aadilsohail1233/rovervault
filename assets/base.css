@@ -4807,7 +4807,7 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
     height: 50em;
 }
   .video-title {
-   font-size: 32px;
+   font-size: 32px !important;
   }
   .parts-sections .card {
     height: 36em;
