@@ -14,10 +14,10 @@
   </div>
      </div>     
   </div>
+  
 <div class="tab-content" id="review">
   {% assign review_video = product.metafields.custom.review_video_embed %}
-  {{ review_video }}
-  {% if review_video contains '.mp4' %}
+  {% if review_video contains '.mp4' or review_video contains '.mov' %}
     <video controls width="100%">
       <source src="{{ review_video | strip }}" type="video/mp4">
       Your browser does not support the video tag.
@@ -29,7 +29,7 @@
 
 <div class="tab-content" id="startup" style="display: none;">
   {% assign startup_video = product.metafields.custom.startup_video_embed %}
-  {% if startup_video contains '.mp4' %}
+  {% if startup_video contains '.mp4' or startup_video contains '.mov' %}
     <video controls width="100%">
       <source src="{{ startup_video | strip }}" type="video/mp4">
       Your browser does not support the video tag.
@@ -41,7 +41,7 @@
 
 <div class="tab-content" id="technical" style="display: none;">
   {% assign technical_video = product.metafields.custom.techinal_video_embed %}
-  {% if technical_video contains '.mp4' %}
+  {% if technical_video contains '.mp4' or technical_video contains '.mov' %}
     <video controls width="100%">
       <source src="{{ technical_video | strip }}" type="video/mp4">
       Your browser does not support the video tag.
@@ -53,7 +53,7 @@
 
 <div class="tab-content" id="startup2" style="display: none;">
   {% assign drive_video = product.metafields.custom.drive_video_embed %}
-  {% if drive_video contains '.mp4' %}
+  {% if drive_video contains '.mp4' or drive_video contains '.mov' %}
     <video controls width="100%">
       <source src="{{ drive_video | strip }}" type="video/mp4">
       Your browser does not support the video tag.
@@ -61,7 +61,9 @@
   {% else %}
     {{ drive_video }}
   {% endif %}
-</div>  
+</div>
+
+  
 </div>
 </div>
 </div>  
