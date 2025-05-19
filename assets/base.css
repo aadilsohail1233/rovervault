@@ -4762,6 +4762,9 @@ a.enquire_heading {
     height: 230px;
     object-fit: cover;
 }
+  .parts_collections .product-col-2 .relative_img .prd-img{
+      height:auto;
+  }
 }
 @media screen and (max-width: 990px) and (min-width: 768px) {
  a.enquire_heading {
