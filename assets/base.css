@@ -4844,6 +4844,9 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
     height: 39em; 
   }
 
+  .parts_collections .card {
+    height: 37em;
+}
      .vehicles .card {
     height: 51em;
 } 
