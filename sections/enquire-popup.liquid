@@ -85,42 +85,46 @@
 }
 {% endstylesheet %}
 
-<div>
-<!-- Trigger Button -->
-<button id="openEnquirePopup" style="padding: 10px 20px; background-color: green; color: white;">
-  Enquire
-</button>
 
-<!-- Popup -->
-<div id="enquirePopup" class="enquire-popup-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; z-index: 1000;">
-  <div class="enquire-popup" style="background: white; padding: 20px; border-radius: 8px; position: relative; width: 400px; max-width: 90%;">
-    <button class="enquire-close-btn" onclick="togglePopup()" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 20px; cursor: pointer;">×</button>
-    <h2 class="enquire-title">ENQUIRE</h2>
-    <form id="enquireForm">
-      <input type="email" placeholder="Email" required class="enquire-input" style="width: 100%; padding: 10px; margin-bottom: 10px;" />
-      <textarea placeholder="Message" required class="enquire-textarea" style="width: 100%; padding: 10px; margin-bottom: 10px;"></textarea>
-      <div class="enquire-buttons" style="display: flex; justify-content: space-between;">
-        <button type="submit" class="enquire-submit" style="padding: 10px 20px;">Enquire</button>
-        <button type="button" class="enquire-cancel" onclick="togglePopup()" style="padding: 10px 20px;">Cancel</button>
-      </div>
-    </form>
+<div>
+  <!-- Trigger Button -->
+  <button id="openEnquirePopup" style="padding: 10px 20px; background-color: green; color: white;">
+    Enquire
+  </button>
+
+  <!-- Popup -->
+  <div id="enquirePopup" class="enquire-popup-overlay">
+    <div class="enquire-popup">
+      <button class="enquire-close-btn" id="closePopupBtn">×</button>
+      <h2 class="enquire-title">ENQUIRE</h2>
+      <form id="enquireForm">
+        <input type="email" placeholder="Email" required class="enquire-input" />
+        <textarea placeholder="Message" required class="enquire-textarea"></textarea>
+        <div class="enquire-buttons">
+          <button type="submit" class="enquire-submit">Enquire</button>
+          <button type="button" class="enquire-cancel" id="cancelPopupBtn">Cancel</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 
+
 {% javascript %}
-function togglePopup() {
+function showPopup() {
   const popup = document.getElementById('enquirePopup');
-  if (popup.style.display === 'flex') {
-    popup.style.display = 'none';
-  } else {
-    popup.style.display = 'flex';
-  }
+  popup.style.display = 'flex';
+}
+
+function hidePopup() {
+  const popup = document.getElementById('enquirePopup');
+  popup.style.display = 'none';
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const openBtn = document.getElementById("openEnquirePopup");
-  if (openBtn) {
-    openBtn.addEventListener("click", togglePopup);
-  }
+  document.getElementById("openEnquirePopup").addEventListener("click", showPopup);
+  document.getElementById("closePopupBtn").addEventListener("click", hidePopup);
+  document.getElementById("cancelPopupBtn").addEventListener("click", hidePopup);
 });
 {% endjavascript %}
+
