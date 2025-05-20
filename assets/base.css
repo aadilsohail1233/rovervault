@@ -4032,7 +4032,7 @@ details-disclosure > details {
     position: absolute;
     left: 50%;
     top: 95%;
-    z-index: 10;
+    z-index: 2;
     transform: translate(-50%, -50%);
 }
 .swiper-controls-wrap .slider-controls{
