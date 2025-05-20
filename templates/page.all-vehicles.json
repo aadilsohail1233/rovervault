@@ -66,7 +66,7 @@
           "type": "tab",
           "settings": {
             "text": "Discovery",
-            "collection": "drips",
+            "collection": "vehicles",
             "active": false
           }
         },
@@ -74,7 +74,7 @@
           "type": "tab",
           "settings": {
             "text": "Defender",
-            "collection": "art",
+            "collection": "vehicles",
             "active": false
           }
         }
