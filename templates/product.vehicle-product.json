@@ -113,6 +113,9 @@
     },
     "full_width_image_GVMBb6": {
       "type": "full-width-image",
+      "custom_css": [
+        ".main-product-image-height img {height: 800px; object-fit: cover;}"
+      ],
       "settings": {
         "image": "shopify://shop_images/car-2.png",
         "margin_top": 36,
