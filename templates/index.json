@@ -162,7 +162,6 @@
         },
         "product_card_aaxzew": {
           "type": "product_card",
-          "disabled": true,
           "settings": {
             "product": "defender"
           }
@@ -174,6 +173,7 @@
         "product_card_A96bML",
         "product_card_aaxzew"
       ],
+      "custom_css": [],
       "settings": {
         "collection_name": "Vehicles"
       }
