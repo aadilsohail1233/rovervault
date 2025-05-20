@@ -162,6 +162,7 @@
         },
         "product_card_aaxzew": {
           "type": "product_card",
+          "disabled": true,
           "settings": {
             "product": "defender"
           }
