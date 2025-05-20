@@ -4285,12 +4285,7 @@ font-family: 'Eczar';
  /* height:100vh; */
   cursor: url(https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926), auto;
 }
-.collection-slider-section .card {
-  height: 42em;  
-}
-.parts-sections .card {
-    height: 37em;
-}
+
 .card {
   width: 100%;
   position: relative;
