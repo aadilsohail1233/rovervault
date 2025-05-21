@@ -104,8 +104,8 @@
       <div class="vehicles-main__specification">
         <div class="vehicles-main__specification-title font-vvds">MISC</div>
         <div class="vehicles-main__specification-value font-eczar">
-          {% if product.metafields.vehicles_main.owners %}
-            <div>{{ product.metafields.vehicles_main.owners.value }}</div>
+          {% if product.metafields.custom.misc %}
+            <div>{{ product.metafields.custom.misc.value }}</div>
           {% else %}
             <div></div>
           {% endif %}
