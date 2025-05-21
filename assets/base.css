@@ -5002,9 +5002,7 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
     .parts_collections .card {
     height: 37em;
 }
-    .parts_collections .product-col-2 .relative_img .prd-img{
-      height:auto;
-  }
+
   .desktop-section-hide {
     opacity: 1 !important;
 }
