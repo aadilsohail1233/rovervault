@@ -200,7 +200,9 @@
     "product_interior_images_RDVyWh": {
       "type": "Product_Interior_Images",
       "name": "Interior Images",
-      "settings": {}
+      "settings": {
+        "mobile_video_title_image": "shopify://shop_images/Heading_4.png"
+      }
     },
     "logo_with_text_small_Ah6LXR": {
       "type": "logo-with-text-small",
