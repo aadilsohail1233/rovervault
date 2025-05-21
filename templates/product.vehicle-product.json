@@ -147,7 +147,9 @@
     "tabs_video_section_VHmFbR": {
       "type": "tabs-video-section",
       "name": "Video Tabs",
-      "settings": {}
+      "settings": {
+        "mobile_video_title_image": "shopify://shop_images/Heading_2_5980bf5b-fbd1-4769-b5ad-851d75f5f558.png"
+      }
     },
     "image_show_z4nGJG": {
       "type": "image-show",
