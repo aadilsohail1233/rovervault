@@ -138,20 +138,13 @@
     {% assign latest_product = collection.products.first %}
     
     <!-- Latest Product Banner -->
-<style>
-.card1 {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-}
-</style>      
+
     <!-- Product Grid -->
 <div class="main_section_all parts_collections">
       {% for product in collection.products %}
      <div class="content">
         <div class="cards">
-          <div class="card1">
+          <div class="card">
         
          <div class="card__side card__side--front card__side--front-1"> 
         
