@@ -12,6 +12,10 @@
     height: 350px;
     object-fit: cover;
 }
+.collection-slider-section .prd-img {
+    height: 238px;
+    object-fit: cover;
+}
 .image-show-main-circle{
       top: 43%; 
 }
