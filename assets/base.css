@@ -4762,7 +4762,7 @@ a.enquire_heading {
     opacity: 1 !important;
 }
 .collection-slider-section .card {
-    height: 63em;
+    height: 52em;
 }
     sticky-header.header-wrapper.color-scheme-1.gradient.header-wrapper--border-bottom {
     width: 95%;
@@ -4783,10 +4783,10 @@ a.enquire_heading {
     filter: brightness(0) invert(1);
   }
   .parts-sections .card {
-    height: 59em;
+    height: 43em;
 }
   .padding-bottom-zero .card {
-    height: 42em;
+    height: 38em;
 }
   .vehicles .card {
     height: 59em;
