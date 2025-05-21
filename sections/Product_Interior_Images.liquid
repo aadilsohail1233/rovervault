@@ -4,6 +4,9 @@
   <div class="video-full-tabs">
      <div class="video-text"> 
   <h2 class="video-title">Interior</h2> 
+   {% if section.settings.mobile_video_title_image != blank %}
+    <img src="{{ section.settings.mobile_video_title_image | image_url }}" alt="Videos" class="video-title-img-mobile">
+  {% endif %}        
      </div>
   <div class="videos-tabs"> 
   <div class="video-tabs">
