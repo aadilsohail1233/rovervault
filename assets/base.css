@@ -4643,9 +4643,10 @@ a.enquire_heading {
   .range-rover-section .card {
     height: 52em;
 }
-    .parts_collections .product-col-2 .relative_img .prd-img{
-    height:auto;
-  }
+.parts_collections .product-col-1 .relative_img .prd-img, .parts_collections .product-col-2 .relative_img .prd-img
+{
+    height: 300px;
+}
   .collection-slider-section .card {
     height: 54em;
 }
@@ -4675,7 +4676,7 @@ a.enquire_heading {
   }
   
  .parts_collections .card {
-    height: 52em;
+    height: 49em;
 } 
   .parts-sections .card {
     height: 48em;
