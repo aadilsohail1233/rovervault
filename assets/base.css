@@ -13,6 +13,14 @@
     object-fit: cover;
 }
 
+.parts_collections .product-col-1 .relative_img .prd-img {
+    height: 350px;
+    object-fit: cover;
+}
+.parts_collections .product-col-2 .relative_img .prd-img {
+    height: 350px;
+    object-fit: cover;
+}
 .range-rover-section .card {
     height: 46em;
 }
