@@ -12,6 +12,17 @@
     height: 400px;
     object-fit: cover;
 }
+.footer-page-footer {
+    color: #EBE9D6;
+    font-size: 16px;
+    background-color: #6B8D50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: Eczar;
+    font-weight: 500;
+}
 
 .parts_collections .product-col-1 .relative_img .prd-img {
     height: 350px;
