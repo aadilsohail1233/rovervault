@@ -4,6 +4,7 @@
   <div class="video-full-tabs">
      <div class="video-text"> 
   <h2 class="video-title">Videos</h2> 
+ <img src="{{ 'video-title-mobile.jpg' | asset_url }}" alt="Videos" class="video-title-img-mobile">
      </div>
   <div class="videos-tabs"> 
   <div class="video-tabs">
@@ -80,6 +81,13 @@
   border-top: 5px solid #6B8D50;
 }
 
+.video-title-img-mobile {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+
 .video-title {
   color: #567336;
   font-weight: bold;
@@ -124,6 +132,16 @@
 /*  background: white;
   padding: 20px;
   border: 1px solid #d6d7bc; */
+}
+
+  @media (max-width: 768px) {
+  .video-title {
+    display: none;
+  }
+
+  .video-title-img-mobile {
+    display: block;
+  }
 }
 </style>
 
