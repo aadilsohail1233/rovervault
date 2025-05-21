@@ -211,7 +211,6 @@
     },
     "product_specification_details_Umx3XT": {
       "type": "Product_Specification_Details",
-      "disabled": true,
       "name": "Specification Section",
       "settings": {}
     },
