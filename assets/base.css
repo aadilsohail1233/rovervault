@@ -4589,6 +4589,10 @@ a.enquire_heading {
 /*  .card {
     height: 53em; 
   } */
+
+  .collection-slider-section .card {
+    height: 52em;
+}
 .range-rover-section .card {
     height: 52em;
 }
