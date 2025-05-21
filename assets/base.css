@@ -4563,6 +4563,9 @@ a.enquire_heading {
 .range-rover-section .card {
     height: 52em;
 }
+  .collection-slider-section .desktop-section-hide {
+    display: none !important;
+}
   .parts_collections .product-col-2 .relative_img .prd-img{
     height:auto;
   }
