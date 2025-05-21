@@ -4692,9 +4692,10 @@ a.enquire_heading {
     .card {
     height: 59em; 
   }
-    .parts_collections .product-col-2 .relative_img .prd-img{
-    height:auto;
-  }
+.parts_collections .product-col-1 .relative_img .prd-img, .parts_collections .product-col-2 .relative_img .prd-img
+{
+    height: 300px;
+}
   sticky-header.header-wrapper.color-scheme-1.gradient.header-wrapper--border-bottom {
     width: 90%;
     margin: 0 auto;
