@@ -171,6 +171,13 @@ document.querySelectorAll('.tab-link').forEach(function(button) {
 {% schema %}
 {
   "name": "Tabbed Video Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "mobile_video_title_image",
+      "label": "Mobile Video Title Image"
+    }
+  ],
   "blocks": [
     {
       "type": "tab",
@@ -185,12 +192,7 @@ document.querySelectorAll('.tab-link').forEach(function(button) {
           "type": "text",
           "id": "item_1",
           "label": "Grid Item 1"
-        },
-        {
-        "type": "image_picker",
-        "id": "mobile_video_title_image",
-        "label": "Mobile Video Title Image"
-       }
+        }
       ]
     }
   ],
@@ -203,3 +205,4 @@ document.querySelectorAll('.tab-link').forEach(function(button) {
   ]
 }
 {% endschema %}
+
