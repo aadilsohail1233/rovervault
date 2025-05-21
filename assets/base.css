@@ -4739,9 +4739,10 @@ a.enquire_heading {
     .card {
     height: 63em; 
   }
-    .parts_collections .product-col-2 .relative_img .prd-img{
-    height:auto;
-  }
+.parts_collections .product-col-1 .relative_img .prd-img, .parts_collections .product-col-2 .relative_img .prd-img
+{
+    height: 350px;
+}
      .desktop-section-hide {
     opacity: 1 !important;
 }
