@@ -4915,6 +4915,14 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
     height: 39em; 
   }
 
+.main_section_all .content {
+    flex: 0 0 50%;
+}
+  .parts_collections .product-col-1 .relative_img .prd-img, .parts_collections .product-col-2 .relative_img .prd-img
+{
+    height: 300px;
+}
+
   .parts_collections .card {
     height: 37em;
 }
@@ -4947,6 +4955,14 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
 .card {
     height: 39em; 
   }  
+
+    .main_section_all .content {
+    flex: 0 0 50%;
+}
+  .parts_collections .product-col-1 .relative_img .prd-img, .parts_collections .product-col-2 .relative_img .prd-img
+{
+    height: 300px;
+}
       .collection-slider-section .card {
     height: 44em;
 }
@@ -4974,6 +4990,14 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
 .card {
     height: 53em; 
   }     
+
+    .main_section_all .content {
+    flex: 0 0 50%;
+}
+  .parts_collections .product-col-1 .relative_img .prd-img, .parts_collections .product-col-2 .relative_img .prd-img
+{
+    height: 300px;
+}
 
     .parts_collections .card {
     height: 37em;
