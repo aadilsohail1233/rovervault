@@ -11,6 +11,9 @@
   "sections": {
     "image_show_eiHRQp": {
       "type": "image-show",
+      "custom_css": [
+        ".image-show-main-circle{top:43%;}"
+      ],
       "settings": {
         "background-image": "shopify://shop_images/background-image-art.png",
         "logo-type": true,
