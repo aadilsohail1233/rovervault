@@ -4563,14 +4563,11 @@ a.enquire_heading {
 .range-rover-section .card {
     height: 52em;
 }
-  .collection-slider-section .desktop-section-hide {
-    display: none !important;
-}
   .parts_collections .product-col-2 .relative_img .prd-img{
     height:auto;
   }
   .collection-slider-section .card {
-    height: 100vh;
+    height: 51em;
 }
   .padding-bottom-zero .content, .parts-sections .content{
     padding: 0em 0 0;
