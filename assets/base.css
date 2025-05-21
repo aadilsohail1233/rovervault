@@ -15,6 +15,10 @@
 .image-show-main-circle{
       top: 43%;
 }
+.parts-sections .prd-img-others, .parts-sections .prd-img  {
+    height: 280px;
+    object-fit: cover;
+}
 .footer-page-footer {
     color: #EBE9D6;
     font-size: 16px;
