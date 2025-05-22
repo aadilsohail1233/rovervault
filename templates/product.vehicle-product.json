@@ -252,6 +252,14 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
+    },
+    "enquire_popup_9FUhCJ": {
+      "type": "enquire-popup",
+      "name": "Enquire Popup",
+      "settings": {
+        "background_image": "shopify://shop_images/Frame_1073_1.png",
+        "recipient_email": ""
+      }
     }
   },
   "order": [
@@ -269,6 +277,7 @@
     "product_interior_images_RDVyWh",
     "logo_with_text_small_Ah6LXR",
     "product_specification_details_Umx3XT",
-    "image_show_GJbiTa"
+    "image_show_GJbiTa",
+    "enquire_popup_9FUhCJ"
   ]
 }
