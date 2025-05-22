@@ -135,6 +135,14 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
+    },
+    "enquire_popup_CimK9H": {
+      "type": "enquire-popup",
+      "name": "Enquire Popup",
+      "settings": {
+        "background_image": "shopify://shop_images/Frame_1073_1.png",
+        "recipient_email": ""
+      }
     }
   },
   "order": [
@@ -142,6 +150,7 @@
     "vehicle_advantages_show_RjK9C9",
     "main",
     "product_all_template_collection_zDJzNH",
-    "image_show_NaNKwV"
+    "image_show_NaNKwV",
+    "enquire_popup_CimK9H"
   ]
 }
