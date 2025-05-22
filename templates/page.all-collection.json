@@ -87,6 +87,7 @@
         },
         "tab_qyjFRA": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "text": "Drive Care",
             "url": "shopify://pages/drive-care",
