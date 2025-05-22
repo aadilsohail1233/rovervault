@@ -263,6 +263,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <script>
   const urlParams = new URLSearchParams(window.location.search);
   const sortBy = urlParams.get('sort_by');
+  alert(sortBy);
   if (sortBy) {
     document.body.insertAdjacentHTML('sortedfull', `<p>Sort method: ${sortBy}</p>`);
   }
