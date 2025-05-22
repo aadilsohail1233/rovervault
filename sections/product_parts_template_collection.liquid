@@ -94,13 +94,9 @@
       
       <select id="sort_by">
         <option value="">Sort by</option>
-        <option value="best-selling">Best Selling</option>
+        <option value="newest-listing">Newest Listing</option>
         <option value="price-asc">Price, Low to High</option>
         <option value="price-desc">Price, High to Low</option>
-        <option value="title-asc">Alphabetically, A-Z</option>
-        <option value="title-desc">Alphabetically, Z-A</option>
-        <option value="created-desc">Date, New to Old</option>
-        <option value="created-asc">Date, Old to New</option>
       </select>
     </div>
   </div>
@@ -119,13 +115,9 @@
         <div class="sort-dropdown">
       <select id="sort_by">
         <option value="">Sort by</option>
-        <option value="best-selling">Best Selling</option>
+        <option value="newest-listing">Newest Listing</option>
         <option value="price-asc">Price, Low to High</option>
         <option value="price-desc">Price, High to Low</option>
-        <option value="title-asc">Alphabetically, A-Z</option>
-        <option value="title-desc">Alphabetically, Z-A</option>
-        <option value="created-desc">Date, New to Old</option>
-        <option value="created-asc">Date, Old to New</option>
       </select>
     </div>
 
@@ -140,135 +132,33 @@
     <!-- Latest Product Banner -->
 
     <!-- Product Grid -->
+{% assign products = collections[section.settings.selected_collection].products %}
 <div class="main_section_all parts_collections">
-      {% for product in collection.products %}
-     <div class="content">
-        <div class="cards">
-          <div class="card">
-        
-         <div class="card__side card__side--front card__side--front-1"> 
-        
-        <div class="product-col-1" data-type="{{ product.type | downcase }}">
-          {% if product.available %}
-            <div class="product-avaliable">Available</div>
-          {% else %}
-            <div class="product-avaliable">Sold</div>
-          {% endif %}
 
-         <div class="relative_img">
-         <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}"/>
-          <div class="badge left">
-          {{ collection.title }}
-          </div>
-          <div class="badge rights">
-          <a href="#">
-          <img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" />
-          </a>
-          </div> 
-          {% comment %}
-          <div class="badge left">
-          {{ product.collections.first.title | default: "Vehicle" }}
-         </div>
-         {% endcomment %}
-         </div>
+  <!-- Default: No sorting -->
+  <div class="product-grid" id="sort-default">
+    {% for product in products %}
+      {% include 'product-card', product: product %}
+    {% endfor %}
+  </div>
 
-        <div class="product-col-title">{{ product.title }}</div>
-          <div class="product-details-col product-b-top product-b-bottom">
-          <div class="cl-title">Fact 1</div>
-          <div class="cl-description">
-            {% if product.metafields.custom.fact1 %}
-              {{ product.metafields.custom.fact1 }}
-            {% else %}
-              None
-            {% endif %}
-          </div>  
-          </div>
-          <div class="product-details-col product-b-bottom mar-bottom">
-          <div class="cl-title">Fact 2</div>
-          <div class="cl-description">
-          {% if product.metafields.custom.fact2 %}
-          {{ product.metafields.custom.fact2 }}
-          {% else %}
-          None
-          {% endif %}
-          </div>  
-          </div> 
+  <!-- Price Ascending -->
+  <div class="product-grid" id="sort-price-asc" style="display: none;">
+    {% assign sorted_products_asc = products | sort: 'price' %}
+    {% for product in sorted_products_asc %}
+      {% include 'product-card', product: product %}
+    {% endfor %}
+  </div>
 
-        <div class="button-product desktop-section-hide margin-button-bottom"><a href="{{ product.url }}" class="button--main">More info</a></div>
-        </div>
-          </div>
-        <div class="card__side card__side--back card__side--back-1">
-                        <div class="product-col-2">
-                        <div class="product-avaliable">
-                         {% if product.available %}
-                            <div class="product-avaliable">Available</div>
-                          {% else %}
-                            <div class="product-avaliable">Sold</div>
-                          {% endif %}
-                        </div>
-                        <div class="relative_img">
-                          {% assign second_image = product.images[1] %}
-                         <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
-                                  <div class="badge right">
-                          {{ collection.title }}
-                         </div>
-                         <div class="badge lefts">
-                          <a href="#">  
-                          <img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" />
-                          </a>  
-                         </div>                  
-        {% comment %}
-                          <div class="badge right">
-                          {{ latest_product.collections.first.title | default: "Vehicle" }}
-                         </div>
-                         {% endcomment %}
-                         </div>
-                        <div class="product-col-title white-color">Details</div>
-                         <div class="product-details-col product-b-top product-b-bottom white-color">
-                          <div class="cl-title white-color">Fact 3</div>
-                            {% if product.metafields.custom.fact1 %}
-                             <div class="cl-description white-color">
-                              {{ product.metafields.custom.fact1 }}
-                             </div>
-                            {% else %}
-                              <div class="cl-description white-color">
-                              None
-                              </div>  
-                            {% endif %} 
-                          </div>
-                          <div class="product-details-col product-b-bottom white-color">
-                          <div class="cl-title white-color">Fact 4</div>
-                          <div class="cl-description white-color">
-                            {% if product.metafields.custom.fact2 %}
-                            <div class="cl-description white-color">
-                              {{ product.metafields.custom.fact2 }}
-                            </div>
-                            {% else %}
-                            <div class="cl-description white-color">
-                              None
-                            </div>
-                            {% endif %}  
-                            
-                          </div>  
-                          </div>  
-                          <div class="button-carts-all">
-                          <div class="button-product"><a href="{{ product.url }}" class="button--main">View full listing</a></div>
-                          <div class="button-product">
-                          <form method="post" action="/cart/add">
-                            <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-                            <button type="submit" class="button--main cart-button" style="display:none;">Add to cart</button>
-                          </form>
-                        </div>
-                        </div>
-                      </div>
-          
-        </div>  
-            
-     </div> 
-        </div>
-</div>
-      {% endfor %}
-</div>      
+  <!-- Price Descending -->
+  <div class="product-grid" id="sort-price-desc" style="display: none;">
+    {% assign sorted_products_desc = products | sort: 'price' | reverse %}
+    {% for product in sorted_products_desc %}
+      {% include 'product-card', product: product %}
+    {% endfor %}
+  </div>
+
+</div>  
     
     <div class="border-lines"></div>
     <div class="results-count">Showing {{ collection.products.size }} of {{ collection.products.size }} results</div>
@@ -308,6 +198,45 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const sortBySelects = document.querySelectorAll('#sort_by');
+
+  function updateSortView(sortValue) {
+    const allGrids = ['sort-default', 'sort-price-asc', 'sort-price-desc'];
+    allGrids.forEach(id => document.getElementById(id).style.display = 'none');
+
+    switch (sortValue) {
+      case 'price-asc':
+        document.getElementById('sort-price-asc').style.display = 'block';
+        break;
+      case 'price-desc':
+        document.getElementById('sort-price-desc').style.display = 'block';
+        break;
+      default:
+        document.getElementById('sort-default').style.display = 'block';
+    }
+  }
+
+  sortBySelects.forEach(select => {
+    select.addEventListener('change', function () {
+      updateSortView(this.value);
+    });
+  });
+
+  // Auto-select on page load if sort_by exists in URL
+  const params = new URLSearchParams(window.location.search);
+  const sortValue = params.get('sort_by') || '';
+  if (sortValue) {
+    document.querySelectorAll('#sort_by').forEach(select => {
+      select.value = sortValue;
+    });
+    updateSortView(sortValue);
+  } else {
+    updateSortView('');
+  }
 });
 </script>
 
