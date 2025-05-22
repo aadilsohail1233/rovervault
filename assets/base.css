@@ -12,6 +12,9 @@
     height: 350px;
     object-fit: cover;
 }
+.single-product-cart button {
+    border: 0px;
+}
 .single-product-cart{
     display: flex;
     justify-content: center;
