@@ -46,6 +46,7 @@
 {% endschema %}
 {% assign sort_by1 = request.params.sort_by %}
 <p>Sort method: {{ sort_by1 }}</p>
+<div id="sortedfull"></div>
 
 {% assign collection_handle = section.settings.selected_collection %}
 {% assign collection = collections[collection_handle] %}
@@ -263,6 +264,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const urlParams = new URLSearchParams(window.location.search);
   const sortBy = urlParams.get('sort_by');
   if (sortBy) {
-    document.body.insertAdjacentHTML('beforeend', `<p>Sort method: ${sortBy}</p>`);
+    document.body.insertAdjacentHTML('sortedfull', `<p>Sort method: ${sortBy}</p>`);
   }
 </script>
