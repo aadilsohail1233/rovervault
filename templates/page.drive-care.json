@@ -39,6 +39,7 @@
       "blocks": {
         "tab_jGq94Y": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "text": "All",
             "url": "shopify://pages/all-accessories",
