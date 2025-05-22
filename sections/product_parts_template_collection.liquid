@@ -45,7 +45,7 @@
 }
 {% endschema %}
 {% assign sort_by1 = request.params.sort_here %}
-<p>Sort method: {{ request.params.sort_by }}</p>
+<p>Sort method: {{ request.params.sort_here }}</p>
 
 
 {% assign collection_handle = section.settings.selected_collection %}
@@ -251,9 +251,9 @@ document.addEventListener('DOMContentLoaded', function () {
       const selectedSort = this.value;
       const url = new URL(window.location.href);
       if (selectedSort) {
-        url.searchParams.set('sort_by', selectedSort);
+        url.searchParams.set('sort_here', selectedSort);
       } else {
-        url.searchParams.delete('sort_by');
+        url.searchParams.delete('sort_here');
       }
       window.location.href = url.toString();
     });
