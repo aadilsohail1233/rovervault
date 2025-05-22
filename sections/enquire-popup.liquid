@@ -145,6 +145,7 @@ font-size: 132px;
     <div class="enquire-popup">
       <h2 class="enquire-title">ENQUIRE</h2>
       <form id="my-form" action="https://formspree.io/f/xovdbjak" method="POST">
+      <input type="hidden" id="current-page-url" placeholder="url" name="url" class="enquire-input" />  
       <input type="email" placeholder="Email" name="email" required class="enquire-input" />
       <textarea placeholder="Message" name="message" required class="enquire-textarea"></textarea>
       <div class="button-popup">  
@@ -213,3 +214,6 @@ document.addEventListener("DOMContentLoaded", function () {
   
 {% endjavascript %}
 
+<script>
+  document.getElementById('current-page-url').value = window.location.href;
+</script>
