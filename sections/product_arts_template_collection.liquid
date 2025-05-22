@@ -94,13 +94,9 @@
       
       <select id="sort_by">
         <option value="">Sort by</option>
-        <option value="best-selling">Best Selling</option>
+        <option value="newest-listing">Newest Listing</option>
         <option value="price-asc">Price, Low to High</option>
         <option value="price-desc">Price, High to Low</option>
-        <option value="title-asc">Alphabetically, A-Z</option>
-        <option value="title-desc">Alphabetically, Z-A</option>
-        <option value="created-desc">Date, New to Old</option>
-        <option value="created-asc">Date, Old to New</option>
       </select>
     </div>
   </div>
@@ -117,15 +113,11 @@
 </select>
  </div>
         <div class="sort-dropdown">
-      <select id="sort_by">
+       <select id="sort_by">
         <option value="">Sort by</option>
-        <option value="best-selling">Best Selling</option>
+        <option value="newest-listing">Newest Listing</option>
         <option value="price-asc">Price, Low to High</option>
         <option value="price-desc">Price, High to Low</option>
-        <option value="title-asc">Alphabetically, A-Z</option>
-        <option value="title-desc">Alphabetically, Z-A</option>
-        <option value="created-desc">Date, New to Old</option>
-        <option value="created-asc">Date, Old to New</option>
       </select>
     </div>
 
@@ -298,4 +290,42 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const sortBySelects = document.querySelectorAll('#sort_by');
 
+  function updateSortView(sortValue) {
+    const allGrids = ['sort-default', 'sort-price-asc', 'sort-price-desc'];
+    allGrids.forEach(id => document.getElementById(id).style.display = 'none');
+
+    switch (sortValue) {
+      case 'price-asc':
+        document.getElementById('sort-price-asc').style.display = 'block';
+        break;
+      case 'price-desc':
+        document.getElementById('sort-price-desc').style.display = 'block';
+        break;
+      default:
+        document.getElementById('sort-default').style.display = 'block';
+    }
+  }
+
+  sortBySelects.forEach(select => {
+    select.addEventListener('change', function () {
+      updateSortView(this.value);
+    });
+  });
+
+  // Auto-select on page load if sort_by exists in URL
+  const params = new URLSearchParams(window.location.search);
+  const sortValue = params.get('sort_by') || '';
+  if (sortValue) {
+    document.querySelectorAll('#sort_by').forEach(select => {
+      select.value = sortValue;
+    });
+    updateSortView(sortValue);
+  } else {
+    updateSortView('');
+  }
+});
+</script>
