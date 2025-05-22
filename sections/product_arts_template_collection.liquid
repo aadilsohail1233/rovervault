@@ -133,13 +133,11 @@
 {% assign products = collections[section.settings.selected_collection].products %}
     <!-- Product Grid -->
 <div class="main_section_all parts_collections arts">
-      {% for product in collection.products %}
-
-    <!-- Default: No sorting -->
+ <!-- Default: No sorting -->
   <div class="product-grid" id="sort-default">
     <div class="full-width-cards">
     {% for product in products %}
-      {% include 'product-card1', product: product %}
+      {% include 'product-card', product: product %}
     {% endfor %}
     </div>
   </div>
@@ -149,7 +147,7 @@
     <div class="full-width-cards">
     {% assign sorted_products_asc = products | sort: 'price' %}
     {% for product in sorted_products_asc %}
-      {% include 'product-card1', product: product %}
+      {% include 'product-card', product: product %}
     {% endfor %}
     </div>
   </div>
@@ -159,15 +157,11 @@
     <div class="full-width-cards">
     {% assign sorted_products_desc = products | sort: 'price' | reverse %}
     {% for product in sorted_products_desc %}
-      {% include 'product-card1', product: product %}
+      {% include 'product-card', product: product %}
     {% endfor %}
     </div>
   </div>
-        
-  
 
-  
-      {% endfor %}
 </div>      
     
     <div class="border-lines"></div>
