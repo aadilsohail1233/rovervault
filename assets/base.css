@@ -4474,6 +4474,7 @@ font-family: 'Eczar';
 }
   .image-show-background__image {
     min-height: 450px !important;
+    object-fit: cover;
   }
 }
 @media (max-width: 768px) { 
