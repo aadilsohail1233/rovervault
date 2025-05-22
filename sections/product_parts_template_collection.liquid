@@ -49,7 +49,7 @@
 {% assign collection = collections[collection_handle] %}
 {% assign products = collection.products %}
 {% assign sort_by = request.params.sort_by %}
-
+<p>Sort method: {{ sort_by }}</p>
 {%- if sort_by == "price-asc" -%}
   {% assign products = products | sort: "price" %}
 {%- elsif sort_by == "price-desc" -%}
