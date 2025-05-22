@@ -311,3 +311,21 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var sortSelects = document.querySelectorAll('#sort_by');
+
+    sortSelects.forEach(function(select) {
+      select.addEventListener('change', function () {
+        var selectedSort = this.value;
+        if (selectedSort) {
+          var url = new URL(window.location.href);
+          url.searchParams.set('sort_by', selectedSort);
+          window.location.href = url.toString();
+        }
+      });
+    });
+  });
+</script>
+
+
