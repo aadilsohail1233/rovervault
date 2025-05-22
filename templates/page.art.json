@@ -42,6 +42,7 @@
       "blocks": {
         "tab_A9pXAe": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "text": "All",
             "url": "shopify://pages/all-accessories",
@@ -82,6 +83,7 @@
         },
         "tab_P7Pdgg": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "text": "Drive Care",
             "url": "shopify://pages/drive-care",
