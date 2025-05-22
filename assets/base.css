@@ -15,6 +15,14 @@
 .single-product-cart button {
     border: 0px;
 }
+.single-product-cart button:hover{
+  transform: perspective(1500px) rotateX(20deg) rotateY(20deg);
+    will-change: transform;
+    transform-origin: 50% 50% 0px;
+    opacity: 1;
+    transition: transform .3s ease-in-out;
+    font-family: Eczar;
+}
 .single-product-cart{
     display: flex;
     justify-content: center;
