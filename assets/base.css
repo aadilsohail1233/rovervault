@@ -181,6 +181,7 @@ span.carts12:hover {
 }
 a.footer-page__link {
     color: #6b8d50;
+  text-decoration: none;
 }
 .badge.lefts {
     border: 0;
