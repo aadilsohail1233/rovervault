@@ -53,6 +53,7 @@
 {%- if sort_by == "price-asc" -%}
   {% assign products = products | sort: "price" %}
 {%- elsif sort_by == "price-desc" -%}
+  here we are here
   {% assign products = products | sort: "price" | reverse %}
 {%- elsif sort_by == "title-asc" -%}
   {% assign products = products | sort: "title" %}
