@@ -44,12 +44,14 @@
   ]
 }
 {% endschema %}
+{% assign sort_by1 = request.params.sort_by %}
+<p>Sort method: {{ sort_by1 }}</p>
 
 {% assign collection_handle = section.settings.selected_collection %}
 {% assign collection = collections[collection_handle] %}
 {% assign products = collection.products %}
-{% assign sort_by1 = request.params.sort_by %}
-<p>Sort method: {{ sort_by1 }}</p>
+
+
 {%- if sort_by == "price-asc" -%}
   {% assign products = products | sort: "price" %}
 {%- elsif sort_by == "price-desc" -%}
