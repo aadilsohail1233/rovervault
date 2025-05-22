@@ -12,6 +12,9 @@
     height: 350px;
     object-fit: cover;
 }
+.full-width-cards {
+    width: 100%;
+}
 .collection-slider-section .prd-img {
     height: 238px;
     object-fit: cover;
