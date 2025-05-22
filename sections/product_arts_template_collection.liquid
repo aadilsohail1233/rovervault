@@ -130,7 +130,7 @@
     {% assign latest_product = collection.products.first %}
     
     <!-- Latest Product Banner -->
-
+{% assign products = collections[section.settings.selected_collection].products %}
     <!-- Product Grid -->
 <div class="main_section_all parts_collections arts">
       {% for product in collection.products %}
