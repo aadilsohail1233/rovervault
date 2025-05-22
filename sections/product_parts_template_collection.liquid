@@ -136,26 +136,32 @@
 <div class="main_section_all parts_collections">
 
   <!-- Default: No sorting -->
-  <div class="product-grid full-width-cards" id="sort-default">
+  <div class="product-grid" id="sort-default">
+    <div class="full-width-cards">
     {% for product in products %}
       {% include 'product-card', product: product %}
     {% endfor %}
+    </div>
   </div>
 
   <!-- Price Ascending -->
-  <div class="product-grid full-width-cards" id="sort-price-asc" style="display: none;">
+  <div class="product-grid" id="sort-price-asc" style="display: none;">
+    <div class="full-width-cards">
     {% assign sorted_products_asc = products | sort: 'price' %}
     {% for product in sorted_products_asc %}
       {% include 'product-card', product: product %}
     {% endfor %}
+    </div>
   </div>
 
   <!-- Price Descending -->
-  <div class="product-grid full-width-cards" id="sort-price-desc" style="display: none;">
+  <div class="product-grid" id="sort-price-desc" style="display: none;">
+    <div class="full-width-cards">
     {% assign sorted_products_desc = products | sort: 'price' | reverse %}
     {% for product in sorted_products_desc %}
       {% include 'product-card', product: product %}
     {% endfor %}
+    </div>
   </div>
 
 </div>  
@@ -210,13 +216,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     switch (sortValue) {
       case 'price-asc':
-        document.getElementById('sort-price-asc').style.display = 'flex';
+        document.getElementById('sort-price-asc').style.display = 'block';
         break;
       case 'price-desc':
-        document.getElementById('sort-price-desc').style.display = 'flex';
+        document.getElementById('sort-price-desc').style.display = 'block';
         break;
       default:
-        document.getElementById('sort-default').style.display = 'flex';
+        document.getElementById('sort-default').style.display = 'block';
     }
   }
 
