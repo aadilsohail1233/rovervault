@@ -12,7 +12,7 @@
     "image_show_eiHRQp": {
       "type": "image-show",
       "custom_css": [
-        ".image-show-main-circle{top:43%;}"
+        ".image-show-main-circle {top: 43%;}"
       ],
       "settings": {
         "background-image": "shopify://shop_images/background-image-art.png",
@@ -137,6 +137,14 @@
         "margin_top": 36,
         "margin_bottom": 36
       }
+    },
+    "enquire_popup_qNFcrU": {
+      "type": "enquire-popup",
+      "name": "Enquire Popup",
+      "settings": {
+        "background_image": "shopify://shop_images/Frame_1073_1.png",
+        "recipient_email": ""
+      }
     }
   },
   "order": [
@@ -144,6 +152,7 @@
     "vehicle_advantages_show_CC4Ayb",
     "product_parts_template_collection_wWpHAa",
     "main",
-    "image_show_aJ4T87"
+    "image_show_aJ4T87",
+    "enquire_popup_qNFcrU"
   ]
 }
