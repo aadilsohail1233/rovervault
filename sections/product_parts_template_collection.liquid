@@ -241,15 +241,19 @@ document.addEventListener('DOMContentLoaded', function () {
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const sortSelects = document.querySelectorAll('#sort_by');
+  const currentParams = new URLSearchParams(window.location.search);
+  const currentSort = currentParams.get('sort_by');
 
-  sortSelects.forEach(function(select) {
+  sortSelects.forEach(select => {
+    if (currentSort) {
+      select.value = currentSort;
+    }
+
     select.addEventListener('change', function () {
       const selectedSort = this.value;
-      if (selectedSort) {
-        const url = new URL(window.location.href);
-        url.searchParams.set('sort_by', selectedSort);
-        window.location.href = url.toString();
-      }
+      const url = new URL(window.location.href);
+      url.searchParams.set('sort_by', selectedSort);
+      window.location.href = url.toString();
     });
   });
 });
