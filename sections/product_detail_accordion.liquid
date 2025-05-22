@@ -41,7 +41,7 @@
 
 .accordion-content {
   display: none;
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
   background-color: #CBD2B5;
   color: #6B8D50;
   font-size: 14px;
@@ -71,7 +71,7 @@
    <div class="single-product-cart">
     <form method="post" action="/cart/add">
       <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-      <button type="submit" class="button--main">Add to cart</button>
+      <button type="submit" class="button--main cart-button">Add to cart</button>
     </form>
    </div>
   </div>
