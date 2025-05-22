@@ -118,6 +118,7 @@
     },
     "product_parts_specifications_Lt8kfw": {
       "type": "product-parts-specifications",
+      "disabled": true,
       "name": "Parts Main Specifications",
       "settings": {
         "margin_top": 36,
