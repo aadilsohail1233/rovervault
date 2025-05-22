@@ -12,6 +12,12 @@
     height: 350px;
     object-fit: cover;
 }
+.single-product-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
 .full-width-cards {
     width: 100%;
     display: flex;
