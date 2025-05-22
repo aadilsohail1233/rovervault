@@ -1,13 +1,7 @@
 {% schema %}
 {
   "name": "Product Parts Collection",
-  "settings": [
-    {
-      "type": "collection",
-      "id": "selected_collection",
-      "label": "Select Collection"
-    }
-  ],
+  "settings": [],
   "blocks": [
     {
       "type": "tab",
@@ -35,79 +29,107 @@
     {
       "name": "Product Parts Collection",
       "blocks": [
-        { "type": "tab", "settings": { "text": "All", "url": "#", "active": true } },
-        { "type": "tab", "settings": { "text": "Range Rover", "url": "#", "active": false } },
-        { "type": "tab", "settings": { "text": "Discovery", "url": "#", "active": false } },
-        { "type": "tab", "settings": { "text": "Defender", "url": "#", "active": false } }
+        {
+          "type": "tab",
+          "settings": {
+            "text": "All",
+            "url": "#",
+            "active": true
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "text": "Range Rover",
+            "url": "#",
+            "active": false
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "text": "Discovery",
+            "url": "#",
+            "active": false
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "text": "Defender",
+            "url": "#",
+            "active": false
+          }
+        }
       ]
     }
   ]
 }
 {% endschema %}
 
-{% assign collection_handle = section.settings.selected_collection %}
-{% assign collection = collections[collection_handle] %}
-
-{% if collection %}
-  {% paginate collection.products by 100 %}
 <div class="page-width">
   <div class="range-rover-section">
 
-    <!-- Tabs and Sorting -->
+    <!-- Filters and Sorting Bar -->
     <div class="top-bar-filter desktop-filters">
       <div class="tabs parts-tabs">
         {% for block in section.blocks %}
-          {% if block.type == 'tab' %}
-            <a href="{{ block.settings.url }}" class="tab {% if block.settings.active %}active{% endif %}">
-              {{ block.settings.text }}
-            </a>
-          {% endif %}
+          <a href="{{ block.settings.url }}" class="tab {% if block.settings.active %}active{% endif %}">
+            {{ block.settings.text }}
+          </a>
         {% endfor %}
       </div>
+
       <div class="sort-dropdown">
         <select id="sort_by">
           <option value="">Sort by</option>
           <option value="best-selling">Best Selling</option>
           <option value="price-asc">Price, Low to High</option>
           <option value="price-desc">Price, High to Low</option>
+          <option value="title-asc">Alphabetically, A-Z</option>
+          <option value="title-desc">Alphabetically, Z-A</option>
+          <option value="created-desc">Date, New to Old</option>
+          <option value="created-asc">Date, Old to New</option>
         </select>
       </div>
     </div>
 
-    <!-- Mobile Tabs and Sorting -->
     <div class="top-bar-filter mobile-tablet-filters">
       <div class="dropdwn">
         <select onchange="if (this.value) window.location.href=this.value;">
           {% for block in section.blocks %}
-            {% if block.type == 'tab' %}
-              <option value="{{ block.settings.url }}" {% if block.settings.active %}selected{% endif %}>
-                {{ block.settings.text }}
-              </option>
-            {% endif %}
+            <option value="{{ block.settings.url }}" {% if block.settings.active %}selected{% endif %}>
+              {{ block.settings.text }}
+            </option>
           {% endfor %}
         </select>
       </div>
+
       <div class="sort-dropdown">
         <select id="sort_by">
           <option value="">Sort by</option>
           <option value="best-selling">Best Selling</option>
           <option value="price-asc">Price, Low to High</option>
           <option value="price-desc">Price, High to Low</option>
+          <option value="title-asc">Alphabetically, A-Z</option>
+          <option value="title-desc">Alphabetically, Z-A</option>
+          <option value="created-desc">Date, New to Old</option>
+          <option value="created-asc">Date, Old to New</option>
         </select>
       </div>
     </div>
 
     <div class="border-lines"></div>
 
-    <!-- Product Grid -->
-    {% if collection.products.size > 0 %}
+    {% if collection and collection.products.size > 0 %}
+      {% assign latest_product = collection.products.first %}
       <div class="main_section_all parts_collections">
         {% for product in collection.products %}
           <div class="content">
             <div class="cards">
               <div class="card">
 
-                <!-- Front Side -->
+                <!-- FRONT -->
                 <div class="card__side card__side--front card__side--front-1">
                   <div class="product-col-1" data-type="{{ product.type | downcase }}">
                     {% if product.available %}
@@ -128,13 +150,14 @@
                     <div class="product-details-col product-b-top product-b-bottom">
                       <div class="cl-title">Fact 1</div>
                       <div class="cl-description">
-                        {{ product.metafields.custom.fact1 | default: "None" }}
+                        {{ product.metafields.custom.fact1 | default: 'None' }}
                       </div>
                     </div>
+
                     <div class="product-details-col product-b-bottom mar-bottom">
                       <div class="cl-title">Fact 2</div>
                       <div class="cl-description">
-                        {{ product.metafields.custom.fact2 | default: "None" }}
+                        {{ product.metafields.custom.fact2 | default: 'None' }}
                       </div>
                     </div>
 
@@ -144,7 +167,7 @@
                   </div>
                 </div>
 
-                <!-- Back Side -->
+                <!-- BACK -->
                 <div class="card__side card__side--back card__side--back-1">
                   <div class="product-col-2">
                     <div class="product-avaliable">
@@ -154,27 +177,28 @@
                         <div class="product-avaliable">Sold</div>
                       {% endif %}
                     </div>
+
                     <div class="relative_img">
                       {% assign second_image = product.images[1] %}
-                      <img alt="{{ product.title }}" class="prd-img" src="{{ second_image | default: product.featured_image | img_url: 'large' }}" />
+                      <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
                       <div class="badge right">{{ collection.title }}</div>
                       <div class="badge lefts">
                         <a href="#"><img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" /></a>
                       </div>
                     </div>
+
                     <div class="product-col-title white-color">Details</div>
+
                     <div class="product-details-col product-b-top product-b-bottom white-color">
                       <div class="cl-title white-color">Fact 3</div>
-                      <div class="cl-description white-color">
-                        {{ product.metafields.custom.fact1 | default: "None" }}
-                      </div>
+                      <div class="cl-description white-color">{{ product.metafields.custom.fact1 | default: 'None' }}</div>
                     </div>
+
                     <div class="product-details-col product-b-bottom white-color">
                       <div class="cl-title white-color">Fact 4</div>
-                      <div class="cl-description white-color">
-                        {{ product.metafields.custom.fact2 | default: "None" }}
-                      </div>
+                      <div class="cl-description white-color">{{ product.metafields.custom.fact2 | default: 'None' }}</div>
                     </div>
+
                     <div class="button-carts-all">
                       <div class="button-product">
                         <a href="{{ product.url }}" class="button--main">View full listing</a>
@@ -186,6 +210,7 @@
                         </form>
                       </div>
                     </div>
+
                   </div>
                 </div>
 
@@ -204,10 +229,8 @@
 
   </div>
 </div>
-{% endpaginate %}
-{% endif %}
 
-<!-- Flip Card Script -->
+<!-- Flip Card Logic -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const flipToBackButtons = document.querySelectorAll('.badge.lefts a');
@@ -237,19 +260,21 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-<!-- Sort by Script -->
+<!-- Sort Logic -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const sortSelects = document.querySelectorAll('#sort_by');
+  const currentSort = new URLSearchParams(window.location.search).get('sort_by');
 
-  sortSelects.forEach(function(select) {
+  sortSelects.forEach(select => {
+    if (currentSort) {
+      select.value = currentSort;
+    }
     select.addEventListener('change', function () {
       const selectedSort = this.value;
-      if (selectedSort) {
-        const url = new URL(window.location.href);
-        url.searchParams.set('sort_by', selectedSort);
-        window.location.href = url.toString();
-      }
+      const url = new URL(window.location.href);
+      url.searchParams.set('sort_by', selectedSort);
+      window.location.href = url.toString();
     });
   });
 });
