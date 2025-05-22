@@ -134,111 +134,39 @@
     <!-- Product Grid -->
 <div class="main_section_all parts_collections arts">
       {% for product in collection.products %}
-     <div class="content">
-        <div class="cards">
-          <div class="card">
+
+    <!-- Default: No sorting -->
+  <div class="product-grid" id="sort-default">
+    <div class="full-width-cards">
+    {% for product in products %}
+      {% include 'product-card1', product: product %}
+    {% endfor %}
+    </div>
+  </div>
+
+  <!-- Price Ascending -->
+  <div class="product-grid" id="sort-price-asc" style="display: none;">
+    <div class="full-width-cards">
+    {% assign sorted_products_asc = products | sort: 'price' %}
+    {% for product in sorted_products_asc %}
+      {% include 'product-card1', product: product %}
+    {% endfor %}
+    </div>
+  </div>
+
+  <!-- Price Descending -->
+  <div class="product-grid" id="sort-price-desc" style="display: none;">
+    <div class="full-width-cards">
+    {% assign sorted_products_desc = products | sort: 'price' | reverse %}
+    {% for product in sorted_products_desc %}
+      {% include 'product-card1', product: product %}
+    {% endfor %}
+    </div>
+  </div>
         
-         <div class="card__side card__side--front card__side--front-1"> 
-        
-        <div class="product-col-1" data-type="{{ product.type | downcase }}">
-          {% if product.available %}
-            <div class="product-avaliable">Available</div>
-          {% else %}
-            <div class="product-avaliable">Sold</div>
-          {% endif %}
+  
 
-         <div class="relative_img">
-         <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}"/>
-          <div class="badge left">
-          {{ collection.title }}
-          </div>
-          <div class="badge rights">
-          <a href="#">
-          <img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" />
-          </a>
-          </div> 
-          {% comment %}
-          <div class="badge left">
-          {{ product.collections.first.title | default: "Vehicle" }}
-         </div>
-         {% endcomment %}
-         </div>
-
-        <div class="product-col-title">{{ product.title }}</div>
-
-        <div class="button-product desktop-section-hide margin-button-bottom"><a href="{{ product.url }}" class="button--main">More info</a></div>
-        </div>
-          </div>
-        <div class="card__side card__side--back card__side--back-1">
-                        <div class="product-col-2">
-                        <div class="product-avaliable">
-                         {% if product.available %}
-                            <div class="product-avaliable">Available</div>
-                          {% else %}
-                            <div class="product-avaliable">Sold</div>
-                          {% endif %}
-                        </div>
-                        <div class="relative_img">
-                          {% assign second_image = product.images[1] %}
-                         <img alt="{{ product.title }}" class="prd-img" src="{% if second_image %}{{ second_image | img_url: 'large' }}{% else %}{{ product.featured_image | img_url: 'large' }}{% endif %}" />
-                                                              <div class="badge right">
-                         {{ collection.title }}
-                         </div>
-                         <div class="badge lefts">
-                          <a href="#">  
-                          <img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" />
-                          </a>  
-                         </div>           
-        {% comment %}
-                          <div class="badge right">
-                          {{ latest_product.collections.first.title | default: "Vehicle" }}
-                         </div>
-                         {% endcomment %}
-                         </div>
-                        <div class="product-col-title white-color">Details</div>
-                         <div class="product-details-col product-b-top product-b-bottom white-color">
-                          <div class="cl-title white-color">Year</div>
-                            {% if product.metafields.vehicles_main.year %}
-                             <div class="cl-description white-color">
-                              {{ product.metafields.vehicles_main.year }}
-                             </div>
-                            {% else %}
-                              <div class="cl-description white-color">
-                              None
-                              </div>  
-                            {% endif %} 
-                          </div>
-                          <div class="product-details-col product-b-bottom white-color">
-                          <div class="cl-title white-color">Size</div>
-                          <div class="cl-description white-color">
-                            {% if product.metafields.custom.size %}
-                            <div class="cl-description white-color">
-                              {{ product.metafields.custom.size }}
-                            </div>
-                            {% else %}
-                            <div class="cl-description white-color">
-                              None
-                            </div>
-                            {% endif %}  
-                            
-                          </div>  
-                          </div>  
-                          <div class="button-carts-all">
-                          <div class="button-product"><a href="{{ product.url }}" class="button--main">View full listing</a></div>
-                          <div class="button-product">
-                          <form method="post" action="/cart/add">
-                            <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-                            <button type="submit" class="button--main cart-button" style="display:none;">Add to cart</button>
-                          </form>
-                        </div>
-                        </div>
-                      </div>
-          
-        </div>  
-            
-     </div> 
-        </div>
-</div>
+  
       {% endfor %}
 </div>      
     
