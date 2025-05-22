@@ -4472,6 +4472,9 @@ font-family: 'Eczar';
   .emptyonmobile {
     display: none;
 }
+  .image-show-background__image {
+    min-height: 450px;
+  }
 }
 @media (max-width: 768px) { 
 
