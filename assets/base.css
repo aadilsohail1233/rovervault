@@ -1231,6 +1231,9 @@ summary::-webkit-details-marker {
  .header__icon--cart{
    margin-right: 0rem !important;
  } 
+  .full-width-cards {
+    display: block;
+}
 }
 
 @media screen and (max-width: 749px) {
