@@ -768,7 +768,7 @@ table:not([class]) th {
     display: none !important;
   }
   .hide-footer-mobile{
-    display:none;
+    display:none !important;
   }
 }
 
