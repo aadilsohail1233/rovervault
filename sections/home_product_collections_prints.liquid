@@ -60,7 +60,8 @@
                            </a>
                          </div>   
                          </div>
-                          <div class="product-col-title">{{ product.title }}</div> 
+                        {{ truncated_title }}{% if product.title.size > 20 %}...{% endif %}
+                          <div class="product-col-title">{{ truncated_title }}{% if product.title.size > 20 %}...{% endif %}</div> 
                         <div class="button-product margin-button-bottom"><a href="javascript:void(0)" class="button--main" style="opacity: 0;">View full listing</a></div>
                       </div>
                       </div>  
