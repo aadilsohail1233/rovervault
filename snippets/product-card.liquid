@@ -27,8 +27,8 @@
          </div>
          {% endcomment %}
          </div>
-        {% assign words = product.title | split: ' ' %}
-        <div class="product-col-title">{{ words | slice: 0, 5 | join: ' ' }}{% if words.size > 5 %}...{% endif %}</div>
+        {% assign truncated_title = product.title | truncate: 53, '' %}
+        <div class="product-col-title">{{ truncated_title }}{% if product.title.size > 50 %}...{% endif %}</div>
           <div class="product-details-col product-b-top product-b-bottom">
           <div class="cl-title">Fact 1</div>
           <div class="cl-description">
