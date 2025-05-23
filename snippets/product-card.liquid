@@ -10,7 +10,7 @@
           {% else %}
             <div class="product-avaliable">Sold</div>
           {% endif %}
-
+          
          <div class="relative_img">
          <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}"/>
           <div class="badge left">
@@ -27,8 +27,8 @@
          </div>
          {% endcomment %}
          </div>
-
-        <div class="product-col-title">{{ product.title }}</div>
+        {% assign words = product.title | split: ' ' %}
+        <div class="product-col-title">{{ words | slice: 0, 5 | join: ' ' }}{% if words.size > 5 %}...{% endif %}</div>
           <div class="product-details-col product-b-top product-b-bottom">
           <div class="cl-title">Fact 1</div>
           <div class="cl-description">
