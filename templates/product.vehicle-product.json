@@ -129,9 +129,9 @@
         "margin_bottom": 36
       }
     },
-    "product_detail_accordion_Az3FBH": {
-      "type": "product_detail_accordion",
-      "name": "Product Accordian Details",
+    "product_vehicle_accordians_yDXeC9": {
+      "type": "product_vehicle_accordians",
+      "name": "Product Accordian Vehicle",
       "settings": {}
     },
     "logo_with_text_small_P6KTnM": {
@@ -268,7 +268,7 @@
     "vehicle_product_header_DXtgwC",
     "full_width_image_GVMBb6",
     "product_vehicles_main_specifications_MMHzMf",
-    "product_detail_accordion_Az3FBH",
+    "product_vehicle_accordians_yDXeC9",
     "logo_with_text_small_P6KTnM",
     "tabs_video_section_VHmFbR",
     "image_show_z4nGJG",
