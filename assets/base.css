@@ -30,6 +30,7 @@
     opacity: 1;
     transition: transform .3s ease-in-out;
     font-family: Eczar;
+  pointer-events: none;
 }
 .single-product-cart{
     display: flex;
