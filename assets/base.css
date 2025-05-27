@@ -5098,6 +5098,12 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
   }
 }
 
+@media (min-width: 1025px) and (max-width: 1365px) {
+  .parts-sections .card
+ {
+    height: 43em;
+}
+}
 @media (min-width: 1366px) and (max-width: 1920px) {
       .page-width {
         padding: 0 0px;
