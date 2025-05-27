@@ -206,6 +206,7 @@
     },
     "logo_with_text_small_Ah6LXR": {
       "type": "logo-with-text-small",
+      "disabled": true,
       "name": "Logo With Text Small",
       "settings": {
         "logo_image": "shopify://shop_images/Group_592.png",
