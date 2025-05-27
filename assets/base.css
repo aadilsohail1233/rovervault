@@ -4900,6 +4900,10 @@ a.enquire_heading {
     height: 230px;
     object-fit: cover;
 }
+    .padding-bottom-zero .prd-img {
+    height: 230px;
+    object-fit: cover;
+}
   .parts_collections .product-col-2 .relative_img .prd-img{
       height:auto;
   }
