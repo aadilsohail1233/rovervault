@@ -56,9 +56,9 @@
                            {{ section.settings.collection_name }}
                          </div>
                         <div class="badge rights">
-                          <a href="#">
+                          <!--<a href="#">-->
                           <img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" />
-                          </a>
+                          <!--</a>-->
                           </div>  
                          </div>
                            {% assign truncated_title = product.title | truncate: 23, '' %}
@@ -113,7 +113,7 @@
                           {% endif %}
                           </div>  
                           </div> 
-                          <!--<div class="button-product desktop-section-hide margin-button-bottom"><a href="javascript:void(0)" class="button--main" style="opacity: 0;">View full listing</a></div>-->
+                         
                       </div>
                   </div>
                   <div class="card__side card__side--back card__side--back-1">
@@ -183,7 +183,7 @@
                           </div>  
                           </div>
                         
-                          <div class="button-product button_now"><a href="{{ product.url }}" class="button--main">View full listing</a></div>
+                          
                       </div>
                     
                   </div>
@@ -196,7 +196,8 @@
           {% endfor %}
         </div>
       </div>
-
+ <!--<div class="button-product desktop-section-hide margin-button-bottom"><a href="javascript:void(0)" class="button--main" style="opacity: 0;">View full listing</a></div>-->      
+<!--<div class="button-product button_now"><a href="{{ product.url }}" class="button--main">View full listing</a></div>-->
 <!-- Slider navigation -->
   <div class="swiper-controls-wrap">
     <div class="slider-controls">
