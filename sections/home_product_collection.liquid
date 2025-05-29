@@ -37,7 +37,7 @@
             {% assign product = block.settings.product %}
             {% if product %}
               <div class="swiper-slide">
-
+  <a href="{{ product.url }}">
               <div class="content">
                 
               <div class="cards">
@@ -45,7 +45,7 @@
                   
                   <div class="card__side card__side--front card__side--front-1">
                     <div class="product-col-1">
-                      <a href="{{ product.url }}">
+                      
                         <div class="product-avaliable">
                         {% if product.available %}
                           <div class="product-avaliable">Available</div>
@@ -116,7 +116,6 @@
                           {% endif %}
                           </div>  
                           </div> 
-                      </a>
                           <!--<div class="button-product desktop-section-hide margin-button-bottom"><a href="javascript:void(0)" class="button--main" style="opacity: 0;">View full listing</a></div>-->
                       </div>
                   </div>
@@ -199,7 +198,7 @@
              
                 
               </div>
-                
+              </a>
               </div>
             {% endif %}
           {% endfor %}
