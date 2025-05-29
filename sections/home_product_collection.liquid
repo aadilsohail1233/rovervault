@@ -56,11 +56,11 @@
                          <div class="badge left">
                            {{ section.settings.collection_name }}
                          </div>
-                        <!--<div class="badge rights">
-                          <a href="#">
+                         <div class="badge rights">
+                          <span>
                           <img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" />
-                          </a>
-                          </div>-->  
+                          </span>
+                          </div> 
                          </div>
                            {% assign truncated_title = product.title | truncate: 23, '' %}
                           <div class="product-col-title">{{ truncated_title }}{% if product.title.size > 20 %}...{% endif %}</div>
@@ -135,11 +135,11 @@
                          <div class="badge right">
                             {{ section.settings.collection_name }}
                          </div>
-                         <!--<div class="badge lefts">
-                          <a href="#">  
+                         <div class="badge lefts">
+                          <span>  
                           <img src="https://cdn.shopify.com/s/files/1/0694/0314/8465/files/Group_620.png?v=1745422926" />
-                          </a>  
-                         </div>--> 
+                          </span>  
+                         </div>
                          </div>
                         <div class="product-col-title white-color">Details</div>
                           <div class="product-details-col product-b-top product-b-bottom white-color">
@@ -258,8 +258,8 @@
     </script>
           <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const flipToBackButtons = document.querySelectorAll('.badge.lefts a');
-  const flipToFrontButtons = document.querySelectorAll('.badge.rights a');
+  const flipToBackButtons = document.querySelectorAll('.badge.lefts span');
+  const flipToFrontButtons = document.querySelectorAll('.badge.rights span');
 
   // Flip to back
   flipToBackButtons.forEach(button => {
