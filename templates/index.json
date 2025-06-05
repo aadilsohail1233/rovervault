@@ -127,6 +127,7 @@
     },
     "vehicles_page_links_QcL9HT": {
       "type": "vehicles-page-links",
+      "disabled": true,
       "settings": {
         "margin_top": 16,
         "margin_bottom": 36
