@@ -1,6 +1,31 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Custom Display Text",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "custom_text",
+      "label": "Custom Text",
+      "default": "Your custom text goes here"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Display Text"
+    }
+  ]
+}
 {% endschema %}
+
+<div class="custom-text-display">
+ {{ section.settings.custom_text }}
+</div>
+
+<style>
+  .custom-text-display {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+  }
+</style>
