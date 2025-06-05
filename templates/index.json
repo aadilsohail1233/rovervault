@@ -25,6 +25,24 @@
         "custom_text": "Cars - Parts - art - drip"
       }
     },
+    "image_area_show_QTfyNy": {
+      "type": "image-area-show",
+      "name": "Image waves animation",
+      "settings": {
+        "background-image": "shopify://shop_images/Frame_587.png",
+        "mobile-background-image": "shopify://shop_images/Frame_587.png",
+        "logo-type": false,
+        "logo-text": "",
+        "footer-image": "shopify://shop_images/wave_main_v2.gif",
+        "footer-image1": "shopify://shop_images/wave_tablet_v1.gif",
+        "footer-image2": "shopify://shop_images/wave_mobile_v1.gif",
+        "down-text": "",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
     "image_with_text_1_hehR3M": {
       "type": "image-with-text-1",
       "blocks": {
@@ -437,6 +455,7 @@
   "order": [
     "home_hero_gV8DN8",
     "text_details_center_pXXaBT",
+    "image_area_show_QTfyNy",
     "image_with_text_1_hehR3M",
     "image_show_TbTzfG",
     "vehicles_page_links_QcL9HT",
