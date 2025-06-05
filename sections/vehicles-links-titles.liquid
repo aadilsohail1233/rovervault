@@ -11,10 +11,9 @@
     }
   }
 
-  .vehicles-page-links-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
+  .vehicles-page-links-wrapper1 {
+    display: inline-block;
+    width:100%;
   }
 
   @media screen and (max-width: 850px) {
@@ -50,7 +49,7 @@
 
 <div class="section-{{ section.id }}-margin gradient color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
-    <div class="vehicles-page-links-wrapper">
+    <div class="vehicles-page-links-wrapper1">
       <div class="vehicles-page-link font-vvds">{{ section.settings['down-text'] }}</div>
     </div>
   </div>
