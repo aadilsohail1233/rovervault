@@ -181,6 +181,15 @@
         "layout_direction": "text-left"
       }
     },
+    "vehicles_links_titles_X49JqQ": {
+      "type": "vehicles-links-titles",
+      "name": "Vehicles Link Title",
+      "settings": {
+        "margin_top": 36,
+        "down-text": "Cars",
+        "margin_bottom": 36
+      }
+    },
     "home_product_collection_gVAdHQ": {
       "type": "home_product_collection",
       "blocks": {
@@ -478,6 +487,7 @@
     "vehicles_page_links_QcL9HT",
     "image_with_text_1_hjJnG4",
     "logo_with_text_rQ7Exy",
+    "vehicles_links_titles_X49JqQ",
     "home_product_collection_gVAdHQ",
     "home_product_collection_parts_KppqMH",
     "home_product_collections_prints_3rN3De",
