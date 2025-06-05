@@ -108,6 +108,7 @@
     },
     "image_show_TbTzfG": {
       "type": "image-show",
+      "disabled": true,
       "settings": {
         "background-image": "shopify://shop_images/background-image-1.png",
         "mobile-background-image": "shopify://shop_images/Frame_726_1.png",
@@ -126,6 +127,7 @@
     },
     "vehicles_page_links_QcL9HT": {
       "type": "vehicles-page-links",
+      "disabled": true,
       "settings": {
         "margin_top": 16,
         "margin_bottom": 36
@@ -161,6 +163,7 @@
         "text_QCkpjh",
         "button_6zNVyq"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/car-1.png",
         "layout": "text_first",
@@ -172,6 +175,7 @@
     },
     "logo_with_text_rQ7Exy": {
       "type": "logo-with-text",
+      "disabled": true,
       "settings": {
         "logo_image": "shopify://shop_images/Layer_4_3b78df73-d389-4d75-a06c-dace18f48d7d.png",
         "first_text_image": "shopify://shop_images/Heading_eb082fad-41c8-4a63-8b17-68c091d06146.png",
@@ -187,6 +191,7 @@
       "settings": {
         "margin_top": 36,
         "down-text": "Cars",
+        "link_url": "",
         "margin_bottom": 36
       }
     },
