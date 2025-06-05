@@ -4771,6 +4771,9 @@ a.enquire_heading {
     .card {
     height: 59em; 
   }
+    .custom-text-display{
+  font-size: 24px !important;
+}
 .parts_collections .product-col-1 .relative_img .prd-img, .parts_collections .product-col-2 .relative_img .prd-img
 {
     height: 300px;
