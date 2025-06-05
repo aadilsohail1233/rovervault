@@ -4653,7 +4653,7 @@ a.enquire_heading {
     height: 53em; 
   } */
 .custom-text-display{
-  font-size: 24px;
+  font-size: 24px !important;
 }
   .collection-slider-section .card {
     height: 46em;
