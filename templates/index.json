@@ -191,7 +191,7 @@
       "settings": {
         "margin_top": 36,
         "down-text": "Cars",
-        "link_url": "",
+        "link_url": "shopify://pages/all-collections",
         "margin_bottom": 36
       }
     },
@@ -240,7 +240,7 @@
       "settings": {
         "margin_top": 36,
         "down-text": "Parts",
-        "link_url": "",
+        "link_url": "shopify://pages/parts",
         "margin_bottom": 36
       }
     },
@@ -280,6 +280,16 @@
       ],
       "settings": {
         "collection_name": "Part"
+      }
+    },
+    "vehicles_links_titles_gEytXP": {
+      "type": "vehicles-links-titles",
+      "name": "Vehicles Link Title",
+      "settings": {
+        "margin_top": 36,
+        "down-text": "Prints",
+        "link_url": "shopify://pages/prints",
+        "margin_bottom": 36
       }
     },
     "home_product_collections_prints_3rN3De": {
@@ -328,6 +338,16 @@
         "collection_name": "Print"
       }
     },
+    "vehicles_links_titles_3X3iNz": {
+      "type": "vehicles-links-titles",
+      "name": "Vehicles Link Title",
+      "settings": {
+        "margin_top": 36,
+        "down-text": "Arts",
+        "link_url": "shopify://pages/art",
+        "margin_bottom": 36
+      }
+    },
     "home_product_collections_arts_WjmGLV": {
       "type": "home_product_collections_arts",
       "blocks": {
@@ -364,6 +384,16 @@
       ],
       "settings": {
         "collection_name": "Art"
+      }
+    },
+    "vehicles_links_titles_z6zLkP": {
+      "type": "vehicles-links-titles",
+      "name": "Vehicles Link Title",
+      "settings": {
+        "margin_top": 36,
+        "down-text": "Drip",
+        "link_url": "shopify://pages/drips",
+        "margin_bottom": 36
       }
     },
     "home_product_collections_drips_BmDw4j": {
@@ -506,8 +536,11 @@
     "home_product_collection_gVAdHQ",
     "vehicles_links_titles_NAgww9",
     "home_product_collection_parts_KppqMH",
+    "vehicles_links_titles_gEytXP",
     "home_product_collections_prints_3rN3De",
+    "vehicles_links_titles_3X3iNz",
     "home_product_collections_arts_WjmGLV",
+    "vehicles_links_titles_z6zLkP",
     "home_product_collections_drips_BmDw4j",
     "logo_with_text_pmUeyA",
     "features_KPKJ94",
