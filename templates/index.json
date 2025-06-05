@@ -18,6 +18,13 @@
         "padding_bottom": 0
       }
     },
+    "text_details_center_pXXaBT": {
+      "type": "Text-details-center",
+      "name": "Custom Display Text",
+      "settings": {
+        "custom_text": "Cars - Parts - art - drip"
+      }
+    },
     "image_with_text_1_hehR3M": {
       "type": "image-with-text-1",
       "blocks": {
@@ -428,6 +435,7 @@
   },
   "order": [
     "home_hero_gV8DN8",
+    "text_details_center_pXXaBT",
     "image_with_text_1_hehR3M",
     "image_show_TbTzfG",
     "vehicles_page_links_QcL9HT",
