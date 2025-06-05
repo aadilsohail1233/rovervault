@@ -1,6 +1,364 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{%- style -%}
+  .section-{{ section.id }}-margin {
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
   }
+.image-show-footer-tablet{
+  display:none;
+}
+.image-show-footer-mobile{
+ display:none; 
+}  
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-margin {
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+  
+.image-mobile-background{
+    display:inline-block;
+  }
+.image-show-background{
+  display:none;
+}  
+.image-show-footer-tablet{
+      display:none !important;
+    }
+.image-show-footer-mobile{
+ display:inline-block; 
+}      
+.image-show-footer-mobile img { 
+      margin-top: -55px;
+    width: 106%;
+    margin-left: -3%;
+    position: relative;
+
+}
+
+  }
+  
+  .image-mobile-background{
+    display:none;
+  }
+  .image-show-wrapper {
+    width: 100%;
+  }
+
+  .image-show-background {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .image-show-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 516px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: white;
+    font-weight: 600;
+    font-family: 'Eczar';
+  }
+
+  .image-show-main-logo {
+    width: 300px;
+    height: 150px;
+    border-top-right-radius: 150px;
+    border-top-left-radius: 150px;
+    background-color: #EBE9D6;
+    border: 5px solid rgba(var(--color-secondary-button-text));
+    border-bottom: none;
+    margin-bottom: -7.8px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-show-main-logo img {
+    width: 125px;
+  }
+
+  @media screen and (max-width: 890px) {
+    .image-show-main {
+      max-width: 420px;
+    }
+
+    .image-show-main-logo {
+      width: 200px;
+      height: 100px;
+      border-top-right-radius: 100px;
+      border-top-left-radius: 100px;
+    }
+
+    .image-show-main-logo img{
+      width: 100px;
+    }
+  }
+
+  .image-show-background__image {
+    min-height: 585px;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .image-show-main-circle {
+    text-align: center;
+    padding: 32px 0px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    width: 573px;
+    background-color: #EBE9D6;
+    border-radius: 50%;
+    border: 5px solid rgba(var(--color-secondary-button-text));
+    font-size: 7.2rem;
+    color: #6B8D50;
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 890px) {
+    .image-show-main-circle {
+      font-size: 4.5rem;
+      width: 331px;
+    }
+  }
+
+  .image-show-main-content {
+    color: #6B8D50;
+    background-color: #EBE9D6;
+    text-align: center;
+    padding: 32px;
+    border: 5px solid rgba(var(--color-secondary-button-text));
+  }
+
+  .image-show-main-content__text {
+    font-size: 7.93rem;
+    font-family: 'VVDS Fifties';
+    line-height: 90%;
+    letter-spacing: 0px;
+    color: #6B8D50;
+  }
+
+  @media screen and (max-width: 890px) {
+    .image-show-main-content {
+      padding: 15px;
+    }
+    .image-show-main-content__text {
+      font-size: 5.5rem;
+    }
+    .image-show-footer {
+      display: none;
+    }
+    .image-show-footer-tablet{
+      display:inline-block;
+    }
+    .image-show-footer-tablet img {
+    margin-top: -55px;
+    width: 106%;
+    margin-left: -3%;
+    position: relative;
+    }
+  }
+
+
+  .image-show-footer {
+    margin-top: -55px;
+    width: 106%;
+    margin-left: -3%;
+    position: relative;
+  }
+
+  .image-show-footer img{
+    width: 100%;
+  }
+
+  .image-show-footer__text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.2rem;
+    color: #EBE9D6;
+    font-weight: 600;
+    font-family: 'Eczar';
+  }
+
+  .image-show-main-content a {
+    min-width: 209px;
+    display: inline-block;
+    margin-top: 25px;
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-margin gradient color-{{ section.settings.section_color_scheme }}">
+  <div class="page-width">
+    <div class="image-show-wrapper"> 
+      <div class="image-show-background">
+        
+  <picture>
+    {% if section.settings.mobile-background-image != blank %}
+      <source 
+        srcset="{{ section.settings.mobile-background-image | img_url: 'master' }}" 
+        media="(max-width: 767px)">
+    {% endif %}
+    <img
+      src="{{ section.settings.background-image | img_url: 'master' }}"
+      class="image-show-background__image"
+      alt="Background"
+    >
+  </picture>
+        {% if section.settings['logo-type'] %}
+          <div class="image-show-main-circle font-vvds">
+            {{ section.settings['logo-text'] }}
+          </div>
+        {% else %}
+          <div class="image-show-main">
+            <div class="image-show-main-logo">
+              <img src="{{ section.settings.logo | img_url: 'master' }}" alt="Logo">
+            </div>
+            <div class="image-show-main-content">
+              <div class="image-show-main-content__text">{{ section.settings['logo-text'] }}</div>
+              {% for block in section.blocks %}
+                {% comment %}
+                {{ block.settings.button_link }} 
+                {% endcomment %}
+                <a href="javascript:void(0)" class="button--main button-condition-hidden open-enquire-popup">
+                  {{ block.settings.button_label }}
+                </a>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+      <div class="image-show-footer">
+        <img src="{{ section.settings.footer-image | img_url: 'master' }}" alt="Footer">
+        <div class="image-show-footer__text">{{ section.settings['down-text'] }}</div>
+      </div>
+      <div class="image-show-footer-tablet">
+        <img src="{{ section.settings.footer-image1 | img_url: 'master' }}" alt="Footer">
+      </div>
+      <div class="image-show-footer-mobile">
+        <img src="{{ section.settings.footer-image2 | img_url: 'master' }}" alt="Footer">
+      </div>      
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image With Logo",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background-image",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile-background-image",
+      "label": "Mobile Background Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "logo-type",
+      "label": "Logo Type",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    { "type": "text", "id": "logo-text", "label": "Logo Text" },
+    {
+      "type": "image_picker",
+      "id": "footer-image",
+      "label": "Footer Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "footer-image1",
+      "label": "Footer Image Tablet"
+    },
+    {
+      "type": "image_picker",
+      "id": "footer-image2",
+      "label": "Footer Image Mobile"
+    },
+    { "type": "text", "id": "down-text", "label": "Down Text" },
+    {
+      "type": "color_scheme",
+      "id": "section_color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.multirow.settings.container_color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "button",
+      "name": "Learn more button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "t:sections.image-with-text.blocks.button.settings.button_label.default",
+          "label": "Enquire"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image With Logo",
+      "category": "Image"
+    }
+  ]
+}
 {% endschema %}
