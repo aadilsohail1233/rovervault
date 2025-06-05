@@ -4652,7 +4652,9 @@ a.enquire_heading {
 /*  .card {
     height: 53em; 
   } */
-
+.custom-text-display{
+  font-size: 24px;
+}
   .collection-slider-section .card {
     height: 46em;
 }
