@@ -43,6 +43,22 @@
         "margin_bottom": 36
       }
     },
+    "image_with_logo_GgHxcP": {
+      "type": "image-with-logo",
+      "name": "Image With Logo New",
+      "settings": {
+        "background-image": "shopify://shop_images/vehicles_clean_same_ratio_1.png",
+        "mobile-background-image": "shopify://shop_images/vehicles_clean_same_ratio_1.png",
+        "logo-type": false,
+        "logo": "shopify://shop_images/Vector_2.png",
+        "logo-text": "True aficionado collectors",
+        "down-text": "",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
     "image_with_text_1_hehR3M": {
       "type": "image-with-text-1",
       "blocks": {
@@ -456,6 +472,7 @@
     "home_hero_gV8DN8",
     "text_details_center_pXXaBT",
     "image_area_show_QTfyNy",
+    "image_with_logo_GgHxcP",
     "image_with_text_1_hehR3M",
     "image_show_TbTzfG",
     "vehicles_page_links_QcL9HT",
