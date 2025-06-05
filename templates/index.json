@@ -62,6 +62,7 @@
         "text_nGmxQa",
         "button_6DzHTe"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/Mask_group.png",
         "layout": "image_first",
