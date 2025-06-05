@@ -28,7 +28,7 @@
     } */
   }
 
-  .vehicles-page-link {
+  .vehicles-page-link1 {
     text-align: center;
     padding: 35px 0px;
     border-radius: 100%;
@@ -38,10 +38,12 @@
     font-size: 7.2rem;
     text-decoration: none;
     cursor: pointer;
+    width:50%;
+    margin: 0 auto;
   }
 
   @media screen and (max-width: 850px) {
-    .vehicles-page-link {
+    .vehicles-page-link1 {
       font-size: 4.8rem;
     }
   }
@@ -50,7 +52,7 @@
 <div class="section-{{ section.id }}-margin gradient color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
     <div class="vehicles-page-links-wrapper1">
-      <div class="vehicles-page-link font-vvds">{{ section.settings['down-text'] }}</div>
+      <div class="vehicles-page-link1 font-vvds">{{ section.settings['down-text'] }}</div>
     </div>
   </div>
 </div>
