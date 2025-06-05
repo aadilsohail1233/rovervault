@@ -234,6 +234,16 @@
         "collection_name": "Vehicles"
       }
     },
+    "vehicles_links_titles_NAgww9": {
+      "type": "vehicles-links-titles",
+      "name": "Vehicles Link Title",
+      "settings": {
+        "margin_top": 36,
+        "down-text": "Parts",
+        "link_url": "",
+        "margin_bottom": 36
+      }
+    },
     "home_product_collection_parts_KppqMH": {
       "type": "home_product_collection_parts",
       "blocks": {
@@ -494,6 +504,7 @@
     "logo_with_text_rQ7Exy",
     "vehicles_links_titles_X49JqQ",
     "home_product_collection_gVAdHQ",
+    "vehicles_links_titles_NAgww9",
     "home_product_collection_parts_KppqMH",
     "home_product_collections_prints_3rN3De",
     "home_product_collections_arts_WjmGLV",
