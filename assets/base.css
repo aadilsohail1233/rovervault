@@ -4716,6 +4716,9 @@ a.enquire_heading {
     .card {
     height: 56em; 
   }
+  .custom-text-display{
+  font-size: 24px;
+}
   .range-rover-section .card {
     height: 52em;
 }
