@@ -131,7 +131,9 @@
     {% assign latest_product = collection.products.first %}
     
     <!-- Latest Product Banner -->
-{% assign products = collections[section.settings.selected_collection].products %}
+    
+
+{% paginate collections[section.settings.selected_collection].products by 1000 %}      
     <!-- Product Grid -->
 <div class="main_section_all parts_collections arts">
  <!-- Default: No sorting -->
@@ -168,6 +170,7 @@
     <div class="border-lines"></div>
     <div class="results-count">Showing {{ collection.products.size }} of {{ collection.products.size }} results</div>
     <div class="border-lines"></div>  
+  {% endpaginate %}
   {% else %}
     <p>No products found in this collection.</p>
   {% endif %}
