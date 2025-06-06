@@ -133,7 +133,8 @@
     <!-- Latest Product Banner -->
     
 
-{% paginate collections[section.settings.selected_collection].products by 1000 %}      
+{% paginate collections[section.settings.selected_collection].products by 1000 %}  
+  {% assign products = collections[section.settings.selected_collection].products %}
     <!-- Product Grid -->
 <div class="main_section_all parts_collections arts">
  <!-- Default: No sorting -->
