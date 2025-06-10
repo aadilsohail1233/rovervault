@@ -30,7 +30,7 @@
       "custom_css": [
         ".image-show-footer {z-index: 999;}",
         ".image-show-footer-tablet {z-index: 999;}",
-        ".image-show-footer-mobile{z-index: 999; }"
+        ".image-show-footer-mobile {z-index: 999; position: relative;}"
       ],
       "name": "Image waves animation",
       "settings": {
