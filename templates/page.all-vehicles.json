@@ -30,7 +30,7 @@
       "type": "vehicle-advantages-show",
       "settings": {
         "image": "shopify://shop_images/text-4.png",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor.",
+        "text": "Each vehicle in our collection is a one-of-one restoration - rebuilt with modern upgrades, premium materials, and timeless design. Explore machines that honor their roots while driving boldly into the future.",
         "margin_top": 36,
         "margin_bottom": 36
       }
