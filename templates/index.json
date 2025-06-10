@@ -28,7 +28,9 @@
     "image_area_show_QTfyNy": {
       "type": "image-area-show",
       "custom_css": [
-        ".image-show-footer {z-index: 999;}"
+        ".image-show-footer {z-index: 999;}",
+        ".image-show-footer-tablet {z-index: 999;}",
+        ".image-show-footer-mobile{z-index: 999; }"
       ],
       "name": "Image waves animation",
       "settings": {
