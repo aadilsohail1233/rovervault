@@ -45,8 +45,8 @@
                     <a href="{{ product.url }}" style="text-decoration: none;">
                     <div class="product-col-1">
                         <div class="product-avaliable">
-                        {% if product.custom.vehicle_status %}
-                          <div class="product-avaliable">{{ product.custom.vehicle_status }}</div>
+                        {% if product.metafields.custom.vehicle_status %}
+                          <div class="product-avaliable">{{ product.metafields.custom.vehicle_status }}</div>
                         {% endif %}
                         </div>
                          <div class="relative_img">
