@@ -121,11 +121,9 @@
  <a href="{{ product.url }}" style="text-decoration: none;">
                       <div class="product-col-2">
                         <div class="product-avaliable">
-                        {% if product.available %}
-                          <div class="product-avaliable">Available</div>
-                        {% else %}
-                          <div class="product-avaliable">Sold</div>
-                        {% endif %} 
+                  {% if product.metafields.custom.vehicle_status %}
+                          <div class="product-avaliable">{{ product.metafields.custom.vehicle_status }}</div>
+                        {% endif %}
                         </div>
                         <div class="relative_img">
                           {% assign second_image = product.images[1] %}
