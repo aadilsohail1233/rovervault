@@ -29,7 +29,7 @@
       "type": "vehicle-advantages-show",
       "settings": {
         "image": "shopify://shop_images/text-parts.png",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor.",
+        "text": "Our curated selection of spare parts is sourced to keep classic Rovers running strong. Whether you're tackling a full rebuild or fine-tuning the details, each component is chosen for quality, compatibility, and that unmistakable Rover character.",
         "margin_top": 36,
         "margin_bottom": 36
       }
