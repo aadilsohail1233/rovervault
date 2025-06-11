@@ -11,6 +11,11 @@
   "sections": {
     "image_show_YyGAzh": {
       "type": "image-show",
+      "custom_css": [
+        ".image-show-footer {display: none !important;}",
+        ".image-show-footer-tablet {display: none !important;}",
+        ".image-show-footer-mobile {display: none !important;}"
+      ],
       "settings": {
         "background-image": "shopify://shop_images/background-image-prints.png",
         "logo-type": true,
