@@ -3,6 +3,28 @@
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
   }
+  .image-show-footer-tablet{
+  display:none;
+}
+.image-show-footer-mobile{
+ display:none; 
+}  
+
+   @media screen and (max-width: 600px) {
+.image-show-footer-tablet{
+      display:none !important;
+    }
+.image-show-footer-mobile{
+ display:inline-block; 
+}      
+.image-show-footer-mobile img { 
+      margin-top: -55px;
+    width: 106%;
+    margin-left: -3%;
+    position: relative;
+
+}
+   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-margin {
