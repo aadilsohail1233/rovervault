@@ -175,10 +175,10 @@
                           </div>  
                           </div> 
                           <div class="product-details-col product-b-bottom mar-bottom">
-                          <div class="cl-title">Heritage</div>
+                          <div class="cl-title">Sold On</div>
                           <div class="cl-description">
-                          {% if product.metafields.vehicles_main.transmission %}
-                          {{ product.metafields.vehicles_main.transmission }}
+                         {% if product.metafields.custom.vehicle_sold_on %}
+                          {{ product.metafields.custom.vehicle_sold_on }}
                           {% else %}
                           None
                           {% endif %}
