@@ -111,12 +111,11 @@
            <div class="card__side card__side--front card__side--front-1"> 
         
         <div class="product-col-1" data-type="{{ product.type | downcase }}">
-          {% if product.available %}
-            <div class="product-avaliable">Available</div>
-          {% else %}
-            <div class="product-avaliable">Sold</div>
-          {% endif %}
-
+          <div class="product-avaliable">
+            {% if product.metafields.custom.vehicle_status %}
+            <div class="product-avaliable">{{ product.metafields.custom.vehicle_status }}</div>
+            {% endif %}
+          </div>
          <div class="relative_img">
          <img alt="{{ product.title }}" class="prd-img" src="{{ product.featured_image | img_url: 'large' }}"/>
           <div class="badge left">
@@ -194,11 +193,9 @@
         <div class="card__side card__side--back card__side--back-1">
                         <div class="product-col-2">
                         <div class="product-avaliable">
-                         {% if product.available %}
-                            <div class="product-avaliable">Available</div>
-                          {% else %}
-                            <div class="product-avaliable">Sold</div>
-                          {% endif %}
+                        {% if product.metafields.custom.vehicle_status %}
+                          <div class="product-avaliable">{{ product.metafields.custom.vehicle_status }}</div>
+                        {% endif %}
                         </div>
                         <div class="relative_img">
                           {% assign second_image = product.images[1] %}
