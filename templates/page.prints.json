@@ -11,6 +11,7 @@
   "sections": {
     "image_show_YyGAzh": {
       "type": "image-show",
+      "disabled": true,
       "custom_css": [
         ".image-show-footer {display: none !important;}",
         ".image-show-footer-tablet {display: none !important;}",
