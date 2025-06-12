@@ -30,7 +30,8 @@
         {% assign truncated_title = product.title | truncate: 23, '' %}
         <div class="product-col-title">{{ truncated_title }}{% if product.title.size > 20 %}...{% endif %}</div>
         <div class="product-details-provance product-b-top product-b-bottom">
-          
+          <div class="cl-title">Provenance</div>
+          <div class="cl-description">{{ product.metafields.custom.provenance }}</div>
         </div>
                 <!--
           <div class="product-details-col product-b-top product-b-bottom">
