@@ -11,6 +11,7 @@
   "sections": {
     "image_show_eiHRQp": {
       "type": "image-show",
+      "disabled": true,
       "custom_css": [
         ".image-show-main-circle {top: 43%;}"
       ],
@@ -34,7 +35,10 @@
         "image": "shopify://shop_images/text-art.png",
         "text": "This is where Rover culture becomes visual storytelling. Our curated art collection captures the lines, legacy, and emotion of these iconic vehicles - reimagined through the eyes of artists and enthusiasts alike. Bold, nostalgic, and built for your wall.",
         "margin_top": 36,
-        "margin_bottom": 36
+        "margin_bottom": 36,
+        "footer-image": "shopify://shop_images/wave_main_v2.gif",
+        "footer-image1": "shopify://shop_images/wave_tablet_v1.gif",
+        "footer-image2": "shopify://shop_images/wave_mobile_v1.gif"
       }
     },
     "product_parts_template_collection_wWpHAa": {
