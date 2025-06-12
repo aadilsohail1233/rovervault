@@ -11,6 +11,7 @@
   "sections": {
     "image_show_bQmjtw": {
       "type": "image-show",
+      "disabled": true,
       "settings": {
         "background-image": "shopify://shop_images/Mask_group_1_6e4a93de-b98d-4061-94f9-5cff40f2e982.png",
         "mobile-background-image": "shopify://shop_images/Mask_group_3.png",
@@ -32,7 +33,10 @@
         "image": "shopify://shop_images/Frame_646_1_eeec3154-346c-4b4a-b6f2-2226b6f0e466.png",
         "text": "Each vehicle in our collection is a one-of-one restoration - rebuilt with modern upgrades, premium materials, and timeless design. Explore machines that honor their roots while driving boldly into the future.",
         "margin_top": 36,
-        "margin_bottom": 36
+        "margin_bottom": 36,
+        "footer-image": "shopify://shop_images/wave_main_v2.gif",
+        "footer-image1": "shopify://shop_images/wave_tablet_v1.gif",
+        "footer-image2": "shopify://shop_images/wave_mobile_v1.gif"
       }
     },
     "main": {
