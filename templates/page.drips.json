@@ -11,6 +11,7 @@
   "sections": {
     "image_show_YyGAzh": {
       "type": "image-show",
+      "disabled": true,
       "settings": {
         "background-image": "shopify://shop_images/AdobeStock_1167486658_Editorial_Use_Only_1.png",
         "logo-type": true,
@@ -31,7 +32,10 @@
         "image": "shopify://shop_images/Frame_646.png",
         "text": "For those who live the Rover lifestyle - on the road or off it. Designed with comfort, quality, and understated style in mind, each piece reflects the heritage and spirit of the machines we admire. Gear up, stand out, and stay true to the trail.",
         "margin_top": 36,
-        "margin_bottom": 36
+        "margin_bottom": 36,
+        "footer-image": "shopify://shop_images/wave_main_v2.gif",
+        "footer-image1": "shopify://shop_images/wave_tablet_v1.gif",
+        "footer-image2": "shopify://shop_images/wave_mobile_v1.gif"
       }
     },
     "product_arts_template_collection_z6Bipx": {
