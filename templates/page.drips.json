@@ -100,6 +100,9 @@
         "tab_xGfYNR",
         "tab_hVcqBD"
       ],
+      "custom_css": [
+        ".product-col-2 .relative_img img {background-color: #ebe8d5;}"
+      ],
       "settings": {
         "selected_collection": "drips"
       }
