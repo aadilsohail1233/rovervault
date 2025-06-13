@@ -65,6 +65,17 @@
                          </div>
                           {% assign truncated_title = product.title | truncate: 23, '' %}
                           <div class="product-col-title">{{ truncated_title }}{% if product.title.size > 20 %}...{% endif %}</div>
+                             <div class="product-details-provance product-b-top">
+                              <div class="cl-title">Provenance</div>
+                              <div class="cl-description">
+                                {% if product.metafields.custom.provenance != blank %}
+                                {{ product.metafields.custom.provenance | truncatewords: 23, "..." }}
+                                {% else %}
+                                None
+                                {% endif %}  
+                              </div>
+                            </div>
+                          {% comment %}
                           <div class="product-details-col product-b-top product-b-bottom">
                           <div class="cl-title">Fact 1</div>
                           <div class="cl-description">
@@ -75,6 +86,7 @@
                             {% endif %}
                           </div>  
                           </div>
+                     
                           <div class="product-details-col product-b-bottom mar-bottom">
                           <div class="cl-title">Fact 2</div>
                           <div class="cl-description">
@@ -85,6 +97,8 @@
                           {% endif %}
                           </div>  
                           </div> 
+                     {% endcomment %}
+              
                    <div class="button-product margin-button-bottom"><a href="javascript:void(0)" class="button--main" style="opacity: 0;">View full listing</a></div>   
                    </div>
                       
