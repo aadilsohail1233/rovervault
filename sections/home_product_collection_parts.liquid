@@ -131,7 +131,17 @@
                          </div>
                         <div class="product-col-title white-color">Details</div>
                           <div class="product-details-col product-b-top product-b-bottom white-color">
-                          <div class="cl-title white-color">Fact 3</div>
+                          <div class="cl-title white-color">Price</div>
+                            {% if product.price == blank or product.price == 0 %}
+                              <div class="cl-description white-color">
+                               None
+                              </div>  
+                            {% else %}
+                               <div class="cl-description white-color">
+                            {{ product.price | money }}
+                               </div>
+                            {% endif %}
+                     {% comment %}
                             {% if product.metafields.custom.fact1 %}
                              <div class="cl-description white-color">
                               {{ product.metafields.custom.fact1 }}
@@ -141,13 +151,14 @@
                               None
                               </div>  
                             {% endif %} 
+                     {% endcomment %}
                           </div>
                           <div class="product-details-col product-b-bottom white-color mar-bottom">
-                          <div class="cl-title white-color">Fact 4</div>
+                          <div class="cl-title white-color">Mics Fact</div>
                           <div class="cl-description white-color">
-                            {% if product.metafields.custom.fact2 %}
+                            {% if product.metafields.custom.fact1 %}
                             <div class="cl-description white-color">
-                              {{ product.metafields.custom.fact2 }}
+                              {{ product.metafields.custom.fact1 }}
                             </div>
                             {% else %}
                             <div class="cl-description white-color">
