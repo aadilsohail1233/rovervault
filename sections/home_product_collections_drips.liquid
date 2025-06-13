@@ -97,7 +97,45 @@
                           </a>  
                          </div> 
                         </div>
-                        <div class="product-col-title white-color space-title">{{ product.title }}</div>
+                                                <div class="product-col-title white-color">Details</div>
+                          <div class="product-details-col product-b-top product-b-bottom white-color">
+                          <div class="cl-title white-color">Price</div>
+                            {% if product.price == blank or product.price == 0 %}
+                              <div class="cl-description white-color">
+                               None
+                              </div>  
+                            {% else %}
+                               <div class="cl-description white-color">
+                            {{ product.price | money }}
+                               </div>
+                            {% endif %}
+                     {% comment %}
+                            {% if product.metafields.custom.fact1 %}
+                             <div class="cl-description white-color">
+                              {{ product.metafields.custom.fact1 }}
+                             </div>
+                            {% else %}
+                              <div class="cl-description white-color">
+                              None
+                              </div>  
+                            {% endif %} 
+                     {% endcomment %}
+                          </div>
+                          <div class="product-details-col product-b-bottom white-color mar-bottom">
+                          <div class="cl-title white-color">Mics Fact</div>
+                          <div class="cl-description white-color">
+                            {% if product.metafields.custom.fact1 %}
+                            <div class="cl-description white-color">
+                              {{ product.metafields.custom.fact1 }}
+                            </div>
+                            {% else %}
+                            <div class="cl-description white-color">
+                              None
+                            </div>
+                            {% endif %}  
+                            
+                          </div>  
+                          </div>  
                         <div class="button-product margin-button-bottom"><a href="{{ product.url }}" class="button--main">View full listing</a></div>
                      </div>   
                     </div> 
