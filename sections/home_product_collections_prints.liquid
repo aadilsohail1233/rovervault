@@ -61,8 +61,8 @@
                          </div>   
                          </div>
                         
-                         {% assign truncated_title = product.title | truncate: 20, '' %}
-                          <div class="product-col-title">{{ truncated_title }}{% if product.title.size > 20 %}...{% endif %}
+                          {% assign truncated_title = product.title | truncate: 20, '' %}
+                          <div class="product-col-title">{{ truncated_title }}{% if product.title.size > 20 %}...{% endif %} </div>
                           <div class="product-details-provance product-b-top">
                               <div class="cl-title">Provenance</div>
                               <div class="cl-description">
@@ -138,7 +138,6 @@
                  </div>
                 </div>
                 </div>
-              </div>
               </div>
             {% endif %}
           {% endfor %}
