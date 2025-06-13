@@ -113,13 +113,10 @@
     },
     "product_gallery_AkUf6h": {
       "type": "product-gallery",
-      "name": "Product Gallery Grid",
       "settings": {}
     },
     "product_parts_specifications_Lt8kfw": {
       "type": "product-parts-specifications",
-      "disabled": true,
-      "name": "Parts Main Specifications",
       "settings": {
         "margin_top": 36,
         "margin_bottom": 36
@@ -127,7 +124,6 @@
     },
     "product_detail_accordion_XKBQUz": {
       "type": "product_detail_accordion",
-      "name": "Product Accordian Details",
       "settings": {}
     },
     "logo_with_text_small_P6KTnM": {
@@ -141,7 +137,6 @@
     },
     "product_parts_images_t48kn8": {
       "type": "Product_Parts_Images",
-      "name": "Parts Images",
       "settings": {}
     },
     "image_show_z4nGJG": {
@@ -175,7 +170,6 @@
     },
     "vehicle_advantages_show_9yEMAX": {
       "type": "vehicle-advantages-show",
-      "name": "Vehicle Advantages Show",
       "settings": {
         "image": "shopify://shop_images/Frame_646_b215b0f9-d7cb-4988-987a-7f965fdbc4ac.png",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
@@ -217,7 +211,6 @@
     },
     "enquire_popup_J7pjj7": {
       "type": "enquire-popup",
-      "name": "Enquire Popup",
       "settings": {
         "background_image": "shopify://shop_images/Frame_1073_1.png",
         "recipient_email": ""
