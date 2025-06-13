@@ -101,6 +101,7 @@ a.footer-page__link:hover {
 .padding-bottom-zero .prd-img {
     height: 250px;
     object-fit: cover;
+      background-color: #eae8d5;
 }
 h1.vehicle-product-title {
     font-family: 'VVDS Fifties';
