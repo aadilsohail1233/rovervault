@@ -9,7 +9,7 @@
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 .padding-bottom-zero .prd-img-others {
-    height: 350px;
+    height: 250px;
     object-fit: cover;
 }
 .space-title {
@@ -99,7 +99,7 @@ a.footer-page__link:hover {
     color: #C18A14;
 }
 .padding-bottom-zero .prd-img {
-    height: 350px;
+    height: 250px;
     object-fit: cover;
 }
 h1.vehicle-product-title {
