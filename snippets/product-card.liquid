@@ -34,7 +34,7 @@
   <div class="cl-title">Description</div>
              <div class="cl-description">
             {% if product.metafields.custom.description != blank %}
-            {{ product.metafields.custom.description | truncatewords: 20, "..." }}
+            {{ product.metafields.custom.description | truncate: 20, "..." }}
             {% else %}
             None
             {% endif %}  
@@ -43,7 +43,7 @@
   <div class="cl-title">Provenance</div>
           <div class="cl-description">
             {% if product.metafields.custom.provenance != blank %}
-            {{ product.metafields.custom.provenance | truncatewords: 20, "..." }}
+            {{ product.metafields.custom.provenance | truncate: 20, "..." }}
             {% else %}
             None
             {% endif %}  
