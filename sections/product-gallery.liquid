@@ -9,6 +9,10 @@
 }
 {% endschema %}
 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css">
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox-plus-jquery.min.js"></script>
+
 <div class="section-{{ section.id }}">
 <div class="page-width">
   
@@ -18,7 +22,9 @@
       {% for media in product.media %}
         {% if media.media_type == 'image' %}
           <div class="media-item">
-            <img src="{{ media.preview_image | img_url: '800x800' }}" alt="{{ media.alt | escape }}">
+            <a href="{{ media.preview_image | img_url:'master' }}" data-lightbox="product-gallery">
+              <img src="{{ media.preview_image | img_url:'800x800' }}" alt="{{ media.alt | escape }}"> 
+            </a>
           </div>
         {% endif %}
       {% endfor %}
