@@ -85,22 +85,38 @@
           {% endif %} 
         {% endif %}
 
-        {% if product.variants.size > 1 %}
-          <h4>Variants</h4>
-          {% for option in product.options %}
-            <strong>Filter by {{ option.name | downcase }}:</strong> 
-            {% for value in option.values %}
-              <span>{{ value }}</span> 
-            {% endfor %}
-            <br>
-          {% endfor %}
+{% if product.variants.size > 1 %}
+  <h4>Variants</h4>
 
-          <ul>
-            {% for variant in product.variants %}
-              <li>{{ variant.title }} — {{ variant.price | money }}</li>
-            {% endfor %}
-          </ul>
-        {% endif %}
+  {% for option in product.options %}
+    {% if option.name == "Color" %}
+      <div class="color-swatches">
+        <strong>{{ option.name | escape }}</strong>:
+        {% for value in option.values %}
+          {% assign color = value | downcase | handleize %}
+          <span 
+            class="color-swatch" 
+            style="background-color: {{ color }};" 
+            title="{{ value | escape }}"
+          ></span>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if option.name == "Size" %}
+      <div class="size-chips">
+        <strong>{{ option.name | escape }}</strong>:
+        {% for value in option.values %}
+          <span class="size-chip">
+            {{ value | escape }}
+          </span>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endfor %}
+
+{% endif %}
+
 
         <div class="single-price">
           {% if product.price %}
