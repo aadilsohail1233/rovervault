@@ -97,7 +97,7 @@
             class="color-swatch" 
             style="background-color: {{ value | handleize }}"
             title="{{ value | escape }}"
-          ></span>
+          >{{ value | escape }}</span>
         {% elsif option.name == "Size" %}
           <span class="size-chip">
             {{ value | escape }}
