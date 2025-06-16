@@ -95,7 +95,6 @@
         {% if option.name == "Color" %}
           <span 
             class="color-swatch" 
-            style="background-color: {{ value | handleize }}"
             title="{{ value | escape }}"
           >{{ value | escape }}</span>
         {% elsif option.name == "Size" %}
