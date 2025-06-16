@@ -88,35 +88,26 @@
 {% if product.variants.size > 1 %}
   <h4>Variants</h4>
 
-  {% for option in product.options %}
-    {% if option.name == "Color" %}
-      <div class="color-swatches">
-        <strong>{{ option.name | escape }}</strong>:
-        {% for value in option.values %}
-          {% assign color = value | downcase | handleize %}
+  {% for option in product.options_with_values %}
+    <div class="option-group">
+      <strong>{{ option.name | escape }}</strong>:
+      {% for value in option.values %}
+        {% if option.name == "Color" %}
           <span 
             class="color-swatch" 
-            style="background-color: {{ color }};" 
+            style="background-color: {{ value | handleize }}"
             title="{{ value | escape }}"
           ></span>
-        {% endfor %}
-      </div>
-    {% endif %}
-
-    {% if option.name == "Size" %}
-      <div class="size-chips">
-        <strong>{{ option.name | escape }}</strong>:
-        {% for value in option.values %}
+        {% elsif option.name == "Size" %}
           <span class="size-chip">
             {{ value | escape }}
           </span>
-        {% endfor %}
-      </div>
-    {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
   {% endfor %}
-
-{% endif %}
-
+  
+ {% endif %}
 
         <div class="single-price">
           {% if product.price %}
