@@ -85,8 +85,9 @@
           {% endif %} 
         {% endif %}
 
+        
 {% if product.variants.size > 1 %}
-  <h4>Variants</h4>
+ <div class="accordion-header"> <strong>Variants</strong></div>
 
 
   {% for option in product.options_with_values %}
