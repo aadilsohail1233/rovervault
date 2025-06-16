@@ -4,7 +4,7 @@
   "settings": [],
   "presets": [
     {
-      "name": "Product Accordian Details",
+      "name": "Product Accordian Details"
     }
   ]
 }
@@ -50,7 +50,6 @@
   font-size: 20px;
 }
 
-
 .custom-accordion.open .accordion-content {
   display: block;
 }
@@ -59,61 +58,77 @@
   transform: rotate(180deg);
 }
 </style>
-<div class="section-{{ section.id }}">
-  <div class="page-width">
-<div class="custom-accordion open">
-  <div class="accordion-header">
-    {% if collection.title == "Parts" or collection.title == "Drip" %}
-    <strong>DESCRIPTION</strong>    
-      {% else %}
-    <strong>PROVENANCE</strong> 
-     {% endif %} 
-    
-  <!--  <span class="accordion-toggle">&#x25BC;</span>-->
-  </div>
-  <div class="accordion-content">
-    {% if collection.title == "Parts" or collection.title == "Drip" %} 
-                {% if product.metafields.custom.description != blank %}
-            {{ product.metafields.custom.description}}
-            {% else %}
-            None
-            {% endif %} 
-      {% else %}
-      {% if product.metafields.custom.provenance != blank %}
-            {{ product.metafields.custom.provenance }}
-            {% else %}
-            None
-            {% endif %} 
-     {% endif %} 
-    
 
-    <div class="single-price">
-        {% if product.price %}
+<div class="section-{{ section.id }}">  
+  <div class="page-width">
+    <div class="custom-accordion open">
+      <div class="accordion-header">
+        {% if collection.title == "Parts" or collection.title == "Drip" %}
+          <strong>DESCRIPTION</strong>    
+        {% else %}
+          <strong>PROVENANCE</strong> 
+        {% endif %} 
+      </div>
+
+      <div class="accordion-content">
+        {% if collection.title == "Parts" or collection.title == "Drip" %} 
+          {% if product.metafields.custom.description != blank %}
+            {{ product.metafields.custom.description}}
+          {% else %}
+            None
+          {% endif %} 
+        {% else %}
+          {% if product.metafields.custom.provenance != blank %}
+            {{ product.metafields.custom.provenance }}
+          {% else %}
+            None
+          {% endif %} 
+        {% endif %}
+
+        {% if product.variants.size > 1 %}
+          <h4>Variants</h4>
+          {% for option in product.options %}
+            <strong>Filter by {{ option.name | downcase }}:</strong> 
+            {% for value in option.values %}
+              <span>{{ value }}</span> 
+            {% endfor %}
+            <br>
+          {% endfor %}
+
+          <ul>
+            {% for variant in product.variants %}
+              <li>{{ variant.title }} — {{ variant.price | money }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        <div class="single-price">
+          {% if product.price %}
             <div>{{ product.price | money }}</div>
           {% else %}
             <div></div>
           {% endif %}
-      
-    </div>
-   <div class="single-product-cart">
-    <form method="post" action="/cart/add">
-      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-      <button type="submit" class="button--main">Add to cart</button>
-    </form>
-   </div>
-  </div>
-</div>
-  </div>
-</div>
+        </div>
+
+        <div class="single-product-cart">
+          <form method="post" action="/cart/add">
+            <input type="hidden" name="id" value="{{ product.variants.first.id }}"> 
+            <button type="submit" class="button--main">Add to Cart</button>
+          </form>
+        </div>
+
+      </div><!-- .accordion-content -->
+    </div><!-- .custom-accordion -->
+  </div><!-- .page-width -->
+</div><!-- section -->
+
 <script>
- /* document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.custom-accordion').forEach(accordion => {
-      accordion.addEventListener('click', () => {
-        accordion.classList.toggle('open');
-      });
-    });
-  }); */
+  // Uncomment if you want the accordion to be collapsible
+  // document.addEventListener('DOMContentLoaded', function() {
+  //   document.querySelectorAll('.custom-accordion').forEach(accordion => {
+  //     accordion.addEventListener('click', () => {
+  //       accordion.classList.toggle('open');
+  //     });
+  //   });
+  // });
 </script>
-
-
-
