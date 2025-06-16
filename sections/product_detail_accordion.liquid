@@ -128,44 +128,44 @@
   </div><!-- .page-width -->
 </div><!-- section -->
 <script>
-  document.addEventListener('DOMContentLoaded', function(){
-    // Store variants for later
-    var variants = {{ product.variants | json }};
+document.addEventListener('DOMContentLoaded', function(){
+  var variants = {{ product.variants | json }};
 
-    document.querySelectorAll('.variant-item').forEach(function(el) {
-      el.addEventListener('click', function(){
-        // Remove selected class within this option group
-        var group = el.closest('.option-group');
-        group.querySelectorAll('.variant-item.selected').forEach(function(el) {
-          el.classList.remove('selected'); 
-        });
-
-        // Highlight this
-        el.classList.add('selected'); 
-
-
-        // Update variantId to match this selection
-        var selectedOptions = {};
-
-        document.querySelectorAll('.variant-item.selected').forEach(function(el) {
-          var optionName = el.dataset.optionName;
-          var optionValue = el.dataset.optionValue;
-          selectedOptions[optionName] = optionValue;
-        });
-
-        // Find matching variant
-        var matching = variants.find(function(variant) {
-          return variant.options.every(function(el, idx) {
-            return variant.options[idx] == selectedOptions[Object.keys(selectedOptions)[idx]];
-          });
-        });
-
-        if (matching) {
-          document.querySelector("#selected-variant-id").value = matching.id;
-        }
+  document.querySelectorAll('.variant-item').forEach(function(el) {
+    el.addEventListener('click', function(){
+      // Remove selected class within this option group
+      var group = el.closest('.option-group');
+      group.querySelectorAll('.variant-item.selected').forEach(function(el) {
+        el.classList.remove('selected'); 
       });
+
+      // Highlight this
+      el.classList.add('selected'); 
+
+
+      // Update variantId to match this selection
+      var selectedOptions = {};
+
+      document.querySelectorAll('.variant-item.selected').forEach(function(el) {
+        var optionName = el.dataset.optionName;
+        var optionValue = el.dataset.optionValue;
+        selectedOptions[optionName] = optionValue;
+      });
+
+      // Find matching variant
+      var matching = variants.find(function(variant) {
+        return variant.options.every(function(el, idx) {
+          return variant.options[idx] == selectedOptions[Object.keys(selectedOptions)[idx]];
+        });
+      });
+
+      if (matching) {
+        document.querySelector("#selected-variant-id").value = matching.id;
+      }
     });
   });
+});
+
 </script>
 
 <style>
