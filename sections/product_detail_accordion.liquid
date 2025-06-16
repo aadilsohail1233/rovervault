@@ -88,20 +88,18 @@
 {% if product.variants.size > 1 %}
   <h4>Variants</h4>
 
+
   {% for option in product.options_with_values %}
     <div class="option-group">
       <strong>{{ option.name | escape }}</strong>:
       {% for value in option.values %}
-        {% if option.name == "Color" %}
-          <span 
-            class="color-swatch" 
-            title="{{ value | escape }}"
-          >{{ value | escape }}</span>
-        {% elsif option.name == "Size" %}
-          <span class="size-chip">
-            {{ value | escape }}
-          </span>
-        {% endif %}
+        <span 
+          class="variant-item {% if forloop.first %}selected{% endif %}" 
+          data-option-name="{{ option.name | escape }}"
+          data-option-value="{{ value | escape }}"
+        >
+          {{ value | escape }}
+        </span>
       {% endfor %}
     </div>
   {% endfor %}
