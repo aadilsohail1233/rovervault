@@ -127,7 +127,64 @@
     </div><!-- .custom-accordion -->
   </div><!-- .page-width -->
 </div><!-- section -->
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+    // Store variants for later
+    var variants = {{ product.variants | json }};
 
+    document.querySelectorAll('.variant-item').forEach(function(el) {
+      el.addEventListener('click', function(){
+        // Remove selected class
+        document.querySelectorAll('.variant-item.selected').forEach(function(el) {
+          el.classList.remove('selected'); 
+        });
+
+        // Highlight this
+        el.classList.add('selected'); 
+
+
+        // Update variantId to match this selection
+        var selectedOptions = {};
+
+        document.querySelectorAll('.variant-item.selected').forEach(function(el) {
+          var optionName = el.dataset.optionName;
+          var optionValue = el.dataset.optionValue;
+          selectedOptions[optionName] = optionValue;
+        });
+
+        // Find matching variant
+        var matching = variants.find(function(variant) {
+          return variant.options.every(function(el, idx) {
+            return variant.options[idx] == selectedOptions[Object.keys(selectedOptions)[idx]];
+          });
+        });
+
+        if (matching) {
+          document.querySelector("#selected-variant-id").value = matching.id;
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .variant-item {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    cursor: pointer;
+    display: inline-block;
+    background: #f5f5f5;
+    transition: background 0.3s ease;
+  }
+  
+  .variant-item.selected {
+    background: #cbd2b5;
+    color: #50793a;
+    border-color: #50793a;
+    font-weight: bold;
+  }
+</style>
 <script>
   // Uncomment if you want the accordion to be collapsible
   // document.addEventListener('DOMContentLoaded', function() {
