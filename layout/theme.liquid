@@ -304,7 +304,25 @@
     </script>
   </head>
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
-    <div id="intro-video-wrapper" style="position: fixed; z-index: 9999; width: 100%; height: 100%; background: black; top: 0; left: 0;">
+<style>
+  #intro-video-wrapper {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: black;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+  }
+
+  #intro-video-wrapper.fade-out {
+    opacity: 0;
+  }
+</style>
+
+<div id="intro-video-wrapper">
   <video id="intro-video" autoplay muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
     <source src="https://cdn.shopify.com/videos/c/o/v/c9926d6b52d5452b8ea3028500e0ba9f.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -316,12 +334,18 @@
     var video = document.getElementById('intro-video');
     var wrapper = document.getElementById('intro-video-wrapper');
 
-    // When video ends, hide it
     video.addEventListener('ended', function () {
-      wrapper.style.display = 'none';
+      // Trigger fade-out
+      wrapper.classList.add('fade-out');
+
+      // Then remove the wrapper from view after the fade (1s delay)
+      setTimeout(function () {
+        wrapper.style.display = 'none';
+      }, 1000); // Match the transition duration
     });
   });
 </script>
+
 
     
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
