@@ -304,7 +304,10 @@
     </script>
   </head>
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
-<style>
+
+    
+  {% comment %}  
+    <style>
   #intro-video-wrapper {
     position: fixed;
     z-index: 9999;
@@ -346,7 +349,7 @@
   });
 </script>
 
-
+{% endcomment %}
     
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
