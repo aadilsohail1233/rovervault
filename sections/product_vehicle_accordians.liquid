@@ -78,7 +78,11 @@
       
     </div>
    <div class="single-product-cart">
-   <button type="submit" class="button--main open-enquire-popup">Enquire</button>
+  {% if product.collections contains 'vehicles' or product.collections contains 'Vehicles' %}
+    <a href="https://www.classic.com/a/hemmings-auctions-JWbQXnK/" class="button--main" target="_blank">Buy on Hemmings</a>
+  {% else %}
+    <button type="submit" class="button--main open-enquire-popup">Enquire</button>
+  {% endif %}
    </div>
   </div>
 </div>
