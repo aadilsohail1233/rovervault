@@ -4502,6 +4502,7 @@ font-family: 'Eczar';
   span.carts12 {
     height: 44px !important;
     margin-top: 0px;
+      display:flex;
   }
   
   header-drawer{
