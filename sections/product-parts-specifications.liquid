@@ -43,8 +43,8 @@
     <div class="vehicles-main-specifications-wrapper">
       <div class="vehicles-main__specification">
         <div class="vehicles-main__specification-title font-vvds font-vvds">
-          {% if product.custom.fact1_title %}
-            <div>{{ product.custom.fact1_title.value }}</div>
+          {% if product.metafields.custom.fact1_title %}
+            <div>{{ product.metafields.custom.fact1_title.value }}</div>
           {% else %}
             <div></div>
           {% endif %} 
