@@ -61,7 +61,7 @@
   }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-margin gradient color-{{ section.settings.section_color_scheme }} {% unless section.settings.mobile_text_image %} emptyonmobile{% endunless %}">
+<div id="{{ section.id }}" class="section-{{ section.id }}-margin gradient color-{{ section.settings.section_color_scheme }} {% unless section.settings.mobile_text_image %} emptyonmobile{% endunless %}">
   <div class="page-width">
     <div class="logo-with-text-wrapper">
       <div class="logo-with-text-images{% if section.settings.layout_direction == 'logo-left' %} layoutorders2{% endif %}">
