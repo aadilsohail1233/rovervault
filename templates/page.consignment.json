@@ -38,11 +38,19 @@
         "margin_bottom": 36,
         "layout_direction": "text-left"
       }
+    },
+    "vehicle_consignment_form_XP77Xi": {
+      "type": "vehicle-consignment-form",
+      "name": "Vehicle Consignment",
+      "settings": {
+        "banner_image": "shopify://shop_images/Frame_701.png"
+      }
     }
   },
   "order": [
     "main",
     "home_hero_Y6BCjL",
-    "logo_with_text_UB86kD"
+    "logo_with_text_UB86kD",
+    "vehicle_consignment_form_XP77Xi"
   ]
 }
