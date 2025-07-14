@@ -12,6 +12,11 @@
     height: 250px;
     object-fit: cover;
 }
+section.forms_consigment {
+    border-top: 5px solid #6B8D50;
+    padding: 50px 0px;
+    border-bottom: 5px solid #6B8D50;
+}
 .space-title {
     margin-bottom: 20px;
 }
