@@ -16,6 +16,32 @@
     font-size: 24px;
     color: #6B8D50;
 }
+.forms_consigment input::placeholder,
+.forms_consigment textarea::placeholder {
+  color: #6B8D50;                  
+  font-family: Eczar;
+  font-size: 20px;         
+  letter-spacing: 0.2px;          
+}
+
+.forms_consigment input::-webkit-input-placeholder,
+.forms_consigment textarea::-webkit-input-placeholder {
+  color: #6B8D50;
+  font-family: Eczar;
+}
+
+.forms_consigment input::-moz-placeholder,
+.forms_consigment textarea::-moz-placeholder {
+  color: #6B8D50;
+  font-family: "Inter", sans-serif;
+  opacity: 1;
+}
+
+.forms_consigment input:-ms-input-placeholder,
+.forms_consigment textarea:-ms-input-placeholder {
+  color: #6B8D50;
+  font-family: Eczar;
+}
 .forms_consigment .page-width {
     border-top: 5px solid #6B8D50;
     padding: 50px 0px;
