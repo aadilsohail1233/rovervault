@@ -12,6 +12,9 @@
     height: 250px;
     object-fit: cover;
 }
+section.faq-accordion-section {
+    padding: 50px 0px;
+}
 .forms_consigment label {
     font-size: 24px;
     color: #6B8D50;
