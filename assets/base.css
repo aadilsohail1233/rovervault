@@ -12,11 +12,9 @@
     height: 250px;
     object-fit: cover;
 }
-section.faq-accordion-section {
-    padding: 50px 0px;
-}
 
 .faq-accordion-section .page-width {
+    padding: 50px 0px;
     border-bottom:5px solid #6B8D50;
 }
 .forms_consigment label {
