@@ -15,6 +15,10 @@
 section.faq-accordion-section {
     padding: 50px 0px;
 }
+
+.faq-accordion-section .page-width {
+    border-bottom:5px solid #6B8D50;
+}
 .forms_consigment label {
     font-size: 24px;
     color: #6B8D50;
