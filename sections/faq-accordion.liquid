@@ -13,7 +13,7 @@
     {% for block in section.blocks %}
       <div class="faq-item{% if forloop.first %} open{% endif %}" {{ block.shopify_attributes }}>
         <button type="button" class="faq-question">
-          <span>{{ block.settings.question }}</span>
+          <span class="font-vvds">{{ block.settings.question }}</span>
           <svg class="faq-caret" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
             <path d="M2 5l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill="none"></path>
           </svg>
