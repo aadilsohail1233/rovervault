@@ -39,6 +39,16 @@
         "layout_direction": "text-left"
       }
     },
+    "two_images_section_YghQpr": {
+      "type": "Two_images_section",
+      "name": "Two Images Section",
+      "settings": {
+        "image": "shopify://shop_images/Frame_630.png",
+        "second-image": "shopify://shop_images/AdobeStock_231541369_1.png",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
     "vehicle_consignment_form_XP77Xi": {
       "type": "vehicle-consignment-form",
       "name": "Vehicle Consignment",
@@ -51,6 +61,7 @@
     "main",
     "home_hero_Y6BCjL",
     "logo_with_text_UB86kD",
+    "two_images_section_YghQpr",
     "vehicle_consignment_form_XP77Xi"
   ]
 }
