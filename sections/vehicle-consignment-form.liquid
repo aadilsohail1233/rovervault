@@ -1,7 +1,6 @@
 <!-- vehicle-consignment-form.liquid -->
 <style>
-
-/* --- vehicle‑consignment‑dropzone --- */
+/* ---------- vehicle‑consignment‑dropzone ---------- */
 .file-drop-area{
   position:relative;
   display:flex;
@@ -17,22 +16,19 @@
   transition:border-color .2s ease-in-out, background .2s;
   margin-bottom:20px;
 }
-  #fileList{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-  }
-  /* inside your existing drop‑zone CSS file */
-.dz-icon{
-  width:40px;          /* match the svg size you had */
-  height:auto;
-  pointer-events:none; /* keeps the drop‑zone clickable */
+#fileList{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:2rem;
 }
-
+.dz-icon{
+  width:40px;
+  height:auto;
+  pointer-events:none;
+}
 .file-drop-area:hover{
   border-color:#6b8d50;
-  background:transparent;
 }
 .file-drop-area svg{ pointer-events:none; }
 .dz-text{ margin:0; text-align:center; color:#3b5e2b; font-size:.9rem; line-height:1.3; }
@@ -40,24 +36,24 @@
 #fileElem{ position:absolute; inset:0; opacity:0; cursor:pointer; }
 #fileList{ list-style:none; margin:8px 0 0; padding:0; font-size:.85rem; }
 #fileList li{ margin-bottom:4px; }
-
-  
 </style>
+
 <section class="forms_consigment">
   <div class="page-width">
 
-    <div style="text-align: center;">
-      {% if section.settings.banner_image != blank %}
-        <img src="{{ section.settings.banner_image | image_url }}" alt="Banner" style="width:100%; height:auto;">
-      {% endif %}
-    </div>
+    {% if section.settings.banner_image != blank %}
+      <img src="{{ section.settings.banner_image | image_url }}" alt="Banner" style="width:100%; height:auto;">
+    {% endif %}
 
-    <form method="POST" action="https://formsubmit.co/mohsinpervaiz39@gmail.com" enctype="multipart/form-data">
+    <!-- ⚠️  ONE‑image version (FormSubmit free tier) -->
+    <form method="POST"
+          action="https://formsubmit.co/mohsinpervaiz39@gmail.com"
+          enctype="multipart/form-data">
       <input type="hidden" name="_subject" value="New Vehicle Consignment Submission">
-      <input type="hidden" name="_captcha" value="false">
 
-      <label class="font-vvds">Vehicle Year & Model</label>
-      <input type="text" name="Vehicle Model" required class="fields-inputss" placeholder="e.g. 2021 Range Rover Autobiography">
+      <label class="font-vvds">Vehicle Year &amp; Model</label>
+      <input type="text" name="Vehicle Model" required class="fields-inputss"
+             placeholder="e.g. 2021 Range Rover Autobiography">
 
       <label class="font-vvds">Condition</label>
       <select name="Condition" required class="fields-inputss">
@@ -68,57 +64,59 @@
       </select>
 
       <label class="font-vvds">Location</label>
-      <input type="text" name="Location" required class="fields-inputss" placeholder="Vancouver, BC, Canada">
+      <input type="text" name="Location" required class="fields-inputss"
+             placeholder="Vancouver, BC, Canada">
 
       <label class="font-vvds">Modifications / Upgrades (if any)</label>
-      <input type="text" name="Modifications" class="fields-inputss" placeholder="Vancouver, BC, Canada">
+      <input type="text" name="Modifications" class="fields-inputss"
+             placeholder="OEM wheels, tuned exhaust …">
 
       <label class="font-vvds">Asking Price</label>
       <input type="text" name="Price" class="fields-inputss" placeholder="e.g. $98,500 CAD">
 
-{%- comment -%} OLD single‑file input you can delete
-<label class="font-vvds">Upload Photos</label>
-<input type="file" name="attachment" accept="image/*" class="fields-inputss">
-{%- endcomment -%}
+      <!-- ─── Upload Photo (single) ─── -->
+      <label class="font-vvds">Upload Photo</label>
 
-<!-- NEW multi‑file drop‑zone -->
-<label class="font-vvds">Upload Photos</label>
+      <div id="drop-area" class="file-drop-area">
+        <img src="https://cdn.shopify.com/s/files/1/0734/2859/9022/files/Frame_710.png"
+             alt="Upload icon"
+             class="dz-icon">
+        <p class="dz-text">
+          <strong>Drop an image here, or <span class="dz-browse">browse</span></strong><br>
+          <small>PNG / JPG up to 5 MB</small>
+        </p>
+        <!-- single file only -->
+        <input id="fileElem"
+               type="file"
+               name="attachment"
+               accept="image/png, image/jpeg">
+      </div>
 
-<div id="drop-area" class="file-drop-area">
-   <img
-  src="https://cdn.shopify.com/s/files/1/0734/2859/9022/files/Frame_710.png"
-  alt="Upload icon"
-  class="dz-icon">
-
-  <p class="dz-text">
-    <strong>Drop your images here, or <span class="dz-browse">browse</span></strong><br>
-    <small>Supports: PNG, JPG, JPEG — max 5 images</small>
-  </p>
-
-  <!-- hidden input; “attachments[]” enables multiple files with formsubmit.co -->
-  <input id="fileElem" type="file" name="attachments[]" accept="image/png, image/jpeg" multiple>
-</div>
-
-<!-- where we’ll list chosen files -->
-<ul id="fileList"></ul>
-
+      <ul id="fileList"></ul>
 
       <label class="font-vvds">Provenance</label>
-      <input type="text" name="Provenance" class="fields-inputss" placeholder="e.g. Original Canadian spec, one-owner, dealer-serviced, low mileage">
+      <input type="text" name="Provenance" class="fields-inputss"
+             placeholder="Original Canadian spec, one‑owner …">
 
       <label class="font-vvds">Misc</label>
-      <input type="text" name="Misc" class="fields-inputss" placeholder="Mention anything noteworthy—winter package, limited edition, or rare colour">
+      <input type="text" name="Misc" class="fields-inputss"
+             placeholder="Winter package, limited edition, rare colour …">
 
       <label class="font-vvds">Your Name</label>
-      <input type="text" name="Name" required class="fields-inputss" placeholder="e.g. Daniel Thompson">
+      <input type="text" name="Name" required class="fields-inputss"
+             placeholder="e.g. Daniel Thompson">
 
       <label class="font-vvds">Email</label>
-      <input type="email" name="Email" required class="fields-inputss" placeholder="e.g. daniel.thompson@email.com">
+      <input type="email" name="Email" required class="fields-inputss"
+             placeholder="e.g. daniel.thompson@email.com">
 
       <label class="font-vvds">Phone</label>
-      <input type="text" name="Phone" class="fields-inputss" placeholder="e.g. +1 (416) 555-0132">
+      <input type="text" name="Phone" class="fields-inputss"
+             placeholder="e.g. +1 (416) 555‑0132">
 
-      <button type="submit" style="background-color: #3b5e2b; color: white; padding: 12px 20px; border: none; font-size: 16px; width: 100%; cursor: pointer;">
+      <button type="submit"
+              style="background:#3b5e2b; color:#fff; padding:12px 20px; border:none;
+                     font-size:16px; width:100%; cursor:pointer;">
         Send for Review
       </button>
     </form>
@@ -126,14 +124,16 @@
   </div>
 </section>
 
-        <script>
+<script>
 (function(){
   const fileInput  = document.getElementById('fileElem');
   const fileList   = document.getElementById('fileList');
-  const MAX_FILES  = 5;
+  const MAX_FILES  = 1;          // FormSubmit = 1 file
+  const MAX_SIZE   = 5 * 1024**2; // 5 MB
 
-  // highlight drop‑zone on drag‑over
   const dropArea = document.getElementById('drop-area');
+
+  // highlight on drag
   ['dragenter','dragover'].forEach(evt =>
     dropArea.addEventListener(evt, e => {
       e.preventDefault(); e.stopPropagation();
@@ -147,31 +147,35 @@
     })
   );
 
-  // handle dropped files
+  // dropped files
   dropArea.addEventListener('drop', e => {
-    if (e.dataTransfer.files) {
-      fileInput.files = e.dataTransfer.files;
-      updateList();
+    if (!e.dataTransfer.files) return;
+    if (e.dataTransfer.files.length > MAX_FILES){
+      alert(`Form allows only ${MAX_FILES} image.`);
+      return;
     }
+    const file = e.dataTransfer.files[0];
+    if (file.size > MAX_SIZE){
+      alert('Image must be 5 MB or less.');
+      return;
+    }
+    fileInput.files = e.dataTransfer.files;
+    updateList();
   });
 
-  // handle manual browse selection
+  // manual browse
   fileInput.addEventListener('change', updateList);
 
   function updateList(){
     const files = Array.from(fileInput.files);
-    if (files.length > MAX_FILES){
-      alert(`Please select up to ${MAX_FILES} images.`);
-      fileInput.value = '';                 // reset
+    if (files.length === 0){
       fileList.innerHTML = '';
       return;
     }
-    // show filenames
-    fileList.innerHTML = files.map(f => `<li>${f.name}</li>`).join('');
+    fileList.innerHTML = `<li>${files[0].name}</li>`;
   }
 })();
 </script>
-
 
 {% schema %}
 {
