@@ -1,5 +1,34 @@
 <!-- vehicle-consignment-form.liquid -->
+<style>
 
+/* --- vehicle‑consignment‑dropzone --- */
+.file-drop-area{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:32px 16px;
+  border:2px dashed #3b5e2b;
+  border-radius:4px;
+  background:#f3f2e9;
+  cursor:pointer;
+  transition:border-color .2s ease-in-out, background .2s;
+}
+.file-drop-area:hover{
+  border-color:#2e4c21;
+  background:#f7f6f1;
+}
+.file-drop-area svg{ pointer-events:none; }
+.dz-text{ margin:0; text-align:center; color:#3b5e2b; font-size:.9rem; line-height:1.3; }
+.dz-browse{ text-decoration:underline; }
+#fileElem{ position:absolute; inset:0; opacity:0; cursor:pointer; }
+#fileList{ list-style:none; margin:8px 0 0; padding:0; font-size:.85rem; }
+#fileList li{ margin-bottom:4px; }
+
+  
+</style>
 <section class="forms_consigment">
   <div class="page-width">
 
@@ -33,8 +62,32 @@
       <label class="font-vvds">Asking Price</label>
       <input type="text" name="Price" class="fields-inputss" placeholder="e.g. $98,500 CAD">
 
-      <label class="font-vvds">Upload Photos</label>
-      <input type="file" name="attachment" accept="image/*" class="fields-inputss">
+{%- comment -%} OLD single‑file input you can delete
+<label class="font-vvds">Upload Photos</label>
+<input type="file" name="attachment" accept="image/*" class="fields-inputss">
+{%- endcomment -%}
+
+<!-- NEW multi‑file drop‑zone -->
+<label class="font-vvds">Upload Photos</label>
+
+<div id="drop-area" class="file-drop-area">
+  <svg width="40" viewBox="0 0 24 24" aria-hidden="true">
+    <path fill="#3b5e2b" d="M12 3L2 9v12h20V9L12 3zm8 16H4v-8l8-5 8 5v8z"/>
+    <circle fill="#3b5e2b" cx="12" cy="13" r="3"/>
+  </svg>
+
+  <p class="dz-text">
+    <strong>Drop your images here, or <span class="dz-browse">browse</span></strong><br>
+    <small>Supports: PNG, JPG, JPEG — max 5 images</small>
+  </p>
+
+  <!-- hidden input; “attachments[]” enables multiple files with formsubmit.co -->
+  <input id="fileElem" type="file" name="attachments[]" accept="image/png, image/jpeg" multiple>
+</div>
+
+<!-- where we’ll list chosen files -->
+<ul id="fileList"></ul>
+
 
       <label class="font-vvds">Provenance</label>
       <input type="text" name="Provenance" class="fields-inputss" placeholder="e.g. Original Canadian spec, one-owner, dealer-serviced, low mileage">
