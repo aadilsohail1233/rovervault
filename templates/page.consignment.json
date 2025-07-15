@@ -55,6 +55,41 @@
       "settings": {
         "banner_image": "shopify://shop_images/Frame_701.png"
       }
+    },
+    "faq_accordion_JC8g79": {
+      "type": "faq-accordion",
+      "blocks": {
+        "faq_jJDVjN": {
+          "type": "faq",
+          "settings": {
+            "question": "How much does it cost?",
+            "answer": "We operate on a simple commission structure—no upfront fees."
+          }
+        },
+        "faq_BD8awA": {
+          "type": "faq",
+          "settings": {
+            "question": "How much does it cost?",
+            "answer": "We operate on a simple commission structure—no upfront fees."
+          }
+        },
+        "faq_haeREL": {
+          "type": "faq",
+          "settings": {
+            "question": "How much does it cost?",
+            "answer": "We operate on a simple commission structure—no upfront fees."
+          }
+        }
+      },
+      "block_order": [
+        "faq_jJDVjN",
+        "faq_BD8awA",
+        "faq_haeREL"
+      ],
+      "name": "FAQ Accordion",
+      "settings": {
+        "section_heading": "COMMON QUESTIONS"
+      }
     }
   },
   "order": [
@@ -62,6 +97,7 @@
     "home_hero_Y6BCjL",
     "logo_with_text_UB86kD",
     "two_images_section_YghQpr",
-    "vehicle_consignment_form_XP77Xi"
+    "vehicle_consignment_form_XP77Xi",
+    "faq_accordion_JC8g79"
   ]
 }
