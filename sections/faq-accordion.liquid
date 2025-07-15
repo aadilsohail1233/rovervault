@@ -1,6 +1,146 @@
+{% comment %}
+  FAQ Accordion Section
+  Drop this file into your theme's /sections directory, then add the section in the theme editor.  
+{% endcomment %}
+
+<section class="faq-accordion-section">
+  <div class="faq-accordion-wrapper" id="faq-accordion-{{ section.id }}">
+    {% if section.settings.section_heading != blank %}
+      <h2 class="faq-header">{{ section.settings.section_heading }}</h2>
+    {% endif %}
+
+    {% for block in section.blocks %}
+      <div class="faq-item{% if forloop.first %} open{% endif %}" {{ block.shopify_attributes }}>
+        <button type="button" class="faq-question">
+          <span>{{ block.settings.question }}</span>
+          <svg class="faq-caret" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M2 5l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill="none"></path>
+          </svg>
+        </button>
+        <div class="faq-answer rte">
+          {{ block.settings.answer }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+.faq-accordion-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.faq-header {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: .05em;
+  color: #5d8344; /* green */
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+.faq-item {
+  border: 2px solid #5d8344;
+  border-radius: 4px;
+  margin-bottom: .75rem;
+  overflow: hidden;
+  background: #fff;
+}
+.faq-question {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .75rem 1rem;
+  background: none;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #2d2d2d;
+}
+.faq-question span {
+  text-align: left;
+}
+.faq-question:focus {
+  outline: 0;
+}
+.faq-caret {
+  transition: transform .3s ease;
+  stroke: #5d8344;
+}
+.faq-item.open .faq-caret {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  max-height: 0;
+  opacity: 0;
+  transition: all .3s ease;
+  padding: 0 1rem;
+}
+.faq-item.open .faq-answer {
+  max-height: 1000px;
+  opacity: 1;
+  padding: .75rem 1rem 1rem;
+}
+</style>
+
+<script>
+  (function() {
+    const container = document.getElementById('faq-accordion-{{ section.id }}');
+    if (!container) return;
+    container.querySelectorAll('.faq-item').forEach(item => {
+      const trigger = item.querySelector('.faq-question');
+      trigger.addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+  })();
+</script>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "FAQ Accordion",
+  "tag": "section",
+  "class": "shopify-section--faq-accordion",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Heading",
+      "default": "COMMON QUESTIONS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "How much does it cost?"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer",
+          "default": "We operate on a simple commission structure—no upfront fees."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "FAQ Accordion",
+      "blocks": [
+        { "type": "faq" },
+        { "type": "faq" },
+        { "type": "faq" }
+      ]
+    }
+  ]
+}
 {% endschema %}
