@@ -16,6 +16,13 @@
   cursor:pointer;
   transition:border-color .2s ease-in-out, background .2s;
 }
+  /* inside your existing drop‑zone CSS file */
+.dz-icon{
+  width:40px;          /* match the svg size you had */
+  height:auto;
+  pointer-events:none; /* keeps the drop‑zone clickable */
+}
+
 .file-drop-area:hover{
   border-color:#2e4c21;
   background:#f7f6f1;
@@ -71,10 +78,10 @@
 <label class="font-vvds">Upload Photos</label>
 
 <div id="drop-area" class="file-drop-area">
-  <svg width="40" viewBox="0 0 24 24" aria-hidden="true">
-    <path fill="#3b5e2b" d="M12 3L2 9v12h20V9L12 3zm8 16H4v-8l8-5 8 5v8z"/>
-    <circle fill="#3b5e2b" cx="12" cy="13" r="3"/>
-  </svg>
+   <img
+  src="{{ 'upload-icon.png' | asset_url }}"
+  alt="Upload icon"
+  class="dz-icon">
 
   <p class="dz-text">
     <strong>Drop your images here, or <span class="dz-browse">browse</span></strong><br>
