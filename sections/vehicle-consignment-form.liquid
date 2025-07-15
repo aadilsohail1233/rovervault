@@ -112,6 +112,55 @@
   </div>
 </section>
 
+      <script>
+        <script>
+(function(){
+  const fileInput  = document.getElementById('fileElem');
+  const fileList   = document.getElementById('fileList');
+  const MAX_FILES  = 5;
+
+  // highlight drop‑zone on drag‑over
+  const dropArea = document.getElementById('drop-area');
+  ['dragenter','dragover'].forEach(evt =>
+    dropArea.addEventListener(evt, e => {
+      e.preventDefault(); e.stopPropagation();
+      dropArea.classList.add('hover');
+    })
+  );
+  ['dragleave','drop'].forEach(evt =>
+    dropArea.addEventListener(evt, e => {
+      e.preventDefault(); e.stopPropagation();
+      dropArea.classList.remove('hover');
+    })
+  );
+
+  // handle dropped files
+  dropArea.addEventListener('drop', e => {
+    if (e.dataTransfer.files) {
+      fileInput.files = e.dataTransfer.files;
+      updateList();
+    }
+  });
+
+  // handle manual browse selection
+  fileInput.addEventListener('change', updateList);
+
+  function updateList(){
+    const files = Array.from(fileInput.files);
+    if (files.length > MAX_FILES){
+      alert(`Please select up to ${MAX_FILES} images.`);
+      fileInput.value = '';                 // reset
+      fileList.innerHTML = '';
+      return;
+    }
+    // show filenames
+    fileList.innerHTML = files.map(f => `<li>${f.name}</li>`).join('');
+  }
+})();
+</script>
+
+      </script>
+
 {% schema %}
 {
   "name": "Vehicle Consignment Form",
