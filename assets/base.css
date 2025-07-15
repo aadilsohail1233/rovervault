@@ -21,6 +21,14 @@ section.forms_consigment {
     padding: 50px 0px;
     border-bottom: 5px solid #6B8D50;
 }
+.forms_consigment .fields-inputss {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border-color: #6B8D50;
+    border: 5px solid #6B8D50;
+}
 .space-title {
     margin-bottom: 20px;
 }
