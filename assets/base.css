@@ -12,6 +12,10 @@
     height: 250px;
     object-fit: cover;
 }
+.forms_consigment label {
+    font-size: 24px;
+    color: #6B8D50;
+}
 section.forms_consigment {
     border-top: 5px solid #6B8D50;
     padding: 50px 0px;
