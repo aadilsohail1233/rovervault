@@ -22,6 +22,17 @@
     border: 5px solid #6B8D50;
     background: transparent !important;
 }
+.paginations-cons .swiper-pagination-bullet-active:after {
+    content: '';
+    width: .75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: #6B8D50 !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
 .paginations-cons {
     left: 50% !important;
     transform: translate(-50%) !important;
