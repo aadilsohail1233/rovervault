@@ -90,6 +90,43 @@
       "settings": {
         "section_heading": "COMMON QUESTIONS"
       }
+    },
+    "testimonals_sliders_bBmkCR": {
+      "type": "Testimonals_sliders",
+      "blocks": {
+        "testimonial_BpGA4H": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Couldn’t believe how smooth the process was. My ‘19 Velar found a new home in just days. Rover Vault handled everything effortless.",
+            "photo": "shopify://shop_images/Frame_710.png",
+            "name": "Sophie L.",
+            "location": "Toronto, ON"
+          }
+        },
+        "testimonial_DbFJhH": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "",
+            "name": "",
+            "location": ""
+          }
+        },
+        "testimonial_6HMhrW": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "",
+            "name": "",
+            "location": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_BpGA4H",
+        "testimonial_DbFJhH",
+        "testimonial_6HMhrW"
+      ],
+      "name": "Testimonial Slider",
+      "settings": {}
     }
   },
   "order": [
@@ -98,6 +135,7 @@
     "logo_with_text_UB86kD",
     "two_images_section_YghQpr",
     "vehicle_consignment_form_XP77Xi",
-    "faq_accordion_JC8g79"
+    "faq_accordion_JC8g79",
+    "testimonals_sliders_bBmkCR"
   ]
 }
