@@ -112,6 +112,15 @@
             "location": "Toronto, ON"
           }
         },
+        "testimonial_fafc97": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Couldn’t believe how smooth the process was. My ‘19 Velar found a new home in just days. Rover Vault handled everything effortless.",
+            "photo": "shopify://shop_images/Frame_710.png",
+            "name": "Sophie L.",
+            "location": "Toronto, ON"
+          }
+        },
         "testimonial_6HMhrW": {
           "type": "testimonial",
           "settings": {
@@ -125,6 +134,7 @@
       "block_order": [
         "testimonial_BpGA4H",
         "testimonial_DbFJhH",
+        "testimonial_fafc97",
         "testimonial_6HMhrW"
       ],
       "name": "Testimonial Slider",
