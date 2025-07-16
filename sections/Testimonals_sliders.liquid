@@ -1,6 +1,164 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Testimonial Slider",
+  "tag": "section",
+  "class": "testimonial-slider-section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Testimonial Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "photo",
+          "label": "Author Photo"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Author Name"
+        },
+        {
+          "type": "text",
+          "id": "location",
+          "label": "Location"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Testimonial Slider",
+      "category": "Testimonials",
+      "blocks": [
+        {
+          "type": "testimonial"
+        },
+        {
+          "type": "testimonial"
+        },
+        {
+          "type": "testimonial"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
+
+<div class="testimonial-slider-wrapper">
+  <h2 class="testimonial-title">SELLER TESTIMONIALS</h2>
+
+  <div class="testimonial-slider swiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide testimonial-card">
+          <p class="quote">{{ block.settings.quote }}</p>
+          <div class="testimonial-footer">
+            {% if block.settings.photo %}
+              <img src="{{ block.settings.photo | image_url: width: 40 }}" alt="{{ block.settings.name }}" class="testimonial-photo">
+            {% endif %}
+            <p class="author"><strong>{{ block.settings.name }}</strong>, {{ block.settings.location }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- Navigation -->
+    <div class="testimonial-nav">
+      <div class="swiper-button-prev">←</div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next">→</div>
+    </div>
+  </div>
+</div>
+
+<style>
+.testimonial-slider-wrapper {
+  background: #f0eecf;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.testimonial-title {
+  font-size: 2rem;
+  color: #3b6e3b;
+  font-weight: bold;
+}
+.testimonial-slider {
+  margin-top: 2rem;
+}
+.testimonial-card {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  min-height: 220px;
+}
+.quote {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.testimonial-photo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.author {
+  font-size: 13px;
+  color: #3b6e3b;
+}
+.testimonial-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  cursor: pointer;
+  font-size: 20px;
+  color: #3b6e3b;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  new Swiper('.testimonial-slider', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    slidesPerView: 1,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
+});
+</script>
