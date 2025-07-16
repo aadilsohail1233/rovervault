@@ -21,6 +21,7 @@
     height: 2.25rem;
     border: 5px solid #6B8D50;
     background: transparent !important;
+    transform: translate(0px, 15px);
 }
 .paginations-cons .swiper-pagination-bullet-active:after {
     content: '';
