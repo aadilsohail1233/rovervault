@@ -16,11 +16,15 @@
     padding-bottom: 10rem !important;
     position: relative;
 }
-.swiper-pagination-bullet {
+.paginations-cons .swiper-pagination-bullet {
     width: 2.25rem;
     height: 2.25rem;
     border: 5px solid #6B8D50;
     background: transparent !important;
+}
+.paginations-cons {
+    left: 50% !important;
+    transform: translate(-50%) !important;
 }
 .faq-accordion-section .page-width {
     padding: 50px 0px;
