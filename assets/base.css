@@ -13,7 +13,7 @@
     object-fit: cover;
 }
 .main-sliders {
-    padding-bottom: 10rem;
+    padding-bottom: 10rem !important;
     position: relative;
 }
 .faq-accordion-section .page-width {
