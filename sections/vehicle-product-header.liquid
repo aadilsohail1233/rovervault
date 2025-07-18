@@ -75,10 +75,7 @@
 <div class="vehicle-product-header__second">
   {% if product.metafields.custom.vehicle_ticker_text %}
     <div class="vehicle-ticker">
-      <div class="vehicle-ticker__track">
-        <div class="vehicle-ticker__text">
-          {{ product.metafields.custom.vehicle_ticker_text }}
-        </div>
+      <div class="vehicle-ticker__track" id="ticker-track">
         <div class="vehicle-ticker__text">
           {{ product.metafields.custom.vehicle_ticker_text }}
         </div>
@@ -91,6 +88,24 @@
     >
   {% endif %}
 </div>
+
+
+      <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const track = document.getElementById("ticker-track");
+    const text = track.querySelector(".vehicle-ticker__text");
+    const textWidth = text.offsetWidth;
+    const trackWidth = track.offsetWidth;
+    const containerWidth = track.parentElement.offsetWidth;
+
+    // Duplicate until it overflows the container
+    while (track.offsetWidth < containerWidth * 2) {
+      const clone = text.cloneNode(true);
+      track.appendChild(clone);
+    }
+  });
+</script>
+
 
 
     </div>
