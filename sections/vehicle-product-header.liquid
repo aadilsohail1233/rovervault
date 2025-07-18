@@ -29,26 +29,30 @@
     width: 40%;
   }
 
-  .vehicle-ticker {
+.vehicle-ticker {
   overflow: hidden;
   position: relative;
-  height: 30px; /* Adjust based on your layout */
+  background: #f9f9f9; /* Optional */
+  height: 30px;
+}
+
+.vehicle-ticker__track {
+  display: flex;
+  width: max-content;
+  animation: ticker-loop 20s linear infinite;
 }
 
 .vehicle-ticker__text {
-  display: inline-block;
   white-space: nowrap;
-  position: absolute;
-  will-change: transform;
-  animation: ticker-scroll 15s linear infinite;
+  padding-right: 50px; /* space between loops */
 }
 
-@keyframes ticker-scroll {
+@keyframes ticker-loop {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
@@ -69,8 +73,13 @@
 <div class="vehicle-product-header__second">
   {% if product.metafields.custom.vehicle_ticker_text %}
     <div class="vehicle-ticker">
-      <div class="vehicle-ticker__text">
-        {{ product.metafields.custom.vehicle_ticker_text }}
+      <div class="vehicle-ticker__track">
+        <div class="vehicle-ticker__text">
+          {{ product.metafields.custom.vehicle_ticker_text }}
+        </div>
+        <div class="vehicle-ticker__text">
+          {{ product.metafields.custom.vehicle_ticker_text }}
+        </div>
       </div>
     </div>
   {% else %}
@@ -80,6 +89,7 @@
     >
   {% endif %}
 </div>
+
 
     </div>
   </div>
