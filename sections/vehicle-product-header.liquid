@@ -41,17 +41,21 @@
         >
         {%- endcomment -%}
       </div>
-      <div class="vehicle-product-header__second">
-        {% if product.metafields.custom.vehicle_ticker_text %}
+<div class="vehicle-product-header__second">
+  {% if product.metafields.custom.vehicle_ticker_text %}
+    <div class="vehicle-ticker">
+      <div class="vehicle-ticker__text">
         {{ product.metafields.custom.vehicle_ticker_text }}
-        {% else %}
-        <img
-          src="{{ section.settings['second-image'] | img_url: 'master' }}"
-          alt="Vehicle Lines"
-        >
-        {% endif %}
-       
       </div>
+    </div>
+  {% else %}
+    <img
+      src="{{ section.settings['second-image'] | img_url: 'master' }}"
+      alt="Vehicle Lines"
+    >
+  {% endif %}
+</div>
+
     </div>
   </div>
 </div>
