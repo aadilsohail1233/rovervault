@@ -27,6 +27,31 @@
   .vehicle-product-header__second {
     width: 40%;
   }
+
+  .vehicle-ticker {
+  overflow: hidden;
+  position: relative;
+  height: 30px; /* Adjust based on your layout */
+  background-color: #f9f9f9; /* Optional background */
+}
+
+.vehicle-ticker__text {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  will-change: transform;
+  animation: ticker-scroll 15s linear infinite;
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 {%- endstyle -%}
 
 <div class="section-{{ section.id }} gradient color-{{ section.settings.section_color_scheme }}">
