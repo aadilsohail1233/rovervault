@@ -91,16 +91,12 @@
 </div>
 
 
-      <script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     const track = document.getElementById("ticker-track");
     const text = track.querySelector(".vehicle-ticker__text");
-    const textWidth = text.offsetWidth;
-    const trackWidth = track.offsetWidth;
-    const containerWidth = track.parentElement.offsetWidth;
 
-    // Duplicate until it overflows the container
-    while (track.offsetWidth < containerWidth * 4) {
+    for (let i = 1; i < 15; i++) {
       const clone = text.cloneNode(true);
       track.appendChild(clone);
     }
