@@ -221,6 +221,12 @@
       alt="Background"
     >
   </picture>
+  {% if section.settings.harmas_image2 != blank %}
+    <img 
+      src="{{ section.settings.harmas_image2 | img_url: 'master' }}" 
+      alt="Harmas Logo"
+      class="overlay-harmas-logo">
+  {% endif %}
         {% if section.settings['logo-type'] %}
           <div class="image-show-main-circle font-vvds">
             {{ section.settings['logo-text'] }}
