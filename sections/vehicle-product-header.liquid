@@ -100,7 +100,7 @@
     const containerWidth = track.parentElement.offsetWidth;
 
     // Duplicate until it overflows the container
-    while (track.offsetWidth < containerWidth * 2) {
+    while (track.offsetWidth < containerWidth * 4) {
       const clone = text.cloneNode(true);
       track.appendChild(clone);
     }
