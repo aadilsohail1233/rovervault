@@ -1,84 +1,81 @@
+{% assign review_video = product.metafields.custom.review_video_embed | strip %}
+{% assign startup_video = product.metafields.custom.startup_video_embed | strip %}
+{% assign technical_video = product.metafields.custom.techinal_video_embed | strip %}
+{% assign drive_video = product.metafields.custom.drive_video_embed | strip %}
+
+{% if review_video != blank or startup_video != blank or technical_video != blank or drive_video != blank %}
 <div class="section-{{ section.id }}">
-<div class="page-width">
-<div class="video-tabs-wrapper">
-  <div class="video-full-tabs">
-     <div class="video-text"> 
-  <h2 class="video-title">Videos</h2> 
- {% if section.settings.mobile_video_title_image != blank %}
-    <img src="{{ section.settings.mobile_video_title_image | image_url }}" alt="Videos" class="video-title-img-mobile">
-  {% endif %}
-     </div>
-  <div class="videos-tabs"> 
-  <div class="video-tabs">
-    <button class="tab-link active" data-tab="review">Review</button>
-    <button class="tab-link" data-tab="startup">Startup</button>
-    <button class="tab-link" data-tab="technical">Technical</button>
-    <button class="tab-link" data-tab="startup2">Drive</button>
+  <div class="page-width">
+    <div class="video-tabs-wrapper">
+      <div class="video-full-tabs">
+        <div class="video-text"> 
+          <h2 class="video-title">Videos</h2> 
+          {% if section.settings.mobile_video_title_image != blank %}
+            <img src="{{ section.settings.mobile_video_title_image | image_url }}" alt="Videos" class="video-title-img-mobile">
+          {% endif %}
+        </div>
+        <div class="videos-tabs"> 
+          <div class="video-tabs">
+            <button class="tab-link active" data-tab="review">Review</button>
+            <button class="tab-link" data-tab="startup">Startup</button>
+            <button class="tab-link" data-tab="technical">Technical</button>
+            <button class="tab-link" data-tab="startup2">Drive</button>
+          </div>
+        </div>     
+      </div>
+
+      <div class="tab-content" id="review">
+        {% assign review_video_down = review_video | downcase %}
+        {% if review_video_down contains '.mp4' or review_video_down contains '.mov' %}
+          <video controls width="100%" height="500px" style="object-fit: cover;">
+            <source src="{{ review_video }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        {% else %}
+          {{ review_video }}
+        {% endif %}
+      </div>
+
+      <div class="tab-content" id="startup" style="display: none;">
+        {% assign startup_video_down = startup_video | downcase %}
+        {% if startup_video_down contains '.mp4' or startup_video_down contains '.mov' %}
+          <video controls width="100%">
+            <source src="{{ startup_video }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        {% else %}
+          {{ startup_video }}
+        {% endif %}
+      </div>
+
+      <div class="tab-content" id="technical" style="display: none;">
+        {% assign technical_video_down = technical_video | downcase %}
+        {% if technical_video_down contains '.mp4' or technical_video_down contains '.mov' %}
+          <video controls width="100%">
+            <source src="{{ technical_video }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        {% else %}
+          {{ technical_video }}
+        {% endif %}
+      </div>
+
+      <div class="tab-content" id="startup2" style="display: none;">
+        {% assign drive_video_down = drive_video | downcase %}
+        {% if drive_video_down contains '.mp4' or drive_video_down contains '.mov' %}
+          <video controls width="100%">
+            <source src="{{ drive_video }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        {% else %}
+          {{ drive_video }}
+        {% endif %}
+      </div>
+
+    </div>
   </div>
-     </div>     
-  </div>
-  
-<div class="tab-content" id="review">
-  {% assign review_video = product.metafields.custom.review_video_embed | strip | downcase %}
-  {% assign review_video_raw = product.metafields.custom.review_video_embed %}
-  {% if review_video contains '.mp4' or review_video contains '.mov' %}
-    <video controls width="100%" height="500px" style="object-fit: cover;">
-      <source src="{{ review_video_raw | strip }}" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  {% else %}
-    {{ review_video_raw }}
-  {% endif %}
 </div>
-
-<div class="tab-content" id="startup" style="display: none;">
-  {% assign startup_video = product.metafields.custom.startup_video_embed | strip | downcase %}
-  {% assign startup_video_raw = product.metafields.custom.startup_video_embed %}
-  {% if startup_video contains '.mp4' or startup_video contains '.mov' %}
-    <video controls width="100%">
-      <source src="{{ startup_video_raw | strip }}" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  {% else %}
-    {{ startup_video_raw }}
-  {% endif %}
-</div>
-
-<div class="tab-content" id="technical" style="display: none;">
-  {% assign technical_video = product.metafields.custom.techinal_video_embed | strip | downcase %}
-  {% assign technical_video_raw = product.metafields.custom.techinal_video_embed %}
-  {% if technical_video contains '.mp4' or technical_video contains '.mov' %}
-    <video controls width="100%">
-      <source src="{{ technical_video_raw | strip }}" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  {% else %}
-    {{ technical_video_raw }}
-  {% endif %}
-</div>
-
-<div class="tab-content" id="startup2" style="display: none;">
-  {% assign drive_video = product.metafields.custom.drive_video_embed | strip | downcase %}
-  {% assign drive_video_raw = product.metafields.custom.drive_video_embed %}
-  {% if drive_video contains '.mp4' or drive_video contains '.mov' %}
-    <video controls width="100%">
-      <source src="{{ drive_video_raw | strip }}" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  {% else %}
-    {{ drive_video_raw }}
-  {% endif %}
-</div>
-
-
-  
-</div>
-</div>
-</div>  
-
-
-
-
+{% endif %}
 <style>
 .video-tabs-wrapper {
 /*  background-color: #e6e4ce; */
