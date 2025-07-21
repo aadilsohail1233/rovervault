@@ -14,7 +14,8 @@
       "custom_css": [
         ".image-show-footer {z-index: 999;}",
         ".image-show-footer-tablet {z-index: 999; position: relative;}",
-        ".image-show-footer-mobile {z-index: 999; position: relative;}"
+        ".image-show-footer-mobile {z-index: 999; position: relative;}",
+        ".image-show-background__image {min-height: 450px;}"
       ],
       "name": "Image waves animation",
       "settings": {
