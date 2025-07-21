@@ -1,3 +1,9 @@
+{% assign body_images = product.metafields.custom.exterior_body_image_2 %}
+{% assign wheels_images = product.metafields.custom.exterior_wheels %}
+{% assign door_images = product.metafields.custom.exterior_door_images %}
+{% assign engine_images = product.metafields.custom.exterior_engine_images %}
+
+{% if body_images != blank or wheels_images != blank or door_images != blank or engine_images != blank %}
 <div class="section-{{ section.id }}">
 <div class="page-width">
 <div class="video-tabs-wrapper">
@@ -171,8 +177,8 @@
 </div>
 </div>
 </div>  
-
-
+{% endif %}
+  
 <div id="viewAllModal" class="view-all-modal" style="display: none;">
   <div class="modal-content">
     <span class="close-modal" onclick="closeModal()">&times;</span>
