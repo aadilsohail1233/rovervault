@@ -1,3 +1,10 @@
+{% assign storage_images = product.metafields.custom.interior_storage_image %}
+{% assign seating_images = product.metafields.custom.interior_seating_image %}
+{% assign info_images = product.metafields.custom.interior_info_image %}
+{% assign safety_images = product.metafields.custom.interior_safety_image %}
+
+{% if storage_images != blank or seating_images != blank or info_images != blank or safety_images != blank %}
+
 <div class="section-{{ section.id }}">
 <div class="page-width">
 <div class="video-tabs-wrapper">
@@ -172,7 +179,7 @@
 </div>
 </div>  
 
-
+{% endif %}
 <div id="viewAllModal1" class="view-all-modal" style="display: none;">
   <div class="modal-content">
     <span class="close-modal" onclick="closeModal()">&times;</span>
