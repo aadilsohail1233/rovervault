@@ -128,6 +128,7 @@
     },
     "logo_with_text_small_P6KTnM": {
       "type": "logo-with-text-small",
+      "disabled": true,
       "settings": {
         "logo_image": "shopify://shop_images/image.svg",
         "text_image": "shopify://shop_images/text-explore.png",
@@ -137,6 +138,7 @@
     },
     "product_parts_images_t48kn8": {
       "type": "Product_Parts_Images",
+      "disabled": true,
       "settings": {}
     },
     "image_show_z4nGJG": {
@@ -153,6 +155,7 @@
       "block_order": [
         "button_BUE9ig"
       ],
+      "disabled": true,
       "settings": {
         "background-image": "shopify://shop_images/Mask_group_2.png",
         "logo-type": false,
@@ -170,6 +173,7 @@
     },
     "vehicle_advantages_show_9yEMAX": {
       "type": "vehicle-advantages-show",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/Frame_646_b215b0f9-d7cb-4988-987a-7f965fdbc4ac.png",
         "text": "Designed with input from the Rover Vault community and built in small batches, each piece reflects the culture, craft, and character of the machines we love.",
