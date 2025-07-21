@@ -102,15 +102,6 @@
         "padding_bottom": 28
       }
     },
-    "vehicle_product_header_DXtgwC": {
-      "type": "vehicle-product-header",
-      "settings": {
-        "margin_top": 36,
-        "margin_bottom": 36,
-        "first-image": "shopify://shop_images/text-panterra.png",
-        "second-image": "shopify://shop_images/lines.png"
-      }
-    },
     "full_width_image_GVMBb6": {
       "type": "full-width-image",
       "custom_css": [
@@ -120,6 +111,15 @@
         "image": "shopify://shop_images/car-2.png",
         "margin_top": 36,
         "margin_bottom": 36
+      }
+    },
+    "vehicle_product_header_DXtgwC": {
+      "type": "vehicle-product-header",
+      "settings": {
+        "margin_top": 36,
+        "margin_bottom": 36,
+        "first-image": "shopify://shop_images/text-panterra.png",
+        "second-image": "shopify://shop_images/lines.png"
       }
     },
     "product_vehicles_main_specifications_MMHzMf": {
@@ -266,8 +266,8 @@
   "order": [
     "main",
     "related-products",
-    "vehicle_product_header_DXtgwC",
     "full_width_image_GVMBb6",
+    "vehicle_product_header_DXtgwC",
     "product_vehicles_main_specifications_MMHzMf",
     "product_vehicle_accordians_yDXeC9",
     "logo_with_text_small_P6KTnM",
