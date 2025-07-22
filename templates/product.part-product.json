@@ -134,6 +134,7 @@
     },
     "product_parts_details_accordian_RwgNE4": {
       "type": "product_parts_details_accordian",
+      "disabled": true,
       "name": "Product Parts Accordian",
       "settings": {}
     },
