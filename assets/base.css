@@ -12,6 +12,9 @@
     height: 250px;
     object-fit: cover;
 }
+.product-col-1 .cl-description {
+    padding: 20px 5px 0px 5px;
+}
 .main-sliders {
     padding-bottom: 10rem !important;
     position: relative;
