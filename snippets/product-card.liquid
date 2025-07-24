@@ -4,7 +4,7 @@
         
          <div class="card__side card__side--front card__side--front-1"> 
         
-        <div class="product-col-1" data-type="{{ product.type | downcase }}">
+        <div class="product-col-1 height-templates" data-type="{{ product.type | downcase }}">
           {% if product.available %}
             <div class="product-avaliable">Available</div>
           {% else %}
@@ -81,7 +81,7 @@
         </div>
           </div>
         <div class="card__side card__side--back card__side--back-1">
-                        <div class="product-col-2">
+                        <div class="product-col-2 height-templates">
                         <div class="product-avaliable">
                          {% if product.available %}
                             <div class="product-avaliable">Available</div>
