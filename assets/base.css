@@ -4404,6 +4404,9 @@ font-family: 'Eczar';
 .height-auto2 {
     height: 100%;
 }
+.height-templates {
+    height: 683px;
+}
 .main-product-section_grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
