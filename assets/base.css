@@ -8,12 +8,7 @@
   --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
-.height-auto1 {
-    height: 100%;
-}
-.height-auto2 {
-    height: 100%;
-}
+
 .padding-bottom-zero .prd-img-others {
     height: 250px;
     object-fit: cover;
@@ -4402,6 +4397,12 @@ font-family: 'Eczar';
    border: 5px solid rgba(var(--color-secondary-button-text));
   background-color:#6B8D50;
   height: 683px;
+}
+.height-auto1 {
+    height: 100%;
+}
+.height-auto2 {
+    height: 100%;
 }
 .main-product-section_grid {
     display: grid;
