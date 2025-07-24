@@ -110,7 +110,7 @@
                       <!-- Product Card Content (trimmed for clarity) -->    
            <div class="card__side card__side--front card__side--front-1"> 
         
-        <div class="product-col-1" data-type="{{ product.type | downcase }}">
+        <div class="product-col-1 height-auto1" data-type="{{ product.type | downcase }}">
           <div class="product-avaliable">
             {% if product.metafields.custom.vehicle_status %}
             <div class="product-avaliable">{{ product.metafields.custom.vehicle_status }}</div>
@@ -191,7 +191,7 @@
           </div>
 		  
         <div class="card__side card__side--back card__side--back-1">
-                        <div class="product-col-2">
+                        <div class="product-col-2 height-auto2">
                         <div class="product-avaliable">
                         {% if product.metafields.custom.vehicle_status %}
                           <div class="product-avaliable">{{ product.metafields.custom.vehicle_status }}</div>
