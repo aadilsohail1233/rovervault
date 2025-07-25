@@ -372,24 +372,17 @@
             "product": "indians"
           }
         },
-        "product_card_6jmHcf": {
+        "product_card_aGBzJH": {
           "type": "product_card",
           "settings": {
-            "product": "cowboys"
-          }
-        },
-        "product_card_ix99JD": {
-          "type": "product_card",
-          "settings": {
-            "product": "indians"
+            "product": "coming-soon"
           }
         }
       },
       "block_order": [
         "product_card_MEYhBN",
         "product_card_637YdY",
-        "product_card_6jmHcf",
-        "product_card_ix99JD"
+        "product_card_aGBzJH"
       ],
       "settings": {
         "collection_name": "Art"
