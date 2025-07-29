@@ -4933,6 +4933,12 @@ a.enquire_heading {
     .card {
     height: 63em; 
   }
+  .height-auto1 {
+    height: 800px;
+}
+.height-auto2 {
+    height: 800px;
+}
 .parts_collections .product-col-1 .relative_img .prd-img, .parts_collections .product-col-2 .relative_img .prd-img
 {
     height: 300px;
@@ -4975,6 +4981,12 @@ a.enquire_heading {
     .card {
     height: 67em; 
   } 
+   .height-auto1 {
+    height: 800px;
+}
+.height-auto2 {
+    height: 800px;
+}
 .parts_collections .product-col-1 .relative_img .prd-img, .parts_collections .product-col-2 .relative_img .prd-img
 {
     height: 300px;
