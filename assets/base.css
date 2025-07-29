@@ -4816,6 +4816,12 @@ a.enquire_heading {
     .card {
     height: 56em; 
   }
+  .height-auto1 {
+    height: 800px;
+}
+.height-auto2 {
+    height: 800px;
+}
   .custom-text-display{
   font-size: 39px !important;
 }
@@ -4871,6 +4877,12 @@ a.enquire_heading {
     .card {
     height: 59em; 
   }
+  .height-auto1 {
+    height: 800px;
+}
+.height-auto2 {
+    height: 800px;
+}
     .custom-text-display{
   font-size: 41px !important;
 }
