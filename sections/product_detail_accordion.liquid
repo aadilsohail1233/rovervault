@@ -231,19 +231,31 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 
-    function openVideoPopup() {
+  function openVideoPopup() {
     document.getElementById('video-popup').style.display = 'flex';
   }
 
   function closeVideoPopup() {
-    document.getElementById('video-popup').style.display = 'none';
+    const popup = document.getElementById('video-popup');
+    const video = popup.querySelector('video');
+
+    // Pause and reset the video
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
+
+    popup.style.display = 'none';
   }
-document.addEventListener('click', function(e) {
-  const popup = document.getElementById('video-popup');
-  if (e.target === popup) {
-    closeVideoPopup();
-  }
-});
+
+  // Optional: Close when clicking outside the video
+  document.addEventListener('click', function(e) {
+    const popup = document.getElementById('video-popup');
+    const inner = document.querySelector('.video-popup-inner');
+    if (e.target === popup) {
+      closeVideoPopup();
+    }
+  });
 </script>
 
 <style>
