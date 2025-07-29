@@ -21,6 +21,15 @@
 {
     height: 600px;
 }
+.padding-bottom-zero .product-col-1
+{
+    height: 600px;
+}
+.padding-bottom-zero .product-col-2
+{
+    height: 600px;
+}
+
 .product-col-1 .cl-description {
     padding: 0px 5px 0px 5px;
 }
