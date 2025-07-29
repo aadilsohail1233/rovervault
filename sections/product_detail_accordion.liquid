@@ -238,7 +238,12 @@ document.addEventListener('DOMContentLoaded', function(){
   function closeVideoPopup() {
     document.getElementById('video-popup').style.display = 'none';
   }
-
+document.addEventListener('click', function(e) {
+  const popup = document.getElementById('video-popup');
+  if (e.target === popup) {
+    closeVideoPopup();
+  }
+});
 </script>
 
 <style>
