@@ -63,7 +63,7 @@
   <div class="page-width">
     
     <!-- First Accordion -->
-    <div class="custom-accordion">
+   <!-- <div class="custom-accordion">
       <div class="accordion-header">
         <strong>USE CASE</strong>
         <span class="accordion-toggle">&#x25BC;</span>
@@ -71,10 +71,22 @@
       <div class="accordion-content">
         {{ product.metafields.custom.use_case | default: "No product details."  }}
       </div>
+    </div>-->
+
+    <div class="custom-accordion">
+      <div class="accordion-header">
+        <strong>POST-SALE INFORMATION</strong>
+        <span class="accordion-toggle">&#x25BC;</span>
+      </div>
+      <div class="accordion-content">
+        {{ product.metafields.custom.use_case | default: "No product details."  }}
+      </div>
     </div>
 
+    POST-SALE INFORMATION
+
     <!-- Second Accordion -->
-    <div class="custom-accordion">
+   <!--<div class="custom-accordion">
       <div class="accordion-header">
         <strong>COMPATIBILITY</strong>
         <span class="accordion-toggle">&#x25BC;</span>
@@ -82,7 +94,7 @@
       <div class="accordion-content">
         {{ product.metafields.custom.compatibility | default: "No product details." }}
       </div>
-    </div>
+    </div>-->
 
   </div>
 </div>
