@@ -4749,6 +4749,12 @@ a.enquire_heading {
 .custom-text-display{
   font-size: 35px !important;
 }
+  .height-auto1 {
+    height: 800px;
+}
+.height-auto2 {
+    height: 800px;
+}
   .collection-slider-section .card {
     height: 46em;
 }
