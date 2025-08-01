@@ -43,64 +43,85 @@
 }
 {% endschema %}
 
-<div class="page-width"> 
-  <div class="custom-hero-banner" style="background-image: url({{ section.settings.banner_image | img_url: 'master' }});">
-    
+<div class="page-width">
+  <div class="custom-hero-banner">
+    {% if section.settings.banner_image %}
+      <img
+        src="{{ section.settings.banner_image | img_url: 'master' }}"
+        alt="Hero Image"
+        class="hero-banner-img"
+      />
+    {% endif %}
+
     <div class="hero-content">
       <div class="hero-heading">
-        {% comment %}
-        <h1>{{ section.settings.heading_text }}</h1>
-        {% endcomment %}
+        {% if section.settings.heading_text %}
+          <h1>{{ section.settings.heading_text }}</h1>
+        {% endif %}
         {% if section.settings.heading_image %}
-          <img class="hero-heading-img" src="{{ section.settings.heading_image | img_url: 'master' }}" alt="Heading Image" />
+          <img
+            class="hero-heading-img"
+            src="{{ section.settings.heading_image | img_url: 'master' }}"
+            alt="Heading Image"
+          />
         {% endif %}
       </div>
 
       <div class="hero-subheading">
-        {% comment %}
-        <p>{{ section.settings.subheading_text }}</p>
-        {% endcomment %}
+        {% if section.settings.subheading_text %}
+          <p>{{ section.settings.subheading_text }}</p>
+        {% endif %}
         {% if section.settings.subheading_image %}
-          <img class="hero-subheading-img" src="{{ section.settings.subheading_image | img_url: 'master' }}" alt="Subheading Image" />
+          <img
+            class="hero-subheading-img"
+            src="{{ section.settings.subheading_image | img_url: 'master' }}"
+            alt="Subheading Image"
+          />
         {% endif %}
       </div>
     </div>
 
     {% if section.settings.badge_image %}
       <div class="hemings-badge">
-        Listed on:<br>
-        <img src="{{ section.settings.badge_image | img_url: 'master' }}" alt="Badge">
+        Listed on:<br />
+        <img
+          src="{{ section.settings.badge_image | img_url: 'master' }}"
+          alt="Badge"
+        />
       </div>
     {% endif %}
-
   </div>
 </div>
 
 <style>
 .custom-hero-banner {
-    background-size: cover;
-    background-position: center;
-    height: 600px;
-    position: relative;
-    display: block;
-    background-repeat: no-repeat;
-    padding-right: 5%;
-    color: white;
-}
-.hero-content {
-    max-width: 500px;
-    position: absolute;
-    top: 80px;
-    right: 60px;
-    text-align: right;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-.hero-heading, .hero-subheading {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-    padding-bottom:20px;
+.hero-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-content {
+  position: absolute;
+  top: 80px;
+  right: 60px;
+  text-align: right;
+  color: white;
+  max-width: 500px;
+}
+
+.hero-heading,
+.hero-subheading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-bottom: 20px;
 }
 
 .hero-heading h1 {
@@ -115,20 +136,53 @@
   margin: 0;
 }
 
-.hero-heading-img, .hero-subheading-img {
+.hero-heading-img,
+.hero-subheading-img {
+  display: block;
   height: auto;
   width: auto;
+  max-width: 100%;
 }
 
 .hemings-badge {
-    margin-top: 20px;
-    font-size: 14px;
-    position: absolute;
-    bottom: 40px;
-    left: 20px;
+  margin-top: 20px;
+  font-size: 14px;
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  color: white;
 }
 
 .hemings-badge img {
   margin-top: 5px;
+  max-height: 40px;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .hero-content {
+    top: 40px;
+    right: 20px;
+    padding: 0 10px;
+  }
+
+  .hero-heading,
+  .hero-subheading {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .hero-heading h1 {
+    font-size: 36px;
+  }
+
+  .hero-subheading p {
+    font-size: 16px;
+  }
+
+  .hemings-badge {
+    bottom: 20px;
+    left: 10px;
+  }
 }
 </style>
