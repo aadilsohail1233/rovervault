@@ -25,6 +25,16 @@
         "custom_text": "Cars - Parts - art - drip"
       }
     },
+    "hero_banner_hWVHYH": {
+      "type": "hero-banner",
+      "name": "Hero Banner",
+      "settings": {
+        "banner_image": "shopify://shop_images/Frame_587.png",
+        "heading_text": "ROVER VAULT",
+        "subheading_text": "CARS • PARTS • ART • DRIP",
+        "badge_image": "shopify://shop_images/image_2.png"
+      }
+    },
     "image_area_show_QTfyNy": {
       "type": "image-area-show",
       "custom_css": [
@@ -527,6 +537,7 @@
   "order": [
     "home_hero_gV8DN8",
     "text_details_center_pXXaBT",
+    "hero_banner_hWVHYH",
     "image_area_show_QTfyNy",
     "image_with_logo_GgHxcP",
     "image_with_text_1_hehR3M",
