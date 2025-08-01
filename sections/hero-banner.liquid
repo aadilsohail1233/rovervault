@@ -32,32 +32,35 @@
   ]
 }
 {% endschema %}
- <div class="page-width"> 
+
 <div class="custom-hero-banner" style="background-image: url({{ section.settings.banner_image | img_url: 'master' }});">
-  
+ <div class="page-width">   
   <div class="hero-content">
     <h1>{{ section.settings.heading_text }}</h1>
     <p>{{ section.settings.subheading_text }}</p>
+  </div>
     {% if section.settings.badge_image %}
       <div class="hemings-badge">
         Listed on:<br>
         <img src="{{ section.settings.badge_image | img_url: '100x' }}" alt="Badge">
       </div>
     {% endif %}
-  </div>
+  
+</div>
+</div>
 
-</div>
-</div>
 <style>
 .custom-hero-banner {
-    background-size: contain;
-    background-position: center;
-    height: 600px;
-    position: relative;
-    display: block;
-    background-repeat: no-repeat;
-    padding-right: 5%;
-    color: white;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 5%;
+  color: white;
+  text-align: right;
 }
 
 .hero-content {
