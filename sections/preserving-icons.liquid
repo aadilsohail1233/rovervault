@@ -1,0 +1,187 @@
+{% schema %}
+{
+  "name": "Preserving Icons Section",
+  "tag": "section",
+  "class": "preserving-icons",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main Heading",
+      "default": "PRESERVING ICONS, DRIVING CULTURE"
+    },
+    {
+      "type": "richtext",
+      "id": "subtext",
+      "label": "Sub Text",
+      "default": "<p>Rover Vault Was Born Out Of A Simple Idea: That Machines With Soul Deserve A Second Life. Based In Michigan.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Explore More"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link",
+      "default": "/"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Vehicle Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_graphic",
+      "label": "Left Graphic (Villa Illustration)"
+    },
+    {
+      "type": "richtext",
+      "id": "main_text",
+      "label": "Main Body Text",
+      "default": "<p>We Specialize In Restoring...<br>These Aren’t Museum Pieces...</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_graphic",
+      "label": "Right Graphic (Rover Illustration)"
+    },
+    {
+      "type": "richtext",
+      "id": "bottom_text",
+      "label": "Bottom Paragraph Text",
+      "default": "<p>But We’re More Than Builders...<br>Welcome To The Vault.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Preserving Icons"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="preserving-icons-wrapper">
+  <div class="preserving-header">
+    <h2>{{ section.settings.heading }}</h2>
+    <div class="preserving-header-text">
+      {{ section.settings.subtext }}
+      <a href="{{ section.settings.button_link }}" class="explore-btn">{{ section.settings.button_text }}</a>
+    </div>
+  </div>
+
+  {% if section.settings.main_image != blank %}
+    <div class="preserving-image-row">
+      <img src="{{ section.settings.main_image | image_url: width: 1200 }}" alt="Main Image">
+    </div>
+  {% endif %}
+
+  <div class="preserving-content">
+    {% if section.settings.left_graphic != blank %}
+      <div class="left-graphic">
+        <img src="{{ section.settings.left_graphic | image_url: width: 400 }}" alt="Left Graphic">
+      </div>
+    {% endif %}
+    <div class="text-content">
+      {{ section.settings.main_text }}
+    </div>
+  </div>
+
+  <div class="bottom-section">
+    <div class="bottom-text">
+      {{ section.settings.bottom_text }}
+    </div>
+    {% if section.settings.right_graphic != blank %}
+      <div class="right-graphic">
+        <img src="{{ section.settings.right_graphic | image_url: width: 400 }}" alt="Right Graphic">
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+
+<style>
+.preserving-icons-wrapper {
+  background-color: #EDE9DD;
+  padding: 40px 20px;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #1e1e1e;
+}
+
+.preserving-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.preserving-header h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #2f4f23;
+  line-height: 1.2;
+}
+
+.preserving-header-text {
+  max-width: 250px;
+  text-align: right;
+}
+
+.explore-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #2f4f23;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.preserving-image-row img {
+  width: 100%;
+  margin: 30px 0;
+  border: 3px solid #2f4f23;
+}
+
+.preserving-content {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.left-graphic img {
+  max-width: 300px;
+  border: 2px solid #2f4f23;
+}
+
+.text-content {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.bottom-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.right-graphic img {
+  max-width: 250px;
+  border: 2px solid #2f4f23;
+}
+
+</style>
