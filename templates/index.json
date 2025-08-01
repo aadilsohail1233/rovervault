@@ -27,12 +27,13 @@
     },
     "hero_banner_hWVHYH": {
       "type": "hero-banner",
-      "disabled": true,
       "name": "Hero Banner",
       "settings": {
         "banner_image": "shopify://shop_images/Frame_587.png",
         "heading_text": "ROVER VAULT",
+        "heading_image": "shopify://shop_images/ROVER_VAULT.png",
         "subheading_text": "CARS • PARTS • ART • DRIP",
+        "subheading_image": "shopify://shop_images/Frame_3.png",
         "badge_image": "shopify://shop_images/image_2.png"
       }
     },
