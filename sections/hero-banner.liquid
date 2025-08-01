@@ -32,9 +32,9 @@
   ]
 }
 {% endschema %}
-
+ <div class="page-width"> 
 <div class="custom-hero-banner" style="background-image: url({{ section.settings.banner_image | img_url: 'master' }});">
- <div class="page-width">   
+  
   <div class="hero-content">
     <h1>{{ section.settings.heading_text }}</h1>
     <p>{{ section.settings.subheading_text }}</p>
@@ -45,9 +45,9 @@
       </div>
     {% endif %}
   </div>
-</div>
-</div>
 
+</div>
+</div>
 <style>
 .custom-hero-banner {
   background-size: cover;
