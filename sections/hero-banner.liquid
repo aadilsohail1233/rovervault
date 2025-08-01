@@ -14,10 +14,20 @@
       "default": "ROVER VAULT"
     },
     {
+      "type": "image_picker",
+      "id": "heading_image",
+      "label": "Image Next to Heading"
+    },
+    {
       "type": "text",
       "id": "subheading_text",
       "label": "Subheading Text",
       "default": "CARS • PARTS • ART • DRIP"
+    },
+    {
+      "type": "image_picker",
+      "id": "subheading_image",
+      "label": "Image Next to Subheading"
     },
     {
       "type": "image_picker",
@@ -32,23 +42,36 @@
   ]
 }
 {% endschema %}
- <div class="page-width"> 
-<div class="custom-hero-banner" style="background-image: url({{ section.settings.banner_image | img_url: 'master' }});">
-  
-  <div class="hero-content">
-    <h1>{{ section.settings.heading_text }}</h1>
-    <p>{{ section.settings.subheading_text }}</p>
-     </div>
+
+<div class="page-width"> 
+  <div class="custom-hero-banner" style="background-image: url({{ section.settings.banner_image | img_url: 'master' }});">
+    
+    <div class="hero-content">
+      <div class="hero-heading">
+        <h1>{{ section.settings.heading_text }}</h1>
+        {% if section.settings.heading_image %}
+          <img class="hero-heading-img" src="{{ section.settings.heading_image | img_url: '100x' }}" alt="Heading Image" />
+        {% endif %}
+      </div>
+
+      <div class="hero-subheading">
+        <p>{{ section.settings.subheading_text }}</p>
+        {% if section.settings.subheading_image %}
+          <img class="hero-subheading-img" src="{{ section.settings.subheading_image | img_url: '100x' }}" alt="Subheading Image" />
+        {% endif %}
+      </div>
+    </div>
+
     {% if section.settings.badge_image %}
       <div class="hemings-badge">
         Listed on:<br>
         <img src="{{ section.settings.badge_image | img_url: '100x' }}" alt="Badge">
       </div>
     {% endif %}
- 
 
+  </div>
 </div>
-</div>
+
 <style>
 .custom-hero-banner {
     background-size: contain;
@@ -67,19 +90,29 @@
     right: 20px;
     text-align: right;
 }
-.hero-content {
-  max-width: 500px;
+
+.hero-heading, .hero-subheading {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
-.hero-content h1 {
+.hero-heading h1 {
   font-size: 60px;
   font-weight: bold;
   margin: 0;
 }
 
-.hero-content p {
+.hero-subheading p {
   font-size: 20px;
   letter-spacing: 2px;
+  margin: 0;
+}
+
+.hero-heading-img, .hero-subheading-img {
+  height: 50px;
+  width: auto;
 }
 
 .hemings-badge {
