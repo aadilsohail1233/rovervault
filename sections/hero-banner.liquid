@@ -52,7 +52,7 @@
         <h1>{{ section.settings.heading_text }}</h1>
         {% endcomment %}
         {% if section.settings.heading_image %}
-          <img class="hero-heading-img" src="{{ section.settings.heading_image }}" alt="Heading Image" />
+          <img class="hero-heading-img" src="{{ section.settings.heading_image | img_url: 'master' }}" alt="Heading Image" />
         {% endif %}
       </div>
 
