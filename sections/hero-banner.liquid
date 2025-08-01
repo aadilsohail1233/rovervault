@@ -48,14 +48,18 @@
     
     <div class="hero-content">
       <div class="hero-heading">
+        {% comment %}
         <h1>{{ section.settings.heading_text }}</h1>
+        {% endcomment %}
         {% if section.settings.heading_image %}
           <img class="hero-heading-img" src="{{ section.settings.heading_image | img_url: '100x' }}" alt="Heading Image" />
         {% endif %}
       </div>
 
       <div class="hero-subheading">
+        {% comment %}
         <p>{{ section.settings.subheading_text }}</p>
+        {% endcomment %}
         {% if section.settings.subheading_image %}
           <img class="hero-subheading-img" src="{{ section.settings.subheading_image | img_url: '100x' }}" alt="Subheading Image" />
         {% endif %}
