@@ -27,6 +27,7 @@
     },
     "hero_banner_hWVHYH": {
       "type": "hero-banner",
+      "disabled": true,
       "name": "Hero Banner",
       "settings": {
         "banner_image": "shopify://shop_images/Frame_587.png",
