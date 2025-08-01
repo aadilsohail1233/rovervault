@@ -11,13 +11,29 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "preserving_icons_VJwdzq": {
+      "type": "preserving-icons",
+      "name": "Preserving Icons",
+      "settings": {
+        "heading": "PRESERVING ICONS, DRIVING CULTURE",
+        "subtext": "<p>Rover Vault Was Born Out Of A Simple Idea: That Machines With Soul Deserve A Second Life. Based In Michigan.</p>",
+        "button_text": "Explore More",
+        "button_link": "/",
+        "main_image": "shopify://shop_images/Rectangle_340.png",
+        "left_graphic": "shopify://shop_images/dorian-le-senechal-6S1B3Hj-2DM-unsplash_1.png",
+        "main_text": "<p>we specialize in restoring, curating, and celebrating classic Land Rovers, not just as vehicles, but as cultural artifacts. These aren’t museum pieces. They’re meant to be driven, admired, and lived with. In a world of over-engineered tech and disposable design, we stand for mechanical honesty, rugged elegance, and timeless utility. Every vehicle we touch is rebuilt with intention — blending vintage character with smart, modern upgrades that never compromise the spirit of the original.</p>",
+        "bottom_text": "<p>But We’re More Than Builders...<br/>Welcome To The Vault.</p>"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "preserving_icons_VJwdzq"
   ]
 }
