@@ -9,22 +9,6 @@
  */
 {
   "sections": {
-    "home_hero_gV8DN8": {
-      "type": "home-hero",
-      "settings": {
-        "first-image": "shopify://shop_images/Logo-1.png",
-        "second-image": "shopify://shop_images/RoverVault-text-1.png",
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
-    "text_details_center_pXXaBT": {
-      "type": "Text-details-center",
-      "name": "Custom Display Text",
-      "settings": {
-        "custom_text": "Cars - Parts - art - drip"
-      }
-    },
     "hero_banner_hWVHYH": {
       "type": "hero-banner",
       "name": "Hero Banner",
@@ -35,6 +19,24 @@
         "subheading_text": "CARS • PARTS • ART • DRIP",
         "subheading_image": "shopify://shop_images/Frame_3.png",
         "badge_image": "shopify://shop_images/image_2.png"
+      }
+    },
+    "home_hero_gV8DN8": {
+      "type": "home-hero",
+      "disabled": true,
+      "settings": {
+        "first-image": "shopify://shop_images/Logo-1.png",
+        "second-image": "shopify://shop_images/RoverVault-text-1.png",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "text_details_center_pXXaBT": {
+      "type": "Text-details-center",
+      "disabled": true,
+      "name": "Custom Display Text",
+      "settings": {
+        "custom_text": "Cars - Parts - art - drip"
       }
     },
     "image_area_show_QTfyNy": {
@@ -537,9 +539,9 @@
     }
   },
   "order": [
+    "hero_banner_hWVHYH",
     "home_hero_gV8DN8",
     "text_details_center_pXXaBT",
-    "hero_banner_hWVHYH",
     "image_area_show_QTfyNy",
     "image_with_logo_GgHxcP",
     "image_with_text_1_hehR3M",
