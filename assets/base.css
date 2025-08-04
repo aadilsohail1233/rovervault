@@ -16,6 +16,9 @@
 header.header.header--middle-left.header--mobile-center.page-width.header--has-menu.header--has-account {
     background: var(--gradient-background);
 }
+ul.header__submenu.list-menu.list-menu--disclosure.color-scheme-1.gradient.caption-large {
+    background: var(--gradient-background);
+}
 .parts-sections .product-col-1
 {
     height: 600px;
