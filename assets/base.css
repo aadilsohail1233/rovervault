@@ -13,6 +13,9 @@
     height: 250px;
     object-fit: cover;
 }
+header.header.header--middle-left.header--mobile-center.page-width.header--has-menu.header--has-account {
+    background: var(--gradient-background);
+}
 .parts-sections .product-col-1
 {
     height: 600px;
