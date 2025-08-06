@@ -16,6 +16,7 @@
 .hemings-badge-inner {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.1));
     width: fit-content;
+    padding: 10px 20px 0px;
 }
 header.header.header--middle-left.header--mobile-center.page-width.header--has-menu.header--has-account {
     background: var(--gradient-background);
