@@ -9,6 +9,10 @@
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
+sticky-header.header-wrapper.color-scheme-1.gradient.header-wrapper--border-bottom {
+    background: transparent;
+}
+
 .padding-bottom-zero .prd-img-others {
     height: 250px;
     object-fit: cover;
