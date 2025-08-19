@@ -22,6 +22,12 @@ sticky-header.header-wrapper.color-scheme-1.gradient.header-wrapper--border-bott
     width: fit-content;
     padding: 10px 20px 0px;
 }
+.parts-descriptions {
+    padding: 15px 15px !important;
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
 header.header.header--middle-left.header--mobile-center.page-width.header--has-menu.header--has-account {
     background: var(--gradient-background);
 }
