@@ -67,7 +67,7 @@
     "image_with_logo_GgHxcP": {
       "type": "image-with-logo",
       "custom_css": [
-        ".image-show-background {margin-top: -60px; z-index: 0;}"
+        ".image-show-background {margin-top: 40px; z-index: 0;}"
       ],
       "name": "Image With Logo New",
       "settings": {
