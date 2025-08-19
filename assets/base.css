@@ -20,7 +20,7 @@ sticky-header.header-wrapper.color-scheme-1.gradient.header-wrapper--border-bott
 .hemings-badge-inner {
    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.1)); */
     width: fit-content;
-    padding: 10px 20px 0px;
+   /* padding: 10px 20px 0px; */
 }
 .parts-descriptions {
     padding: 15px 15px !important;
