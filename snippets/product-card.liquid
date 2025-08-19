@@ -45,7 +45,7 @@
             {% comment %}
   <div class="cl-title">Provenance</div>
            {% endcomment %}
-          <div class="cl-description">
+          <div class="cl-description parts-descriptions">
             {% if product.metafields.custom.provenance != blank %}
             {{ product.metafields.custom.provenance | truncate: 100, "..." }}
             {% else %}
