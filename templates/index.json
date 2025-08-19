@@ -41,6 +41,7 @@
     },
     "image_area_show_QTfyNy": {
       "type": "image-area-show",
+      "disabled": true,
       "custom_css": [
         ".image-show-footer {z-index: 999;}",
         ".image-show-footer-tablet {z-index: 999; position: relative;}",
