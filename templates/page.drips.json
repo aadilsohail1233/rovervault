@@ -101,7 +101,8 @@
         "tab_hVcqBD"
       ],
       "custom_css": [
-        ".product-col-2 .relative_img img {background-color: #ebe8d5; object-fit: contain;}"
+        ".product-col-2 img{object-fit: contain;}",
+        ".product-col-2 .relative_img img {background-color: #ebe8d5;}"
       ],
       "settings": {
         "selected_collection": "drips"
