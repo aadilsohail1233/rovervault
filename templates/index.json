@@ -447,6 +447,9 @@
         "product_card_DdAyTU",
         "product_card_QbNncy"
       ],
+      "custom_css": [
+        "img {object-fit: contain }"
+      ],
       "settings": {
         "collection_name": "Drip"
       }
