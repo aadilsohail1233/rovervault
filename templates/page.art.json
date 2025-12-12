@@ -103,6 +103,9 @@
         "tab_eUqjNf",
         "tab_P7Pdgg"
       ],
+      "custom_css": [
+        "img {object-fit: contain;}"
+      ],
       "settings": {
         "selected_collection": "art"
       }
