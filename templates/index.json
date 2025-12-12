@@ -386,21 +386,14 @@
           "settings": {
             "product": "indians"
           }
-        },
-        "product_card_aGBzJH": {
-          "type": "product_card",
-          "settings": {
-            "product": "cowboys-copy"
-          }
         }
       },
       "block_order": [
         "product_card_MEYhBN",
-        "product_card_637YdY",
-        "product_card_aGBzJH"
+        "product_card_637YdY"
       ],
       "custom_css": [
-        "img{object-fit: contain;}"
+        "img {object-fit: contain;}"
       ],
       "settings": {
         "collection_name": "Art"
