@@ -399,6 +399,9 @@
         "product_card_637YdY",
         "product_card_aGBzJH"
       ],
+      "custom_css": [
+        "img{object-fit: contain;}"
+      ],
       "settings": {
         "collection_name": "Art"
       }
@@ -448,7 +451,7 @@
         "product_card_QbNncy"
       ],
       "custom_css": [
-        "img {object-fit: contain }"
+        "img {object-fit: contain;}"
       ],
       "settings": {
         "collection_name": "Drip"
