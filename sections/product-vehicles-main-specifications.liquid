@@ -102,7 +102,15 @@
         </div>
       </div>
       <div class="vehicles-main__specification">
-        <div class="vehicles-main__specification-title font-vvds">MISC</div>
+        <div class="vehicles-main__specification-title font-vvds">MISC</div>        
+          <!-- Carfax Image -->
+          <div class="misc-image">
+            <img 
+              src="{{ 'carfax.png' | asset_url }}" 
+              alt="Carfax Report"
+              loading="lazy"
+            >
+          </div>
         <div class="vehicles-main__specification-value font-eczar">
           {% if product.metafields.custom.misc %}
             <div>{{ product.metafields.custom.misc.value }}</div>
