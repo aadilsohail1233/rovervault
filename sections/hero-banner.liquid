@@ -93,7 +93,7 @@
             <div class="hemings-badge-inner">
       <!--<span>  Listed on:<span><br />-->
       {% assign link = section.settings.badge_link | default: '#' %}
-      <a href="{{ link }}">
+      <a href="{{ link }}" target="_blank">
         <img
           src="{{ section.settings.badge_image | img_url: 'master' }}"
           alt="Badge"
