@@ -1,6 +1,6 @@
 {% schema %}
 {
-  "name": "Product Parts Collection",
+  "name": "Product Arts Collection",
   "settings": [
     {
       "type": "collection",
@@ -13,27 +13,15 @@
       "type": "tab",
       "name": "Tab",
       "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Tab Text"
-        },
-        {
-          "type": "url",
-          "id": "url",
-          "label": "Tab Link"
-        },
-        {
-          "type": "checkbox",
-          "id": "active",
-          "label": "Set as Active"
-        }
+        { "type": "text", "id": "text", "label": "Tab Text" },
+        { "type": "url", "id": "url", "label": "Tab Link" },
+        { "type": "checkbox", "id": "active", "label": "Set as Active" }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Product Parts Collection",
+      "name": "Product Arts Collection",
       "blocks": [
         { "type": "tab", "settings": { "text": "All", "url": "#", "active": true } },
         { "type": "tab", "settings": { "text": "Range Rover", "url": "#", "active": false } },
@@ -46,7 +34,6 @@
 {% endschema %}
 
 {% assign collection = collections[section.settings.selected_collection] %}
-{% assign products = collection.products %}
 
 <div class="page-width">
 <div class="range-rover-section">
@@ -75,7 +62,6 @@
   </div>
 </div>
 
-<!-- Mobile / Tablet -->
 <div class="top-bar-filter mobile-tablet-filters">
   <div class="dropdwn">
     <select id="sort_by">
@@ -90,9 +76,12 @@
 
 <div class="border-lines"></div>
 
-{% if collection and products.size > 0 %}
+{% if collection and collection.products.size > 0 %}
 
-<div class="main_section_all parts_collections">
+{% paginate collection.products by 1000 %}
+{% assign products = collection.products %}
+
+<div class="main_section_all parts_collections arts">
 
 <!-- ========== DEFAULT ========== -->
 <div class="product-grid" id="sort-default">
@@ -151,6 +140,7 @@
 </div>
 <div class="border-lines"></div>
 
+{% endpaginate %}
 {% else %}
 <p>No products found in this collection.</p>
 {% endif %}
@@ -158,8 +148,44 @@
 </div>
 </div>
 
-<!-- ================= SORT SCRIPT ================= -->
+<!-- ================= STYLES ================= -->
+<style>
+.card__side.card__side--front.card__side--front-1 {
+  height: 100%;
+}
+</style>
 
+<!-- ================= CARD FLIP SCRIPT ================= -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const flipToBackButtons = document.querySelectorAll('.badge.lefts a');
+  const flipToFrontButtons = document.querySelectorAll('.badge.rights a');
+
+  flipToBackButtons.forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (window.innerWidth <= 767) {
+        const card = this.closest('.card');
+        card.classList.remove('frontflipped');
+        card.classList.add('flipped');
+      }
+    });
+  });
+
+  flipToFrontButtons.forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (window.innerWidth <= 767) {
+        const card = this.closest('.card');
+        card.classList.remove('flipped');
+        card.classList.add('frontflipped');
+      }
+    });
+  });
+});
+</script>
+
+<!-- ================= SORT SCRIPT ================= -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const sortSelects = document.querySelectorAll('#sort_by');
