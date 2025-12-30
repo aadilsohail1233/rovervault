@@ -42,6 +42,16 @@
 #fileList li{ margin-bottom:4px; }
 </style>
 
+{% comment %}
+    <label class="font-vvds">Condition</label>
+      <select name="Condition" required class="fields-inputss">
+        <option value="">None</option>
+        <option>New</option>
+        <option>Used</option>
+        <option>Restored</option>
+      </select>
+{% endcomment %}      
+
 <section class="forms_consigment">
   <div class="page-width">
 
@@ -58,14 +68,6 @@
       <label class="font-vvds">Vehicle Year &amp; Model</label>
       <input type="text" name="Vehicle Model" required class="fields-inputss"
              placeholder="e.g. 2021 Range Rover Autobiography">
-
-      <label class="font-vvds">Condition</label>
-      <select name="Condition" required class="fields-inputss">
-        <option value="">None</option>
-        <option>New</option>
-        <option>Used</option>
-        <option>Restored</option>
-      </select>
 
       <label class="font-vvds">Location</label>
       <input type="text" name="Location" required class="fields-inputss"
