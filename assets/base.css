@@ -4414,7 +4414,8 @@ font-family: 'Eczar';
     font-family: VVDS Fifties;
     font-size: 30px;
     color: #6B8D50;
-    line-height: 50px;    
+    line-height: 50px;   
+    padding:4px; 
 }
 .product-avaliable {
     background-color: #6B8D50;
