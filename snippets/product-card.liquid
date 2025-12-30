@@ -142,7 +142,13 @@
                           </div>
                           
                           <div class="product-details-col product-b-bottom white-color mar-bottom">
-                          <div class="cl-title white-color">Mics Fact</div>
+                          <div class="cl-title white-color">
+                            {% if collection.title == "Drip" %}
+                            Sizing
+                            {% else %}
+                            Mics Fact
+                            {% endif %}    
+                            </div>
                           <div class="cl-description white-color">
                             {% if product.metafields.custom.fact1 %}
                             <div class="cl-description white-color">
