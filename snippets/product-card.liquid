@@ -27,8 +27,8 @@
          </div>
          {% endcomment %}
          </div>
-        {% assign truncated_title = product.title | truncate: 35, '' %}
-        <div class="product-col-title">{{ truncated_title }}{% if product.title.size > 35 %}...{% endif %}</div>
+        {% assign truncated_title = product.title | truncate: 40, '' %}
+        <div class="product-col-title">{{ truncated_title }}{% if product.title.size > 40 %}...{% endif %}</div>
         <div class="product-details-provance product-b-top">
           {% if collection.title == "Parts" or collection.title == "Drip" %}
             {% comment %}
