@@ -13,21 +13,9 @@
       "type": "tab",
       "name": "Tab",
       "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Tab Text"
-        },
-        {
-          "type": "url",
-          "id": "url",
-          "label": "Tab Link"
-        },
-        {
-          "type": "checkbox",
-          "id": "active",
-          "label": "Set as Active"
-        }
+        { "type": "text", "id": "text", "label": "Tab Text" },
+        { "type": "url", "id": "url", "label": "Tab Link" },
+        { "type": "checkbox", "id": "active", "label": "Set as Active" }
       ]
     }
   ],
@@ -35,164 +23,144 @@
     {
       "name": "Product Arts Collection",
       "blocks": [
-        {
-          "type": "tab",
-          "settings": {
-            "text": "All",
-            "url": "#",
-            "active": true
-          }
-        },
-        {
-          "type": "tab",
-          "settings": {
-            "text": "Range Rover",
-            "url": "#",
-            "active": false
-          }
-        },
-        {
-          "type": "tab",
-          "settings": {
-            "text": "Discovery",
-            "url": "#",
-            "active": false
-          }
-        },
-        {
-          "type": "tab",
-          "settings": {
-            "text": "Defender",
-            "url": "#",
-            "active": false
-          }
-        }
+        { "type": "tab", "settings": { "text": "All", "url": "#", "active": true } },
+        { "type": "tab", "settings": { "text": "Range Rover", "url": "#", "active": false } },
+        { "type": "tab", "settings": { "text": "Discovery", "url": "#", "active": false } },
+        { "type": "tab", "settings": { "text": "Defender", "url": "#", "active": false } }
       ]
     }
   ]
 }
 {% endschema %}
 
-
 {% assign collection = collections[section.settings.selected_collection] %}
+
 <div class="page-width">
 <div class="range-rover-section">
 
-  <!-- Filters and Sorting Bar -->
+<!-- ================= FILTER BAR ================= -->
+
 <div class="top-bar-filter desktop-filters">
-<div class="tabs parts-tabs">
-  {% for block in section.blocks %}
-    {% if block.type == 'tab' %}
-      <a href="{{ block.settings.url }}" class="tab {% if block.settings.active %}active{% endif %}">
-        {{ block.settings.text }}
-      </a>
-    {% endif %}
-  {% endfor %}
+  <div class="tabs parts-tabs">
+    {% for block in section.blocks %}
+      {% if block.type == 'tab' %}
+        <a href="{{ block.settings.url }}" class="tab {% if block.settings.active %}active{% endif %}">
+          {{ block.settings.text }}
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="sort-dropdown">
+    <select id="sort_by">
+      <option value="">Sort by</option>
+      <option value="name-asc">Name, A–Z</option>
+      <option value="name-desc">Name, Z–A</option>
+      <option value="price-asc">Price, Low to High</option>
+      <option value="price-desc">Price, High to Low</option>
+    </select>
+  </div>
 </div>
 
- <!--   <div class="sort-dropdown">
-      
-      <select id="sort_by">
-        <option value="">Sort by</option>
-        <option value="newest-listing">Newest Listing</option>
-        <option value="price-asc">Price, Low to High</option>
-        <option value="price-desc">Price, High to Low</option>
-      </select>
-    </div>-->
-  
+<div class="top-bar-filter mobile-tablet-filters">
+  <div class="dropdwn">
+    <select id="sort_by">
+      <option value="">Sort by</option>
+      <option value="name-asc">Name, A–Z</option>
+      <option value="name-desc">Name, Z–A</option>
+      <option value="price-asc">Price, Low to High</option>
+      <option value="price-desc">Price, High to Low</option>
+    </select>
   </div>
-  <div class="top-bar-filter mobile-tablet-filters">
- <div class="dropdwn">
-  <select onchange="if (this.value) window.location.href=this.value;">
-  {% for block in section.blocks %}
-    {% if block.type == 'tab' %}
-      <option value="{{ block.settings.url }}" {% if block.settings.active %}selected{% endif %}>
-        {{ block.settings.text }}
-      </option>
-    {% endif %}
-  {% endfor %}
-</select>
- </div>
-       <!-- <div class="sort-dropdown">
-       <select id="sort_by">
-        <option value="">Sort by</option>
-        <option value="newest-listing">Newest Listing</option>
-        <option value="price-asc">Price, Low to High</option>
-        <option value="price-desc">Price, High to Low</option>
-      </select>
-    </div>-->
+</div>
 
-  </div>
+<div class="border-lines"></div>
 
-  <div class="border-lines"></div>
+{% if collection and collection.products.size > 0 %}
 
+{% paginate collection.products by 1000 %}
+{% assign products = collection.products %}
 
-    {% if collection and collection.products.size > 0 %}
-    {% assign latest_product = collection.products.first %}
-    
-    <!-- Latest Product Banner -->
-    
-
-{% paginate collections[section.settings.selected_collection].products by 1000 %}  
-  {% assign products = collections[section.settings.selected_collection].products %}
-    <!-- Product Grid -->
 <div class="main_section_all parts_collections arts">
- <!-- Default: No sorting -->
-  <div class="product-grid" id="sort-default">
-    <div class="full-width-cards">
+
+<!-- ========== DEFAULT ========== -->
+<div class="product-grid" id="sort-default">
+  <div class="full-width-cards">
     {% for product in products %}
       {% include 'product-card', product: product %}
     {% endfor %}
-    </div>
   </div>
+</div>
 
-  <!-- Price Ascending -->
-  <div class="product-grid" id="sort-price-asc" style="display: none;">
-    <div class="full-width-cards">
-    {% assign sorted_products_asc = products | sort: 'price' %}
-    {% for product in sorted_products_asc %}
+<!-- ========== PRICE ASC ========== -->
+<div class="product-grid" id="sort-price-asc" style="display:none;">
+  <div class="full-width-cards">
+    {% assign sorted_price_asc = products | sort: 'price' %}
+    {% for product in sorted_price_asc %}
       {% include 'product-card', product: product %}
     {% endfor %}
-    </div>
   </div>
+</div>
 
-  <!-- Price Descending -->
-  <div class="product-grid" id="sort-price-desc" style="display: none;">
-    <div class="full-width-cards">
-    {% assign sorted_products_desc = products | sort: 'price' | reverse %}
-    {% for product in sorted_products_desc %}
+<!-- ========== PRICE DESC ========== -->
+<div class="product-grid" id="sort-price-desc" style="display:none;">
+  <div class="full-width-cards">
+    {% assign sorted_price_desc = products | sort: 'price' | reverse %}
+    {% for product in sorted_price_desc %}
       {% include 'product-card', product: product %}
     {% endfor %}
-    </div>
   </div>
+</div>
 
-</div>      
-    
-    <div class="border-lines"></div>
-    <div class="results-count">Showing {{ collection.products.size }} of {{ collection.products.size }} results</div>
-    <div class="border-lines"></div>  
-  {% endpaginate %}
-  {% else %}
-    <p>No products found in this collection.</p>
-  {% endif %}
+<!-- ========== NAME ASC ========== -->
+<div class="product-grid" id="sort-name-asc" style="display:none;">
+  <div class="full-width-cards">
+    {% assign sorted_name_asc = products | sort: 'title' %}
+    {% for product in sorted_name_asc %}
+      {% include 'product-card', product: product %}
+    {% endfor %}
+  </div>
+</div>
 
+<!-- ========== NAME DESC ========== -->
+<div class="product-grid" id="sort-name-desc" style="display:none;">
+  <div class="full-width-cards">
+    {% assign sorted_name_desc = products | sort: 'title' | reverse %}
+    {% for product in sorted_name_desc %}
+      {% include 'product-card', product: product %}
+    {% endfor %}
+  </div>
+</div>
+
+</div>
+
+<div class="border-lines"></div>
+<div class="results-count">
+  Showing {{ products.size }} of {{ products.size }} results
+</div>
+<div class="border-lines"></div>
+
+{% endpaginate %}
+{% else %}
+<p>No products found in this collection.</p>
+{% endif %}
 
 </div>
 </div>
 
+<!-- ================= STYLES ================= -->
 <style>
 .card__side.card__side--front.card__side--front-1 {
-    height: 100%;
+  height: 100%;
 }
 </style>
 
-
-      <script>
+<!-- ================= CARD FLIP SCRIPT ================= -->
+<script>
 document.addEventListener('DOMContentLoaded', function () {
   const flipToBackButtons = document.querySelectorAll('.badge.lefts a');
   const flipToFrontButtons = document.querySelectorAll('.badge.rights a');
 
-  // Flip to back
   flipToBackButtons.forEach(button => {
     button.addEventListener('click', function (e) {
       e.preventDefault();
@@ -204,7 +172,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Flip to front
   flipToFrontButtons.forEach(button => {
     button.addEventListener('click', function (e) {
       e.preventDefault();
@@ -217,42 +184,50 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
+
+<!-- ================= SORT SCRIPT ================= -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const sortBySelects = document.querySelectorAll('#sort_by');
+  const sortSelects = document.querySelectorAll('#sort_by');
 
-  function updateSortView(sortValue) {
-    const allGrids = ['sort-default', 'sort-price-asc', 'sort-price-desc'];
-    allGrids.forEach(id => document.getElementById(id).style.display = 'none');
+  function updateSortView(value) {
+    const grids = [
+      'sort-default',
+      'sort-price-asc',
+      'sort-price-desc',
+      'sort-name-asc',
+      'sort-name-desc'
+    ];
 
-    switch (sortValue) {
+    grids.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = 'none';
+    });
+
+    switch (value) {
       case 'price-asc':
         document.getElementById('sort-price-asc').style.display = 'block';
         break;
       case 'price-desc':
         document.getElementById('sort-price-desc').style.display = 'block';
         break;
+      case 'name-asc':
+        document.getElementById('sort-name-asc').style.display = 'block';
+        break;
+      case 'name-desc':
+        document.getElementById('sort-name-desc').style.display = 'block';
+        break;
       default:
         document.getElementById('sort-default').style.display = 'block';
     }
   }
 
-  sortBySelects.forEach(select => {
+  sortSelects.forEach(select => {
     select.addEventListener('change', function () {
       updateSortView(this.value);
     });
   });
 
-  // Auto-select on page load if sort_by exists in URL
-  const params = new URLSearchParams(window.location.search);
-  const sortValue = params.get('sort_by') || '';
-  if (sortValue) {
-    document.querySelectorAll('#sort_by').forEach(select => {
-      select.value = sortValue;
-    });
-    updateSortView(sortValue);
-  } else {
-    updateSortView('');
-  }
+  updateSortView('');
 });
 </script>
