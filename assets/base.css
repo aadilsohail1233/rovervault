@@ -4330,6 +4330,12 @@ font-family: 'Eczar';
   background-color: #628952 !important;
   color: #ffffff !important;
 }
+/* Hover (works fully in Firefox, partially elsewhere) */
+.sort-dropdown select option:hover,
+.sort-dropdown select option:focus {
+  background-color: #628952 !important;
+  color: #ffffff !important;
+}
 
 .top-bar-filter {
   display: flex;
