@@ -4321,6 +4321,16 @@ font-family: 'Eczar';
   padding-left: 10px;
 }
 
+.sort-dropdown select option {
+  background-color: #cfd8c0;
+  color: #628952;
+}
+
+.sort-dropdown select option:checked {
+  background-color: #628952 !important;
+  color: #ffffff !important;
+}
+
 .top-bar-filter {
   display: flex;
   justify-content: space-between;
