@@ -65,6 +65,9 @@
   <div class="page-width">
     <div class="logo-with-text-wrapper">
       <div class="logo-with-text-images{% if section.settings.layout_direction == 'logo-left' %} layoutorders2{% endif %}">
+        <div class="font-vvds sam-text">{{ section.settings.car_unique_sub_text }}</div>
+        <div class="font-vvds large-text">{{ section.settings.car_unique_main_text }}</div>
+        
         <img
           src="{{ section.settings.first_text_image | img_url: 'master' }}"
           alt="{{ section.settings.first_text_image.alt }}"
