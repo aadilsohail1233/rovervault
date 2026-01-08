@@ -19,7 +19,7 @@
         "subheading_text": "CARS • PARTS • ART • DRIP",
         "subheading_image": "shopify://shop_images/image-banner.png",
         "badge_image": "shopify://shop_images/Frame_697.png",
-        "badge_link": "https://www.hemmings.com/"
+        "badge_link": "#vehicle_id"
       }
     },
     "home_hero_gV8DN8": {
@@ -205,6 +205,8 @@
         "logo_image": "shopify://shop_images/Layer_4_3b78df73-d389-4d75-a06c-dace18f48d7d.png",
         "first_text_image": "shopify://shop_images/Heading_eb082fad-41c8-4a63-8b17-68c091d06146.png",
         "second_text_image": "shopify://shop_images/Heading_1_da49abfe-e4a2-4b19-b663-68a4340cb0ea.png",
+        "car_unique_sub_text": "WHAT MAKES OUR",
+        "car_unique_main_text": "CARS UNIQUE",
         "margin_top": 0,
         "margin_bottom": 16,
         "layout_direction": "text-left"
@@ -458,6 +460,8 @@
         "first_text_image": "shopify://shop_images/text-1.png",
         "second_text_image": "shopify://shop_images/text-2.png",
         "mobile_text_image": "shopify://shop_images/text-3.png",
+        "car_unique_sub_text": "WHAT MAKES OUR",
+        "car_unique_main_text": "CARS UNIQUE",
         "margin_top": 36,
         "margin_bottom": 36,
         "layout_direction": "logo-left"
